@@ -118,8 +118,9 @@ public:
         int j, max_resp, resp;
 
         for(i = 0; i < data.size(); i++){
+            
             max_resp = 0;
-            for(i = 0; i < numDiscriminator; j++){
+            for(j = 0; j < numDiscriminator; j++){
                 resp = discriminators[j]->rank(data[i]);
 
                 if(resp > max_resp){
