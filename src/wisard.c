@@ -5,7 +5,7 @@
  */
 
 #include <time.h>
-#include "wisard.h"
+#include "../include/wisard.h"
 #include <stdio.h>
 
 void

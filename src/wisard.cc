@@ -1,19 +1,12 @@
 #include <iostream>
 #include <vector>
+#include "discriminator.cc"
+#include <array>
 
 using namespace std;
 
 class Wisard {
 public:
-    //Nosso construtor
-    Wisard()
-    {
-        entrySize = 0;
-        tupleSize = 0;
-        numDiscriminator = 0;
-        discriminators = vector<Discriminator*>();
-    }
-
     Wisard(int entrySize, int tupleSize, int numDiscriminator) :
     //inicializa as variáveis com os valores definidos no construtor
     //Member variable?
@@ -117,9 +110,9 @@ public:
     //ex-func pybind
     //preciso de voce?
     //duas funcoes rank?
-    std::vector<int> rank(const vector<vector<bool>>& data)
+    std::vector<size_t> rank(const vector<vector<bool>>& data)
     {
-        std::vector<int> a({data.size()});
+        std::vector<size_t> a({data.size()});
 
         unsigned int i;
         int j, max_resp, resp;
@@ -135,7 +128,7 @@ public:
                 }
             }
         }
-
+    return a;
     }
 
 
@@ -151,20 +144,20 @@ public:
         }
     }
 
-    py::array_t<unsigned long int> stats()
+    std::array<unsigned long int, 4> stats()
     {
-        py::array_t<unsigned long int> a({4});
-        auto stats = a.mutable_unchecked();
+        std::array<unsigned long int, 4> a({4});
+        //auto stats = a.mutable_unchecked();
 
         int numRams = discriminators[0]->getNumRams();
         long int ramSize = discriminators[0]->getRamBits();
         long int totalRamBits = numRams * ramSize; 
         long int totalBits = numDiscriminator * totalRamBits;
 
-        stats(0) = numRams;
-        stats(1) = ramSize;
-        stats(2) = totalRamBits;
-        stats(3) = totalBits;
+        a[0] = numRams;
+        a[1] = ramSize;
+        a[2] = totalRamBits;
+        a[3] = totalBits;
 
         return a;
     }
@@ -184,7 +177,3 @@ private:
     int numDiscriminator;
     vector<Discriminator*> discriminators;
 };
-
-/**int main(){
-    return 0;
-}*/

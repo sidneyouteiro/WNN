@@ -2,35 +2,47 @@
 #include <random>
 #include <algorithm>
 #include <vector>
-#include "bitarray.h"
+#include "../include/bitarray.h"
 
 using namespace std;
 
 class Discriminator {
 public:
+    //constructor
     Discriminator(int entrySize, int tupleSize) :
     entrySize(entrySize), tupleSize(tupleSize)
     {
-        
+        //calcula o número de rams e checa se a divisão tem resto, se sim soma mais 1
         numRams = entrySize/tupleSize + ((entrySize%tupleSize) > 0);
+        //calloc retorna um * void
+        //(int *) -> casting/troca de tipo 
+        //Troca o * void para * int, pois vamos lidar com inteiros
+        //Bem como inicializa o array com 0
         tuplesMapping = (int *)calloc(entrySize, sizeof(int));
         
         //Generating pseudo-random mapping
         int i;
-
+        //Percorre esse array
         for (i = 0; i < entrySize; i++) {
+            //mapeia cada tupla, neste caso é parecido com uma enumeração
             tuplesMapping[i] = i;
         }
         
+        //embaralha
         std::shuffle(tuplesMapping, tuplesMapping + entrySize, std::default_random_engine(std::random_device{}()));
 
-        //Allocate Ram Memory
+        //Aloca memória ram
         rams = (bitarray_t *) calloc(numRams, sizeof(bitarray_t));
         
         int num_bits = (1UL << tupleSize);//2^tuple_size
         long int bitarray_size = (num_bits >> 6); //divide by 64 bits
+        //verifica bits restantes
         bitarray_size += ((bitarray_size & 0x3F) > 0); //ceil quotient. If remainder > 0 then sum by 1
 
+        //percorre as rams alocadas
+        //preenchendo os elementos com informações
+        //várias rams iguais
+        //mesmas propriedades
         for (i = 0; i < numRams; i++) {
             rams[i].num_bits = num_bits;
             rams[i].bitarray_size = bitarray_size;
@@ -38,6 +50,7 @@ public:
         }
     }
 
+    //Destructor
     ~Discriminator() 
     {
         //cout << "Destructor" << endl;
@@ -45,21 +58,30 @@ public:
         free(tuplesMapping);
     }
 
+    //Treino do discriminante?
     void train(bitarray_t * data)
     {
+        //vars auxiliares
         int i, j, k = 0, i1, i2;
+        //addr_pos?
         int addr_pos;
         uint64_t addr;
 
+        //percorre o número de rams
         for (i = 0; i < numRams; i++) {
+            //tupleSize - 1?
             addr_pos = tupleSize-1;
             addr = 0;
             
+            //Percorre o tamanho da tupla??
             for (j = 0; j < tupleSize; j++) {
+                //arnazena a divisão de tuplesMapping[i] pro 64
                 i1 = tuplesMapping[k] >> 6;//Divide by 64 to find the bitarray id
+                //armazena o restante para 
                 i2 = tuplesMapping[k] & 0x3F;//Obtain remainder to access the bitarray position
-            
+                //cria um espécie de endereço utilizando esta operação
                 addr |= (((data->bitarray[i1] & (1UL << i2)) >> i2) << addr_pos);
+                //vai para a tupla anterior
                 addr_pos--;
                 k++;
             }
@@ -70,16 +92,19 @@ public:
         }
     }
 
+    //recebe um vetor de booleano?
     void train(const vector<bool>& data)
     {
         int i, j, k = 0, i1, i2;
         int addr_pos;
         uint64_t addr;
 
+        //percorre as rams
         for (i = 0; i < numRams; i++) {
+            //tupleSize-1 ??
             addr_pos = tupleSize-1;
             addr = 0;
-            
+            //j && k?
             for (j = 0; (j < tupleSize) && (k < entrySize); j++) {
                 addr |= (data[tuplesMapping[k]] << addr_pos);
                 addr_pos--;
@@ -207,7 +232,7 @@ int main(){
     
     vector<bool> data = vector<bool>(1024);
     int i;
-
+    
     for (i = 0; i < 1024; i++) {
         data[i] = i&1;
     }
