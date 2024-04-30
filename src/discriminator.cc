@@ -225,7 +225,7 @@ private:
     int * tuplesMapping;
     bitarray_t * rams;
 };
-/**
+/*
 int main(){
 
     Discriminator * disc = new Discriminator(1024, 16);
