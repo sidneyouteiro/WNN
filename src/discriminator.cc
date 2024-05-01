@@ -10,6 +10,7 @@ class Discriminator {
 public:
     //constructor
     Discriminator(int entrySize, int tupleSize) :
+    //tupleSize = ramSize
     entrySize(entrySize), tupleSize(tupleSize)
     {
         //calcula o número de rams e checa se a divisão tem resto, se sim soma mais 1

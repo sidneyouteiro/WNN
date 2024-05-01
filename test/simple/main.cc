@@ -5,13 +5,13 @@ int main(){
 	std::vector<bool> b = {0,0,1,1,0,1,0,0,0,0,0,1,0,1,1,1,0,1,0,0};
 	std::vector<int> y = {0,1};
 
-	printf("DISCRIMINATOR:");
+	printf("DISCRIMINATOR:\n");
 	Discriminator * disc = new Discriminator(20, 4);
 	disc->train(a);
 	cout << "Rank=" << dec << disc->rank(a) << endl;
 	disc->info();
 	
-	printf("WISARD");
+	printf("WISARD\n");
 	Wisard * wisard = new Wisard(20, 4 ,2);
 	std::vector<vector<bool>> c = {};
 	c.push_back(a);
