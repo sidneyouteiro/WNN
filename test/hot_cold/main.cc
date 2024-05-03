@@ -5,7 +5,7 @@ int main(){
 	std::vector<bool> b = {1,1,1,1,0,0,0,0};
 	std::vector<bool> c = {0,0,0,0,1,1,1,1};
 	std::vector<bool> d = {0,0,0,0,0,1,1,1};
-	std::vector<bool> z = {1,1,1,1,1,1,1,0};
+	std::vector<bool> z = {0,1,1,1,1,1,1,1};
 	std::vector<int> y = {0,0,1,1};
 
 	printf("DISCRIMINATOR:\n");
