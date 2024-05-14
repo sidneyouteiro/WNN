@@ -5,8 +5,14 @@
 #include "../include/bitarray.h"
 
 /*!
-* @brief Classe representando um discriminador
+* @brief Descrição breve do que faz a função
+*seconds.
+* @param[in] varParaLer,
+* @param[out] varParaEscrever
+* true if using force mode
+* @return float value
 */
+
 using namespace std;
 
 class Discriminator {
