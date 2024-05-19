@@ -2,7 +2,7 @@
 #include <random>
 #include <algorithm>
 #include <vector>
-#include "../include/bitarray.h"
+#include "../../../include/bitarray.h"
 
 /*!
 * @brief Descrição breve do que faz a função
