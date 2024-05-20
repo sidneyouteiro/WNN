@@ -10,6 +10,7 @@ int main(){
 	std::vector<bool> z2 = {1,1,1,0,1,1,1,1};
 	std::vector<bool> z3 = {1,1,1,1,0,1,1,1};
 	std::vector<int> y = {0,0,1,1};
+	
 
 	//printf("DISCRIMINATOR:\n");
 	//Discriminator * disc = new Discriminator(8, 4);
@@ -41,5 +42,6 @@ int main(){
 		cout << r[i] << endl;
 	}
 	wisard->info();
+	printf("\n");
 }
  

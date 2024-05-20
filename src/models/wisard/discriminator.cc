@@ -228,6 +228,11 @@ public:
         return numRams;
     }
 
+    int getTupleSize()
+    {
+	return tupleSize;
+    }
+
 private:
     int entrySize;
     int tupleSize;

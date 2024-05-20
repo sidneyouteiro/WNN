@@ -136,13 +136,22 @@ public:
 
     void info()
     {
-        cout << "Number of Discriminators = " << numDiscriminator << endl;
-        int i;
+	int i;
+        int numRams = discriminators[0]->getNumRams();
+        long int ramSize = discriminators[0]->getRamBits();
+        long int totalRamBits = numRams * ramSize; 
+        long int totalBits = numDiscriminator * totalRamBits;
 
+	cout << "Number of Discriminators = " << numDiscriminator << endl;
+       
         for (i = 0; i < numDiscriminator; i++) {
             cout << "Discriminator " << i << ": ";
             discriminators[i]->info();
+	    //size = size + discriminators[i]->getTupleSize() * discriminators[i]->getNumRams();
         }
+
+	cout << "Size of wisard:" << totalBits << endl;
+
     }
 
     std::array<unsigned long int, 4> stats()
