@@ -4,9 +4,18 @@
 #include <array>
 
 using namespace std;
-
+/*!
+ * @class Wisard
+ * @brief A class to implement the Wisard algorithm using multiple discriminators.
+ */
 class Wisard {
 public:
+    /*!
+     * @brief Constructor for the Wisard class.
+     * @param entrySize Size of the entry.
+     * @param tupleSize Size of the tuple.
+     * @param numDiscriminator Number of discriminators.
+     */
     Wisard(int entrySize, int tupleSize, int numDiscriminator) :
     //inicializa as variáveis com os valores definidos no construtor
     //Member variable?
@@ -21,9 +30,10 @@ public:
             //Cria os discriminadores com tamanho de entrada e tupla
         }
     }
-
-    //Destrutor
-    //Libera memória dinamicamente
+    
+    /*!
+     * @brief Destructor for the Wisard class. Frees dynamically allocated memory.
+     */
     ~Wisard()
     {
         unsigned int i;
@@ -32,7 +42,9 @@ public:
         }
     }
 
-    //Incrementa o discriminador
+    /*!
+     * @brief Adds a new discriminator to the Wisard.
+     */
     void addDiscriminator()
     {
         //emplace back cria um novo último item
@@ -44,6 +56,11 @@ public:
     //data é um vetor de vetor do tipo booleano
     //label é um vetor de inteiros
     //O que é o label?
+    /*!
+     * @brief Trains the Wisard with the given data and labels.
+     * @param[in] data Vector of vectors of boolean data.
+     * @param[in] label Vector of integer labels.
+     */
     void train(const vector<vector<bool>>& data, const vector<int>& label)
     {
         unsigned int i;
@@ -56,6 +73,11 @@ public:
     }
 
     //rankeamento?
+    /*!
+     * @brief Ranks the given data and returns the label with the highest response.
+     * @param[in] data Vector of boolean data.
+     * @return Label with the highest response.
+     */
     int rank(const vector<bool>& data)
     {
         int i;
@@ -110,6 +132,11 @@ public:
     //ex-func pybind
     //preciso de voce?
     //duas funcoes rank?
+    /*!
+     * @brief Ranks multiple sets of data and returns a vector of labels.
+     * @param[in] data Vector of vectors of boolean data.
+     * @return Vector of labels with the highest responses.
+     */
     std::vector<size_t> rank(const vector<vector<bool>>& data)
     {
         std::vector<size_t> a({data.size()});
@@ -133,7 +160,9 @@ public:
     }
 
 
-
+    /*!
+     * @brief Displays information about the Wisard.
+     */
     void info()
     {
 	int i;
@@ -153,7 +182,11 @@ public:
 	cout << "Size of wisard:" << totalBits << endl;
 
     }
-
+    
+    /*!
+     * @brief Returns statistics about the Wisard.
+     * @return Array of statistics including number of RAMs, RAM size, total RAM bits, and total bits.
+     */
     std::array<unsigned long int, 4> stats()
     {
         std::array<unsigned long int, 4> a({4});
@@ -171,7 +204,10 @@ public:
 
         return a;
     }
-
+    
+    /*!
+     * @brief Resets the Wisard by resetting all discriminators.
+     */
     void reset()
     {
         int i;

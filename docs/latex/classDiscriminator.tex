@@ -1,0 +1,244 @@
+\hypertarget{classDiscriminator}{}\doxysection{Discriminator Class Reference}
+\label{classDiscriminator}\index{Discriminator@{Discriminator}}
+
+
+A class to implement a discriminator using bit arrays and pseudo-\/random mappings.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDiscriminator_a18f6a5ef1ceca3e187cc495a77a8141c}{Discriminator}} (int \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entry\+Size}}, int \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tuple\+Size}})
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classDiscriminator}{Discriminator}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDiscriminator_a85cac98c07ece485461dd6f55e112adb}{$\sim$\+Discriminator}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classDiscriminator}{Discriminator}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDiscriminator_ab8048d9b2da18a14532e90460c5c92a8}{train}} (bitarray\+\_\+t $\ast$data)
+\begin{DoxyCompactList}\small\item\em Trains the discriminator with the given data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDiscriminator_a53db61dec9f645573d5aa577344431a4}{train}} (const vector$<$ bool $>$ \&data)
+\begin{DoxyCompactList}\small\item\em Trains the discriminator with the given vector of boolean data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}{rank}} (bitarray\+\_\+t $\ast$data)
+\begin{DoxyCompactList}\small\item\em Ranks the given data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDiscriminator_a1aa42beb010bc86dd9418db8b294e78c}{rank}} (const vector$<$ bool $>$ \&data)
+\begin{DoxyCompactList}\small\item\em Ranks the given vector of boolean data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDiscriminator_ab2ac35f380491c1ade7032c7269a0e65}{info}} ()
+\begin{DoxyCompactList}\small\item\em Displays information about the discriminator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDiscriminator_a2d97f91f8097cd8581f5c79b34bd0150}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the discriminator. \end{DoxyCompactList}\item 
+long int \mbox{\hyperlink{classDiscriminator_ad65569d300243be32d4f7cde25ed71b4}{get\+Ram\+Bits}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of bits in a RAM. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDiscriminator_a7050bbf5d9b52318fdb8c6387ca7a0ac}{get\+Num\+Rams}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of RAMs. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDiscriminator_a2651a5132e8d8554d47f1406820f4062}{get\+Tuple\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Gets the size of a tuple. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entry\+Size}}
+\item 
+int \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tuple\+Size}}
+\item 
+int \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{num\+Rams}}
+\item 
+int $\ast$ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuples\+Mapping}}
+\item 
+bitarray\+\_\+t $\ast$ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to implement a discriminator using bit arrays and pseudo-\/random mappings. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDiscriminator_a18f6a5ef1ceca3e187cc495a77a8141c}\label{classDiscriminator_a18f6a5ef1ceca3e187cc495a77a8141c}} 
+\index{Discriminator@{Discriminator}!Discriminator@{Discriminator}}
+\index{Discriminator@{Discriminator}!Discriminator@{Discriminator}}
+\doxysubsubsection{\texorpdfstring{Discriminator()}{Discriminator()}}
+{\footnotesize\ttfamily Discriminator\+::\+Discriminator (\begin{DoxyParamCaption}\item[{int}]{entry\+Size,  }\item[{int}]{tuple\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for the \mbox{\hyperlink{classDiscriminator}{Discriminator}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry\+Size} & Size of the entry. \\
+\hline
+{\em tuple\+Size} & Size of the tuple. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDiscriminator_a85cac98c07ece485461dd6f55e112adb}\label{classDiscriminator_a85cac98c07ece485461dd6f55e112adb}} 
+\index{Discriminator@{Discriminator}!````~Discriminator@{$\sim$Discriminator}}
+\index{````~Discriminator@{$\sim$Discriminator}!Discriminator@{Discriminator}}
+\doxysubsubsection{\texorpdfstring{$\sim$Discriminator()}{~Discriminator()}}
+{\footnotesize\ttfamily Discriminator\+::$\sim$\+Discriminator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor for the \mbox{\hyperlink{classDiscriminator}{Discriminator}} class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDiscriminator_a7050bbf5d9b52318fdb8c6387ca7a0ac}\label{classDiscriminator_a7050bbf5d9b52318fdb8c6387ca7a0ac}} 
+\index{Discriminator@{Discriminator}!getNumRams@{getNumRams}}
+\index{getNumRams@{getNumRams}!Discriminator@{Discriminator}}
+\doxysubsubsection{\texorpdfstring{getNumRams()}{getNumRams()}}
+{\footnotesize\ttfamily int Discriminator\+::get\+Num\+Rams (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the number of RAMs. 
+
+\begin{DoxyReturn}{Returns}
+Number of RAMs. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiscriminator_ad65569d300243be32d4f7cde25ed71b4}\label{classDiscriminator_ad65569d300243be32d4f7cde25ed71b4}} 
+\index{Discriminator@{Discriminator}!getRamBits@{getRamBits}}
+\index{getRamBits@{getRamBits}!Discriminator@{Discriminator}}
+\doxysubsubsection{\texorpdfstring{getRamBits()}{getRamBits()}}
+{\footnotesize\ttfamily long int Discriminator\+::get\+Ram\+Bits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the number of bits in a RAM. 
+
+\begin{DoxyReturn}{Returns}
+Number of bits in a RAM. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiscriminator_a2651a5132e8d8554d47f1406820f4062}\label{classDiscriminator_a2651a5132e8d8554d47f1406820f4062}} 
+\index{Discriminator@{Discriminator}!getTupleSize@{getTupleSize}}
+\index{getTupleSize@{getTupleSize}!Discriminator@{Discriminator}}
+\doxysubsubsection{\texorpdfstring{getTupleSize()}{getTupleSize()}}
+{\footnotesize\ttfamily int Discriminator\+::get\+Tuple\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the size of a tuple. 
+
+\begin{DoxyReturn}{Returns}
+Size of a tuple. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiscriminator_ab2ac35f380491c1ade7032c7269a0e65}\label{classDiscriminator_ab2ac35f380491c1ade7032c7269a0e65}} 
+\index{Discriminator@{Discriminator}!info@{info}}
+\index{info@{info}!Discriminator@{Discriminator}}
+\doxysubsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily void Discriminator\+::info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Displays information about the discriminator. 
+
+\mbox{\Hypertarget{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}\label{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}} 
+\index{Discriminator@{Discriminator}!rank@{rank}}
+\index{rank@{rank}!Discriminator@{Discriminator}}
+\doxysubsubsection{\texorpdfstring{rank()}{rank()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Discriminator\+::rank (\begin{DoxyParamCaption}\item[{bitarray\+\_\+t $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ranks the given data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & Pointer to bitarray\+\_\+t data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rank of the data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiscriminator_a1aa42beb010bc86dd9418db8b294e78c}\label{classDiscriminator_a1aa42beb010bc86dd9418db8b294e78c}} 
+\index{Discriminator@{Discriminator}!rank@{rank}}
+\index{rank@{rank}!Discriminator@{Discriminator}}
+\doxysubsubsection{\texorpdfstring{rank()}{rank()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Discriminator\+::rank (\begin{DoxyParamCaption}\item[{const vector$<$ bool $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ranks the given vector of boolean data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & Vector of boolean data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rank of the data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiscriminator_a2d97f91f8097cd8581f5c79b34bd0150}\label{classDiscriminator_a2d97f91f8097cd8581f5c79b34bd0150}} 
+\index{Discriminator@{Discriminator}!reset@{reset}}
+\index{reset@{reset}!Discriminator@{Discriminator}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Discriminator\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resets the discriminator. 
+
+\mbox{\Hypertarget{classDiscriminator_ab8048d9b2da18a14532e90460c5c92a8}\label{classDiscriminator_ab8048d9b2da18a14532e90460c5c92a8}} 
+\index{Discriminator@{Discriminator}!train@{train}}
+\index{train@{train}!Discriminator@{Discriminator}}
+\doxysubsubsection{\texorpdfstring{train()}{train()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Discriminator\+::train (\begin{DoxyParamCaption}\item[{bitarray\+\_\+t $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Trains the discriminator with the given data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & Pointer to bitarray\+\_\+t data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDiscriminator_a53db61dec9f645573d5aa577344431a4}\label{classDiscriminator_a53db61dec9f645573d5aa577344431a4}} 
+\index{Discriminator@{Discriminator}!train@{train}}
+\index{train@{train}!Discriminator@{Discriminator}}
+\doxysubsubsection{\texorpdfstring{train()}{train()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Discriminator\+::train (\begin{DoxyParamCaption}\item[{const vector$<$ bool $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Trains the discriminator with the given vector of boolean data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & Vector of boolean data. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classDiscriminator_a54178a4935259476df0db5f29f686fec}\label{classDiscriminator_a54178a4935259476df0db5f29f686fec}} 
+\index{Discriminator@{Discriminator}!entrySize@{entrySize}}
+\index{entrySize@{entrySize}!Discriminator@{Discriminator}}
+\doxysubsubsection{\texorpdfstring{entrySize}{entrySize}}
+{\footnotesize\ttfamily int Discriminator\+::entry\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}\label{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}} 
+\index{Discriminator@{Discriminator}!numRams@{numRams}}
+\index{numRams@{numRams}!Discriminator@{Discriminator}}
+\doxysubsubsection{\texorpdfstring{numRams}{numRams}}
+{\footnotesize\ttfamily int Discriminator\+::num\+Rams\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}\label{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}} 
+\index{Discriminator@{Discriminator}!rams@{rams}}
+\index{rams@{rams}!Discriminator@{Discriminator}}
+\doxysubsubsection{\texorpdfstring{rams}{rams}}
+{\footnotesize\ttfamily bitarray\+\_\+t$\ast$ Discriminator\+::rams\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}\label{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}} 
+\index{Discriminator@{Discriminator}!tupleSize@{tupleSize}}
+\index{tupleSize@{tupleSize}!Discriminator@{Discriminator}}
+\doxysubsubsection{\texorpdfstring{tupleSize}{tupleSize}}
+{\footnotesize\ttfamily int Discriminator\+::tuple\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}\label{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}} 
+\index{Discriminator@{Discriminator}!tuplesMapping@{tuplesMapping}}
+\index{tuplesMapping@{tuplesMapping}!Discriminator@{Discriminator}}
+\doxysubsubsection{\texorpdfstring{tuplesMapping}{tuplesMapping}}
+{\footnotesize\ttfamily int$\ast$ Discriminator\+::tuples\+Mapping\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/models/wisard/\mbox{\hyperlink{discriminator_8cc}{discriminator.\+cc}}\end{DoxyCompactItemize}

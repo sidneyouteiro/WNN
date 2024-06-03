@@ -17,7 +17,7 @@ int main(){
 	//disc->train(a);
 	//cout << "Rank=" << dec << disc->rank(a) << endl;
 	//disc->info();
-	
+	//compilagain
 	printf("WISARD\n");
 	Wisard * wisard = new Wisard(8, 2, 2);
 	std::vector<vector<bool>> e = {};

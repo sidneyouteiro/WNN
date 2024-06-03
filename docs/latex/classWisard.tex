@@ -1,0 +1,205 @@
+\hypertarget{classWisard}{}\doxysection{Wisard Class Reference}
+\label{classWisard}\index{Wisard@{Wisard}}
+
+
+A class to implement the \mbox{\hyperlink{classWisard}{Wisard}} algorithm using multiple discriminators.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWisard_a899b85e546a4474e31c35185a2e3e92b}{Wisard}} (int \mbox{\hyperlink{classWisard_af4f6686f925f3dfd2a83ccb0b40df9c0}{entry\+Size}}, int \mbox{\hyperlink{classWisard_a03efe8e678a058bbc282312dba6ceb31}{tuple\+Size}}, int \mbox{\hyperlink{classWisard_a8474d87692218b4c2763824fe6c5a5e4}{num\+Discriminator}})
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classWisard}{Wisard}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWisard_ab99d2c8a3f29193d84eccf81c0f9b8f1}{$\sim$\+Wisard}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classWisard}{Wisard}} class. Frees dynamically allocated memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWisard_a376b4f0d4346d6e317722250bc9b9012}{add\+Discriminator}} ()
+\begin{DoxyCompactList}\small\item\em Adds a new discriminator to the \mbox{\hyperlink{classWisard}{Wisard}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWisard_ad124c83c1115271a8873af424478650d}{train}} (const vector$<$ vector$<$ bool $>$$>$ \&data, const vector$<$ int $>$ \&label)
+\begin{DoxyCompactList}\small\item\em Trains the \mbox{\hyperlink{classWisard}{Wisard}} with the given data and labels. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWisard_a2808e0e8043733c0f8fcf50087374543}{rank}} (const vector$<$ bool $>$ \&data)
+\begin{DoxyCompactList}\small\item\em Ranks the given data and returns the label with the highest response. \end{DoxyCompactList}\item 
+std\+::vector$<$ size\+\_\+t $>$ \mbox{\hyperlink{classWisard_ad9a8ad798e838c6d6b6a02383bde711b}{rank}} (const vector$<$ vector$<$ bool $>$$>$ \&data)
+\begin{DoxyCompactList}\small\item\em Ranks multiple sets of data and returns a vector of labels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWisard_a3f3534d6935de639d6b48e3ab173d4b8}{info}} ()
+\begin{DoxyCompactList}\small\item\em Displays information about the \mbox{\hyperlink{classWisard}{Wisard}}. \end{DoxyCompactList}\item 
+std\+::array$<$ unsigned long int, 4 $>$ \mbox{\hyperlink{classWisard_a3f923a4634b14c07c409203ba89fc81f}{stats}} ()
+\begin{DoxyCompactList}\small\item\em Returns statistics about the \mbox{\hyperlink{classWisard}{Wisard}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWisard_aa82ea281a739bc7c4fa999d5b908dd2f}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the \mbox{\hyperlink{classWisard}{Wisard}} by resetting all discriminators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classWisard_af4f6686f925f3dfd2a83ccb0b40df9c0}{entry\+Size}}
+\item 
+int \mbox{\hyperlink{classWisard_a03efe8e678a058bbc282312dba6ceb31}{tuple\+Size}}
+\item 
+int \mbox{\hyperlink{classWisard_a8474d87692218b4c2763824fe6c5a5e4}{num\+Discriminator}}
+\item 
+vector$<$ \mbox{\hyperlink{classDiscriminator}{Discriminator}} $\ast$ $>$ \mbox{\hyperlink{classWisard_a1b71cef88b28106fc19c3986d9a5ba54}{discriminators}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to implement the \mbox{\hyperlink{classWisard}{Wisard}} algorithm using multiple discriminators. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWisard_a899b85e546a4474e31c35185a2e3e92b}\label{classWisard_a899b85e546a4474e31c35185a2e3e92b}} 
+\index{Wisard@{Wisard}!Wisard@{Wisard}}
+\index{Wisard@{Wisard}!Wisard@{Wisard}}
+\doxysubsubsection{\texorpdfstring{Wisard()}{Wisard()}}
+{\footnotesize\ttfamily Wisard\+::\+Wisard (\begin{DoxyParamCaption}\item[{int}]{entry\+Size,  }\item[{int}]{tuple\+Size,  }\item[{int}]{num\+Discriminator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for the \mbox{\hyperlink{classWisard}{Wisard}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry\+Size} & Size of the entry. \\
+\hline
+{\em tuple\+Size} & Size of the tuple. \\
+\hline
+{\em num\+Discriminator} & Number of discriminators. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWisard_ab99d2c8a3f29193d84eccf81c0f9b8f1}\label{classWisard_ab99d2c8a3f29193d84eccf81c0f9b8f1}} 
+\index{Wisard@{Wisard}!````~Wisard@{$\sim$Wisard}}
+\index{````~Wisard@{$\sim$Wisard}!Wisard@{Wisard}}
+\doxysubsubsection{\texorpdfstring{$\sim$Wisard()}{~Wisard()}}
+{\footnotesize\ttfamily Wisard\+::$\sim$\+Wisard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor for the \mbox{\hyperlink{classWisard}{Wisard}} class. Frees dynamically allocated memory. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWisard_a376b4f0d4346d6e317722250bc9b9012}\label{classWisard_a376b4f0d4346d6e317722250bc9b9012}} 
+\index{Wisard@{Wisard}!addDiscriminator@{addDiscriminator}}
+\index{addDiscriminator@{addDiscriminator}!Wisard@{Wisard}}
+\doxysubsubsection{\texorpdfstring{addDiscriminator()}{addDiscriminator()}}
+{\footnotesize\ttfamily void Wisard\+::add\+Discriminator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a new discriminator to the \mbox{\hyperlink{classWisard}{Wisard}}. 
+
+\mbox{\Hypertarget{classWisard_a3f3534d6935de639d6b48e3ab173d4b8}\label{classWisard_a3f3534d6935de639d6b48e3ab173d4b8}} 
+\index{Wisard@{Wisard}!info@{info}}
+\index{info@{info}!Wisard@{Wisard}}
+\doxysubsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily void Wisard\+::info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Displays information about the \mbox{\hyperlink{classWisard}{Wisard}}. 
+
+\mbox{\Hypertarget{classWisard_a2808e0e8043733c0f8fcf50087374543}\label{classWisard_a2808e0e8043733c0f8fcf50087374543}} 
+\index{Wisard@{Wisard}!rank@{rank}}
+\index{rank@{rank}!Wisard@{Wisard}}
+\doxysubsubsection{\texorpdfstring{rank()}{rank()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Wisard\+::rank (\begin{DoxyParamCaption}\item[{const vector$<$ bool $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ranks the given data and returns the label with the highest response. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & Vector of boolean data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Label with the highest response. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWisard_ad9a8ad798e838c6d6b6a02383bde711b}\label{classWisard_ad9a8ad798e838c6d6b6a02383bde711b}} 
+\index{Wisard@{Wisard}!rank@{rank}}
+\index{rank@{rank}!Wisard@{Wisard}}
+\doxysubsubsection{\texorpdfstring{rank()}{rank()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$size\+\_\+t$>$ Wisard\+::rank (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ bool $>$$>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ranks multiple sets of data and returns a vector of labels. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & Vector of vectors of boolean data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of labels with the highest responses. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWisard_aa82ea281a739bc7c4fa999d5b908dd2f}\label{classWisard_aa82ea281a739bc7c4fa999d5b908dd2f}} 
+\index{Wisard@{Wisard}!reset@{reset}}
+\index{reset@{reset}!Wisard@{Wisard}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Wisard\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resets the \mbox{\hyperlink{classWisard}{Wisard}} by resetting all discriminators. 
+
+\mbox{\Hypertarget{classWisard_a3f923a4634b14c07c409203ba89fc81f}\label{classWisard_a3f923a4634b14c07c409203ba89fc81f}} 
+\index{Wisard@{Wisard}!stats@{stats}}
+\index{stats@{stats}!Wisard@{Wisard}}
+\doxysubsubsection{\texorpdfstring{stats()}{stats()}}
+{\footnotesize\ttfamily std\+::array$<$unsigned long int, 4$>$ Wisard\+::stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns statistics about the \mbox{\hyperlink{classWisard}{Wisard}}. 
+
+\begin{DoxyReturn}{Returns}
+Array of statistics including number of RAMs, RAM size, total RAM bits, and total bits. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWisard_ad124c83c1115271a8873af424478650d}\label{classWisard_ad124c83c1115271a8873af424478650d}} 
+\index{Wisard@{Wisard}!train@{train}}
+\index{train@{train}!Wisard@{Wisard}}
+\doxysubsubsection{\texorpdfstring{train()}{train()}}
+{\footnotesize\ttfamily void Wisard\+::train (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ bool $>$$>$ \&}]{data,  }\item[{const vector$<$ int $>$ \&}]{label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Trains the \mbox{\hyperlink{classWisard}{Wisard}} with the given data and labels. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & Vector of vectors of boolean data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em label} & Vector of integer labels. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classWisard_a1b71cef88b28106fc19c3986d9a5ba54}\label{classWisard_a1b71cef88b28106fc19c3986d9a5ba54}} 
+\index{Wisard@{Wisard}!discriminators@{discriminators}}
+\index{discriminators@{discriminators}!Wisard@{Wisard}}
+\doxysubsubsection{\texorpdfstring{discriminators}{discriminators}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classDiscriminator}{Discriminator}}$\ast$$>$ Wisard\+::discriminators\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWisard_af4f6686f925f3dfd2a83ccb0b40df9c0}\label{classWisard_af4f6686f925f3dfd2a83ccb0b40df9c0}} 
+\index{Wisard@{Wisard}!entrySize@{entrySize}}
+\index{entrySize@{entrySize}!Wisard@{Wisard}}
+\doxysubsubsection{\texorpdfstring{entrySize}{entrySize}}
+{\footnotesize\ttfamily int Wisard\+::entry\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWisard_a8474d87692218b4c2763824fe6c5a5e4}\label{classWisard_a8474d87692218b4c2763824fe6c5a5e4}} 
+\index{Wisard@{Wisard}!numDiscriminator@{numDiscriminator}}
+\index{numDiscriminator@{numDiscriminator}!Wisard@{Wisard}}
+\doxysubsubsection{\texorpdfstring{numDiscriminator}{numDiscriminator}}
+{\footnotesize\ttfamily int Wisard\+::num\+Discriminator\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWisard_a03efe8e678a058bbc282312dba6ceb31}\label{classWisard_a03efe8e678a058bbc282312dba6ceb31}} 
+\index{Wisard@{Wisard}!tupleSize@{tupleSize}}
+\index{tupleSize@{tupleSize}!Wisard@{Wisard}}
+\doxysubsubsection{\texorpdfstring{tupleSize}{tupleSize}}
+{\footnotesize\ttfamily int Wisard\+::tuple\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/models/wisard/\mbox{\hyperlink{wisard_8cc}{wisard.\+cc}}\end{DoxyCompactItemize}
