@@ -7,6 +7,10 @@
 class RegressionRAM
 {
 public:
+        /*
+        Construtor da classe
+        c é um objeto do tipo nl::json
+        */
     	RegressionRAM(nl::json c)
 	{
 		nl::json value;
