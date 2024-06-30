@@ -72,26 +72,27 @@ protected:
     checkAddressSize(entrySize, addressSize);
 
     if(mapping.size()==0){
-      int numberOfRAMS = entrySize / addressSize;
-      int remain = entrySize % addressSize;
-      int indexesSize = entrySize;
-      if(completeAddressing && remain > 0) {
-        numberOfRAMS++;
-        indexesSize += addressSize-remain;
-      }
+        int numberOfRAMS = entrySize / addressSize;
+        int remain = entrySize % addressSize;
+        int indexesSize = entrySize;
+        if(completeAddressing && remain > 0) {
+            numberOfRAMS++;
+            indexesSize += addressSize-remain;
+        }
 
-      rams.resize(numberOfRAMS);
-      mapping.resize(indexesSize);
+        rams.resize(numberOfRAMS);
+        mapping.resize(indexesSize);
 
-      for (int i = 0; i < entrySize; i++){
-        mapping[i]=i;
-      }
-      for (size_t i=entrySize; i<mapping.size(); i++){
-        mapping[i] = randint(0, entrySize-1, false);
-      }
+        for (int i = 0; i < entrySize; i++){
+            mapping[i]=i;
+        }
+        for (size_t i=entrySize; i<mapping.size(); i++){
+            mapping[i] = randint(0, entrySize-1, false);
+        }
 
-    if(!orderedMapping){
-        random_shuffle(mapping.begin(), mapping.end());
+        if(!orderedMapping){
+            random_shuffle(mapping.begin(), mapping.end());
+        }
     }
     else{
       rams.resize(mapping.size()/addressSize);
@@ -101,7 +102,6 @@ protected:
       std::vector<int> subIndexes(mapping.begin() + (((int)i)*addressSize), mapping.begin() + ((((int)i)+1)*addressSize));
       rams[i] = RegressionRAM(subIndexes, minZero, minOne);
     }
-  }
 
   void checkEntrySize(const int entry) const {
     if(entrySize != entry){
