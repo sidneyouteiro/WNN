@@ -1,3 +1,4 @@
+#include "../../data/dataset.cc"
 
 class RegressionWisard: public RegressionModel{
 public:
