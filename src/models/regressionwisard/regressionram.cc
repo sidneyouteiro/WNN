@@ -7,11 +7,12 @@
 class RegressionRAM
 {
 public:
+      RegressionRAM() {}
         /*
         Construtor da classe
         c é um objeto do tipo nl::json
         */
-    	RegressionRAM(nl::json c)
+    RegressionRAM(nl::json c)
 	{
 		nl::json value;
 
@@ -26,12 +27,14 @@ public:
 		value = c["mapping"];
 		mapping = value.is_null() ? std::vector<int>() : value.get<std::vector<int>>();
 
-		value c["minZero"];
+		value = c["minZero"];
 		minZero = value.is_null() ? 0 : value.get<int>();
 
 		value = c["minOne"];
-		minOne = value.is_null() ? 0 : value.get<int>;
+		minOne = value.is_null() ? 0 : value.get<int>();
 	}
+
+    RegressionRAM(const std::vector<int> mapping, const int minZero = 0, const int minOne = 0) : mapping(mapping), minZero(minZero), minOne(minOne){}
 
 	//Limpar memória
 	~RegressionRAM()
@@ -49,7 +52,7 @@ public:
             memory.insert(it, std::pair<addr_t, regression_content_t>(index, {1, y, 0}));
 	    else{
             it->second[0]++;
-            it->secomd[1] += y;
+            it->second[1] += y;
         }
     }
     

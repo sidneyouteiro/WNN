@@ -1,3 +1,5 @@
+#include "../include/wisardpkg.hpp"
+
 //Base
 #include "base.h"
 
@@ -19,6 +21,7 @@ namespace nl = nlohmann;
 #include "models/base/regressionmodel.cc"
 
 //RegressionWisard
+#include "models/regressionwisard/meanfunctions.cc"
 #include "models/regressionwisard/regressionramdatahandle.cc"
 #include "models/regressionwisard/regressionram.cc"
 #include "models/regressionwisard/regressionwisard.cc"

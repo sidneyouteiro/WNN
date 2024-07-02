@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <string.h>
-
 class RegressionRAMDataHandle {
 public:
   RegressionRAMDataHandle(std::string inputdata){
