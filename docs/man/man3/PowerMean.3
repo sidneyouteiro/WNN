@@ -1,0 +1,197 @@
+.TH "PowerMean" 3 "Version 2.0" "WISARD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PowerMean \- Classe para cálculo de média de potência\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Derivada de \fBMean\fP\&.
+.SS "Membros públicos"
+
+.in +1c
+.ti -1c
+.RI "double \fBcalculate\fP (const std::vector< std::vector< double > > &outputRams)"
+.br
+.RI "Calcula a média de potência com base nos dados fornecidos\&. "
+.ti -1c
+.RI "std::string \fBclassName\fP () const"
+.br
+.RI "Obtém o nome da classe\&. "
+.ti -1c
+.RI "\fBMean\fP * \fBclone\fP () const"
+.br
+.RI "Cria uma cópia do objeto \fBPowerMean\fP\&. "
+.ti -1c
+.RI "nl::json \fBgetJSON\fP () const"
+.br
+.RI "Obtém a configuração do objeto em formato JSON\&. "
+.ti -1c
+.RI "\fBPowerMean\fP (int n)"
+.br
+.RI "Construtor da classe \fBPowerMean\fP\&. "
+.in -1c
+.SS "Atributos Privados"
+
+.in +1c
+.ti -1c
+.RI "int \fBpower\fP"
+.br
+.in -1c
+.SH "Descrição detalhada"
+.PP 
+Classe para cálculo de média de potência\&. 
+.PP
+Definido na linha \fB81\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.SH "Documentação dos Construtores & Destrutor"
+.PP 
+.SS "PowerMean::PowerMean (int n)\fR [inline]\fP"
+
+.PP
+Construtor da classe \fBPowerMean\fP\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIn\fP Potência a ser utilizada no cálculo\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB89\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.nf
+89 : power(n) {}
+.PP
+.fi
+
+.PP
+Referenciado por \fBclone()\fP\&.
+.SH "Documentação das funções"
+.PP 
+.SS "double PowerMean::calculate (const std::vector< std::vector< double > > & outputRams)\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Calcula a média de potência com base nos dados fornecidos\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIoutputRams\fP Dados de saída das RAMs\&. 
+.RE
+.PP
+\fBRetorna\fP
+.RS 4
+A média de potência calculada\&. 
+.RE
+.PP
+
+.PP
+Implementa \fBMean\fP\&.
+.PP
+Definido na linha \fB96\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.nf
+96                                                                      {
+97         double sumy = 0;
+98         int counter = 0;
+99         for (unsigned int i = 0; i < outputRams\&.size(); i++) {
+100             if (outputRams[i][0] != 0) {
+101                 sumy += pow(outputRams[i][1] / outputRams[i][0], power);
+102                 counter++;
+103             }
+104         }
+105         if (counter > 0)
+106             return pow(sumy / counter, 1\&.0 / power);
+107 
+108         return 0;
+109     }
+.PP
+.fi
+
+.PP
+Referências \fBpower\fP\&.
+.SS "std::string PowerMean::className () const\fR [inline]\fP"
+
+.PP
+Obtém o nome da classe\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Nome da classe\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB123\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.nf
+123                                 {
+124         return "PowerMean";
+125     }
+.PP
+.fi
+
+.PP
+Referenciado por \fBgetJSON()\fP\&.
+.SS "\fBMean\fP * PowerMean::clone () const\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Cria uma cópia do objeto \fBPowerMean\fP\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Ponteiro para a cópia do objeto \fBPowerMean\fP\&. 
+.RE
+.PP
+
+.PP
+Implementa \fBMean\fP\&.
+.PP
+Definido na linha \fB115\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.nf
+115                         {
+116         return new PowerMean(power);
+117     }
+.PP
+.fi
+
+.PP
+Referências \fBpower\fP e \fBPowerMean()\fP\&.
+.SS "nl::json PowerMean::getJSON () const\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Obtém a configuração do objeto em formato JSON\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Configuração do objeto em JSON\&. 
+.RE
+.PP
+
+.PP
+Implementa \fBMean\fP\&.
+.PP
+Definido na linha \fB131\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.nf
+131                            {
+132         nl::json config = {
+133             {"type", className()},
+134             {"power", power}
+135         };
+136         return config;
+137     }
+.PP
+.fi
+
+.PP
+Referências \fBclassName()\fP e \fBpower\fP\&.
+.SH "Documentação dos dados membro"
+.PP 
+.SS "int PowerMean::power\fR [private]\fP"
+
+.PP
+Definido na linha \fB83\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.PP
+Referenciado por \fBcalculate()\fP, \fBclone()\fP e \fBgetJSON()\fP\&.
+
+.SH "Autor"
+.PP 
+Gerado automaticamente por Doxygen para WISARD a partir do código fonte\&.

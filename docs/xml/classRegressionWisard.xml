@@ -1,0 +1,772 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="pt">
+  <compounddef id="classRegressionWisard" kind="class" language="C++" prot="public">
+    <compoundname>RegressionWisard</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">RegressionModel</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classRegressionWisard_1a7a40098add4d89932e44ff01868e0550" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RegressionWisard::addressSize</definition>
+        <argsstring></argsstring>
+        <name>addressSize</name>
+        <qualifiedname>RegressionWisard::addressSize</qualifiedname>
+        <briefdescription>
+<para>Tamanho do endereço. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="229" column="9" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="229" bodyend="-1"/>
+        <referencedby refid="classRegressionWisard_1a4bfafa888b990804d754feb76044b679" compoundref="regressionwisard_8cc" startline="205" endline="215">checkAddressSize</referencedby>
+        <referencedby refid="classRegressionWisard_1a6104a1884a605d02e08042eaf2b70310" compoundref="regressionwisard_8cc" startline="222" endline="226">checkMinZeroOne</referencedby>
+        <referencedby refid="classRegressionWisard_1afef642836ca4d47c9a1ee6f9497ee265" compoundref="regressionwisard_8cc" startline="15" endline="52">RegressionWisard</referencedby>
+        <referencedby refid="classRegressionWisard_1ad003f5c063b032a1995ccfcf2682c549" compoundref="regressionwisard_8cc" startline="154" endline="188">setRAMShuffle</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classRegressionWisard_1aa667b0e3eb449edf55101e21b9e81047" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool RegressionWisard::completeAddressing</definition>
+        <argsstring></argsstring>
+        <name>completeAddressing</name>
+        <qualifiedname>RegressionWisard::completeAddressing</qualifiedname>
+        <briefdescription>
+<para>Endereçamento completo. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="230" column="10" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="230" bodyend="-1"/>
+        <referencedby refid="classRegressionWisard_1afef642836ca4d47c9a1ee6f9497ee265" compoundref="regressionwisard_8cc" startline="15" endline="52">RegressionWisard</referencedby>
+        <referencedby refid="classRegressionWisard_1ad003f5c063b032a1995ccfcf2682c549" compoundref="regressionwisard_8cc" startline="154" endline="188">setRAMShuffle</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classRegressionWisard_1a0b4ff031198660ee8239a94211a98cd0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RegressionWisard::entrySize</definition>
+        <argsstring></argsstring>
+        <name>entrySize</name>
+        <qualifiedname>RegressionWisard::entrySize</qualifiedname>
+        <briefdescription>
+<para>Tamanho da entrada. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="237" column="9" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="237" bodyend="-1"/>
+        <referencedby refid="classRegressionWisard_1a4bfafa888b990804d754feb76044b679" compoundref="regressionwisard_8cc" startline="205" endline="215">checkAddressSize</referencedby>
+        <referencedby refid="classRegressionWisard_1a6a25655a9cb15452b468a13dc4ed2858" compoundref="regressionwisard_8cc" startline="194" endline="198">checkEntrySize</referencedby>
+        <referencedby refid="classRegressionWisard_1afef642836ca4d47c9a1ee6f9497ee265" compoundref="regressionwisard_8cc" startline="15" endline="52">RegressionWisard</referencedby>
+        <referencedby refid="classRegressionWisard_1ad003f5c063b032a1995ccfcf2682c549" compoundref="regressionwisard_8cc" startline="154" endline="188">setRAMShuffle</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classRegressionWisard_1a103aa1c658a82b6fb5d17db4bc5cef4b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; RegressionWisard::mapping</definition>
+        <argsstring></argsstring>
+        <name>mapping</name>
+        <qualifiedname>RegressionWisard::mapping</qualifiedname>
+        <briefdescription>
+<para>Mapeamento dos índices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="239" column="17" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="239" bodyend="-1"/>
+        <referencedby refid="classRegressionWisard_1afef642836ca4d47c9a1ee6f9497ee265" compoundref="regressionwisard_8cc" startline="15" endline="52">RegressionWisard</referencedby>
+        <referencedby refid="classRegressionWisard_1ad003f5c063b032a1995ccfcf2682c549" compoundref="regressionwisard_8cc" startline="154" endline="188">setRAMShuffle</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classRegressionWisard_1af7f452b5991bf8498d19cb3b5aea16af" prot="private" static="no" mutable="no">
+        <type><ref refid="classMean" kindref="compound">Mean</ref> *</type>
+        <definition>Mean* RegressionWisard::mean</definition>
+        <argsstring></argsstring>
+        <name>mean</name>
+        <qualifiedname>RegressionWisard::mean</qualifiedname>
+        <briefdescription>
+<para>Objeto para cálculo de média. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="232" column="10" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="232" bodyend="-1"/>
+        <referencedby refid="classRegressionWisard_1ab4d4796e3f62df331fee309301e0a681" compoundref="regressionwisard_8cc" startline="104" endline="111">predict</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classRegressionWisard_1a4d8ca9f91145bca9cccf256b75a79ab0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RegressionWisard::minOne</definition>
+        <argsstring></argsstring>
+        <name>minOne</name>
+        <qualifiedname>RegressionWisard::minOne</qualifiedname>
+        <briefdescription>
+<para>Número mínimo de uns. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="234" column="9" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="234" bodyend="-1"/>
+        <referencedby refid="classRegressionWisard_1afef642836ca4d47c9a1ee6f9497ee265" compoundref="regressionwisard_8cc" startline="15" endline="52">RegressionWisard</referencedby>
+        <referencedby refid="classRegressionWisard_1ad003f5c063b032a1995ccfcf2682c549" compoundref="regressionwisard_8cc" startline="154" endline="188">setRAMShuffle</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classRegressionWisard_1a19bf9ed20712adaa43cff5f46985ad0f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RegressionWisard::minZero</definition>
+        <argsstring></argsstring>
+        <name>minZero</name>
+        <qualifiedname>RegressionWisard::minZero</qualifiedname>
+        <briefdescription>
+<para>Número mínimo de zeros. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="233" column="9" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="233" bodyend="-1"/>
+        <referencedby refid="classRegressionWisard_1afef642836ca4d47c9a1ee6f9497ee265" compoundref="regressionwisard_8cc" startline="15" endline="52">RegressionWisard</referencedby>
+        <referencedby refid="classRegressionWisard_1ad003f5c063b032a1995ccfcf2682c549" compoundref="regressionwisard_8cc" startline="154" endline="188">setRAMShuffle</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classRegressionWisard_1a42982f590753efc85fd6f52081dccfa6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RegressionWisard::numberOfTrainings</definition>
+        <argsstring></argsstring>
+        <name>numberOfTrainings</name>
+        <qualifiedname>RegressionWisard::numberOfTrainings</qualifiedname>
+        <briefdescription>
+<para>Número de treinamentos. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="236" column="9" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="236" bodyend="-1"/>
+        <referencedby refid="classRegressionWisard_1afef642836ca4d47c9a1ee6f9497ee265" compoundref="regressionwisard_8cc" startline="15" endline="52">RegressionWisard</referencedby>
+        <referencedby refid="classRegressionWisard_1a125bffa9cf4806492f2b2cf96a3932b0" compoundref="regressionwisard_8cc" startline="89" endline="97">train</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classRegressionWisard_1a218ec296378e06b77f337de4c99e315a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool RegressionWisard::orderedMapping</definition>
+        <argsstring></argsstring>
+        <name>orderedMapping</name>
+        <qualifiedname>RegressionWisard::orderedMapping</qualifiedname>
+        <briefdescription>
+<para>Mapeamento ordenado. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="231" column="10" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="231" bodyend="-1"/>
+        <referencedby refid="classRegressionWisard_1afef642836ca4d47c9a1ee6f9497ee265" compoundref="regressionwisard_8cc" startline="15" endline="52">RegressionWisard</referencedby>
+        <referencedby refid="classRegressionWisard_1ad003f5c063b032a1995ccfcf2682c549" compoundref="regressionwisard_8cc" startline="154" endline="188">setRAMShuffle</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classRegressionWisard_1a335eab19f2332e0bfb09157f184de16f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classRegressionRAM" kindref="compound">RegressionRAM</ref> &gt;</type>
+        <definition>std::vector&lt;RegressionRAM&gt; RegressionWisard::rams</definition>
+        <argsstring></argsstring>
+        <name>rams</name>
+        <qualifiedname>RegressionWisard::rams</qualifiedname>
+        <briefdescription>
+<para>Vetor de RAMs de regressão. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="238" column="17" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="238" bodyend="-1"/>
+        <referencedby refid="classRegressionWisard_1ac37f1d1c653928a21c5d3588c3837c9b" compoundref="regressionwisard_8cc" startline="143" endline="147">applyFit</referencedby>
+        <referencedby refid="classRegressionWisard_1a2f22f241b281ab6a0e4cf1cfb9335bb4" compoundref="regressionwisard_8cc" startline="133" endline="138">calculateFit</referencedby>
+        <referencedby refid="classRegressionWisard_1ab4d4796e3f62df331fee309301e0a681" compoundref="regressionwisard_8cc" startline="104" endline="111">predict</referencedby>
+        <referencedby refid="classRegressionWisard_1afef642836ca4d47c9a1ee6f9497ee265" compoundref="regressionwisard_8cc" startline="15" endline="52">RegressionWisard</referencedby>
+        <referencedby refid="classRegressionWisard_1ad003f5c063b032a1995ccfcf2682c549" compoundref="regressionwisard_8cc" startline="154" endline="188">setRAMShuffle</referencedby>
+        <referencedby refid="classRegressionWisard_1a125bffa9cf4806492f2b2cf96a3932b0" compoundref="regressionwisard_8cc" startline="89" endline="97">train</referencedby>
+        <referencedby refid="classRegressionWisard_1a8203ce8fa5395d5891c29c4abccb7979" compoundref="regressionwisard_8cc" startline="63" endline="65">~RegressionWisard</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classRegressionWisard_1a2d96d1e6bb01d4aed4e8f5cb40510596" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RegressionWisard::steps</definition>
+        <argsstring></argsstring>
+        <name>steps</name>
+        <qualifiedname>RegressionWisard::steps</qualifiedname>
+        <briefdescription>
+<para>Número de passos. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="235" column="9" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="235" bodyend="-1"/>
+        <referencedby refid="classRegressionWisard_1afef642836ca4d47c9a1ee6f9497ee265" compoundref="regressionwisard_8cc" startline="15" endline="52">RegressionWisard</referencedby>
+        <referencedby refid="classRegressionWisard_1a11970036606a16938821722fb3af53ee" compoundref="regressionwisard_8cc" startline="71" endline="82">train</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classRegressionWisard_1ac37f1d1c653928a21c5d3588c3837c9b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RegressionWisard::applyFit</definition>
+        <argsstring>()</argsstring>
+        <name>applyFit</name>
+        <qualifiedname>RegressionWisard::applyFit</qualifiedname>
+        <briefdescription>
+<para>Aplica o ajuste calculado. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="143" column="10" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="143" bodyend="147"/>
+        <references refid="classRegressionWisard_1a335eab19f2332e0bfb09157f184de16f" compoundref="regressionwisard_8cc" startline="238">rams</references>
+        <referencedby refid="classRegressionWisard_1a11970036606a16938821722fb3af53ee" compoundref="regressionwisard_8cc" startline="71" endline="82">train</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionWisard_1a2f22f241b281ab6a0e4cf1cfb9335bb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RegressionWisard::calculateFit</definition>
+        <argsstring>(const BinInput &amp;input, const double y)</argsstring>
+        <name>calculateFit</name>
+        <qualifiedname>RegressionWisard::calculateFit</qualifiedname>
+        <param>
+          <type>const BinInput &amp;</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Calcula o ajuste para uma entrada binária e um valor y. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entrada binária. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valor associado à entrada. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="133" column="10" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="133" bodyend="138"/>
+        <references refid="classRegressionWisard_1ab4d4796e3f62df331fee309301e0a681" compoundref="regressionwisard_8cc" startline="104" endline="111">predict</references>
+        <references refid="classRegressionWisard_1a335eab19f2332e0bfb09157f184de16f" compoundref="regressionwisard_8cc" startline="238">rams</references>
+        <referencedby refid="classRegressionWisard_1a11970036606a16938821722fb3af53ee" compoundref="regressionwisard_8cc" startline="71" endline="82">train</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionWisard_1ab4d4796e3f62df331fee309301e0a681" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double RegressionWisard::predict</definition>
+        <argsstring>(const BinInput &amp;input) const</argsstring>
+        <name>predict</name>
+        <qualifiedname>RegressionWisard::predict</qualifiedname>
+        <param>
+          <type>const BinInput &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Faz a predição para uma entrada binária. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entrada binária. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>O valor predito. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="104" column="12" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="104" bodyend="111"/>
+        <references refid="classMean_1a6c725db111881910fcf4df655debbbc7">Mean::calculate</references>
+        <references refid="classRegressionWisard_1a6a25655a9cb15452b468a13dc4ed2858" compoundref="regressionwisard_8cc" startline="194" endline="198">checkEntrySize</references>
+        <references refid="classRegressionWisard_1af7f452b5991bf8498d19cb3b5aea16af" compoundref="regressionwisard_8cc" startline="232">mean</references>
+        <references refid="classRegressionWisard_1a335eab19f2332e0bfb09157f184de16f" compoundref="regressionwisard_8cc" startline="238">rams</references>
+        <referencedby refid="classRegressionWisard_1a2f22f241b281ab6a0e4cf1cfb9335bb4" compoundref="regressionwisard_8cc" startline="133" endline="138">calculateFit</referencedby>
+        <referencedby refid="classRegressionWisard_1ab2825bf4202b12029b489c1d4de342b8" compoundref="regressionwisard_8cc" startline="118" endline="126">predict</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionWisard_1ab2825bf4202b12029b489c1d4de342b8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; RegressionWisard::predict</definition>
+        <argsstring>(const DataSet &amp;dataset) const</argsstring>
+        <name>predict</name>
+        <qualifiedname>RegressionWisard::predict</qualifiedname>
+        <param>
+          <type>const DataSet &amp;</type>
+          <declname>dataset</declname>
+        </param>
+        <briefdescription>
+<para>Faz a predição para um conjunto de dados. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Conjunto de dados. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vetor com os valores preditos. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="118" column="17" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="118" bodyend="126"/>
+        <references refid="classRegressionWisard_1ab4d4796e3f62df331fee309301e0a681" compoundref="regressionwisard_8cc" startline="104" endline="111">predict</references>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionWisard_1a56ec56a98f692d756f1f80e04bd19354" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RegressionWisard::RegressionWisard</definition>
+        <argsstring>()</argsstring>
+        <name>RegressionWisard</name>
+        <qualifiedname>RegressionWisard::RegressionWisard</qualifiedname>
+        <briefdescription>
+<para>Construtor padrão. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="9" column="5" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionWisard_1a054c0bf1dd245976d942f5714fa5c8ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RegressionWisard::RegressionWisard</definition>
+        <argsstring>(int addressSize)</argsstring>
+        <name>RegressionWisard</name>
+        <qualifiedname>RegressionWisard::RegressionWisard</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>addressSize</declname>
+        </param>
+        <briefdescription>
+<para>Construtor que inicializa o modelo com um tamanho de endereço especificado. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>addressSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tamanho do endereço. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="58" column="5" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionWisard_1afef642836ca4d47c9a1ee6f9497ee265" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RegressionWisard::RegressionWisard</definition>
+        <argsstring>(nl::json c)</argsstring>
+        <name>RegressionWisard</name>
+        <qualifiedname>RegressionWisard::RegressionWisard</qualifiedname>
+        <param>
+          <type>nl::json</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Construtor que inicializa o modelo com um objeto JSON. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objeto do tipo nl::json contendo a configuração inicial do modelo. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="15" column="5" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="15" bodyend="52"/>
+        <references refid="classRegressionWisard_1a7a40098add4d89932e44ff01868e0550" compoundref="regressionwisard_8cc" startline="229">addressSize</references>
+        <references refid="classRegressionWisard_1aa667b0e3eb449edf55101e21b9e81047" compoundref="regressionwisard_8cc" startline="230">completeAddressing</references>
+        <references refid="classRegressionWisard_1a0b4ff031198660ee8239a94211a98cd0" compoundref="regressionwisard_8cc" startline="237">entrySize</references>
+        <references refid="classRegressionWisard_1a103aa1c658a82b6fb5d17db4bc5cef4b" compoundref="regressionwisard_8cc" startline="239">mapping</references>
+        <references refid="classRegressionWisard_1a4d8ca9f91145bca9cccf256b75a79ab0" compoundref="regressionwisard_8cc" startline="234">minOne</references>
+        <references refid="classRegressionWisard_1a19bf9ed20712adaa43cff5f46985ad0f" compoundref="regressionwisard_8cc" startline="233">minZero</references>
+        <references refid="classRegressionWisard_1a42982f590753efc85fd6f52081dccfa6" compoundref="regressionwisard_8cc" startline="236">numberOfTrainings</references>
+        <references refid="classRegressionWisard_1a218ec296378e06b77f337de4c99e315a" compoundref="regressionwisard_8cc" startline="231">orderedMapping</references>
+        <references refid="classRegressionWisard_1a335eab19f2332e0bfb09157f184de16f" compoundref="regressionwisard_8cc" startline="238">rams</references>
+        <references refid="classRegressionWisard_1a2d96d1e6bb01d4aed4e8f5cb40510596" compoundref="regressionwisard_8cc" startline="235">steps</references>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionWisard_1a125bffa9cf4806492f2b2cf96a3932b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RegressionWisard::train</definition>
+        <argsstring>(const BinInput &amp;input, const double y)</argsstring>
+        <name>train</name>
+        <qualifiedname>RegressionWisard::train</qualifiedname>
+        <param>
+          <type>const BinInput &amp;</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Treina o modelo com uma entrada binária e um valor y. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entrada binária. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valor associado à entrada. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="89" column="10" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="89" bodyend="97"/>
+        <references refid="classRegressionWisard_1a6a25655a9cb15452b468a13dc4ed2858" compoundref="regressionwisard_8cc" startline="194" endline="198">checkEntrySize</references>
+        <references refid="classRegressionWisard_1a42982f590753efc85fd6f52081dccfa6" compoundref="regressionwisard_8cc" startline="236">numberOfTrainings</references>
+        <references refid="classRegressionWisard_1a335eab19f2332e0bfb09157f184de16f" compoundref="regressionwisard_8cc" startline="238">rams</references>
+        <references refid="classRegressionWisard_1ad003f5c063b032a1995ccfcf2682c549" compoundref="regressionwisard_8cc" startline="154" endline="188">setRAMShuffle</references>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionWisard_1a11970036606a16938821722fb3af53ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RegressionWisard::train</definition>
+        <argsstring>(const DataSet &amp;dataset)</argsstring>
+        <name>train</name>
+        <qualifiedname>RegressionWisard::train</qualifiedname>
+        <param>
+          <type>const DataSet &amp;</type>
+          <declname>dataset</declname>
+        </param>
+        <briefdescription>
+<para>Treina o modelo com um conjunto de dados. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Conjunto de dados utilizado para o treinamento. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="71" column="10" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="71" bodyend="82"/>
+        <references refid="classRegressionWisard_1ac37f1d1c653928a21c5d3588c3837c9b" compoundref="regressionwisard_8cc" startline="143" endline="147">applyFit</references>
+        <references refid="classRegressionWisard_1a2f22f241b281ab6a0e4cf1cfb9335bb4" compoundref="regressionwisard_8cc" startline="133" endline="138">calculateFit</references>
+        <references refid="classRegressionWisard_1a2d96d1e6bb01d4aed4e8f5cb40510596" compoundref="regressionwisard_8cc" startline="235">steps</references>
+        <references refid="classRegressionWisard_1a11970036606a16938821722fb3af53ee" compoundref="regressionwisard_8cc" startline="71" endline="82">train</references>
+        <referencedby refid="classRegressionWisard_1a11970036606a16938821722fb3af53ee" compoundref="regressionwisard_8cc" startline="71" endline="82">train</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionWisard_1a8203ce8fa5395d5891c29c4abccb7979" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RegressionWisard::~RegressionWisard</definition>
+        <argsstring>()</argsstring>
+        <name>~RegressionWisard</name>
+        <qualifiedname>RegressionWisard::~RegressionWisard</qualifiedname>
+        <briefdescription>
+<para>Destrutor da classe que limpa a memória. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="63" column="5" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="63" bodyend="65"/>
+        <references refid="classRegressionWisard_1a335eab19f2332e0bfb09157f184de16f" compoundref="regressionwisard_8cc" startline="238">rams</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classRegressionWisard_1a4bfafa888b990804d754feb76044b679" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RegressionWisard::checkAddressSize</definition>
+        <argsstring>(const int entrySize, const int addressSize) const</argsstring>
+        <name>checkAddressSize</name>
+        <qualifiedname>RegressionWisard::checkAddressSize</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>entrySize</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>addressSize</declname>
+        </param>
+        <briefdescription>
+<para>Verifica o tamanho do endereço. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entrySize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tamanho da entrada. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>addressSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tamanho do endereço. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="205" column="10" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="205" bodyend="215"/>
+        <references refid="classRegressionWisard_1a7a40098add4d89932e44ff01868e0550" compoundref="regressionwisard_8cc" startline="229">addressSize</references>
+        <references refid="classRegressionWisard_1a0b4ff031198660ee8239a94211a98cd0" compoundref="regressionwisard_8cc" startline="237">entrySize</references>
+        <referencedby refid="classRegressionWisard_1ad003f5c063b032a1995ccfcf2682c549" compoundref="regressionwisard_8cc" startline="154" endline="188">setRAMShuffle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionWisard_1a6a25655a9cb15452b468a13dc4ed2858" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RegressionWisard::checkEntrySize</definition>
+        <argsstring>(const int entry) const</argsstring>
+        <name>checkEntrySize</name>
+        <qualifiedname>RegressionWisard::checkEntrySize</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+<para>Verifica o tamanho da entrada. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entry</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tamanho da entrada. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="194" column="10" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="194" bodyend="198"/>
+        <references refid="classRegressionWisard_1a0b4ff031198660ee8239a94211a98cd0" compoundref="regressionwisard_8cc" startline="237">entrySize</references>
+        <referencedby refid="classRegressionWisard_1ab4d4796e3f62df331fee309301e0a681" compoundref="regressionwisard_8cc" startline="104" endline="111">predict</referencedby>
+        <referencedby refid="classRegressionWisard_1a125bffa9cf4806492f2b2cf96a3932b0" compoundref="regressionwisard_8cc" startline="89" endline="97">train</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionWisard_1a6104a1884a605d02e08042eaf2b70310" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RegressionWisard::checkMinZeroOne</definition>
+        <argsstring>(int min0, int min1)</argsstring>
+        <name>checkMinZeroOne</name>
+        <qualifiedname>RegressionWisard::checkMinZeroOne</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>min0</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min1</declname>
+        </param>
+        <briefdescription>
+<para>Verifica os valores mínimos de zeros e uns. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>min0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valor mínimo de zeros. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valor mínimo de uns. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="222" column="10" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="222" bodyend="226"/>
+        <references refid="classRegressionWisard_1a7a40098add4d89932e44ff01868e0550" compoundref="regressionwisard_8cc" startline="229">addressSize</references>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionWisard_1ad003f5c063b032a1995ccfcf2682c549" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RegressionWisard::setRAMShuffle</definition>
+        <argsstring>(int entrySize)</argsstring>
+        <name>setRAMShuffle</name>
+        <qualifiedname>RegressionWisard::setRAMShuffle</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>entrySize</declname>
+        </param>
+        <briefdescription>
+<para>Configura o embaralhamento das RAMs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entrySize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tamanho da entrada. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionwisard.cc" line="154" column="10" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="154" bodyend="188"/>
+        <references refid="classRegressionWisard_1a7a40098add4d89932e44ff01868e0550" compoundref="regressionwisard_8cc" startline="229">addressSize</references>
+        <references refid="classRegressionWisard_1a4bfafa888b990804d754feb76044b679" compoundref="regressionwisard_8cc" startline="205" endline="215">checkAddressSize</references>
+        <references refid="classRegressionWisard_1aa667b0e3eb449edf55101e21b9e81047" compoundref="regressionwisard_8cc" startline="230">completeAddressing</references>
+        <references refid="classRegressionWisard_1a0b4ff031198660ee8239a94211a98cd0" compoundref="regressionwisard_8cc" startline="237">entrySize</references>
+        <references refid="classRegressionWisard_1a103aa1c658a82b6fb5d17db4bc5cef4b" compoundref="regressionwisard_8cc" startline="239">mapping</references>
+        <references refid="classRegressionWisard_1a4d8ca9f91145bca9cccf256b75a79ab0" compoundref="regressionwisard_8cc" startline="234">minOne</references>
+        <references refid="classRegressionWisard_1a19bf9ed20712adaa43cff5f46985ad0f" compoundref="regressionwisard_8cc" startline="233">minZero</references>
+        <references refid="classRegressionWisard_1a218ec296378e06b77f337de4c99e315a" compoundref="regressionwisard_8cc" startline="231">orderedMapping</references>
+        <references refid="classRegressionWisard_1a335eab19f2332e0bfb09157f184de16f" compoundref="regressionwisard_8cc" startline="238">rams</references>
+        <referencedby refid="classRegressionWisard_1a125bffa9cf4806492f2b2cf96a3932b0" compoundref="regressionwisard_8cc" startline="89" endline="97">train</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Classe para um modelo de regressão utilizando <ref refid="classWisard" kindref="compound">Wisard</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>RegressionModel</label>
+      </node>
+      <node id="1">
+        <label>RegressionWisard</label>
+        <link refid="classRegressionWisard"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>Mean</label>
+        <link refid="classMean"/>
+      </node>
+      <node id="2">
+        <label>RegressionModel</label>
+      </node>
+      <node id="5">
+        <label>RegressionRAM</label>
+        <link refid="classRegressionRAM"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-mapping</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>RegressionWisard</label>
+        <link refid="classRegressionWisard"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-mean</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-rams</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-mapping</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>T</label>
+      </node>
+      <node id="7">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; RegressionRAM &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; RegressionRAM &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::vector&lt; int &gt;</label>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/models/regressionwisard/regressionwisard.cc" line="4" column="1" bodyfile="src/models/regressionwisard/regressionwisard.cc" bodystart="4" bodyend="240"/>
+    <listofallmembers>
+      <member refid="classRegressionWisard_1a7a40098add4d89932e44ff01868e0550" prot="private" virt="non-virtual"><scope>RegressionWisard</scope><name>addressSize</name></member>
+      <member refid="classRegressionWisard_1ac37f1d1c653928a21c5d3588c3837c9b" prot="public" virt="non-virtual"><scope>RegressionWisard</scope><name>applyFit</name></member>
+      <member refid="classRegressionWisard_1a2f22f241b281ab6a0e4cf1cfb9335bb4" prot="public" virt="non-virtual"><scope>RegressionWisard</scope><name>calculateFit</name></member>
+      <member refid="classRegressionWisard_1a4bfafa888b990804d754feb76044b679" prot="protected" virt="non-virtual"><scope>RegressionWisard</scope><name>checkAddressSize</name></member>
+      <member refid="classRegressionWisard_1a6a25655a9cb15452b468a13dc4ed2858" prot="protected" virt="non-virtual"><scope>RegressionWisard</scope><name>checkEntrySize</name></member>
+      <member refid="classRegressionWisard_1a6104a1884a605d02e08042eaf2b70310" prot="protected" virt="non-virtual"><scope>RegressionWisard</scope><name>checkMinZeroOne</name></member>
+      <member refid="classRegressionWisard_1aa667b0e3eb449edf55101e21b9e81047" prot="private" virt="non-virtual"><scope>RegressionWisard</scope><name>completeAddressing</name></member>
+      <member refid="classRegressionWisard_1a0b4ff031198660ee8239a94211a98cd0" prot="private" virt="non-virtual"><scope>RegressionWisard</scope><name>entrySize</name></member>
+      <member refid="classRegressionWisard_1a103aa1c658a82b6fb5d17db4bc5cef4b" prot="private" virt="non-virtual"><scope>RegressionWisard</scope><name>mapping</name></member>
+      <member refid="classRegressionWisard_1af7f452b5991bf8498d19cb3b5aea16af" prot="private" virt="non-virtual"><scope>RegressionWisard</scope><name>mean</name></member>
+      <member refid="classRegressionWisard_1a4d8ca9f91145bca9cccf256b75a79ab0" prot="private" virt="non-virtual"><scope>RegressionWisard</scope><name>minOne</name></member>
+      <member refid="classRegressionWisard_1a19bf9ed20712adaa43cff5f46985ad0f" prot="private" virt="non-virtual"><scope>RegressionWisard</scope><name>minZero</name></member>
+      <member refid="classRegressionWisard_1a42982f590753efc85fd6f52081dccfa6" prot="private" virt="non-virtual"><scope>RegressionWisard</scope><name>numberOfTrainings</name></member>
+      <member refid="classRegressionWisard_1a218ec296378e06b77f337de4c99e315a" prot="private" virt="non-virtual"><scope>RegressionWisard</scope><name>orderedMapping</name></member>
+      <member refid="classRegressionWisard_1ab4d4796e3f62df331fee309301e0a681" prot="public" virt="non-virtual"><scope>RegressionWisard</scope><name>predict</name></member>
+      <member refid="classRegressionWisard_1ab2825bf4202b12029b489c1d4de342b8" prot="public" virt="non-virtual"><scope>RegressionWisard</scope><name>predict</name></member>
+      <member refid="classRegressionWisard_1a335eab19f2332e0bfb09157f184de16f" prot="private" virt="non-virtual"><scope>RegressionWisard</scope><name>rams</name></member>
+      <member refid="classRegressionWisard_1a56ec56a98f692d756f1f80e04bd19354" prot="public" virt="non-virtual"><scope>RegressionWisard</scope><name>RegressionWisard</name></member>
+      <member refid="classRegressionWisard_1afef642836ca4d47c9a1ee6f9497ee265" prot="public" virt="non-virtual"><scope>RegressionWisard</scope><name>RegressionWisard</name></member>
+      <member refid="classRegressionWisard_1a054c0bf1dd245976d942f5714fa5c8ef" prot="public" virt="non-virtual"><scope>RegressionWisard</scope><name>RegressionWisard</name></member>
+      <member refid="classRegressionWisard_1ad003f5c063b032a1995ccfcf2682c549" prot="protected" virt="non-virtual"><scope>RegressionWisard</scope><name>setRAMShuffle</name></member>
+      <member refid="classRegressionWisard_1a2d96d1e6bb01d4aed4e8f5cb40510596" prot="private" virt="non-virtual"><scope>RegressionWisard</scope><name>steps</name></member>
+      <member refid="classRegressionWisard_1a11970036606a16938821722fb3af53ee" prot="public" virt="non-virtual"><scope>RegressionWisard</scope><name>train</name></member>
+      <member refid="classRegressionWisard_1a125bffa9cf4806492f2b2cf96a3932b0" prot="public" virt="non-virtual"><scope>RegressionWisard</scope><name>train</name></member>
+      <member refid="classRegressionWisard_1a8203ce8fa5395d5891c29c4abccb7979" prot="public" virt="non-virtual"><scope>RegressionWisard</scope><name>~RegressionWisard</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

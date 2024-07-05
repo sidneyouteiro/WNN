@@ -1,0 +1,150 @@
+.TH "SimpleMean" 3 "Version 2.0" "WISARD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SimpleMean \- Classe para cálculo de média simples\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Derivada de \fBMean\fP\&.
+.SS "Membros públicos"
+
+.in +1c
+.ti -1c
+.RI "double \fBcalculate\fP (const std::vector< std::vector< double > > &outputRams)"
+.br
+.RI "Calcula a média simples com base nos dados fornecidos\&. "
+.ti -1c
+.RI "std::string \fBclassName\fP () const"
+.br
+.RI "Obtém o nome da classe\&. "
+.ti -1c
+.RI "\fBMean\fP * \fBclone\fP () const"
+.br
+.RI "Cria uma cópia do objeto \fBSimpleMean\fP\&. "
+.ti -1c
+.RI "nl::json \fBgetJSON\fP () const"
+.br
+.RI "Obtém a configuração do objeto em formato JSON\&. "
+.in -1c
+.SH "Descrição detalhada"
+.PP 
+Classe para cálculo de média simples\&. 
+.PP
+Definido na linha \fB29\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.SH "Documentação das funções"
+.PP 
+.SS "double SimpleMean::calculate (const std::vector< std::vector< double > > & outputRams)\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Calcula a média simples com base nos dados fornecidos\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIoutputRams\fP Dados de saída das RAMs\&. 
+.RE
+.PP
+\fBRetorna\fP
+.RS 4
+A média simples calculada\&. 
+.RE
+.PP
+
+.PP
+Implementa \fBMean\fP\&.
+.PP
+Definido na linha \fB36\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.nf
+36                                                                      {
+37         double sumCounters = 0;
+38         double sumY = 0;
+39         for (unsigned int i = 0; i < outputRams\&.size(); i++) {
+40             sumCounters += outputRams[i][0];
+41             sumY += outputRams[i][1];
+42         }
+43 
+44         if (sumCounters > 0)
+45             return sumY / sumCounters;
+46 
+47         return 0;
+48     }
+.PP
+.fi
+
+.SS "std::string SimpleMean::className () const\fR [inline]\fP"
+
+.PP
+Obtém o nome da classe\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Nome da classe\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB62\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.nf
+62                                 {
+63         return "SimpleMean";
+64     }
+.PP
+.fi
+
+.PP
+Referenciado por \fBgetJSON()\fP\&.
+.SS "\fBMean\fP * SimpleMean::clone () const\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Cria uma cópia do objeto \fBSimpleMean\fP\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Ponteiro para a cópia do objeto \fBSimpleMean\fP\&. 
+.RE
+.PP
+
+.PP
+Implementa \fBMean\fP\&.
+.PP
+Definido na linha \fB54\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.nf
+54                         {
+55         return new SimpleMean();
+56     }
+.PP
+.fi
+
+.SS "nl::json SimpleMean::getJSON () const\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Obtém a configuração do objeto em formato JSON\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Configuração do objeto em JSON\&. 
+.RE
+.PP
+
+.PP
+Implementa \fBMean\fP\&.
+.PP
+Definido na linha \fB70\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.nf
+70                            {
+71         nl::json config = {
+72             {"type", className()}
+73         };
+74         return config;
+75     }
+.PP
+.fi
+
+.PP
+Referências \fBclassName()\fP\&.
+
+.SH "Autor"
+.PP 
+Gerado automaticamente por Doxygen para WISARD a partir do código fonte\&.

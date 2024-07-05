@@ -1,0 +1,5 @@
+<map id="RegressionRAM::train" name="RegressionRAM::train">
+<area shape="rect" id="Node000001" title="Treina a RAM com a imagem binária e o valor y." alt="" coords="5,5,156,31"/>
+<area shape="rect" id="Node000002" href="$classRegressionRAM.html#ad7d93ac38c2cb7fce602f8396283dd1a" title="Obtém o índice da imagem binária." alt="" coords="204,5,380,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,15,190,15,190,21,156,21"/>
+</map>

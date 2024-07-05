@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="pt">
+  <compounddef id="classSimpleMean" kind="class" language="C++" prot="public">
+    <compoundname>SimpleMean</compoundname>
+    <basecompoundref refid="classMean" prot="public" virt="non-virtual">Mean</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSimpleMean_1a71cb658d6a2c5eaec48184fa4c041168" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double SimpleMean::calculate</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;outputRams)</argsstring>
+        <name>calculate</name>
+        <qualifiedname>SimpleMean::calculate</qualifiedname>
+        <reimplements refid="classMean_1a6c725db111881910fcf4df655debbbc7">calculate</reimplements>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+          <declname>outputRams</declname>
+        </param>
+        <briefdescription>
+<para>Calcula a média simples com base nos dados fornecidos. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outputRams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dados de saída das RAMs. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A média simples calculada. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="36" column="12" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="36" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classSimpleMean_1a7aac832cd5e3977a95934a8ae8fb594a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string SimpleMean::className</definition>
+        <argsstring>() const</argsstring>
+        <name>className</name>
+        <qualifiedname>SimpleMean::className</qualifiedname>
+        <briefdescription>
+<para>Obtém o nome da classe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Nome da classe. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="62" column="17" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="62" bodyend="64"/>
+        <referencedby refid="classSimpleMean_1aab8299cd1a27e45631726aad7017eee8" compoundref="meanfunctions_8cc" startline="70" endline="75">getJSON</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSimpleMean_1a6d2fc6ae2f6c509d5795452a9de22983" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classMean" kindref="compound">Mean</ref> *</type>
+        <definition>Mean * SimpleMean::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <qualifiedname>SimpleMean::clone</qualifiedname>
+        <reimplements refid="classMean_1a958ceadab78c39fe3945567847aa78b8">clone</reimplements>
+        <briefdescription>
+<para>Cria uma cópia do objeto <ref refid="classSimpleMean" kindref="compound">SimpleMean</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Ponteiro para a cópia do objeto <ref refid="classSimpleMean" kindref="compound">SimpleMean</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="54" column="10" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classSimpleMean_1aab8299cd1a27e45631726aad7017eee8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>nl::json</type>
+        <definition>nl::json SimpleMean::getJSON</definition>
+        <argsstring>() const</argsstring>
+        <name>getJSON</name>
+        <qualifiedname>SimpleMean::getJSON</qualifiedname>
+        <reimplements refid="classMean_1aec291edfcf29ea7915959630a2a1fc25">getJSON</reimplements>
+        <briefdescription>
+<para>Obtém a configuração do objeto em formato JSON. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Configuração do objeto em JSON. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="70" column="14" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="70" bodyend="75"/>
+        <references refid="classSimpleMean_1a7aac832cd5e3977a95934a8ae8fb594a" compoundref="meanfunctions_8cc" startline="62" endline="64">className</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Classe para cálculo de média simples. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Mean</label>
+        <link refid="classMean"/>
+      </node>
+      <node id="1">
+        <label>SimpleMean</label>
+        <link refid="classSimpleMean"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Mean</label>
+        <link refid="classMean"/>
+      </node>
+      <node id="1">
+        <label>SimpleMean</label>
+        <link refid="classSimpleMean"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/models/regressionwisard/meanfunctions.cc" line="29" column="1" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="29" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classSimpleMean_1a71cb658d6a2c5eaec48184fa4c041168" prot="public" virt="virtual"><scope>SimpleMean</scope><name>calculate</name></member>
+      <member refid="classSimpleMean_1a7aac832cd5e3977a95934a8ae8fb594a" prot="public" virt="non-virtual"><scope>SimpleMean</scope><name>className</name></member>
+      <member refid="classSimpleMean_1a6d2fc6ae2f6c509d5795452a9de22983" prot="public" virt="virtual"><scope>SimpleMean</scope><name>clone</name></member>
+      <member refid="classSimpleMean_1aab8299cd1a27e45631726aad7017eee8" prot="public" virt="virtual"><scope>SimpleMean</scope><name>getJSON</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.11.0" xml:lang="pt">
+  <compound refid="classDiscriminator" kind="class"><name>Discriminator</name>
+    <member refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" kind="variable"><name>entrySize</name></member>
+    <member refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" kind="variable"><name>numRams</name></member>
+    <member refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" kind="variable"><name>rams</name></member>
+    <member refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" kind="variable"><name>tupleSize</name></member>
+    <member refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" kind="variable"><name>tuplesMapping</name></member>
+    <member refid="classDiscriminator_1a18f6a5ef1ceca3e187cc495a77a8141c" kind="function"><name>Discriminator</name></member>
+    <member refid="classDiscriminator_1a7050bbf5d9b52318fdb8c6387ca7a0ac" kind="function"><name>getNumRams</name></member>
+    <member refid="classDiscriminator_1ad65569d300243be32d4f7cde25ed71b4" kind="function"><name>getRamBits</name></member>
+    <member refid="classDiscriminator_1a2651a5132e8d8554d47f1406820f4062" kind="function"><name>getTupleSize</name></member>
+    <member refid="classDiscriminator_1ab2ac35f380491c1ade7032c7269a0e65" kind="function"><name>info</name></member>
+    <member refid="classDiscriminator_1a76a9e6c46205fbb22e7c71fee3267582" kind="function"><name>rank</name></member>
+    <member refid="classDiscriminator_1a1aa42beb010bc86dd9418db8b294e78c" kind="function"><name>rank</name></member>
+    <member refid="classDiscriminator_1a2d97f91f8097cd8581f5c79b34bd0150" kind="function"><name>reset</name></member>
+    <member refid="classDiscriminator_1ab8048d9b2da18a14532e90460c5c92a8" kind="function"><name>train</name></member>
+    <member refid="classDiscriminator_1a53db61dec9f645573d5aa577344431a4" kind="function"><name>train</name></member>
+    <member refid="classDiscriminator_1a85cac98c07ece485461dd6f55e112adb" kind="function"><name>~Discriminator</name></member>
+  </compound>
+  <compound refid="classHarmonicMean" kind="class"><name>HarmonicMean</name>
+    <member refid="classHarmonicMean_1a366283b04e8ae81d7f5ede51d71ab752" kind="function"><name>calculate</name></member>
+    <member refid="classHarmonicMean_1a6abae98ad4be2ec5f5d3a2394aaf2f9f" kind="function"><name>className</name></member>
+    <member refid="classHarmonicMean_1a678bb735f9d4237e2a47a58c90b92503" kind="function"><name>clone</name></member>
+    <member refid="classHarmonicMean_1a186bf48440b678ba1b9a35f084dda338" kind="function"><name>getJSON</name></member>
+  </compound>
+  <compound refid="classMean" kind="class"><name>Mean</name>
+    <member refid="classMean_1a6c725db111881910fcf4df655debbbc7" kind="function"><name>calculate</name></member>
+    <member refid="classMean_1a958ceadab78c39fe3945567847aa78b8" kind="function"><name>clone</name></member>
+    <member refid="classMean_1aec291edfcf29ea7915959630a2a1fc25" kind="function"><name>getJSON</name></member>
+  </compound>
+  <compound refid="classMedian" kind="class"><name>Median</name>
+    <member refid="classMedian_1a3f90ea702434c059b776f7e9e43e707c" kind="function"><name>calculate</name></member>
+    <member refid="classMedian_1aa6ae083db8e70faab76c09e6ce833cec" kind="function"><name>className</name></member>
+    <member refid="classMedian_1aeb9c27d4102a96ed26e4f31175372fbe" kind="function"><name>clone</name></member>
+    <member refid="classMedian_1a6c692aaeecbbc132c968d15390af6f8f" kind="function"><name>getJSON</name></member>
+  </compound>
+  <compound refid="classPowerMean" kind="class"><name>PowerMean</name>
+    <member refid="classPowerMean_1a3e39d4719328bf801444dd4252a3937c" kind="variable"><name>power</name></member>
+    <member refid="classPowerMean_1a372235fcd24ea38f1b904302682e4058" kind="function"><name>calculate</name></member>
+    <member refid="classPowerMean_1a12e74bd8542ab5311b807f1339c85871" kind="function"><name>className</name></member>
+    <member refid="classPowerMean_1afbdacd5ee8241bbddeb515e11115cf19" kind="function"><name>clone</name></member>
+    <member refid="classPowerMean_1a289c1ba18b1e4183ec1d47d7c7166e66" kind="function"><name>getJSON</name></member>
+    <member refid="classPowerMean_1a199342b28474b5ccaa8f9b43704f7302" kind="function"><name>PowerMean</name></member>
+  </compound>
+  <compound refid="classRegressionRAM" kind="class"><name>RegressionRAM</name>
+    <member refid="classRegressionRAM_1a6d9d14f2194853166459c9ac734080c2" kind="variable"><name>mapping</name></member>
+    <member refid="classRegressionRAM_1a77a4282abeff7ed9c178c4ea4aea5a0d" kind="variable"><name>memory</name></member>
+    <member refid="classRegressionRAM_1afdb97503ca3766f6209826f26eb8b770" kind="variable"><name>minOne</name></member>
+    <member refid="classRegressionRAM_1a8c283108a2205b2dc816fb13c8b36724" kind="variable"><name>minZero</name></member>
+    <member refid="classRegressionRAM_1a1e6220b2089ed30daf63041821ec8ac6" kind="function"><name>applyFit</name></member>
+    <member refid="classRegressionRAM_1afb1e91cc19c1912cc2e569bbe0f82da9" kind="function"><name>calculateFit</name></member>
+    <member refid="classRegressionRAM_1a818bb9b81fbe8acac517f8f0aa1b5bf9" kind="function"><name>getJSON</name></member>
+    <member refid="classRegressionRAM_1a01cd8b4699432518143520961c4981a9" kind="function"><name>getMapping</name></member>
+    <member refid="classRegressionRAM_1abb209836b83ae461eab6c2d3961343b8" kind="function"><name>getMemory</name></member>
+    <member refid="classRegressionRAM_1ac7a5d96231c14447a9f26f171ad82ef4" kind="function"><name>getsizeoff</name></member>
+    <member refid="classRegressionRAM_1af3d15e9225cc5c6e514801d15a85c07a" kind="function"><name>getVote</name></member>
+    <member refid="classRegressionRAM_1a1468df083af359878a5e864e56d58d94" kind="function"><name>RegressionRAM</name></member>
+    <member refid="classRegressionRAM_1a8bbb6293b5fa116ee0a69e1c48fe76eb" kind="function"><name>RegressionRAM</name></member>
+    <member refid="classRegressionRAM_1a0ad601f407a8baea97364e81828f5635" kind="function"><name>RegressionRAM</name></member>
+    <member refid="classRegressionRAM_1a33d0c3451d6aa1f3e6fd1bcd25af42eb" kind="function"><name>setMinOne</name></member>
+    <member refid="classRegressionRAM_1a34308c3b554de1cb36139a04ce6ce2c3" kind="function"><name>setMinZero</name></member>
+    <member refid="classRegressionRAM_1a3d40a96015f14882569e8c3bd820b03a" kind="function"><name>train</name></member>
+    <member refid="classRegressionRAM_1a94223ef17afc193c6cb2b0e713e331b1" kind="function"><name>~RegressionRAM</name></member>
+    <member refid="classRegressionRAM_1ad7d93ac38c2cb7fce602f8396283dd1a" kind="function"><name>getIndex</name></member>
+  </compound>
+  <compound refid="classRegressionRAMDataHandle" kind="class"><name>RegressionRAMDataHandle</name>
+    <member refid="classRegressionRAMDataHandle_1ac6106be1b5ed0b4704896872dd2247d8" kind="variable"><name>ramdata</name></member>
+    <member refid="classRegressionRAMDataHandle_1ae14bec5896e36c648e5af2389465af9d" kind="function"><name>compare</name></member>
+    <member refid="classRegressionRAMDataHandle_1aee65ec030eb5fc20ee5d1aa87af64472" kind="function"><name>data</name></member>
+    <member refid="classRegressionRAMDataHandle_1a4fcf657e5fa8d8f74c57b55bae909b16" kind="function"><name>data</name></member>
+    <member refid="classRegressionRAMDataHandle_1a6d4de5cf1dad67abd478b43be27b31bf" kind="function"><name>get</name></member>
+    <member refid="classRegressionRAMDataHandle_1aad7d447964f7f8f16ebb2d92a5a01e67" kind="function"><name>get</name></member>
+    <member refid="classRegressionRAMDataHandle_1ac8c3377cd28ff6f75a1d5865081eba83" kind="function"><name>RegressionRAMDataHandle</name></member>
+    <member refid="classRegressionRAMDataHandle_1ae52da90bfea5c5f772bf8828ef83381d" kind="function"><name>RegressionRAMDataHandle</name></member>
+    <member refid="classRegressionRAMDataHandle_1aefd557b2ecfbad935e3991aa7d7e654e" kind="function"><name>RegressionRAMDataHandle</name></member>
+    <member refid="classRegressionRAMDataHandle_1a933bf9c75fb351c4e65f7661437c3b68" kind="function"><name>RegressionRAMDataHandle</name></member>
+    <member refid="classRegressionRAMDataHandle_1a1195014557d4831bc5d655027713fcfe" kind="function"><name>save</name></member>
+    <member refid="classRegressionRAMDataHandle_1a9073351b9bc44a907b6624c9a2403f01" kind="function"><name>set</name></member>
+    <member refid="classRegressionRAMDataHandle_1a3a7043e9cca877cfa24ac8fe082197c9" kind="function"><name>set</name></member>
+    <member refid="classRegressionRAMDataHandle_1ab8e382fb4b1ef0e6cfcd8177f2514e3a" kind="function"><name>dataToRam</name></member>
+    <member refid="classRegressionRAMDataHandle_1a0e44ea5d5f6504fb53868d5021ff11e8" kind="function"><name>setData</name></member>
+  </compound>
+  <compound refid="classRegressionWisard" kind="class"><name>RegressionWisard</name>
+    <member refid="classRegressionWisard_1a7a40098add4d89932e44ff01868e0550" kind="variable"><name>addressSize</name></member>
+    <member refid="classRegressionWisard_1aa667b0e3eb449edf55101e21b9e81047" kind="variable"><name>completeAddressing</name></member>
+    <member refid="classRegressionWisard_1a0b4ff031198660ee8239a94211a98cd0" kind="variable"><name>entrySize</name></member>
+    <member refid="classRegressionWisard_1a103aa1c658a82b6fb5d17db4bc5cef4b" kind="variable"><name>mapping</name></member>
+    <member refid="classRegressionWisard_1af7f452b5991bf8498d19cb3b5aea16af" kind="variable"><name>mean</name></member>
+    <member refid="classRegressionWisard_1a4d8ca9f91145bca9cccf256b75a79ab0" kind="variable"><name>minOne</name></member>
+    <member refid="classRegressionWisard_1a19bf9ed20712adaa43cff5f46985ad0f" kind="variable"><name>minZero</name></member>
+    <member refid="classRegressionWisard_1a42982f590753efc85fd6f52081dccfa6" kind="variable"><name>numberOfTrainings</name></member>
+    <member refid="classRegressionWisard_1a218ec296378e06b77f337de4c99e315a" kind="variable"><name>orderedMapping</name></member>
+    <member refid="classRegressionWisard_1a335eab19f2332e0bfb09157f184de16f" kind="variable"><name>rams</name></member>
+    <member refid="classRegressionWisard_1a2d96d1e6bb01d4aed4e8f5cb40510596" kind="variable"><name>steps</name></member>
+    <member refid="classRegressionWisard_1ac37f1d1c653928a21c5d3588c3837c9b" kind="function"><name>applyFit</name></member>
+    <member refid="classRegressionWisard_1a2f22f241b281ab6a0e4cf1cfb9335bb4" kind="function"><name>calculateFit</name></member>
+    <member refid="classRegressionWisard_1ab4d4796e3f62df331fee309301e0a681" kind="function"><name>predict</name></member>
+    <member refid="classRegressionWisard_1ab2825bf4202b12029b489c1d4de342b8" kind="function"><name>predict</name></member>
+    <member refid="classRegressionWisard_1a56ec56a98f692d756f1f80e04bd19354" kind="function"><name>RegressionWisard</name></member>
+    <member refid="classRegressionWisard_1a054c0bf1dd245976d942f5714fa5c8ef" kind="function"><name>RegressionWisard</name></member>
+    <member refid="classRegressionWisard_1afef642836ca4d47c9a1ee6f9497ee265" kind="function"><name>RegressionWisard</name></member>
+    <member refid="classRegressionWisard_1a125bffa9cf4806492f2b2cf96a3932b0" kind="function"><name>train</name></member>
+    <member refid="classRegressionWisard_1a11970036606a16938821722fb3af53ee" kind="function"><name>train</name></member>
+    <member refid="classRegressionWisard_1a8203ce8fa5395d5891c29c4abccb7979" kind="function"><name>~RegressionWisard</name></member>
+    <member refid="classRegressionWisard_1a4bfafa888b990804d754feb76044b679" kind="function"><name>checkAddressSize</name></member>
+    <member refid="classRegressionWisard_1a6a25655a9cb15452b468a13dc4ed2858" kind="function"><name>checkEntrySize</name></member>
+    <member refid="classRegressionWisard_1a6104a1884a605d02e08042eaf2b70310" kind="function"><name>checkMinZeroOne</name></member>
+    <member refid="classRegressionWisard_1ad003f5c063b032a1995ccfcf2682c549" kind="function"><name>setRAMShuffle</name></member>
+  </compound>
+  <compound refid="classSimpleMean" kind="class"><name>SimpleMean</name>
+    <member refid="classSimpleMean_1a71cb658d6a2c5eaec48184fa4c041168" kind="function"><name>calculate</name></member>
+    <member refid="classSimpleMean_1a7aac832cd5e3977a95934a8ae8fb594a" kind="function"><name>className</name></member>
+    <member refid="classSimpleMean_1a6d2fc6ae2f6c509d5795452a9de22983" kind="function"><name>clone</name></member>
+    <member refid="classSimpleMean_1aab8299cd1a27e45631726aad7017eee8" kind="function"><name>getJSON</name></member>
+  </compound>
+  <compound refid="classWisard" kind="class"><name>Wisard</name>
+    <member refid="classWisard_1a1b71cef88b28106fc19c3986d9a5ba54" kind="variable"><name>discriminators</name></member>
+    <member refid="classWisard_1af4f6686f925f3dfd2a83ccb0b40df9c0" kind="variable"><name>entrySize</name></member>
+    <member refid="classWisard_1a8474d87692218b4c2763824fe6c5a5e4" kind="variable"><name>numDiscriminator</name></member>
+    <member refid="classWisard_1a03efe8e678a058bbc282312dba6ceb31" kind="variable"><name>tupleSize</name></member>
+    <member refid="classWisard_1a376b4f0d4346d6e317722250bc9b9012" kind="function"><name>addDiscriminator</name></member>
+    <member refid="classWisard_1a3f3534d6935de639d6b48e3ab173d4b8" kind="function"><name>info</name></member>
+    <member refid="classWisard_1a2808e0e8043733c0f8fcf50087374543" kind="function"><name>rank</name></member>
+    <member refid="classWisard_1a2b4a4cd1baa154a4e6d8f51ac3e9f195" kind="function"><name>rank</name></member>
+    <member refid="classWisard_1aa82ea281a739bc7c4fa999d5b908dd2f" kind="function"><name>reset</name></member>
+    <member refid="classWisard_1acc9485557e11ab5a8f98004651a199ee" kind="function"><name>stats</name></member>
+    <member refid="classWisard_1acf383b265d01edd1355ee78411e1e657" kind="function"><name>train</name></member>
+    <member refid="classWisard_1a899b85e546a4474e31c35185a2e3e92b" kind="function"><name>Wisard</name></member>
+    <member refid="classWisard_1ab99d2c8a3f29193d84eccf81c0f9b8f1" kind="function"><name>~Wisard</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="meanfunctions_8cc" kind="file"><name>meanfunctions.cc</name>
+  </compound>
+  <compound refid="regressionram_8cc" kind="file"><name>regressionram.cc</name>
+  </compound>
+  <compound refid="regressionramdatahandle_8cc" kind="file"><name>regressionramdatahandle.cc</name>
+  </compound>
+  <compound refid="regressionwisard_8cc" kind="file"><name>regressionwisard.cc</name>
+  </compound>
+  <compound refid="sequence_8md" kind="file"><name>sequence.md</name>
+  </compound>
+  <compound refid="discriminator_8cc" kind="file"><name>discriminator.cc</name>
+  </compound>
+  <compound refid="wisard_8cc" kind="file"><name>wisard.cc</name>
+  </compound>
+  <compound refid="md_src_2models_2regressionwisard_2sequence" kind="page"><name>md_src_2models_2regressionwisard_2sequence</name>
+  </compound>
+  <compound refid="dir_bdeba5f06b852fec80257c0bf4c3c36e" kind="dir"><name>src/models</name>
+  </compound>
+  <compound refid="dir_da06e3dc947cae33087c36059ccd8df4" kind="dir"><name>src/models/regressionwisard</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_077cf56d4b31f3f80e17d96eb64b10eb" kind="dir"><name>src/models/wisard</name>
+  </compound>
+</doxygenindex>

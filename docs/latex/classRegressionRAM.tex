@@ -1,0 +1,720 @@
+\doxysection{Referência à classe Regression\+RAM}
+\hypertarget{classRegressionRAM}{}\label{classRegressionRAM}\index{RegressionRAM@{RegressionRAM}}
+
+
+Classe representando a RAM.  
+
+
+
+
+Diagrama de colaboração para Regression\+RAM\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classRegressionRAM__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRegressionRAM_a1e6220b2089ed30daf63041821ec8ac6}{apply\+Fit}} ()
+\begin{DoxyCompactList}\small\item\em Aplica o ajuste calculado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRegressionRAM_afb1e91cc19c1912cc2e569bbe0f82da9}{calculate\+Fit}} (const Bin\+Input \&image, const double y\+Fit)
+\begin{DoxyCompactList}\small\item\em Calcula o ajuste da RAM para a imagem binária e o valor y\+Fit. \end{DoxyCompactList}\item 
+nl\+::json \mbox{\hyperlink{classRegressionRAM_a818bb9b81fbe8acac517f8f0aa1b5bf9}{get\+JSON}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a configuração da RAM em formato JSON. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classRegressionRAM_a01cd8b4699432518143520961c4981a9}{get\+Mapping}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o mapeamento da RAM. \end{DoxyCompactList}\item 
+regression\+\_\+ram\+\_\+t \mbox{\hyperlink{classRegressionRAM_abb209836b83ae461eab6c2d3961343b8}{get\+Memory}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a memória da RAM. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{classRegressionRAM_ac7a5d96231c14447a9f26f171ad82ef4}{getsizeoff}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o tamanho da RAM em bytes. \end{DoxyCompactList}\item 
+regression\+\_\+content\+\_\+t \mbox{\hyperlink{classRegressionRAM_af3d15e9225cc5c6e514801d15a85c07a}{get\+Vote}} (const Bin\+Input \&image) const
+\begin{DoxyCompactList}\small\item\em Obtém o voto da RAM para a imagem binária fornecida. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRegressionRAM_a1468df083af359878a5e864e56d58d94}{Regression\+RAM}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRegressionRAM_a8bbb6293b5fa116ee0a69e1c48fe76eb}{Regression\+RAM}} (const std\+::vector$<$ int $>$ \mbox{\hyperlink{classRegressionRAM_a6d9d14f2194853166459c9ac734080c2}{mapping}}, const int \mbox{\hyperlink{classRegressionRAM_a8c283108a2205b2dc816fb13c8b36724}{min\+Zero}}=0, const int \mbox{\hyperlink{classRegressionRAM_afdb97503ca3766f6209826f26eb8b770}{min\+One}}=0)
+\begin{DoxyCompactList}\small\item\em Construtor da classe que inicializa a RAM com parâmetros específicos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRegressionRAM_a0ad601f407a8baea97364e81828f5635}{Regression\+RAM}} (nl\+::json c)
+\begin{DoxyCompactList}\small\item\em Construtor da classe que inicializa a RAM com um objeto JSON. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRegressionRAM_a33d0c3451d6aa1f3e6fd1bcd25af42eb}{set\+Min\+One}} (const int value)
+\begin{DoxyCompactList}\small\item\em Define o valor mínimo de uns. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRegressionRAM_a34308c3b554de1cb36139a04ce6ce2c3}{set\+Min\+Zero}} (const int value)
+\begin{DoxyCompactList}\small\item\em Define o valor mínimo de zeros. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRegressionRAM_a3d40a96015f14882569e8c3bd820b03a}{train}} (const Bin\+Input \&image, const double y)
+\begin{DoxyCompactList}\small\item\em Treina a RAM com a imagem binária e o valor y. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRegressionRAM_a94223ef17afc193c6cb2b0e713e331b1}{\texorpdfstring{$\sim$}{\string~}\+Regression\+RAM}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe que limpa a memória. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros protegidos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::tuple$<$ addr\+\_\+t, bool $>$ \mbox{\hyperlink{classRegressionRAM_ad7d93ac38c2cb7fce602f8396283dd1a}{get\+Index}} (const Bin\+Input \&image) const
+\begin{DoxyCompactList}\small\item\em Obtém o índice da imagem binária. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classRegressionRAM_a6d9d14f2194853166459c9ac734080c2}{mapping}}
+\begin{DoxyCompactList}\small\item\em Mapeamento da RAM. \end{DoxyCompactList}\item 
+regression\+\_\+ram\+\_\+t \mbox{\hyperlink{classRegressionRAM_a77a4282abeff7ed9c178c4ea4aea5a0d}{memory}}
+\begin{DoxyCompactList}\small\item\em Memória da RAM. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRegressionRAM_afdb97503ca3766f6209826f26eb8b770}{min\+One}}
+\begin{DoxyCompactList}\small\item\em Número mínimo de uns. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRegressionRAM_a8c283108a2205b2dc816fb13c8b36724}{min\+Zero}}
+\begin{DoxyCompactList}\small\item\em Número mínimo de zeros. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe representando a RAM. 
+
+Classe utilizada para modelar as rams que serão utilizadas no treinamento. 
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00006}{6}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\Hypertarget{classRegressionRAM_a1468df083af359878a5e864e56d58d94}\index{RegressionRAM@{RegressionRAM}!RegressionRAM@{RegressionRAM}}
+\index{RegressionRAM@{RegressionRAM}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{RegressionRAM()}{RegressionRAM()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classRegressionRAM_a1468df083af359878a5e864e56d58d94} 
+Regression\+RAM\+::\+Regression\+RAM (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor padrão. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00012}{12}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \{\}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{regressionram_8cc_source_l00176}{getsizeoff()}}.
+
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionRAM_a1468df083af359878a5e864e56d58d94_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionRAM_a0ad601f407a8baea97364e81828f5635}\index{RegressionRAM@{RegressionRAM}!RegressionRAM@{RegressionRAM}}
+\index{RegressionRAM@{RegressionRAM}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{RegressionRAM()}{RegressionRAM()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classRegressionRAM_a0ad601f407a8baea97364e81828f5635} 
+Regression\+RAM\+::\+Regression\+RAM (\begin{DoxyParamCaption}\item[{nl\+::json}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor da classe que inicializa a RAM com um objeto JSON. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em c} & Objeto do tipo nl\+::json contendo a configuração inicial da RAM. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00018}{18}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ nl::json\ value;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ value\ =\ c[\textcolor{stringliteral}{"{}memory"{}}];}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::string\ data\ =\ value.is\_null()\ ?\ \textcolor{stringliteral}{"{}"{}}\ :\ value.get<std::string>();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (data.size()\ >\ 0)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle}{RegressionRAMDataHandle}}\ dh(data);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionRAM_a77a4282abeff7ed9c178c4ea4aea5a0d}{memory}}\ =\ dh.get(0);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ value\ =\ c[\textcolor{stringliteral}{"{}mapping"{}}];}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionRAM_a6d9d14f2194853166459c9ac734080c2}{mapping}}\ =\ value.is\_null()\ ?\ std::vector<int>()\ :\ value.get<std::vector<int>>();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ value\ =\ c[\textcolor{stringliteral}{"{}minZero"{}}];}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionRAM_a8c283108a2205b2dc816fb13c8b36724}{minZero}}\ =\ value.is\_null()\ ?\ 0\ :\ value.get<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ value\ =\ c[\textcolor{stringliteral}{"{}minOne"{}}];}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionRAM_afdb97503ca3766f6209826f26eb8b770}{minOne}}\ =\ value.is\_null()\ ?\ 0\ :\ value.get<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00044}{Regression\+RAMData\+Handle\+::get()}}, \mbox{\hyperlink{regressionram_8cc_source_l00212}{mapping}}, \mbox{\hyperlink{regressionram_8cc_source_l00211}{memory}}, \mbox{\hyperlink{regressionram_8cc_source_l00214}{min\+One}} e \mbox{\hyperlink{regressionram_8cc_source_l00213}{min\+Zero}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionRAM_a0ad601f407a8baea97364e81828f5635_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionRAM_a8bbb6293b5fa116ee0a69e1c48fe76eb}\index{RegressionRAM@{RegressionRAM}!RegressionRAM@{RegressionRAM}}
+\index{RegressionRAM@{RegressionRAM}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{RegressionRAM()}{RegressionRAM()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classRegressionRAM_a8bbb6293b5fa116ee0a69e1c48fe76eb} 
+Regression\+RAM\+::\+Regression\+RAM (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$}]{mapping}{, }\item[{const int}]{min\+Zero}{ = {\ttfamily 0}, }\item[{const int}]{min\+One}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor da classe que inicializa a RAM com parâmetros específicos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em mapping} & Vetor de inteiros representando o mapeamento. \\
+\hline
+{\em min\+Zero} & Número mínimo de zeros. \\
+\hline
+{\em min\+One} & Número mínimo de uns. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00045}{45}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ :\ \mbox{\hyperlink{classRegressionRAM_a6d9d14f2194853166459c9ac734080c2}{mapping}}(\mbox{\hyperlink{classRegressionRAM_a6d9d14f2194853166459c9ac734080c2}{mapping}}),\ \mbox{\hyperlink{classRegressionRAM_a8c283108a2205b2dc816fb13c8b36724}{minZero}}(\mbox{\hyperlink{classRegressionRAM_a8c283108a2205b2dc816fb13c8b36724}{minZero}}),\ \mbox{\hyperlink{classRegressionRAM_afdb97503ca3766f6209826f26eb8b770}{minOne}}(\mbox{\hyperlink{classRegressionRAM_afdb97503ca3766f6209826f26eb8b770}{minOne}})\ \{\}}
+
+\end{DoxyCode}
+\Hypertarget{classRegressionRAM_a94223ef17afc193c6cb2b0e713e331b1}\index{RegressionRAM@{RegressionRAM}!````~RegressionRAM@{\texorpdfstring{$\sim$}{\string~}RegressionRAM}}
+\index{````~RegressionRAM@{\texorpdfstring{$\sim$}{\string~}RegressionRAM}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RegressionRAM()}{\string~RegressionRAM()}}
+{\footnotesize\ttfamily \label{classRegressionRAM_a94223ef17afc193c6cb2b0e713e331b1} 
+Regression\+RAM\+::\texorpdfstring{$\sim$}{\string~}\+Regression\+RAM (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destrutor da classe que limpa a memória. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00050}{50}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionRAM_a6d9d14f2194853166459c9ac734080c2}{mapping}}.clear();}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionRAM_a77a4282abeff7ed9c178c4ea4aea5a0d}{memory}}.clear();}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionram_8cc_source_l00212}{mapping}} e \mbox{\hyperlink{regressionram_8cc_source_l00211}{memory}}.
+
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classRegressionRAM_a1e6220b2089ed30daf63041821ec8ac6}\index{RegressionRAM@{RegressionRAM}!applyFit@{applyFit}}
+\index{applyFit@{applyFit}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{applyFit()}{applyFit()}}
+{\footnotesize\ttfamily \label{classRegressionRAM_a1e6220b2089ed30daf63041821ec8ac6} 
+void Regression\+RAM\+::apply\+Fit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Aplica o ajuste calculado. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00110}{110}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00111\ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ \mbox{\hyperlink{classRegressionRAM_a77a4282abeff7ed9c178c4ea4aea5a0d}{memory}}.begin();\ it\ !=\ \mbox{\hyperlink{classRegressionRAM_a77a4282abeff7ed9c178c4ea4aea5a0d}{memory}}.end();\ it++)}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ it-\/>second[1]\ +=\ it-\/>second[2]\ /\ it-\/>second[0];}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ it-\/>second[2]\ =\ 0;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionram_8cc_source_l00211}{memory}}.
+
+\Hypertarget{classRegressionRAM_afb1e91cc19c1912cc2e569bbe0f82da9}\index{RegressionRAM@{RegressionRAM}!calculateFit@{calculateFit}}
+\index{calculateFit@{calculateFit}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{calculateFit()}{calculateFit()}}
+{\footnotesize\ttfamily \label{classRegressionRAM_afb1e91cc19c1912cc2e569bbe0f82da9} 
+void Regression\+RAM\+::calculate\+Fit (\begin{DoxyParamCaption}\item[{const Bin\+Input \&}]{image}{, }\item[{const double}]{y\+Fit}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcula o ajuste da RAM para a imagem binária e o valor y\+Fit. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em image} & Imagem binária. \\
+\hline
+{\em y\+Fit} & Valor de ajuste. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00099}{99}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00100\ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ addr\_t\ index\ =\ std::get<0>(\mbox{\hyperlink{classRegressionRAM_ad7d93ac38c2cb7fce602f8396283dd1a}{getIndex}}(image));}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ \mbox{\hyperlink{classRegressionRAM_a77a4282abeff7ed9c178c4ea4aea5a0d}{memory}}.find(index);}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ it-\/>second[2]\ +=\ yFit;}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionram_8cc_source_l00190}{get\+Index()}} e \mbox{\hyperlink{regressionram_8cc_source_l00211}{memory}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionRAM_afb1e91cc19c1912cc2e569bbe0f82da9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionRAM_ad7d93ac38c2cb7fce602f8396283dd1a}\index{RegressionRAM@{RegressionRAM}!getIndex@{getIndex}}
+\index{getIndex@{getIndex}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{getIndex()}{getIndex()}}
+{\footnotesize\ttfamily \label{classRegressionRAM_ad7d93ac38c2cb7fce602f8396283dd1a} 
+std\+::tuple$<$ addr\+\_\+t, bool $>$ Regression\+RAM\+::get\+Index (\begin{DoxyParamCaption}\item[{const Bin\+Input \&}]{image}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Obtém o índice da imagem binária. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em image} & Imagem binária. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Tupla contendo o índice e um booleano indicando se os critérios mínimos foram atendidos. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00190}{190}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00191\ \ \ \ \ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ addr\_t\ index\ =\ 0;}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ addr\_t\ p\ =\ 1;}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ countOne\ =\ 0;}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classRegressionRAM_a6d9d14f2194853166459c9ac734080c2}{mapping}}.size();\ i++)}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ bin\ =\ image[\mbox{\hyperlink{classRegressionRAM_a6d9d14f2194853166459c9ac734080c2}{mapping}}[i]];}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ countOne\ +=\ bin;}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ index\ +=\ bin\ *\ p;}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ p\ *=\ 2;}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((countOne\ <\ \mbox{\hyperlink{classRegressionRAM_afdb97503ca3766f6209826f26eb8b770}{minOne}})\ ||\ (((\textcolor{keywordtype}{int})\mbox{\hyperlink{classRegressionRAM_a6d9d14f2194853166459c9ac734080c2}{mapping}}.size()\ -\/\ countOne)\ <\ \mbox{\hyperlink{classRegressionRAM_a8c283108a2205b2dc816fb13c8b36724}{minZero}}))}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_tuple(index,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_tuple(index,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00208\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionram_8cc_source_l00212}{mapping}}, \mbox{\hyperlink{regressionram_8cc_source_l00214}{min\+One}} e \mbox{\hyperlink{regressionram_8cc_source_l00213}{min\+Zero}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionram_8cc_source_l00099}{calculate\+Fit()}}, \mbox{\hyperlink{regressionram_8cc_source_l00079}{get\+Vote()}} e \mbox{\hyperlink{regressionram_8cc_source_l00061}{train()}}.
+
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionRAM_ad7d93ac38c2cb7fce602f8396283dd1a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionRAM_a818bb9b81fbe8acac517f8f0aa1b5bf9}\index{RegressionRAM@{RegressionRAM}!getJSON@{getJSON}}
+\index{getJSON@{getJSON}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{getJSON()}{getJSON()}}
+{\footnotesize\ttfamily \label{classRegressionRAM_a818bb9b81fbe8acac517f8f0aa1b5bf9} 
+nl\+::json Regression\+RAM\+::get\+JSON (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém a configuração da RAM em formato JSON. 
+
+\begin{DoxyReturn}{Retorna}
+Objeto JSON representando a configuração da RAM. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00159}{159}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00160\ \ \ \ \ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle}{RegressionRAMDataHandle}}\ dh(\mbox{\hyperlink{classRegressionRAM_a77a4282abeff7ed9c178c4ea4aea5a0d}{memory}});}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ nl::json\ config\ =}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}minZero"{}},\ \mbox{\hyperlink{classRegressionRAM_a8c283108a2205b2dc816fb13c8b36724}{minZero}}\},}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}minOne"{}},\ \mbox{\hyperlink{classRegressionRAM_afdb97503ca3766f6209826f26eb8b770}{minOne}}\},}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}mapping"{}},\ \mbox{\hyperlink{classRegressionRAM_a6d9d14f2194853166459c9ac734080c2}{mapping}}\},}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}memory"{}},\ \mbox{\hyperlink{classRegressionRAM_a77a4282abeff7ed9c178c4ea4aea5a0d}{memory}}\},}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ config;}
+\DoxyCodeLine{00170\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionram_8cc_source_l00212}{mapping}}, \mbox{\hyperlink{regressionram_8cc_source_l00211}{memory}}, \mbox{\hyperlink{regressionram_8cc_source_l00214}{min\+One}} e \mbox{\hyperlink{regressionram_8cc_source_l00213}{min\+Zero}}.
+
+\Hypertarget{classRegressionRAM_a01cd8b4699432518143520961c4981a9}\index{RegressionRAM@{RegressionRAM}!getMapping@{getMapping}}
+\index{getMapping@{getMapping}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{getMapping()}{getMapping()}}
+{\footnotesize\ttfamily \label{classRegressionRAM_a01cd8b4699432518143520961c4981a9} 
+std\+::vector$<$ int $>$ Regression\+RAM\+::get\+Mapping (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém o mapeamento da RAM. 
+
+\begin{DoxyReturn}{Retorna}
+Vetor de inteiros representando o mapeamento. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00150}{150}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00151\ \ \ \ \ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classRegressionRAM_a6d9d14f2194853166459c9ac734080c2}{mapping}};}
+\DoxyCodeLine{00153\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionram_8cc_source_l00212}{mapping}}.
+
+\Hypertarget{classRegressionRAM_abb209836b83ae461eab6c2d3961343b8}\index{RegressionRAM@{RegressionRAM}!getMemory@{getMemory}}
+\index{getMemory@{getMemory}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{getMemory()}{getMemory()}}
+{\footnotesize\ttfamily \label{classRegressionRAM_abb209836b83ae461eab6c2d3961343b8} 
+regression\+\_\+ram\+\_\+t Regression\+RAM\+::get\+Memory (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém a memória da RAM. 
+
+\begin{DoxyReturn}{Retorna}
+Memória da RAM. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00141}{141}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00142\ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classRegressionRAM_a77a4282abeff7ed9c178c4ea4aea5a0d}{memory}};}
+\DoxyCodeLine{00144\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionram_8cc_source_l00211}{memory}}.
+
+\Hypertarget{classRegressionRAM_ac7a5d96231c14447a9f26f171ad82ef4}\index{RegressionRAM@{RegressionRAM}!getsizeoff@{getsizeoff}}
+\index{getsizeoff@{getsizeoff}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{getsizeoff()}{getsizeoff()}}
+{\footnotesize\ttfamily \label{classRegressionRAM_ac7a5d96231c14447a9f26f171ad82ef4} 
+long Regression\+RAM\+::getsizeoff (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém o tamanho da RAM em bytes. 
+
+\begin{DoxyReturn}{Retorna}
+Tamanho da RAM em bytes. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00176}{176}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00177\ \ \ \ \ \{}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ size\ =\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{classRegressionRAM_a1468df083af359878a5e864e56d58d94}{RegressionRAM}});}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ size\ +=\ \mbox{\hyperlink{classRegressionRAM_a6d9d14f2194853166459c9ac734080c2}{mapping}}.size()\ *\ \textcolor{keyword}{sizeof}(addr\_t);}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ size\ +=\ \mbox{\hyperlink{classRegressionRAM_a77a4282abeff7ed9c178c4ea4aea5a0d}{memory}}.size()\ *\ (\textcolor{keyword}{sizeof}(addr\_t)\ +\ \textcolor{keyword}{sizeof}(regression\_content\_t));}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ size;}
+\DoxyCodeLine{00182\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionram_8cc_source_l00212}{mapping}}, \mbox{\hyperlink{regressionram_8cc_source_l00211}{memory}} e \mbox{\hyperlink{regressionram_8cc_source_l00012}{Regression\+RAM()}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionRAM_ac7a5d96231c14447a9f26f171ad82ef4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionRAM_af3d15e9225cc5c6e514801d15a85c07a}\index{RegressionRAM@{RegressionRAM}!getVote@{getVote}}
+\index{getVote@{getVote}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{getVote()}{getVote()}}
+{\footnotesize\ttfamily \label{classRegressionRAM_af3d15e9225cc5c6e514801d15a85c07a} 
+regression\+\_\+content\+\_\+t Regression\+RAM\+::get\+Vote (\begin{DoxyParamCaption}\item[{const Bin\+Input \&}]{image}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém o voto da RAM para a imagem binária fornecida. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em image} & Imagem binária. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Conteúdo da RAM associado à imagem. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00079}{79}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ std::tuple<addr\_t,\ bool>\ result\ =\ \mbox{\hyperlink{classRegressionRAM_ad7d93ac38c2cb7fce602f8396283dd1a}{getIndex}}(image);}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::get<1>(result))\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{0,\ 0\};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ addr\_t\ index\ =\ std::get<0>(result);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ \mbox{\hyperlink{classRegressionRAM_a77a4282abeff7ed9c178c4ea4aea5a0d}{memory}}.find(index);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ ==\ \mbox{\hyperlink{classRegressionRAM_a77a4282abeff7ed9c178c4ea4aea5a0d}{memory}}.end())}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{0,\ 0\};}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{it-\/>second[0],\ it-\/>second[1]\};}
+\DoxyCodeLine{00092\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionram_8cc_source_l00190}{get\+Index()}} e \mbox{\hyperlink{regressionram_8cc_source_l00211}{memory}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionRAM_af3d15e9225cc5c6e514801d15a85c07a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionRAM_a33d0c3451d6aa1f3e6fd1bcd25af42eb}\index{RegressionRAM@{RegressionRAM}!setMinOne@{setMinOne}}
+\index{setMinOne@{setMinOne}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{setMinOne()}{setMinOne()}}
+{\footnotesize\ttfamily \label{classRegressionRAM_a33d0c3451d6aa1f3e6fd1bcd25af42eb} 
+void Regression\+RAM\+::set\+Min\+One (\begin{DoxyParamCaption}\item[{const int}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define o valor mínimo de uns. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & Valor mínimo de uns. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00132}{132}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00133\ \ \ \ \ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionRAM_afdb97503ca3766f6209826f26eb8b770}{minOne}}\ =\ value;}
+\DoxyCodeLine{00135\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionram_8cc_source_l00214}{min\+One}}.
+
+\Hypertarget{classRegressionRAM_a34308c3b554de1cb36139a04ce6ce2c3}\index{RegressionRAM@{RegressionRAM}!setMinZero@{setMinZero}}
+\index{setMinZero@{setMinZero}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{setMinZero()}{setMinZero()}}
+{\footnotesize\ttfamily \label{classRegressionRAM_a34308c3b554de1cb36139a04ce6ce2c3} 
+void Regression\+RAM\+::set\+Min\+Zero (\begin{DoxyParamCaption}\item[{const int}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define o valor mínimo de zeros. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & Valor mínimo de zeros. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00123}{123}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00124\ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionRAM_a8c283108a2205b2dc816fb13c8b36724}{minZero}}\ =\ value;}
+\DoxyCodeLine{00126\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionram_8cc_source_l00213}{min\+Zero}}.
+
+\Hypertarget{classRegressionRAM_a3d40a96015f14882569e8c3bd820b03a}\index{RegressionRAM@{RegressionRAM}!train@{train}}
+\index{train@{train}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{train()}{train()}}
+{\footnotesize\ttfamily \label{classRegressionRAM_a3d40a96015f14882569e8c3bd820b03a} 
+void Regression\+RAM\+::train (\begin{DoxyParamCaption}\item[{const Bin\+Input \&}]{image}{, }\item[{const double}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Treina a RAM com a imagem binária e o valor y. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em image} & Imagem binária utilizada para o treinamento. \\
+\hline
+{\em y} & Valor associado à imagem. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00061}{61}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062\ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ addr\_t\ index\ =\ std::get<0>(\mbox{\hyperlink{classRegressionRAM_ad7d93ac38c2cb7fce602f8396283dd1a}{getIndex}}(image));}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ \mbox{\hyperlink{classRegressionRAM_a77a4282abeff7ed9c178c4ea4aea5a0d}{memory}}.find(index);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ ==\ \mbox{\hyperlink{classRegressionRAM_a77a4282abeff7ed9c178c4ea4aea5a0d}{memory}}.end())}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionRAM_a77a4282abeff7ed9c178c4ea4aea5a0d}{memory}}.insert(it,\ std::pair<addr\_t,\ regression\_content\_t>(index,\ \{1,\ y,\ 0\}));}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ it-\/>second[0]++;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ it-\/>second[1]\ +=\ y;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionram_8cc_source_l00190}{get\+Index()}} e \mbox{\hyperlink{regressionram_8cc_source_l00211}{memory}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionRAM_a3d40a96015f14882569e8c3bd820b03a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Documentação dos dados membro}
+\Hypertarget{classRegressionRAM_a6d9d14f2194853166459c9ac734080c2}\index{RegressionRAM@{RegressionRAM}!mapping@{mapping}}
+\index{mapping@{mapping}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{mapping}{mapping}}
+{\footnotesize\ttfamily \label{classRegressionRAM_a6d9d14f2194853166459c9ac734080c2} 
+std\+::vector$<$int$>$ Regression\+RAM\+::mapping\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mapeamento da RAM. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00212}{212}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionram_8cc_source_l00190}{get\+Index()}}, \mbox{\hyperlink{regressionram_8cc_source_l00159}{get\+JSON()}}, \mbox{\hyperlink{regressionram_8cc_source_l00150}{get\+Mapping()}}, \mbox{\hyperlink{regressionram_8cc_source_l00176}{getsizeoff()}}, \mbox{\hyperlink{regressionram_8cc_source_l00018}{Regression\+RAM()}} e \mbox{\hyperlink{regressionram_8cc_source_l00050}{\texorpdfstring{$\sim$}{\string~}\+Regression\+RAM()}}.
+
+\Hypertarget{classRegressionRAM_a77a4282abeff7ed9c178c4ea4aea5a0d}\index{RegressionRAM@{RegressionRAM}!memory@{memory}}
+\index{memory@{memory}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{memory}{memory}}
+{\footnotesize\ttfamily \label{classRegressionRAM_a77a4282abeff7ed9c178c4ea4aea5a0d} 
+regression\+\_\+ram\+\_\+t Regression\+RAM\+::memory\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Memória da RAM. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00211}{211}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionram_8cc_source_l00110}{apply\+Fit()}}, \mbox{\hyperlink{regressionram_8cc_source_l00099}{calculate\+Fit()}}, \mbox{\hyperlink{regressionram_8cc_source_l00159}{get\+JSON()}}, \mbox{\hyperlink{regressionram_8cc_source_l00141}{get\+Memory()}}, \mbox{\hyperlink{regressionram_8cc_source_l00176}{getsizeoff()}}, \mbox{\hyperlink{regressionram_8cc_source_l00079}{get\+Vote()}}, \mbox{\hyperlink{regressionram_8cc_source_l00018}{Regression\+RAM()}}, \mbox{\hyperlink{regressionram_8cc_source_l00061}{train()}} e \mbox{\hyperlink{regressionram_8cc_source_l00050}{\texorpdfstring{$\sim$}{\string~}\+Regression\+RAM()}}.
+
+\Hypertarget{classRegressionRAM_afdb97503ca3766f6209826f26eb8b770}\index{RegressionRAM@{RegressionRAM}!minOne@{minOne}}
+\index{minOne@{minOne}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{minOne}{minOne}}
+{\footnotesize\ttfamily \label{classRegressionRAM_afdb97503ca3766f6209826f26eb8b770} 
+int Regression\+RAM\+::min\+One\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Número mínimo de uns. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00214}{214}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionram_8cc_source_l00190}{get\+Index()}}, \mbox{\hyperlink{regressionram_8cc_source_l00159}{get\+JSON()}}, \mbox{\hyperlink{regressionram_8cc_source_l00018}{Regression\+RAM()}} e \mbox{\hyperlink{regressionram_8cc_source_l00132}{set\+Min\+One()}}.
+
+\Hypertarget{classRegressionRAM_a8c283108a2205b2dc816fb13c8b36724}\index{RegressionRAM@{RegressionRAM}!minZero@{minZero}}
+\index{minZero@{minZero}!RegressionRAM@{RegressionRAM}}
+\doxysubsubsection{\texorpdfstring{minZero}{minZero}}
+{\footnotesize\ttfamily \label{classRegressionRAM_a8c283108a2205b2dc816fb13c8b36724} 
+int Regression\+RAM\+::min\+Zero\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Número mínimo de zeros. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionram_8cc_source_l00213}{213}} do ficheiro \mbox{\hyperlink{regressionram_8cc_source}{regressionram.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionram_8cc_source_l00190}{get\+Index()}}, \mbox{\hyperlink{regressionram_8cc_source_l00159}{get\+JSON()}}, \mbox{\hyperlink{regressionram_8cc_source_l00018}{Regression\+RAM()}} e \mbox{\hyperlink{regressionram_8cc_source_l00123}{set\+Min\+Zero()}}.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+src/models/regressionwisard/\mbox{\hyperlink{regressionram_8cc}{regressionram.\+cc}}\end{DoxyCompactItemize}

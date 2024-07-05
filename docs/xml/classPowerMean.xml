@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="pt">
+  <compounddef id="classPowerMean" kind="class" language="C++" prot="public">
+    <compoundname>PowerMean</compoundname>
+    <basecompoundref refid="classMean" prot="public" virt="non-virtual">Mean</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classPowerMean_1a3e39d4719328bf801444dd4252a3937c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PowerMean::power</definition>
+        <argsstring></argsstring>
+        <name>power</name>
+        <qualifiedname>PowerMean::power</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="83" column="9" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="83" bodyend="-1"/>
+        <referencedby refid="classPowerMean_1a372235fcd24ea38f1b904302682e4058" compoundref="meanfunctions_8cc" startline="96" endline="109">calculate</referencedby>
+        <referencedby refid="classPowerMean_1afbdacd5ee8241bbddeb515e11115cf19" compoundref="meanfunctions_8cc" startline="115" endline="117">clone</referencedby>
+        <referencedby refid="classPowerMean_1a289c1ba18b1e4183ec1d47d7c7166e66" compoundref="meanfunctions_8cc" startline="131" endline="137">getJSON</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPowerMean_1a372235fcd24ea38f1b904302682e4058" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double PowerMean::calculate</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;outputRams)</argsstring>
+        <name>calculate</name>
+        <qualifiedname>PowerMean::calculate</qualifiedname>
+        <reimplements refid="classMean_1a6c725db111881910fcf4df655debbbc7">calculate</reimplements>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+          <declname>outputRams</declname>
+        </param>
+        <briefdescription>
+<para>Calcula a média de potência com base nos dados fornecidos. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outputRams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dados de saída das RAMs. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A média de potência calculada. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="96" column="12" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="96" bodyend="109"/>
+        <references refid="classPowerMean_1a3e39d4719328bf801444dd4252a3937c" compoundref="meanfunctions_8cc" startline="83">power</references>
+      </memberdef>
+      <memberdef kind="function" id="classPowerMean_1a12e74bd8542ab5311b807f1339c85871" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string PowerMean::className</definition>
+        <argsstring>() const</argsstring>
+        <name>className</name>
+        <qualifiedname>PowerMean::className</qualifiedname>
+        <briefdescription>
+<para>Obtém o nome da classe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Nome da classe. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="123" column="17" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="123" bodyend="125"/>
+        <referencedby refid="classPowerMean_1a289c1ba18b1e4183ec1d47d7c7166e66" compoundref="meanfunctions_8cc" startline="131" endline="137">getJSON</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPowerMean_1afbdacd5ee8241bbddeb515e11115cf19" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classMean" kindref="compound">Mean</ref> *</type>
+        <definition>Mean * PowerMean::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <qualifiedname>PowerMean::clone</qualifiedname>
+        <reimplements refid="classMean_1a958ceadab78c39fe3945567847aa78b8">clone</reimplements>
+        <briefdescription>
+<para>Cria uma cópia do objeto <ref refid="classPowerMean" kindref="compound">PowerMean</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Ponteiro para a cópia do objeto <ref refid="classPowerMean" kindref="compound">PowerMean</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="115" column="10" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="115" bodyend="117"/>
+        <references refid="classPowerMean_1a3e39d4719328bf801444dd4252a3937c" compoundref="meanfunctions_8cc" startline="83">power</references>
+        <references refid="classPowerMean_1a199342b28474b5ccaa8f9b43704f7302" compoundref="meanfunctions_8cc" startline="89" endline="89">PowerMean</references>
+      </memberdef>
+      <memberdef kind="function" id="classPowerMean_1a289c1ba18b1e4183ec1d47d7c7166e66" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>nl::json</type>
+        <definition>nl::json PowerMean::getJSON</definition>
+        <argsstring>() const</argsstring>
+        <name>getJSON</name>
+        <qualifiedname>PowerMean::getJSON</qualifiedname>
+        <reimplements refid="classMean_1aec291edfcf29ea7915959630a2a1fc25">getJSON</reimplements>
+        <briefdescription>
+<para>Obtém a configuração do objeto em formato JSON. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Configuração do objeto em JSON. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="131" column="14" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="131" bodyend="137"/>
+        <references refid="classPowerMean_1a12e74bd8542ab5311b807f1339c85871" compoundref="meanfunctions_8cc" startline="123" endline="125">className</references>
+        <references refid="classPowerMean_1a3e39d4719328bf801444dd4252a3937c" compoundref="meanfunctions_8cc" startline="83">power</references>
+      </memberdef>
+      <memberdef kind="function" id="classPowerMean_1a199342b28474b5ccaa8f9b43704f7302" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PowerMean::PowerMean</definition>
+        <argsstring>(int n)</argsstring>
+        <name>PowerMean</name>
+        <qualifiedname>PowerMean::PowerMean</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Construtor da classe <ref refid="classPowerMean" kindref="compound">PowerMean</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Potência a ser utilizada no cálculo. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="89" column="5" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="89" bodyend="89"/>
+        <referencedby refid="classPowerMean_1afbdacd5ee8241bbddeb515e11115cf19" compoundref="meanfunctions_8cc" startline="115" endline="117">clone</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Classe para cálculo de média de potência. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Mean</label>
+        <link refid="classMean"/>
+      </node>
+      <node id="1">
+        <label>PowerMean</label>
+        <link refid="classPowerMean"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Mean</label>
+        <link refid="classMean"/>
+      </node>
+      <node id="1">
+        <label>PowerMean</label>
+        <link refid="classPowerMean"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/models/regressionwisard/meanfunctions.cc" line="81" column="1" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="81" bodyend="138"/>
+    <listofallmembers>
+      <member refid="classPowerMean_1a372235fcd24ea38f1b904302682e4058" prot="public" virt="virtual"><scope>PowerMean</scope><name>calculate</name></member>
+      <member refid="classPowerMean_1a12e74bd8542ab5311b807f1339c85871" prot="public" virt="non-virtual"><scope>PowerMean</scope><name>className</name></member>
+      <member refid="classPowerMean_1afbdacd5ee8241bbddeb515e11115cf19" prot="public" virt="virtual"><scope>PowerMean</scope><name>clone</name></member>
+      <member refid="classPowerMean_1a289c1ba18b1e4183ec1d47d7c7166e66" prot="public" virt="virtual"><scope>PowerMean</scope><name>getJSON</name></member>
+      <member refid="classPowerMean_1a3e39d4719328bf801444dd4252a3937c" prot="private" virt="non-virtual"><scope>PowerMean</scope><name>power</name></member>
+      <member refid="classPowerMean_1a199342b28474b5ccaa8f9b43704f7302" prot="public" virt="non-virtual"><scope>PowerMean</scope><name>PowerMean</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

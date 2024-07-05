@@ -1,0 +1,513 @@
+.TH "Discriminator" 3 "Version 2.0" "WISARD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Discriminator \- A class to implement a discriminator using bit arrays and pseudo-random mappings\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Membros públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBDiscriminator\fP (int \fBentrySize\fP, int \fBtupleSize\fP)"
+.br
+.RI "Constructor for the \fBDiscriminator\fP class\&. "
+.ti -1c
+.RI "int \fBgetNumRams\fP ()"
+.br
+.RI "Gets the number of RAMs\&. "
+.ti -1c
+.RI "long int \fBgetRamBits\fP ()"
+.br
+.RI "Gets the number of bits in a RAM\&. "
+.ti -1c
+.RI "int \fBgetTupleSize\fP ()"
+.br
+.RI "Gets the size of a tuple\&. "
+.ti -1c
+.RI "void \fBinfo\fP ()"
+.br
+.RI "Displays information about the discriminator\&. "
+.ti -1c
+.RI "int \fBrank\fP (bitarray_t *data)"
+.br
+.RI "Ranks the given data\&. "
+.ti -1c
+.RI "int \fBrank\fP (const vector< bool > &data)"
+.br
+.RI "Ranks the given vector of boolean data\&. "
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.RI "Resets the discriminator\&. "
+.ti -1c
+.RI "void \fBtrain\fP (bitarray_t *data)"
+.br
+.RI "Trains the discriminator with the given data\&. "
+.ti -1c
+.RI "void \fBtrain\fP (const vector< bool > &data)"
+.br
+.RI "Trains the discriminator with the given vector of boolean data\&. "
+.ti -1c
+.RI "\fB~Discriminator\fP ()"
+.br
+.RI "Destructor for the \fBDiscriminator\fP class\&. "
+.in -1c
+.SS "Atributos Privados"
+
+.in +1c
+.ti -1c
+.RI "int \fBentrySize\fP"
+.br
+.ti -1c
+.RI "int \fBnumRams\fP"
+.br
+.ti -1c
+.RI "bitarray_t * \fBrams\fP"
+.br
+.ti -1c
+.RI "int \fBtupleSize\fP"
+.br
+.ti -1c
+.RI "int * \fBtuplesMapping\fP"
+.br
+.in -1c
+.SH "Descrição detalhada"
+.PP 
+A class to implement a discriminator using bit arrays and pseudo-random mappings\&. 
+.PP
+Definido na linha \fB13\fP do ficheiro \fBdiscriminator\&.cc\fP\&.
+.SH "Documentação dos Construtores & Destrutor"
+.PP 
+.SS "Discriminator::Discriminator (int entrySize, int tupleSize)\fR [inline]\fP"
+
+.PP
+Constructor for the \fBDiscriminator\fP class\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIentrySize\fP Size of the entry\&. 
+.br
+\fItupleSize\fP Size of the tuple\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB20\fP do ficheiro \fBdiscriminator\&.cc\fP\&.
+.nf
+20                                                     :
+21             entrySize(entrySize), tupleSize(tupleSize)
+22         {
+23         // Calculates the number of RAMs needed
+24         numRams = entrySize/tupleSize + ((entrySize%tupleSize) > 0);
+25         //calloc retorna um * void
+26         //(int *) \-> casting/troca de tipo 
+27         //Troca o * void para * int, pois vamos lidar com inteiros
+28         //Bem como inicializa o array com 0
+29         tuplesMapping = (int *)calloc(entrySize, sizeof(int));
+30 
+31         //Generating pseudo\-random mapping
+32         int i;
+33         //Percorre esse array
+34         for (i = 0; i < entrySize; i++) {
+35             //mapeia cada tupla, neste caso é parecido com uma enumeração
+36             tuplesMapping[i] = i;
+37         }
+38 
+39         //embaralha
+40         std::shuffle(tuplesMapping, tuplesMapping + entrySize, std::default_random_engine(std::random_device{}()));
+41 
+42         //Aloca memória ram
+43         rams = (bitarray_t *) calloc(numRams, sizeof(bitarray_t));
+44 
+45         int num_bits = (1UL << tupleSize);//2^tuple_size
+46         long int bitarray_size = (num_bits >> 6); //divide by 64 bits
+47                                                   //verifica bits restantes
+48         bitarray_size += ((bitarray_size & 0x3F) > 0); //ceil quotient\&. If remainder > 0 then sum by 1
+49 
+50         //percorre as rams alocadas
+51         //preenchendo os elementos com informações
+52         //várias rams iguais
+53         //mesmas propriedades
+54         for (i = 0; i < numRams; i++) {
+55             rams[i]\&.num_bits = num_bits;
+56             rams[i]\&.bitarray_size = bitarray_size;
+57             rams[i]\&.bitarray = (uint64_t *)calloc(rams[i]\&.bitarray_size, sizeof(uint64_t));
+58         }
+59     }
+.PP
+.fi
+
+.PP
+Referências \fBentrySize\fP, \fBnumRams\fP, \fBrams\fP, \fBtupleSize\fP e \fBtuplesMapping\fP\&.
+.SS "Discriminator::~Discriminator ()\fR [inline]\fP"
+
+.PP
+Destructor for the \fBDiscriminator\fP class\&. 
+.PP
+Definido na linha \fB64\fP do ficheiro \fBdiscriminator\&.cc\fP\&.
+.nf
+65         {
+66             //cout << "Destructor" << endl;
+67             free(rams);
+68             free(tuplesMapping);
+69         }
+.PP
+.fi
+
+.PP
+Referências \fBrams\fP e \fBtuplesMapping\fP\&.
+.SH "Documentação das funções"
+.PP 
+.SS "int Discriminator::getNumRams ()\fR [inline]\fP"
+
+.PP
+Gets the number of RAMs\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Number of RAMs\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB255\fP do ficheiro \fBdiscriminator\&.cc\fP\&.
+.nf
+256         {
+257             return numRams;
+258         }
+.PP
+.fi
+
+.PP
+Referências \fBnumRams\fP\&.
+.SS "long int Discriminator::getRamBits ()\fR [inline]\fP"
+
+.PP
+Gets the number of bits in a RAM\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Number of bits in a RAM\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB246\fP do ficheiro \fBdiscriminator\&.cc\fP\&.
+.nf
+247         {
+248             return rams[0]\&.num_bits;
+249         }
+.PP
+.fi
+
+.PP
+Referências \fBrams\fP\&.
+.SS "int Discriminator::getTupleSize ()\fR [inline]\fP"
+
+.PP
+Gets the size of a tuple\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Size of a tuple\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB264\fP do ficheiro \fBdiscriminator\&.cc\fP\&.
+.nf
+265         {
+266             return tupleSize;
+267         }
+.PP
+.fi
+
+.PP
+Referências \fBtupleSize\fP\&.
+.SS "void Discriminator::info ()\fR [inline]\fP"
+
+.PP
+Displays information about the discriminator\&. 
+.PP
+Definido na linha \fB201\fP do ficheiro \fBdiscriminator\&.cc\fP\&.
+.nf
+202         {
+203             int i;
+204             long int totalBits = 0;
+205             cout << "Entry = " << entrySize << ", Tuples = " << tupleSize << ", RAMs = " << numRams << ", RAM size = " << rams[0]\&.num_bits << " bits" << endl;
+206 
+207             for (i = 0; i < numRams; i++) {
+208                 // cout << "RAM " << i << " \- " << rams[i]\&.num_bits << " bits" << endl;
+209 
+210                 /*for (j = 0; j < rams[i]\&.bitarray_size; j++) {
+211                   cout << rams[i]\&.bitarray[j] << ", ";
+212                   }
+213                   cout << endl;*/
+214 
+215                 totalBits += rams[i]\&.num_bits;
+216             }
+217 
+218             cout << "Total Bits = " << totalBits << endl;
+219         }
+.PP
+.fi
+
+.PP
+Referências \fBentrySize\fP, \fBnumRams\fP, \fBrams\fP e \fBtupleSize\fP\&.
+.SS "int Discriminator::rank (bitarray_t * data)\fR [inline]\fP"
+
+.PP
+Ranks the given data\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIdata\fP Pointer to bitarray_t data\&. 
+.RE
+.PP
+\fBRetorna\fP
+.RS 4
+Rank of the data\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB141\fP do ficheiro \fBdiscriminator\&.cc\fP\&.
+.nf
+142         {
+143             int rank = 0;
+144             int i, j, k = 0, i1, i2;
+145             int addr_pos;
+146             uint64_t addr;
+147 
+148             for (i = 0; i < numRams; i++) {
+149                 addr_pos = tupleSize\-1;
+150                 addr = 0;
+151 
+152                 for (j = 0; j < tupleSize; j++) {
+153                     i1 = tuplesMapping[k] >> 6;//Divide by 64 to find the bitarray id
+154                     i2 = tuplesMapping[k] & 0x3F;//Obtain remainder to access the bitarray position
+155 
+156                     addr |= (((data\->bitarray[i1] & (1UL << i2)) >> i2) << addr_pos);
+157                     addr_pos\-\-;    
+158                     k++;
+159                 }
+160 
+161                 i1 = addr >> 6;//Divide by 64 to find the bitarray id
+162                 i2 = addr & 0x3F;//Obtain remainder to access the bitarray position
+163                 rank += (rams[i]\&.bitarray[i1] & (1UL << i2)) >> i2; 
+164             }
+165 
+166             return rank;
+167         }
+.PP
+.fi
+
+.PP
+Referências \fBnumRams\fP, \fBrams\fP, \fBrank()\fP, \fBtupleSize\fP e \fBtuplesMapping\fP\&.
+.PP
+Referenciado por \fBrank()\fP e \fBrank()\fP\&.
+.SS "int Discriminator::rank (const vector< bool > & data)\fR [inline]\fP"
+
+.PP
+Ranks the given vector of boolean data\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIdata\fP Vector of boolean data\&. 
+.RE
+.PP
+\fBRetorna\fP
+.RS 4
+Rank of the data\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB174\fP do ficheiro \fBdiscriminator\&.cc\fP\&.
+.nf
+175         {
+176             int rank = 0;
+177             int i, j, k = 0, i1, i2;
+178             int addr_pos;
+179             uint64_t addr;
+180 
+181             for (i = 0; i < numRams; i++) {
+182                 addr_pos = tupleSize\-1;
+183                 addr = 0;
+184 
+185                 for (j = 0; (j < tupleSize) && (k < entrySize); j++) {
+186                     addr |= (data[tuplesMapping[k]] << addr_pos);
+187                     addr_pos\-\-;    
+188                     k++;
+189                 }
+190 
+191                 i1 = addr >> 6;//Divide by 64 to find the bitarray id
+192                 i2 = addr & 0x3F;//Obtain remainder to access the bitarray position
+193                 rank += (rams[i]\&.bitarray[i1] & (1UL << i2)) >> i2; 
+194             }
+195 
+196             return rank;
+197         }
+.PP
+.fi
+
+.PP
+Referências \fBentrySize\fP, \fBnumRams\fP, \fBrams\fP, \fBrank()\fP, \fBtupleSize\fP e \fBtuplesMapping\fP\&.
+.SS "void Discriminator::reset ()\fR [inline]\fP"
+
+.PP
+Resets the discriminator\&. 
+.PP
+Definido na linha \fB224\fP do ficheiro \fBdiscriminator\&.cc\fP\&.
+.nf
+225         {
+226             //Generating pseudo\-random mapping
+227             int i, j;
+228 
+229             for (i = 0; i < entrySize; i++) {
+230                 tuplesMapping[i] = i;
+231             }
+232 
+233             std::shuffle(tuplesMapping, tuplesMapping + entrySize, std::default_random_engine(std::random_device{}()));
+234 
+235             for (i = 0; i < numRams; i++) {
+236                 for (j = 0; j < rams[i]\&.bitarray_size; j++) {
+237                     rams[i]\&.bitarray[j] = 0;
+238                 }
+239             }    
+240         }
+.PP
+.fi
+
+.PP
+Referências \fBentrySize\fP, \fBnumRams\fP, \fBrams\fP e \fBtuplesMapping\fP\&.
+.SS "void Discriminator::train (bitarray_t * data)\fR [inline]\fP"
+
+.PP
+Trains the discriminator with the given data\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIdata\fP Pointer to bitarray_t data\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB75\fP do ficheiro \fBdiscriminator\&.cc\fP\&.
+.nf
+76         {
+77             //vars auxiliares
+78             int i, j, k = 0, i1, i2;
+79             //addr_pos?
+80             int addr_pos;
+81             uint64_t addr;
+82 
+83             //percorre o número de rams
+84             for (i = 0; i < numRams; i++) {
+85                 //tupleSize \- 1?
+86                 addr_pos = tupleSize\-1;
+87                 addr = 0;
+88 
+89                 //Percorre o tamanho da tupla??
+90                 for (j = 0; j < tupleSize; j++) {
+91                     //arnazena a divisão de tuplesMapping[i] pro 64
+92                     i1 = tuplesMapping[k] >> 6;//Divide by 64 to find the bitarray id
+93                                                //armazena o restante para 
+94                     i2 = tuplesMapping[k] & 0x3F;//Obtain remainder to access the bitarray position
+95                                                  //cria um espécie de endereço utilizando esta operação
+96                     addr |= (((data\->bitarray[i1] & (1UL << i2)) >> i2) << addr_pos);
+97                     //vai para a tupla anterior
+98                     addr_pos\-\-;
+99                     k++;
+100                 }
+101 
+102                 i1 = addr >> 6;//Divide by 64 to find the bitarray id
+103                 i2 = addr & 0x3F;//Obtain remainder to access the bitarray position
+104                 rams[i]\&.bitarray[i1] |= (1UL << i2); 
+105             }
+106         }
+.PP
+.fi
+
+.PP
+Referências \fBnumRams\fP, \fBrams\fP, \fBtupleSize\fP e \fBtuplesMapping\fP\&.
+.SS "void Discriminator::train (const vector< bool > & data)\fR [inline]\fP"
+
+.PP
+Trains the discriminator with the given vector of boolean data\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIdata\fP Vector of boolean data\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB112\fP do ficheiro \fBdiscriminator\&.cc\fP\&.
+.nf
+113         {
+114             int i, j, k = 0, i1, i2;
+115             int addr_pos;
+116             uint64_t addr;
+117 
+118             //percorre as rams
+119             for (i = 0; i < numRams; i++) {
+120                 //tupleSize\-1 ??
+121                 addr_pos = tupleSize\-1;
+122                 addr = 0;
+123                 //j && k?
+124                 for (j = 0; (j < tupleSize) && (k < entrySize); j++) {
+125                     addr |= (data[tuplesMapping[k]] << addr_pos);
+126                     addr_pos\-\-;
+127                     k++;
+128                 }
+129 
+130                 i1 = addr >> 6;//Divide by 64 to find the bitarray id
+131                 i2 = addr & 0x3F;//Obtain remainder to access the bitarray position
+132                 rams[i]\&.bitarray[i1] |= (1UL << i2); 
+133             }
+134         }
+.PP
+.fi
+
+.PP
+Referências \fBentrySize\fP, \fBnumRams\fP, \fBrams\fP, \fBtupleSize\fP e \fBtuplesMapping\fP\&.
+.SH "Documentação dos dados membro"
+.PP 
+.SS "int Discriminator::entrySize\fR [private]\fP"
+
+.PP
+Definido na linha \fB270\fP do ficheiro \fBdiscriminator\&.cc\fP\&.
+.PP
+Referenciado por \fBDiscriminator()\fP, \fBinfo()\fP, \fBrank()\fP, \fBreset()\fP e \fBtrain()\fP\&.
+.SS "int Discriminator::numRams\fR [private]\fP"
+
+.PP
+Definido na linha \fB272\fP do ficheiro \fBdiscriminator\&.cc\fP\&.
+.PP
+Referenciado por \fBDiscriminator()\fP, \fBgetNumRams()\fP, \fBinfo()\fP, \fBrank()\fP, \fBrank()\fP, \fBreset()\fP, \fBtrain()\fP e \fBtrain()\fP\&.
+.SS "bitarray_t* Discriminator::rams\fR [private]\fP"
+
+.PP
+Definido na linha \fB274\fP do ficheiro \fBdiscriminator\&.cc\fP\&.
+.PP
+Referenciado por \fBDiscriminator()\fP, \fBgetRamBits()\fP, \fBinfo()\fP, \fBrank()\fP, \fBrank()\fP, \fBreset()\fP, \fBtrain()\fP, \fBtrain()\fP e \fB~Discriminator()\fP\&.
+.SS "int Discriminator::tupleSize\fR [private]\fP"
+
+.PP
+Definido na linha \fB271\fP do ficheiro \fBdiscriminator\&.cc\fP\&.
+.PP
+Referenciado por \fBDiscriminator()\fP, \fBgetTupleSize()\fP, \fBinfo()\fP, \fBrank()\fP, \fBrank()\fP, \fBtrain()\fP e \fBtrain()\fP\&.
+.SS "int* Discriminator::tuplesMapping\fR [private]\fP"
+
+.PP
+Definido na linha \fB273\fP do ficheiro \fBdiscriminator\&.cc\fP\&.
+.PP
+Referenciado por \fBDiscriminator()\fP, \fBrank()\fP, \fBrank()\fP, \fBreset()\fP, \fBtrain()\fP, \fBtrain()\fP e \fB~Discriminator()\fP\&.
+
+.SH "Autor"
+.PP 
+Gerado automaticamente por Doxygen para WISARD a partir do código fonte\&.

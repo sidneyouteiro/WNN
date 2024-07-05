@@ -1,0 +1,205 @@
+\doxysection{Referência à classe Median}
+\hypertarget{classMedian}{}\label{classMedian}\index{Median@{Median}}
+
+
+Classe para cálculo de mediana.  
+
+
+
+
+Diagrama de heranças da classe Median
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{classMedian__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Median\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{classMedian__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classMedian_a3f90ea702434c059b776f7e9e43e707c}{calculate}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&output\+Rams)
+\begin{DoxyCompactList}\small\item\em Calcula a mediana com base nos dados fornecidos. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classMedian_aa6ae083db8e70faab76c09e6ce833cec}{class\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o nome da classe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMean}{Mean}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMedian_aeb9c27d4102a96ed26e4f31175372fbe}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Cria uma cópia do objeto \doxylink{classMedian}{Median}. \end{DoxyCompactList}\item 
+nl\+::json \mbox{\hyperlink{classMedian_a6c692aaeecbbc132c968d15390af6f8f}{get\+JSON}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a configuração do objeto em formato JSON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe para cálculo de mediana. 
+
+Definido na linha \mbox{\hyperlink{meanfunctions_8cc_source_l00143}{143}} do ficheiro \mbox{\hyperlink{meanfunctions_8cc_source}{meanfunctions.\+cc}}.
+
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classMedian_a3f90ea702434c059b776f7e9e43e707c}\index{Median@{Median}!calculate@{calculate}}
+\index{calculate@{calculate}!Median@{Median}}
+\doxysubsubsection{\texorpdfstring{calculate()}{calculate()}}
+{\footnotesize\ttfamily \label{classMedian_a3f90ea702434c059b776f7e9e43e707c} 
+double Median\+::calculate (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{output\+Rams}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Calcula a mediana com base nos dados fornecidos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em output\+Rams} & Dados de saída das RAMs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A mediana calculada. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classMean_a6c725db111881910fcf4df655debbbc7}{Mean}}.
+
+
+
+Definido na linha \mbox{\hyperlink{meanfunctions_8cc_source_l00150}{150}} do ficheiro \mbox{\hyperlink{meanfunctions_8cc_source}{meanfunctions.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ std::vector<double>\ means(outputRams.size());}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ outputRams.size();\ i++)\ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ means[i]\ =\ outputRams[i][1]\ /\ outputRams[i][0];}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ std::sort(means.begin(),\ means.end());}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (means.size()\ \%\ 2\ ==\ 0)\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ means.size()\ /\ 2;}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (means[index]\ +\ means[index\ +\ 1])\ /\ 2.0;}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ (means.size()\ -\/\ 1)\ /\ 2\ +\ 1;}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ means[index];}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classMedian_aa6ae083db8e70faab76c09e6ce833cec}\index{Median@{Median}!className@{className}}
+\index{className@{className}!Median@{Median}}
+\doxysubsubsection{\texorpdfstring{className()}{className()}}
+{\footnotesize\ttfamily \label{classMedian_aa6ae083db8e70faab76c09e6ce833cec} 
+std\+::string Median\+::class\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém o nome da classe. 
+
+\begin{DoxyReturn}{Retorna}
+Nome da classe. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{meanfunctions_8cc_source_l00178}{178}} do ficheiro \mbox{\hyperlink{meanfunctions_8cc_source}{meanfunctions.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Median"{}};}
+\DoxyCodeLine{00180\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{meanfunctions_8cc_source_l00186}{get\+JSON()}}.
+
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{classMedian_aa6ae083db8e70faab76c09e6ce833cec_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classMedian_aeb9c27d4102a96ed26e4f31175372fbe}\index{Median@{Median}!clone@{clone}}
+\index{clone@{clone}!Median@{Median}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \label{classMedian_aeb9c27d4102a96ed26e4f31175372fbe} 
+\mbox{\hyperlink{classMean}{Mean}} \texorpdfstring{$\ast$}{*} Median\+::clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Cria uma cópia do objeto \doxylink{classMedian}{Median}. 
+
+\begin{DoxyReturn}{Retorna}
+Ponteiro para a cópia do objeto \doxylink{classMedian}{Median}. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classMean_a958ceadab78c39fe3945567847aa78b8}{Mean}}.
+
+
+
+Definido na linha \mbox{\hyperlink{meanfunctions_8cc_source_l00170}{170}} do ficheiro \mbox{\hyperlink{meanfunctions_8cc_source}{meanfunctions.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMedian}{Median}}();}
+\DoxyCodeLine{00172\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classMedian_a6c692aaeecbbc132c968d15390af6f8f}\index{Median@{Median}!getJSON@{getJSON}}
+\index{getJSON@{getJSON}!Median@{Median}}
+\doxysubsubsection{\texorpdfstring{getJSON()}{getJSON()}}
+{\footnotesize\ttfamily \label{classMedian_a6c692aaeecbbc132c968d15390af6f8f} 
+nl\+::json Median\+::get\+JSON (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Obtém a configuração do objeto em formato JSON. 
+
+\begin{DoxyReturn}{Retorna}
+Configuração do objeto em JSON. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classMean_aec291edfcf29ea7915959630a2a1fc25}{Mean}}.
+
+
+
+Definido na linha \mbox{\hyperlink{meanfunctions_8cc_source_l00186}{186}} do ficheiro \mbox{\hyperlink{meanfunctions_8cc_source}{meanfunctions.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ nl::json\ config\ =\ \{}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}type"{}},\ \mbox{\hyperlink{classMedian_aa6ae083db8e70faab76c09e6ce833cec}{className}}()\}}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ config;}
+\DoxyCodeLine{00191\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{meanfunctions_8cc_source_l00178}{class\+Name()}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{classMedian_a6c692aaeecbbc132c968d15390af6f8f_cgraph}
+\end{center}
+\end{figure}
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+src/models/regressionwisard/\mbox{\hyperlink{meanfunctions_8cc}{meanfunctions.\+cc}}\end{DoxyCompactItemize}

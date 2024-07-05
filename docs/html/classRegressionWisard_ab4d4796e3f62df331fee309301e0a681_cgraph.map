@@ -1,0 +1,7 @@
+<map id="RegressionWisard::predict" name="RegressionWisard::predict">
+<area shape="rect" id="Node000001" title="Faz a predição para uma entrada binária." alt="" coords="5,31,181,56"/>
+<area shape="rect" id="Node000002" href="$classMean.html#a6c725db111881910fcf4df655debbbc7" title="Calcula a média com base nos dados fornecidos." alt="" coords="287,5,401,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,32,273,22,273,28,182,37"/>
+<area shape="rect" id="Node000003" href="$classRegressionWisard.html#a6a25655a9cb15452b468a13dc4ed2858" title="Verifica o tamanho da entrada." alt="" coords="229,55,459,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,49,216,52,215,58,181,54"/>
+</map>

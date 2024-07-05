@@ -1,0 +1,511 @@
+.TH "RegressionRAMDataHandle" 3 "Version 2.0" "WISARD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RegressionRAMDataHandle \- A class to handle RAM data for regression tasks\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Membros públicos"
+
+.in +1c
+.ti -1c
+.RI "bool \fBcompare\fP (\fBRegressionRAMDataHandle\fP &other)"
+.br
+.RI "Compares this object with another \fBRegressionRAMDataHandle\fP object\&. "
+.ti -1c
+.RI "std::string \fBdata\fP ()"
+.br
+.RI "Gets the entire data as a string\&. "
+.ti -1c
+.RI "std::string \fBdata\fP (int r)"
+.br
+.RI "Gets the data of a specific RAM as a string\&. "
+.ti -1c
+.RI "regression_ram_t \fBget\fP (int r)"
+.br
+.RI "Gets the entire content of a specific RAM\&. "
+.ti -1c
+.RI "regression_content_t \fBget\fP (int r, int addr)"
+.br
+.RI "Gets the content of a specific RAM at a specific address\&. "
+.ti -1c
+.RI "\fBRegressionRAMDataHandle\fP ()"
+.br
+.RI "Default constructor\&. "
+.ti -1c
+.RI "\fBRegressionRAMDataHandle\fP (regression_ram_t \fBdata\fP)"
+.br
+.RI "Constructor that initializes the object with a single regression RAM data\&. "
+.ti -1c
+.RI "\fBRegressionRAMDataHandle\fP (std::string inputdata)"
+.br
+.RI "Constructor that initializes the object with input data\&. "
+.ti -1c
+.RI "\fBRegressionRAMDataHandle\fP (std::vector< regression_ram_t > \fBdata\fP)"
+.br
+.RI "Constructor that initializes the object with multiple regression RAM data\&. "
+.ti -1c
+.RI "void \fBsave\fP (std::string prefix)"
+.br
+.RI "Saves the data to a file with a given prefix\&. "
+.ti -1c
+.RI "void \fBset\fP (int r, int addr, regression_content_t value)"
+.br
+.RI "Sets the content at a specific RAM and address\&. "
+.ti -1c
+.RI "void \fBset\fP (int r, regression_ram_t value)"
+.br
+.RI "Sets the entire content of a specific RAM\&. "
+.in -1c
+.SS "Membros privados"
+
+.in +1c
+.ti -1c
+.RI "regression_ram_t \fBdataToRam\fP (const std::string &inputdata)"
+.br
+.RI "Converts a string to RAM data\&. "
+.ti -1c
+.RI "void \fBsetData\fP (std::string inputdata)"
+.br
+.RI "Sets the data from an input string\&. "
+.in -1c
+.SS "Atributos Privados"
+
+.in +1c
+.ti -1c
+.RI "std::unordered_map< int, regression_ram_t > \fBramdata\fP"
+.br
+.RI "Container for the RAM data\&. "
+.in -1c
+.SH "Descrição detalhada"
+.PP 
+A class to handle RAM data for regression tasks\&. 
+.PP
+Definido na linha \fB5\fP do ficheiro \fBregressionramdatahandle\&.cc\fP\&.
+.SH "Documentação dos Construtores & Destrutor"
+.PP 
+.SS "RegressionRAMDataHandle::RegressionRAMDataHandle (std::string inputdata)\fR [inline]\fP"
+
+.PP
+Constructor that initializes the object with input data\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIinputdata\fP The input data as a string\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB11\fP do ficheiro \fBregressionramdatahandle\&.cc\fP\&.
+.nf
+11                                                {
+12     setData(inputdata);
+13   }
+.PP
+.fi
+
+.PP
+Referências \fBsetData()\fP\&.
+.SS "RegressionRAMDataHandle::RegressionRAMDataHandle (regression_ram_t data)\fR [inline]\fP"
+
+.PP
+Constructor that initializes the object with a single regression RAM data\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIdata\fP A single regression RAM data\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB19\fP do ficheiro \fBregressionramdatahandle\&.cc\fP\&.
+.nf
+19                                                  {
+20     ramdata[0] = data;
+21   }
+.PP
+.fi
+
+.PP
+Referências \fBdata()\fP e \fBramdata\fP\&.
+.SS "RegressionRAMDataHandle::RegressionRAMDataHandle (std::vector< regression_ram_t > data)\fR [inline]\fP"
+
+.PP
+Constructor that initializes the object with multiple regression RAM data\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIdata\fP A vector containing multiple regression RAM data\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB27\fP do ficheiro \fBregressionramdatahandle\&.cc\fP\&.
+.nf
+27                                                             {
+28     for (size_t i = 0; i < data\&.size(); i++) {
+29       ramdata[i] = data[i];
+30     }
+31   }
+.PP
+.fi
+
+.PP
+Referências \fBdata()\fP e \fBramdata\fP\&.
+.SS "RegressionRAMDataHandle::RegressionRAMDataHandle ()\fR [inline]\fP"
+
+.PP
+Default constructor\&. 
+.PP
+Definido na linha \fB36\fP do ficheiro \fBregressionramdatahandle\&.cc\fP\&.
+.nf
+36 {}
+.PP
+.fi
+
+.SH "Documentação das funções"
+.PP 
+.SS "bool RegressionRAMDataHandle::compare (\fBRegressionRAMDataHandle\fP & other)\fR [inline]\fP"
+
+.PP
+Compares this object with another \fBRegressionRAMDataHandle\fP object\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIother\fP The other \fBRegressionRAMDataHandle\fP object to compare with\&. 
+.RE
+.PP
+\fBRetorna\fP
+.RS 4
+True if both objects are equal, otherwise false\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB81\fP do ficheiro \fBregressionramdatahandle\&.cc\fP\&.
+.nf
+81                                                 {
+82     if(ramdata\&.size() != other\&.ramdata\&.size()) return false;
+83     for(std::unordered_map<int,regression_ram_t>::iterator it = ramdata\&.begin(); it != ramdata\&.end(); ++it) {
+84       std::unordered_map<int,regression_ram_t>::iterator ito = other\&.ramdata\&.find(it\->first);
+85       if(ito == other\&.ramdata\&.end() || it\->second\&.size() != ito\->second\&.size()) return false;
+86 
+87       for(regression_ram_t::iterator itram = it\->second\&.begin(); itram != it\->second\&.end(); ++itram) {
+88         regression_ram_t::iterator itramo = ito\->second\&.find(itram\->first);
+89         if(itramo == ito\->second\&.end() || itram\->second != itramo\->second) return false;
+90       }
+91     }
+92     return true;
+93   }
+.PP
+.fi
+
+.PP
+Referências \fBramdata\fP\&.
+.SS "std::string RegressionRAMDataHandle::data ()\fR [inline]\fP"
+
+.PP
+Gets the entire data as a string\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+The entire data as a string\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB99\fP do ficheiro \fBregressionramdatahandle\&.cc\fP\&.
+.nf
+99                    {
+100     std::string out;
+101     for(unsigned int i=0; i<ramdata\&.size(); i++) {
+102       out += (i != 0 ? "\&." : "") + data(i);
+103     }
+104     return out;
+105   }
+.PP
+.fi
+
+.PP
+Referências \fBdata()\fP e \fBramdata\fP\&.
+.PP
+Referenciado por \fBdata()\fP, \fBRegressionRAMDataHandle()\fP, \fBRegressionRAMDataHandle()\fP e \fBsave()\fP\&.
+.SS "std::string RegressionRAMDataHandle::data (int r)\fR [inline]\fP"
+
+.PP
+Gets the data of a specific RAM as a string\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIr\fP The RAM index\&. 
+.RE
+.PP
+\fBRetorna\fP
+.RS 4
+The data of the specified RAM as a string\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB112\fP do ficheiro \fBregressionramdatahandle\&.cc\fP\&.
+.nf
+112                         {
+113     int blockSize = (sizeof(addr_t)+(3*sizeof(double)));
+114     std::string out(ramdata[r]\&.size()*blockSize,0);
+115     int k=0;
+116     for(auto j=ramdata[r]\&.begin(); j!=ramdata[r]\&.end(); ++j) {
+117       out\&.replace(k,sizeof(addr_t),convertToBytes(j\->first));
+118       for (size_t i = 0; i < j\->second\&.size(); i++) {
+119         out\&.replace(k+sizeof(addr_t)+(i*sizeof(double)),sizeof(double),convertToBytes(j\->second[i]));
+120       }
+121       k += blockSize;
+122     }
+123     return Base64::encode(out);
+124   }
+.PP
+.fi
+
+.PP
+Referências \fBramdata\fP\&.
+.SS "regression_ram_t RegressionRAMDataHandle::dataToRam (const std::string & inputdata)\fR [inline]\fP, \fR [private]\fP"
+
+.PP
+Converts a string to RAM data\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIinputdata\fP The input data as a string\&. 
+.RE
+.PP
+\fBRetorna\fP
+.RS 4
+The converted RAM data\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB179\fP do ficheiro \fBregressionramdatahandle\&.cc\fP\&.
+.nf
+179                                                          {
+180     regression_ram_t ramout;
+181     std::string decodedData = Base64::decode(inputdata);
+182     const int blockSize = (sizeof(addr_t)+(3*sizeof(double)));
+183     if(decodedData\&.size()%blockSize != 0) return ramout;
+184 
+185     for(unsigned long i=0; i<decodedData\&.size(); i+=blockSize) {
+186       addr_t address = convertToValue<addr_t>(decodedData\&.substr(i,sizeof(addr_t)));
+187       regression_content_t content;
+188       for (size_t j = 0; j < 3; j++) {
+189         double value = convertToValue<double>(decodedData\&.substr(i+sizeof(addr_t)+(j*sizeof(double)),sizeof(double)));
+190         content\&.push_back(value);
+191       }
+192       ramout[address]=content;
+193     }
+194     return ramout;
+195   }
+.PP
+.fi
+
+.PP
+Referenciado por \fBsetData()\fP\&.
+.SS "regression_ram_t RegressionRAMDataHandle::get (int r)\fR [inline]\fP"
+
+.PP
+Gets the entire content of a specific RAM\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIr\fP The RAM index\&. 
+.RE
+.PP
+\fBRetorna\fP
+.RS 4
+The entire RAM content\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB53\fP do ficheiro \fBregressionramdatahandle\&.cc\fP\&.
+.nf
+53                               {
+54     return ramdata[r];
+55   }
+.PP
+.fi
+
+.PP
+Referências \fBramdata\fP\&.
+.SS "regression_content_t RegressionRAMDataHandle::get (int r, int addr)\fR [inline]\fP"
+
+.PP
+Gets the content of a specific RAM at a specific address\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIr\fP The RAM index\&. 
+.br
+\fIaddr\fP The address within the RAM\&. 
+.RE
+.PP
+\fBRetorna\fP
+.RS 4
+The content at the specified RAM and address\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB44\fP do ficheiro \fBregressionramdatahandle\&.cc\fP\&.
+.nf
+44                                             {
+45     return ramdata[r][addr];
+46   }
+.PP
+.fi
+
+.PP
+Referências \fBramdata\fP\&.
+.PP
+Referenciado por \fBRegressionRAM::RegressionRAM()\fP\&.
+.SS "void RegressionRAMDataHandle::save (std::string prefix)\fR [inline]\fP"
+
+.PP
+Saves the data to a file with a given prefix\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIprefix\fP The prefix for the filename\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB130\fP do ficheiro \fBregressionramdatahandle\&.cc\fP\&.
+.nf
+130                               {
+131     std::string filename = prefix + ramdata_sufix;
+132     std::ofstream dataFile;
+133     dataFile\&.open(filename, std::ios::app);
+134 
+135     for(unsigned int i=0; i<ramdata\&.size(); i++) {
+136       dataFile << (i != 0 ? "\&." : "") + data(i);
+137     }
+138 
+139     dataFile\&.close();
+140   }
+.PP
+.fi
+
+.PP
+Referências \fBdata()\fP e \fBramdata\fP\&.
+.SS "void RegressionRAMDataHandle::set (int r, int addr, regression_content_t value)\fR [inline]\fP"
+
+.PP
+Sets the content at a specific RAM and address\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIr\fP The RAM index\&. 
+.br
+\fIaddr\fP The address within the RAM\&. 
+.br
+\fIvalue\fP The value to set at the specified RAM and address\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB63\fP do ficheiro \fBregressionramdatahandle\&.cc\fP\&.
+.nf
+63                                                         {
+64     ramdata[r][addr] = value;
+65   }
+.PP
+.fi
+
+.PP
+Referências \fBramdata\fP\&.
+.SS "void RegressionRAMDataHandle::set (int r, regression_ram_t value)\fR [inline]\fP"
+
+.PP
+Sets the entire content of a specific RAM\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIr\fP The RAM index\&. 
+.br
+\fIvalue\fP The value to set for the specified RAM\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB72\fP do ficheiro \fBregressionramdatahandle\&.cc\fP\&.
+.nf
+72                                           {
+73     ramdata[r] = value;
+74   }
+.PP
+.fi
+
+.PP
+Referências \fBramdata\fP\&.
+.SS "void RegressionRAMDataHandle::setData (std::string inputdata)\fR [inline]\fP, \fR [private]\fP"
+
+.PP
+Sets the data from an input string\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIinputdata\fP The input data as a string\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB147\fP do ficheiro \fBregressionramdatahandle\&.cc\fP\&.
+.nf
+147                                     {
+148     int s = ramdata_sufix\&.size();
+149     if(inputdata\&.substr(inputdata\&.size()\-s,s)\&.compare(ramdata_sufix) == 0) {
+150       std::ifstream dataFile;
+151       dataFile\&.open(inputdata);
+152       if(dataFile\&.is_open()) {
+153         while(true) {
+154           if(dataFile\&.eof()) break;
+155 
+156           std::string rdata="";
+157           std::getline(dataFile,rdata,'\&.');
+158           ramdata[ramdata\&.size()] = dataToRam(rdata);
+159         }
+160         dataFile\&.close();
+161       }
+162     }
+163     else {
+164       int pos=0;
+165       unsigned int found = 0;
+166       while(found < inputdata\&.size()) {
+167         found = inputdata\&.find('\&.',pos);
+168         ramdata[ramdata\&.size()] = dataToRam(inputdata\&.substr(pos,found\-pos));
+169         pos = found+1;
+170       }
+171     }
+172   }
+.PP
+.fi
+
+.PP
+Referências \fBdataToRam()\fP e \fBramdata\fP\&.
+.PP
+Referenciado por \fBRegressionRAMDataHandle()\fP\&.
+.SH "Documentação dos dados membro"
+.PP 
+.SS "std::unordered_map<int, regression_ram_t> RegressionRAMDataHandle::ramdata\fR [private]\fP"
+
+.PP
+Container for the RAM data\&. 
+.PP
+Definido na linha \fB197\fP do ficheiro \fBregressionramdatahandle\&.cc\fP\&.
+.PP
+Referenciado por \fBcompare()\fP, \fBdata()\fP, \fBdata()\fP, \fBget()\fP, \fBget()\fP, \fBRegressionRAMDataHandle()\fP, \fBRegressionRAMDataHandle()\fP, \fBsave()\fP, \fBset()\fP, \fBset()\fP e \fBsetData()\fP\&.
+
+.SH "Autor"
+.PP 
+Gerado automaticamente por Doxygen para WISARD a partir do código fonte\&.

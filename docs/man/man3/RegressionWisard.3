@@ -1,0 +1,647 @@
+.TH "RegressionWisard" 3 "Version 2.0" "WISARD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RegressionWisard \- Classe para um modelo de regressão utilizando \fBWisard\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Derivada de RegressionModel\&.
+.SS "Membros públicos"
+
+.in +1c
+.ti -1c
+.RI "void \fBapplyFit\fP ()"
+.br
+.RI "Aplica o ajuste calculado\&. "
+.ti -1c
+.RI "void \fBcalculateFit\fP (const BinInput &input, const double y)"
+.br
+.RI "Calcula o ajuste para uma entrada binária e um valor y\&. "
+.ti -1c
+.RI "double \fBpredict\fP (const BinInput &input) const"
+.br
+.RI "Faz a predição para uma entrada binária\&. "
+.ti -1c
+.RI "std::vector< double > \fBpredict\fP (const DataSet &dataset) const"
+.br
+.RI "Faz a predição para um conjunto de dados\&. "
+.ti -1c
+.RI "\fBRegressionWisard\fP ()"
+.br
+.RI "Construtor padrão\&. "
+.ti -1c
+.RI "\fBRegressionWisard\fP (int \fBaddressSize\fP)"
+.br
+.RI "Construtor que inicializa o modelo com um tamanho de endereço especificado\&. "
+.ti -1c
+.RI "\fBRegressionWisard\fP (nl::json c)"
+.br
+.RI "Construtor que inicializa o modelo com um objeto JSON\&. "
+.ti -1c
+.RI "void \fBtrain\fP (const BinInput &input, const double y)"
+.br
+.RI "Treina o modelo com uma entrada binária e um valor y\&. "
+.ti -1c
+.RI "void \fBtrain\fP (const DataSet &dataset)"
+.br
+.RI "Treina o modelo com um conjunto de dados\&. "
+.ti -1c
+.RI "\fB~RegressionWisard\fP ()"
+.br
+.RI "Destrutor da classe que limpa a memória\&. "
+.in -1c
+.SS "Membros protegidos"
+
+.in +1c
+.ti -1c
+.RI "void \fBcheckAddressSize\fP (const int \fBentrySize\fP, const int \fBaddressSize\fP) const"
+.br
+.RI "Verifica o tamanho do endereço\&. "
+.ti -1c
+.RI "void \fBcheckEntrySize\fP (const int entry) const"
+.br
+.RI "Verifica o tamanho da entrada\&. "
+.ti -1c
+.RI "void \fBcheckMinZeroOne\fP (int min0, int min1)"
+.br
+.RI "Verifica os valores mínimos de zeros e uns\&. "
+.ti -1c
+.RI "void \fBsetRAMShuffle\fP (int \fBentrySize\fP)"
+.br
+.RI "Configura o embaralhamento das RAMs\&. "
+.in -1c
+.SS "Atributos Privados"
+
+.in +1c
+.ti -1c
+.RI "int \fBaddressSize\fP"
+.br
+.RI "Tamanho do endereço\&. "
+.ti -1c
+.RI "bool \fBcompleteAddressing\fP"
+.br
+.RI "Endereçamento completo\&. "
+.ti -1c
+.RI "int \fBentrySize\fP"
+.br
+.RI "Tamanho da entrada\&. "
+.ti -1c
+.RI "std::vector< int > \fBmapping\fP"
+.br
+.RI "Mapeamento dos índices\&. "
+.ti -1c
+.RI "\fBMean\fP * \fBmean\fP"
+.br
+.RI "Objeto para cálculo de média\&. "
+.ti -1c
+.RI "int \fBminOne\fP"
+.br
+.RI "Número mínimo de uns\&. "
+.ti -1c
+.RI "int \fBminZero\fP"
+.br
+.RI "Número mínimo de zeros\&. "
+.ti -1c
+.RI "int \fBnumberOfTrainings\fP"
+.br
+.RI "Número de treinamentos\&. "
+.ti -1c
+.RI "bool \fBorderedMapping\fP"
+.br
+.RI "Mapeamento ordenado\&. "
+.ti -1c
+.RI "std::vector< \fBRegressionRAM\fP > \fBrams\fP"
+.br
+.RI "Vetor de RAMs de regressão\&. "
+.ti -1c
+.RI "int \fBsteps\fP"
+.br
+.RI "Número de passos\&. "
+.in -1c
+.SH "Descrição detalhada"
+.PP 
+Classe para um modelo de regressão utilizando \fBWisard\fP\&. 
+.PP
+Definido na linha \fB4\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.SH "Documentação dos Construtores & Destrutor"
+.PP 
+.SS "RegressionWisard::RegressionWisard ()\fR [inline]\fP"
+
+.PP
+Construtor padrão\&. 
+.PP
+Definido na linha \fB9\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.nf
+9 {}
+.PP
+.fi
+
+.SS "RegressionWisard::RegressionWisard (nl::json c)\fR [inline]\fP"
+
+.PP
+Construtor que inicializa o modelo com um objeto JSON\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIc\fP Objeto do tipo nl::json contendo a configuração inicial do modelo\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB15\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.nf
+15                                {
+16         srand(randint(0, 1000000));
+17         nl::json value;
+18 
+19         value = c["addressSize"];
+20         addressSize = value\&.is_null() ? 3 : value\&.get<int>();
+21 
+22         value = c["completeAddressing"];
+23         completeAddressing = value\&.is_null() ? true : value\&.get<bool>();
+24 
+25         value = c["orderedMapping"];
+26         orderedMapping = value\&.is_null() ? false : value\&.get<bool>();
+27 
+28         value = c["minZero"];
+29         minZero = value\&.is_null() ? 0 : value\&.get<int>();
+30 
+31         value = c["minOne"];
+32         minOne = value\&.is_null() ? 0 : value\&.get<int>();
+33 
+34         value = c["steps"];
+35         steps = value\&.is_null() ? 0 : value\&.get<int>();
+36 
+37         value = c["numberOfTrainings"];
+38         numberOfTrainings = value\&.is_null() ? 0 : value\&.get<int>();
+39 
+40         value = c["entrySize"];
+41         entrySize = value\&.is_null() ? 0 : value\&.get<int>();
+42 
+43         value = c["mapping"];
+44         mapping = value\&.is_null() ? std::vector<int>() : value\&.get<std::vector<int>>();
+45 
+46         value = c["data"];
+47         std::vector<nl::json> data = value\&.is_null() ? std::vector<nl::json>() : value\&.get<std::vector<nl::json>>();
+48 
+49         for (size_t i = 0; i < data\&.size(); i++) {
+50             rams\&.push_back(RegressionRAM(data[i]));
+51         }
+52     }
+.PP
+.fi
+
+.PP
+Referências \fBaddressSize\fP, \fBcompleteAddressing\fP, \fBentrySize\fP, \fBmapping\fP, \fBminOne\fP, \fBminZero\fP, \fBnumberOfTrainings\fP, \fBorderedMapping\fP, \fBrams\fP e \fBsteps\fP\&.
+.SS "RegressionWisard::RegressionWisard (int addressSize)\fR [inline]\fP"
+
+.PP
+Construtor que inicializa o modelo com um tamanho de endereço especificado\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIaddressSize\fP Tamanho do endereço\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB58\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.nf
+58 : addressSize(addressSize) {}
+.PP
+.fi
+
+.SS "RegressionWisard::~RegressionWisard ()\fR [inline]\fP"
+
+.PP
+Destrutor da classe que limpa a memória\&. 
+.PP
+Definido na linha \fB63\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.nf
+63                         {
+64         rams\&.clear();
+65     }
+.PP
+.fi
+
+.PP
+Referências \fBrams\fP\&.
+.SH "Documentação das funções"
+.PP 
+.SS "void RegressionWisard::applyFit ()\fR [inline]\fP"
+
+.PP
+Aplica o ajuste calculado\&. 
+.PP
+Definido na linha \fB143\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.nf
+143                     {
+144         for (size_t i = 0; i < rams\&.size(); i++) {
+145             rams[i]\&.applyFit();
+146         }
+147     }
+.PP
+.fi
+
+.PP
+Referências \fBrams\fP\&.
+.PP
+Referenciado por \fBtrain()\fP\&.
+.SS "void RegressionWisard::calculateFit (const BinInput & input, const double y)\fR [inline]\fP"
+
+.PP
+Calcula o ajuste para uma entrada binária e um valor y\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIinput\fP Entrada binária\&. 
+.br
+\fIy\fP Valor associado à entrada\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB133\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.nf
+133                                                              {
+134         double yPredicted = predict(input);
+135         for (size_t i = 0; i < rams\&.size(); i++) {
+136             rams[i]\&.calculateFit(input, (y \- yPredicted));
+137         }
+138     }
+.PP
+.fi
+
+.PP
+Referências \fBpredict()\fP e \fBrams\fP\&.
+.PP
+Referenciado por \fBtrain()\fP\&.
+.SS "void RegressionWisard::checkAddressSize (const int entrySize, const int addressSize) const\fR [inline]\fP, \fR [protected]\fP"
+
+.PP
+Verifica o tamanho do endereço\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIentrySize\fP Tamanho da entrada\&. 
+.br
+\fIaddressSize\fP Tamanho do endereço\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB205\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.nf
+205                                                                             {
+206         if (addressSize < 2) {
+207             throw Exception("The address size can't be less than 2!");
+208         }
+209         if (entrySize < 2) {
+210             throw Exception("The entry size can't be less than 2!");
+211         }
+212         if (entrySize < addressSize) {
+213             throw Exception("The address size can't be bigger than entry size!");
+214         }
+215     }
+.PP
+.fi
+
+.PP
+Referências \fBaddressSize\fP e \fBentrySize\fP\&.
+.PP
+Referenciado por \fBsetRAMShuffle()\fP\&.
+.SS "void RegressionWisard::checkEntrySize (const int entry) const\fR [inline]\fP, \fR [protected]\fP"
+
+.PP
+Verifica o tamanho da entrada\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIentry\fP Tamanho da entrada\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB194\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.nf
+194                                                {
+195         if (entrySize != entry) {
+196             throw Exception("The entry size defined on creation of RAM is different of entry size given as input!");
+197         }
+198     }
+.PP
+.fi
+
+.PP
+Referências \fBentrySize\fP\&.
+.PP
+Referenciado por \fBpredict()\fP e \fBtrain()\fP\&.
+.SS "void RegressionWisard::checkMinZeroOne (int min0, int min1)\fR [inline]\fP, \fR [protected]\fP"
+
+.PP
+Verifica os valores mínimos de zeros e uns\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fImin0\fP Valor mínimo de zeros\&. 
+.br
+\fImin1\fP Valor mínimo de uns\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB222\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.nf
+222                                              {
+223         if (min0 + min1 > addressSize) {
+224             throw Exception("minZero + minOne is bigger than addressSize!");
+225         }
+226     }
+.PP
+.fi
+
+.PP
+Referências \fBaddressSize\fP\&.
+.SS "double RegressionWisard::predict (const BinInput & input) const\fR [inline]\fP"
+
+.PP
+Faz a predição para uma entrada binária\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIinput\fP Entrada binária\&. 
+.RE
+.PP
+\fBRetorna\fP
+.RS 4
+O valor predito\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB104\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.nf
+104                                                 {
+105         checkEntrySize(input\&.size());
+106         std::vector<regression_content_t> outputRams(rams\&.size());
+107         for (size_t i = 0; i < rams\&.size(); i++) {
+108             outputRams[i] = rams[i]\&.getVote(input);
+109         }
+110         return mean\->calculate(outputRams);
+111     }
+.PP
+.fi
+
+.PP
+Referências \fBMean::calculate()\fP, \fBcheckEntrySize()\fP, \fBmean\fP e \fBrams\fP\&.
+.PP
+Referenciado por \fBcalculateFit()\fP e \fBpredict()\fP\&.
+.SS "std::vector< double > RegressionWisard::predict (const DataSet & dataset) const\fR [inline]\fP"
+
+.PP
+Faz a predição para um conjunto de dados\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIdataset\fP Conjunto de dados\&. 
+.RE
+.PP
+\fBRetorna\fP
+.RS 4
+Vetor com os valores preditos\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB118\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.nf
+118                                                             {
+119         std::vector<double> output(dataset\&.size());
+120 
+121         for (size_t i = 0; i < dataset\&.size(); i++) {
+122             output[i] = predict(dataset[i]);
+123         }
+124 
+125         return output;
+126     }
+.PP
+.fi
+
+.PP
+Referências \fBpredict()\fP\&.
+.SS "void RegressionWisard::setRAMShuffle (int entrySize)\fR [inline]\fP, \fR [protected]\fP"
+
+.PP
+Configura o embaralhamento das RAMs\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIentrySize\fP Tamanho da entrada\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB154\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.nf
+154                                       {
+155         this\->entrySize = entrySize;
+156         checkAddressSize(entrySize, addressSize);
+157 
+158         if (mapping\&.size() == 0) {
+159             int numberOfRAMS = entrySize / addressSize;
+160             int remain = entrySize % addressSize;
+161             int indexesSize = entrySize;
+162             if (completeAddressing && remain > 0) {
+163                 numberOfRAMS++;
+164                 indexesSize += addressSize \- remain;
+165             }
+166 
+167             rams\&.resize(numberOfRAMS);
+168             mapping\&.resize(indexesSize);
+169 
+170             for (int i = 0; i < entrySize; i++) {
+171                 mapping[i] = i;
+172             }
+173             for (size_t i = entrySize; i < mapping\&.size(); i++) {
+174                 mapping[i] = randint(0, entrySize \- 1, false);
+175             }
+176 
+177             if (!orderedMapping) {
+178                 random_shuffle(mapping\&.begin(), mapping\&.end());
+179             }
+180         } else {
+181             rams\&.resize(mapping\&.size() / addressSize);
+182         }
+183 
+184         for (size_t i = 0; i < rams\&.size(); i++) {
+185             std::vector<int> subIndexes(mapping\&.begin() + (((int)i) * addressSize), mapping\&.begin() + ((((int)i) + 1) * addressSize));
+186             rams[i] = RegressionRAM(subIndexes, minZero, minOne);
+187         }
+188     }
+.PP
+.fi
+
+.PP
+Referências \fBaddressSize\fP, \fBcheckAddressSize()\fP, \fBcompleteAddressing\fP, \fBentrySize\fP, \fBmapping\fP, \fBminOne\fP, \fBminZero\fP, \fBorderedMapping\fP e \fBrams\fP\&.
+.PP
+Referenciado por \fBtrain()\fP\&.
+.SS "void RegressionWisard::train (const BinInput & input, const double y)\fR [inline]\fP"
+
+.PP
+Treina o modelo com uma entrada binária e um valor y\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIinput\fP Entrada binária\&. 
+.br
+\fIy\fP Valor associado à entrada\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB89\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.nf
+89                                                       {
+90         if (rams\&.empty()) setRAMShuffle(input\&.size());
+91         checkEntrySize(input\&.size());
+92         numberOfTrainings++;
+93         
+94         for (size_t i = 0; i < rams\&.size(); i++) {
+95             rams[i]\&.train(input, y);
+96         }
+97     }
+.PP
+.fi
+
+.PP
+Referências \fBcheckEntrySize()\fP, \fBnumberOfTrainings\fP, \fBrams\fP e \fBsetRAMShuffle()\fP\&.
+.SS "void RegressionWisard::train (const DataSet & dataset)\fR [inline]\fP"
+
+.PP
+Treina o modelo com um conjunto de dados\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIdataset\fP Conjunto de dados utilizado para o treinamento\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB71\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.nf
+71                                        {
+72         for (size_t i = 0; i < dataset\&.size(); i++) {
+73             train(dataset[i], dataset\&.getY(i));
+74         }
+75 
+76         for (int j = 0; j < steps; j++) {
+77             for (size_t i = 0; i < dataset\&.size(); i++) {
+78                 calculateFit(dataset[i], dataset\&.getY(i));
+79             }
+80             applyFit();
+81         }   
+82     }
+.PP
+.fi
+
+.PP
+Referências \fBapplyFit()\fP, \fBcalculateFit()\fP, \fBsteps\fP e \fBtrain()\fP\&.
+.PP
+Referenciado por \fBtrain()\fP\&.
+.SH "Documentação dos dados membro"
+.PP 
+.SS "int RegressionWisard::addressSize\fR [private]\fP"
+
+.PP
+Tamanho do endereço\&. 
+.PP
+Definido na linha \fB229\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.PP
+Referenciado por \fBcheckAddressSize()\fP, \fBcheckMinZeroOne()\fP, \fBRegressionWisard()\fP e \fBsetRAMShuffle()\fP\&.
+.SS "bool RegressionWisard::completeAddressing\fR [private]\fP"
+
+.PP
+Endereçamento completo\&. 
+.PP
+Definido na linha \fB230\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.PP
+Referenciado por \fBRegressionWisard()\fP e \fBsetRAMShuffle()\fP\&.
+.SS "int RegressionWisard::entrySize\fR [private]\fP"
+
+.PP
+Tamanho da entrada\&. 
+.PP
+Definido na linha \fB237\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.PP
+Referenciado por \fBcheckAddressSize()\fP, \fBcheckEntrySize()\fP, \fBRegressionWisard()\fP e \fBsetRAMShuffle()\fP\&.
+.SS "std::vector<int> RegressionWisard::mapping\fR [private]\fP"
+
+.PP
+Mapeamento dos índices\&. 
+.PP
+Definido na linha \fB239\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.PP
+Referenciado por \fBRegressionWisard()\fP e \fBsetRAMShuffle()\fP\&.
+.SS "\fBMean\fP* RegressionWisard::mean\fR [private]\fP"
+
+.PP
+Objeto para cálculo de média\&. 
+.PP
+Definido na linha \fB232\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.PP
+Referenciado por \fBpredict()\fP\&.
+.SS "int RegressionWisard::minOne\fR [private]\fP"
+
+.PP
+Número mínimo de uns\&. 
+.PP
+Definido na linha \fB234\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.PP
+Referenciado por \fBRegressionWisard()\fP e \fBsetRAMShuffle()\fP\&.
+.SS "int RegressionWisard::minZero\fR [private]\fP"
+
+.PP
+Número mínimo de zeros\&. 
+.PP
+Definido na linha \fB233\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.PP
+Referenciado por \fBRegressionWisard()\fP e \fBsetRAMShuffle()\fP\&.
+.SS "int RegressionWisard::numberOfTrainings\fR [private]\fP"
+
+.PP
+Número de treinamentos\&. 
+.PP
+Definido na linha \fB236\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.PP
+Referenciado por \fBRegressionWisard()\fP e \fBtrain()\fP\&.
+.SS "bool RegressionWisard::orderedMapping\fR [private]\fP"
+
+.PP
+Mapeamento ordenado\&. 
+.PP
+Definido na linha \fB231\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.PP
+Referenciado por \fBRegressionWisard()\fP e \fBsetRAMShuffle()\fP\&.
+.SS "std::vector<\fBRegressionRAM\fP> RegressionWisard::rams\fR [private]\fP"
+
+.PP
+Vetor de RAMs de regressão\&. 
+.PP
+Definido na linha \fB238\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.PP
+Referenciado por \fBapplyFit()\fP, \fBcalculateFit()\fP, \fBpredict()\fP, \fBRegressionWisard()\fP, \fBsetRAMShuffle()\fP, \fBtrain()\fP e \fB~RegressionWisard()\fP\&.
+.SS "int RegressionWisard::steps\fR [private]\fP"
+
+.PP
+Número de passos\&. 
+.PP
+Definido na linha \fB235\fP do ficheiro \fBregressionwisard\&.cc\fP\&.
+.PP
+Referenciado por \fBRegressionWisard()\fP e \fBtrain()\fP\&.
+
+.SH "Autor"
+.PP 
+Gerado automaticamente por Doxygen para WISARD a partir do código fonte\&.

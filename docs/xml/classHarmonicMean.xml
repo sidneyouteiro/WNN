@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="pt">
+  <compounddef id="classHarmonicMean" kind="class" language="C++" prot="public">
+    <compoundname>HarmonicMean</compoundname>
+    <basecompoundref refid="classMean" prot="public" virt="non-virtual">Mean</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHarmonicMean_1a366283b04e8ae81d7f5ede51d71ab752" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double HarmonicMean::calculate</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;outputRams)</argsstring>
+        <name>calculate</name>
+        <qualifiedname>HarmonicMean::calculate</qualifiedname>
+        <reimplements refid="classMean_1a6c725db111881910fcf4df655debbbc7">calculate</reimplements>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+          <declname>outputRams</declname>
+        </param>
+        <briefdescription>
+<para>Calcula a média harmônica com base nos dados fornecidos. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outputRams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dados de saída das RAMs. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A média harmônica calculada. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="204" column="12" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="204" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classHarmonicMean_1a6abae98ad4be2ec5f5d3a2394aaf2f9f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string HarmonicMean::className</definition>
+        <argsstring>() const</argsstring>
+        <name>className</name>
+        <qualifiedname>HarmonicMean::className</qualifiedname>
+        <briefdescription>
+<para>Obtém o nome da classe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Nome da classe. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="235" column="17" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="235" bodyend="237"/>
+        <referencedby refid="classHarmonicMean_1a186bf48440b678ba1b9a35f084dda338" compoundref="meanfunctions_8cc" startline="243" endline="248">getJSON</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHarmonicMean_1a678bb735f9d4237e2a47a58c90b92503" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classMean" kindref="compound">Mean</ref> *</type>
+        <definition>Mean * HarmonicMean::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <qualifiedname>HarmonicMean::clone</qualifiedname>
+        <reimplements refid="classMean_1a958ceadab78c39fe3945567847aa78b8">clone</reimplements>
+        <briefdescription>
+<para>Cria uma cópia do objeto <ref refid="classHarmonicMean" kindref="compound">HarmonicMean</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Ponteiro para a cópia do objeto <ref refid="classHarmonicMean" kindref="compound">HarmonicMean</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="227" column="10" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="227" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classHarmonicMean_1a186bf48440b678ba1b9a35f084dda338" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>nl::json</type>
+        <definition>nl::json HarmonicMean::getJSON</definition>
+        <argsstring>() const</argsstring>
+        <name>getJSON</name>
+        <qualifiedname>HarmonicMean::getJSON</qualifiedname>
+        <reimplements refid="classMean_1aec291edfcf29ea7915959630a2a1fc25">getJSON</reimplements>
+        <briefdescription>
+<para>Obtém a configuração do objeto em formato JSON. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Configuração do objeto em JSON. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="243" column="14" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="243" bodyend="248"/>
+        <references refid="classHarmonicMean_1a6abae98ad4be2ec5f5d3a2394aaf2f9f" compoundref="meanfunctions_8cc" startline="235" endline="237">className</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Classe para cálculo de média harmônica. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>HarmonicMean</label>
+        <link refid="classHarmonicMean"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Mean</label>
+        <link refid="classMean"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>HarmonicMean</label>
+        <link refid="classHarmonicMean"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Mean</label>
+        <link refid="classMean"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/models/regressionwisard/meanfunctions.cc" line="197" column="1" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="197" bodyend="249"/>
+    <listofallmembers>
+      <member refid="classHarmonicMean_1a366283b04e8ae81d7f5ede51d71ab752" prot="public" virt="virtual"><scope>HarmonicMean</scope><name>calculate</name></member>
+      <member refid="classHarmonicMean_1a6abae98ad4be2ec5f5d3a2394aaf2f9f" prot="public" virt="non-virtual"><scope>HarmonicMean</scope><name>className</name></member>
+      <member refid="classHarmonicMean_1a678bb735f9d4237e2a47a58c90b92503" prot="public" virt="virtual"><scope>HarmonicMean</scope><name>clone</name></member>
+      <member refid="classHarmonicMean_1a186bf48440b678ba1b9a35f084dda338" prot="public" virt="virtual"><scope>HarmonicMean</scope><name>getJSON</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

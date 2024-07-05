@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="pt">
+  <compounddef id="dir_bdeba5f06b852fec80257c0bf4c3c36e" kind="dir">
+    <compoundname>src/models</compoundname>
+    <innerdir refid="dir_da06e3dc947cae33087c36059ccd8df4">src/models/regressionwisard</innerdir>
+    <innerdir refid="dir_077cf56d4b31f3f80e17d96eb64b10eb">src/models/wisard</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/models/"/>
+  </compounddef>
+</doxygen>

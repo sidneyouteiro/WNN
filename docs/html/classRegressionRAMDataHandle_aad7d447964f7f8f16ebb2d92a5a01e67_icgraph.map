@@ -1,0 +1,5 @@
+<map id="RegressionRAMDataHandle::get" name="RegressionRAMDataHandle::get">
+<area shape="rect" id="Node000001" title="Gets the content of a specific RAM at a specific address." alt="" coords="276,5,489,31"/>
+<area shape="rect" id="Node000002" href="$classRegressionRAM.html#a0ad601f407a8baea97364e81828f5635" title="Construtor da classe que inicializa a RAM com um objeto JSON." alt="" coords="5,5,228,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,21,228,21,228,15,262,15"/>
+</map>

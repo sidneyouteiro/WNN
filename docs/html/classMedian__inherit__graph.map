@@ -1,0 +1,5 @@
+<map id="Median" name="Median">
+<area shape="rect" id="Node000001" title="Classe para cálculo de mediana." alt="" coords="5,159,105,284"/>
+<area shape="rect" id="Node000002" href="$classMean.html" title="Classe base abstrata para cálculo de médias." alt="" coords="11,5,99,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,124,58,158,53,158,53,124"/>
+</map>

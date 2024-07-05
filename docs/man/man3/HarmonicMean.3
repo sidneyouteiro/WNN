@@ -1,0 +1,155 @@
+.TH "HarmonicMean" 3 "Version 2.0" "WISARD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HarmonicMean \- Classe para cálculo de média harmônica\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Derivada de \fBMean\fP\&.
+.SS "Membros públicos"
+
+.in +1c
+.ti -1c
+.RI "double \fBcalculate\fP (const std::vector< std::vector< double > > &outputRams)"
+.br
+.RI "Calcula a média harmônica com base nos dados fornecidos\&. "
+.ti -1c
+.RI "std::string \fBclassName\fP () const"
+.br
+.RI "Obtém o nome da classe\&. "
+.ti -1c
+.RI "\fBMean\fP * \fBclone\fP () const"
+.br
+.RI "Cria uma cópia do objeto \fBHarmonicMean\fP\&. "
+.ti -1c
+.RI "nl::json \fBgetJSON\fP () const"
+.br
+.RI "Obtém a configuração do objeto em formato JSON\&. "
+.in -1c
+.SH "Descrição detalhada"
+.PP 
+Classe para cálculo de média harmônica\&. 
+.PP
+Definido na linha \fB197\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.SH "Documentação das funções"
+.PP 
+.SS "double HarmonicMean::calculate (const std::vector< std::vector< double > > & outputRams)\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Calcula a média harmônica com base nos dados fornecidos\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIoutputRams\fP Dados de saída das RAMs\&. 
+.RE
+.PP
+\fBRetorna\fP
+.RS 4
+A média harmônica calculada\&. 
+.RE
+.PP
+
+.PP
+Implementa \fBMean\fP\&.
+.PP
+Definido na linha \fB204\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.nf
+204                                                                      {
+205         double hmean = 0;
+206         int counter = 0;
+207         for (unsigned int i = 0; i < outputRams\&.size(); i++) {
+208             if (outputRams[i][0] != 0) {
+209                 double amean = outputRams[i][1] / outputRams[i][0];
+210                 if (amean != 0) {
+211                     hmean += 1\&.0 / amean;
+212                     counter++;
+213                 }
+214             }
+215         }
+216 
+217         if (counter > 0)
+218             return counter / hmean;
+219 
+220         return 0;
+221     }
+.PP
+.fi
+
+.SS "std::string HarmonicMean::className () const\fR [inline]\fP"
+
+.PP
+Obtém o nome da classe\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Nome da classe\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB235\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.nf
+235                                 {
+236         return "HarmonicMean";
+237     }
+.PP
+.fi
+
+.PP
+Referenciado por \fBgetJSON()\fP\&.
+.SS "\fBMean\fP * HarmonicMean::clone () const\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Cria uma cópia do objeto \fBHarmonicMean\fP\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Ponteiro para a cópia do objeto \fBHarmonicMean\fP\&. 
+.RE
+.PP
+
+.PP
+Implementa \fBMean\fP\&.
+.PP
+Definido na linha \fB227\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.nf
+227                         {
+228         return new HarmonicMean();
+229     }
+.PP
+.fi
+
+.SS "nl::json HarmonicMean::getJSON () const\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Obtém a configuração do objeto em formato JSON\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Configuração do objeto em JSON\&. 
+.RE
+.PP
+
+.PP
+Implementa \fBMean\fP\&.
+.PP
+Definido na linha \fB243\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.nf
+243                            {
+244         nl::json config = {
+245             {"type", className()}
+246         };
+247         return config;
+248     }
+.PP
+.fi
+
+.PP
+Referências \fBclassName()\fP\&.
+
+.SH "Autor"
+.PP 
+Gerado automaticamente por Doxygen para WISARD a partir do código fonte\&.

@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="pt">
+  <compounddef id="discriminator_8cc" kind="file" language="C++">
+    <compoundname>discriminator.cc</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">random</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">vector</includes>
+    <includes local="yes">../../../include/bitarray.h</includes>
+    <includedby refid="wisard_8cc" local="yes">src/models/wisard/wisard.cc</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>../../../include/bitarray.h</label>
+      </node>
+      <node id="1">
+        <label>src/models/wisard/discriminator.cc</label>
+        <link refid="discriminator_8cc"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>algorithm</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>random</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/models/wisard/discriminator.cc</label>
+        <link refid="discriminator_8cc"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/models/wisard/wisard.cc</label>
+        <link refid="wisard_8cc"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classDiscriminator" prot="public">Discriminator</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../../include/bitarray.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classDiscriminator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classDiscriminator" kindref="compound">Discriminator</ref><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20" refid="classDiscriminator_1a18f6a5ef1ceca3e187cc495a77a8141c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiscriminator_1a18f6a5ef1ceca3e187cc495a77a8141c" kindref="member">Discriminator</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" kindref="member">entrySize</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" kindref="member">tupleSize</ref>)<sp/>:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" kindref="member">entrySize</ref>(<ref refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" kindref="member">entrySize</ref>),<sp/><ref refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" kindref="member">tupleSize</ref>(<ref refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" kindref="member">tupleSize</ref>)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculates<sp/>the<sp/>number<sp/>of<sp/>RAMs<sp/>needed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" kindref="member">numRams</ref><sp/>=<sp/><ref refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" kindref="member">entrySize</ref>/<ref refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" kindref="member">tupleSize</ref><sp/>+<sp/>((<ref refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" kindref="member">entrySize</ref>%<ref refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" kindref="member">tupleSize</ref>)<sp/>&gt;<sp/>0);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//calloc<sp/>retorna<sp/>um<sp/>*<sp/>void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//(int<sp/>*)<sp/>-&gt;<sp/>casting/troca<sp/>de<sp/>tipo<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Troca<sp/>o<sp/>*<sp/>void<sp/>para<sp/>*<sp/>int,<sp/>pois<sp/>vamos<sp/>lidar<sp/>com<sp/>inteiros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Bem<sp/>como<sp/>inicializa<sp/>o<sp/>array<sp/>com<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" kindref="member">tuplesMapping</ref><sp/>=<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*)calloc(<ref refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" kindref="member">entrySize</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Generating<sp/>pseudo-random<sp/>mapping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Percorre<sp/>esse<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" kindref="member">entrySize</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//mapeia<sp/>cada<sp/>tupla,<sp/>neste<sp/>caso<sp/>é<sp/>parecido<sp/>com<sp/>uma<sp/>enumeração</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" kindref="member">tuplesMapping</ref>[i]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//embaralha</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shuffle(<ref refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" kindref="member">tuplesMapping</ref>,<sp/><ref refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" kindref="member">tuplesMapping</ref><sp/>+<sp/><ref refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" kindref="member">entrySize</ref>,<sp/>std::default_random_engine(std::random_device{}()));</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Aloca<sp/>memória<sp/>ram</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" kindref="member">rams</ref><sp/>=<sp/>(bitarray_t<sp/>*)<sp/>calloc(<ref refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" kindref="member">numRams</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(bitarray_t));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_bits<sp/>=<sp/>(1UL<sp/>&lt;&lt;<sp/><ref refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" kindref="member">tupleSize</ref>);</highlight><highlight class="comment">//2^tuple_size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bitarray_size<sp/>=<sp/>(num_bits<sp/>&gt;&gt;<sp/>6);<sp/></highlight><highlight class="comment">//divide<sp/>by<sp/>64<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//verifica<sp/>bits<sp/>restantes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bitarray_size<sp/>+=<sp/>((bitarray_size<sp/>&amp;<sp/>0x3F)<sp/>&gt;<sp/>0);<sp/></highlight><highlight class="comment">//ceil<sp/>quotient.<sp/>If<sp/>remainder<sp/>&gt;<sp/>0<sp/>then<sp/>sum<sp/>by<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//percorre<sp/>as<sp/>rams<sp/>alocadas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//preenchendo<sp/>os<sp/>elementos<sp/>com<sp/>informações</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//várias<sp/>rams<sp/>iguais</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//mesmas<sp/>propriedades</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" kindref="member">numRams</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" kindref="member">rams</ref>[i].num_bits<sp/>=<sp/>num_bits;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" kindref="member">rams</ref>[i].bitarray_size<sp/>=<sp/>bitarray_size;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" kindref="member">rams</ref>[i].bitarray<sp/>=<sp/>(uint64_t<sp/>*)calloc(<ref refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" kindref="member">rams</ref>[i].bitarray_size,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint64_t));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classDiscriminator_1a85cac98c07ece485461dd6f55e112adb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiscriminator_1a85cac98c07ece485461dd6f55e112adb" kindref="member">~Discriminator</ref>()<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout<sp/>&lt;&lt;<sp/>&quot;Destructor&quot;<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(<ref refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" kindref="member">rams</ref>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(<ref refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" kindref="member">tuplesMapping</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classDiscriminator_1ab8048d9b2da18a14532e90460c5c92a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1ab8048d9b2da18a14532e90460c5c92a8" kindref="member">train</ref>(bitarray_t<sp/>*<sp/>data)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//vars<sp/>auxiliares</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>j,<sp/>k<sp/>=<sp/>0,<sp/>i1,<sp/>i2;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//addr_pos?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>addr_pos;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>addr;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//percorre<sp/>o<sp/>número<sp/>de<sp/>rams</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" kindref="member">numRams</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//tupleSize<sp/>-<sp/>1?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addr_pos<sp/>=<sp/><ref refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" kindref="member">tupleSize</ref>-1;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addr<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Percorre<sp/>o<sp/>tamanho<sp/>da<sp/>tupla??</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/><ref refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" kindref="member">tupleSize</ref>;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//arnazena<sp/>a<sp/>divisão<sp/>de<sp/>tuplesMapping[i]<sp/>pro<sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i1<sp/>=<sp/><ref refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" kindref="member">tuplesMapping</ref>[k]<sp/>&gt;&gt;<sp/>6;</highlight><highlight class="comment">//Divide<sp/>by<sp/>64<sp/>to<sp/>find<sp/>the<sp/>bitarray<sp/>id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//armazena<sp/>o<sp/>restante<sp/>para<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2<sp/>=<sp/><ref refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" kindref="member">tuplesMapping</ref>[k]<sp/>&amp;<sp/>0x3F;</highlight><highlight class="comment">//Obtain<sp/>remainder<sp/>to<sp/>access<sp/>the<sp/>bitarray<sp/>position</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cria<sp/>um<sp/>espécie<sp/>de<sp/>endereço<sp/>utilizando<sp/>esta<sp/>operação</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addr<sp/>|=<sp/>(((data-&gt;bitarray[i1]<sp/>&amp;<sp/>(1UL<sp/>&lt;&lt;<sp/>i2))<sp/>&gt;&gt;<sp/>i2)<sp/>&lt;&lt;<sp/>addr_pos);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//vai<sp/>para<sp/>a<sp/>tupla<sp/>anterior</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addr_pos--;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k++;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i1<sp/>=<sp/>addr<sp/>&gt;&gt;<sp/>6;</highlight><highlight class="comment">//Divide<sp/>by<sp/>64<sp/>to<sp/>find<sp/>the<sp/>bitarray<sp/>id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2<sp/>=<sp/>addr<sp/>&amp;<sp/>0x3F;</highlight><highlight class="comment">//Obtain<sp/>remainder<sp/>to<sp/>access<sp/>the<sp/>bitarray<sp/>position</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" kindref="member">rams</ref>[i].bitarray[i1]<sp/>|=<sp/>(1UL<sp/>&lt;&lt;<sp/>i2);<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="classDiscriminator_1a53db61dec9f645573d5aa577344431a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1a53db61dec9f645573d5aa577344431a4" kindref="member">train</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;bool&gt;&amp;<sp/>data)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>j,<sp/>k<sp/>=<sp/>0,<sp/>i1,<sp/>i2;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>addr_pos;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>addr;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//percorre<sp/>as<sp/>rams</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" kindref="member">numRams</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//tupleSize-1<sp/>??</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addr_pos<sp/>=<sp/><ref refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" kindref="member">tupleSize</ref>-1;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addr<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//j<sp/>&amp;&amp;<sp/>k?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0;<sp/>(j<sp/>&lt;<sp/><ref refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" kindref="member">tupleSize</ref>)<sp/>&amp;&amp;<sp/>(k<sp/>&lt;<sp/><ref refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" kindref="member">entrySize</ref>);<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addr<sp/>|=<sp/>(data[<ref refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" kindref="member">tuplesMapping</ref>[k]]<sp/>&lt;&lt;<sp/>addr_pos);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addr_pos--;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k++;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i1<sp/>=<sp/>addr<sp/>&gt;&gt;<sp/>6;</highlight><highlight class="comment">//Divide<sp/>by<sp/>64<sp/>to<sp/>find<sp/>the<sp/>bitarray<sp/>id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2<sp/>=<sp/>addr<sp/>&amp;<sp/>0x3F;</highlight><highlight class="comment">//Obtain<sp/>remainder<sp/>to<sp/>access<sp/>the<sp/>bitarray<sp/>position</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" kindref="member">rams</ref>[i].bitarray[i1]<sp/>|=<sp/>(1UL<sp/>&lt;&lt;<sp/>i2);<sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141" refid="classDiscriminator_1a76a9e6c46205fbb22e7c71fee3267582" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1a76a9e6c46205fbb22e7c71fee3267582" kindref="member">rank</ref>(bitarray_t<sp/>*<sp/>data)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1a76a9e6c46205fbb22e7c71fee3267582" kindref="member">rank</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>j,<sp/>k<sp/>=<sp/>0,<sp/>i1,<sp/>i2;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>addr_pos;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>addr;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" kindref="member">numRams</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addr_pos<sp/>=<sp/><ref refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" kindref="member">tupleSize</ref>-1;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addr<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/><ref refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" kindref="member">tupleSize</ref>;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i1<sp/>=<sp/><ref refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" kindref="member">tuplesMapping</ref>[k]<sp/>&gt;&gt;<sp/>6;</highlight><highlight class="comment">//Divide<sp/>by<sp/>64<sp/>to<sp/>find<sp/>the<sp/>bitarray<sp/>id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2<sp/>=<sp/><ref refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" kindref="member">tuplesMapping</ref>[k]<sp/>&amp;<sp/>0x3F;</highlight><highlight class="comment">//Obtain<sp/>remainder<sp/>to<sp/>access<sp/>the<sp/>bitarray<sp/>position</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addr<sp/>|=<sp/>(((data-&gt;bitarray[i1]<sp/>&amp;<sp/>(1UL<sp/>&lt;&lt;<sp/>i2))<sp/>&gt;&gt;<sp/>i2)<sp/>&lt;&lt;<sp/>addr_pos);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addr_pos--;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k++;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i1<sp/>=<sp/>addr<sp/>&gt;&gt;<sp/>6;</highlight><highlight class="comment">//Divide<sp/>by<sp/>64<sp/>to<sp/>find<sp/>the<sp/>bitarray<sp/>id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2<sp/>=<sp/>addr<sp/>&amp;<sp/>0x3F;</highlight><highlight class="comment">//Obtain<sp/>remainder<sp/>to<sp/>access<sp/>the<sp/>bitarray<sp/>position</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiscriminator_1a76a9e6c46205fbb22e7c71fee3267582" kindref="member">rank</ref><sp/>+=<sp/>(<ref refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" kindref="member">rams</ref>[i].bitarray[i1]<sp/>&amp;<sp/>(1UL<sp/>&lt;&lt;<sp/>i2))<sp/>&gt;&gt;<sp/>i2;<sp/></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1a76a9e6c46205fbb22e7c71fee3267582" kindref="member">rank</ref>;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174" refid="classDiscriminator_1a1aa42beb010bc86dd9418db8b294e78c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1a1aa42beb010bc86dd9418db8b294e78c" kindref="member">rank</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;bool&gt;&amp;<sp/>data)</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1a76a9e6c46205fbb22e7c71fee3267582" kindref="member">rank</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>j,<sp/>k<sp/>=<sp/>0,<sp/>i1,<sp/>i2;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>addr_pos;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>addr;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" kindref="member">numRams</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addr_pos<sp/>=<sp/><ref refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" kindref="member">tupleSize</ref>-1;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addr<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0;<sp/>(j<sp/>&lt;<sp/><ref refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" kindref="member">tupleSize</ref>)<sp/>&amp;&amp;<sp/>(k<sp/>&lt;<sp/><ref refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" kindref="member">entrySize</ref>);<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addr<sp/>|=<sp/>(data[<ref refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" kindref="member">tuplesMapping</ref>[k]]<sp/>&lt;&lt;<sp/>addr_pos);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addr_pos--;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k++;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i1<sp/>=<sp/>addr<sp/>&gt;&gt;<sp/>6;</highlight><highlight class="comment">//Divide<sp/>by<sp/>64<sp/>to<sp/>find<sp/>the<sp/>bitarray<sp/>id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2<sp/>=<sp/>addr<sp/>&amp;<sp/>0x3F;</highlight><highlight class="comment">//Obtain<sp/>remainder<sp/>to<sp/>access<sp/>the<sp/>bitarray<sp/>position</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiscriminator_1a76a9e6c46205fbb22e7c71fee3267582" kindref="member">rank</ref><sp/>+=<sp/>(<ref refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" kindref="member">rams</ref>[i].bitarray[i1]<sp/>&amp;<sp/>(1UL<sp/>&lt;&lt;<sp/>i2))<sp/>&gt;&gt;<sp/>i2;<sp/></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1a76a9e6c46205fbb22e7c71fee3267582" kindref="member">rank</ref>;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201" refid="classDiscriminator_1ab2ac35f380491c1ade7032c7269a0e65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1ab2ac35f380491c1ade7032c7269a0e65" kindref="member">info</ref>()<sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>totalBits<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Entry<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" kindref="member">entrySize</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>Tuples<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" kindref="member">tupleSize</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>RAMs<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" kindref="member">numRams</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>RAM<sp/>size<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" kindref="member">rams</ref>[0].num_bits<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>bits&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" kindref="member">numRams</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cout<sp/>&lt;&lt;<sp/>&quot;RAM<sp/>&quot;<sp/>&lt;&lt;<sp/>i<sp/>&lt;&lt;<sp/>&quot;<sp/>-<sp/>&quot;<sp/>&lt;&lt;<sp/>rams[i].num_bits<sp/>&lt;&lt;<sp/>&quot;<sp/>bits&quot;<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*for<sp/>(j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>rams[i].bitarray_size;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>rams[i].bitarray[j]<sp/>&lt;&lt;<sp/>&quot;,<sp/>&quot;;</highlight></codeline>
+<codeline lineno="212"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>totalBits<sp/>+=<sp/><ref refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" kindref="member">rams</ref>[i].num_bits;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Total<sp/>Bits<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>totalBits<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="224" refid="classDiscriminator_1a2d97f91f8097cd8581f5c79b34bd0150" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1a2d97f91f8097cd8581f5c79b34bd0150" kindref="member">reset</ref>()</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Generating<sp/>pseudo-random<sp/>mapping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>j;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" kindref="member">entrySize</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" kindref="member">tuplesMapping</ref>[i]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shuffle(<ref refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" kindref="member">tuplesMapping</ref>,<sp/><ref refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" kindref="member">tuplesMapping</ref><sp/>+<sp/><ref refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" kindref="member">entrySize</ref>,<sp/>std::default_random_engine(std::random_device{}()));</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" kindref="member">numRams</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/><ref refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" kindref="member">rams</ref>[i].bitarray_size;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" kindref="member">rams</ref>[i].bitarray[j]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="classDiscriminator_1ad65569d300243be32d4f7cde25ed71b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1ad65569d300243be32d4f7cde25ed71b4" kindref="member">getRamBits</ref>()<sp/></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" kindref="member">rams</ref>[0].num_bits;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="255" refid="classDiscriminator_1a7050bbf5d9b52318fdb8c6387ca7a0ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1a7050bbf5d9b52318fdb8c6387ca7a0ac" kindref="member">getNumRams</ref>()</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" kindref="member">numRams</ref>;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="264" refid="classDiscriminator_1a2651a5132e8d8554d47f1406820f4062" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1a2651a5132e8d8554d47f1406820f4062" kindref="member">getTupleSize</ref>()</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" kindref="member">tupleSize</ref>;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="270" refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" kindref="member">entrySize</ref>;</highlight></codeline>
+<codeline lineno="271" refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" kindref="member">tupleSize</ref>;</highlight></codeline>
+<codeline lineno="272" refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" kindref="member">numRams</ref>;</highlight></codeline>
+<codeline lineno="273" refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<sp/><ref refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" kindref="member">tuplesMapping</ref>;</highlight></codeline>
+<codeline lineno="274" refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bitarray_t<sp/>*<sp/><ref refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" kindref="member">rams</ref>;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="277"><highlight class="comment"><sp/><sp/><sp/>int<sp/>main(){</highlight></codeline>
+<codeline lineno="278"><highlight class="comment"></highlight></codeline>
+<codeline lineno="279"><highlight class="comment"><sp/><sp/><sp/>Discriminator<sp/>*<sp/>disc<sp/>=<sp/>new<sp/>Discriminator(1024,<sp/>16);</highlight></codeline>
+<codeline lineno="280"><highlight class="comment"></highlight></codeline>
+<codeline lineno="281"><highlight class="comment"><sp/><sp/><sp/>vector&lt;bool&gt;<sp/>data<sp/>=<sp/>vector&lt;bool&gt;(1024);</highlight></codeline>
+<codeline lineno="282"><highlight class="comment"><sp/><sp/><sp/>int<sp/>i;</highlight></codeline>
+<codeline lineno="283"><highlight class="comment"></highlight></codeline>
+<codeline lineno="284"><highlight class="comment"><sp/><sp/><sp/>for<sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>1024;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="285"><highlight class="comment"><sp/><sp/><sp/>data[i]<sp/>=<sp/>i&amp;1;</highlight></codeline>
+<codeline lineno="286"><highlight class="comment"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="287"><highlight class="comment"></highlight></codeline>
+<codeline lineno="288"><highlight class="comment"><sp/><sp/><sp/>for<sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>1024;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="289"><highlight class="comment"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>data[i];</highlight></codeline>
+<codeline lineno="290"><highlight class="comment"><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="291"><highlight class="comment"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="292"><highlight class="comment"></highlight></codeline>
+<codeline lineno="293"><highlight class="comment"><sp/><sp/><sp/>disc-&gt;train(data);</highlight></codeline>
+<codeline lineno="294"><highlight class="comment"></highlight></codeline>
+<codeline lineno="295"><highlight class="comment"><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;Rank=&quot;<sp/>&lt;&lt;<sp/>dec<sp/>&lt;&lt;<sp/>disc-&gt;rank(data)<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="296"><highlight class="comment"><sp/><sp/><sp/>disc-&gt;info();</highlight></codeline>
+<codeline lineno="297"><highlight class="comment"></highlight></codeline>
+<codeline lineno="298"><highlight class="comment"><sp/><sp/><sp/>delete<sp/>disc;</highlight></codeline>
+<codeline lineno="299"><highlight class="comment"><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline lineno="300"><highlight class="comment"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="301"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/models/wisard/discriminator.cc"/>
+  </compounddef>
+</doxygen>

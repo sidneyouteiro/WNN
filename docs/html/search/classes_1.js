@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wisard_23',['Wisard',['../classWisard.html',1,'']]]
+  ['harmonicmean_0',['HarmonicMean',['../classHarmonicMean.html',1,'']]]
 ];

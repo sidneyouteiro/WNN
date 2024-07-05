@@ -1,0 +1,14 @@
+<map id="RegressionWisard::train" name="RegressionWisard::train">
+<area shape="rect" id="Node000001" title="Treina o modelo com um conjunto de dados." alt="" coords="5,31,168,56"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="49,32,41,22,45,12,61,6,87,4,119,8,131,17,128,22,117,13,87,9,62,11,49,16,46,22,53,29"/>
+<area shape="rect" id="Node000002" href="$classRegressionWisard.html#ac37f1d1c653928a21c5d3588c3837c9b" title="Aplica o ajuste calculado." alt="" coords="227,5,409,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,32,213,27,213,32,169,37"/>
+<area shape="rect" id="Node000003" href="$classRegressionWisard.html#a2f22f241b281ab6a0e4cf1cfb9335bb4" title="Calcula o ajuste para uma entrada binária e um valor y." alt="" coords="216,55,420,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,49,203,53,202,58,168,54"/>
+<area shape="rect" id="Node000004" href="$classRegressionWisard.html#ab4d4796e3f62df331fee309301e0a681" title="Faz a predição para uma entrada binária." alt="" coords="468,55,644,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="420,65,454,65,454,70,420,70"/>
+<area shape="rect" id="Node000005" href="$classMean.html#a6c725db111881910fcf4df655debbbc7" title="Calcula a média com base nos dados fornecidos." alt="" coords="749,29,864,55"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="644,56,735,46,736,52,644,61"/>
+<area shape="rect" id="Node000006" href="$classRegressionWisard.html#a6a25655a9cb15452b468a13dc4ed2858" title="Verifica o tamanho da entrada." alt="" coords="692,79,921,104"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="644,73,678,76,678,82,644,78"/>
+</map>

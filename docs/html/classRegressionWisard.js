@@ -1,0 +1,28 @@
+var classRegressionWisard =
+[
+    [ "RegressionWisard", "classRegressionWisard.html#a56ec56a98f692d756f1f80e04bd19354", null ],
+    [ "RegressionWisard", "classRegressionWisard.html#afef642836ca4d47c9a1ee6f9497ee265", null ],
+    [ "RegressionWisard", "classRegressionWisard.html#a054c0bf1dd245976d942f5714fa5c8ef", null ],
+    [ "~RegressionWisard", "classRegressionWisard.html#a8203ce8fa5395d5891c29c4abccb7979", null ],
+    [ "applyFit", "classRegressionWisard.html#ac37f1d1c653928a21c5d3588c3837c9b", null ],
+    [ "calculateFit", "classRegressionWisard.html#a2f22f241b281ab6a0e4cf1cfb9335bb4", null ],
+    [ "checkAddressSize", "classRegressionWisard.html#a4bfafa888b990804d754feb76044b679", null ],
+    [ "checkEntrySize", "classRegressionWisard.html#a6a25655a9cb15452b468a13dc4ed2858", null ],
+    [ "checkMinZeroOne", "classRegressionWisard.html#a6104a1884a605d02e08042eaf2b70310", null ],
+    [ "predict", "classRegressionWisard.html#ab4d4796e3f62df331fee309301e0a681", null ],
+    [ "predict", "classRegressionWisard.html#ab2825bf4202b12029b489c1d4de342b8", null ],
+    [ "setRAMShuffle", "classRegressionWisard.html#ad003f5c063b032a1995ccfcf2682c549", null ],
+    [ "train", "classRegressionWisard.html#a125bffa9cf4806492f2b2cf96a3932b0", null ],
+    [ "train", "classRegressionWisard.html#a11970036606a16938821722fb3af53ee", null ],
+    [ "addressSize", "classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550", null ],
+    [ "completeAddressing", "classRegressionWisard.html#aa667b0e3eb449edf55101e21b9e81047", null ],
+    [ "entrySize", "classRegressionWisard.html#a0b4ff031198660ee8239a94211a98cd0", null ],
+    [ "mapping", "classRegressionWisard.html#a103aa1c658a82b6fb5d17db4bc5cef4b", null ],
+    [ "mean", "classRegressionWisard.html#af7f452b5991bf8498d19cb3b5aea16af", null ],
+    [ "minOne", "classRegressionWisard.html#a4d8ca9f91145bca9cccf256b75a79ab0", null ],
+    [ "minZero", "classRegressionWisard.html#a19bf9ed20712adaa43cff5f46985ad0f", null ],
+    [ "numberOfTrainings", "classRegressionWisard.html#a42982f590753efc85fd6f52081dccfa6", null ],
+    [ "orderedMapping", "classRegressionWisard.html#a218ec296378e06b77f337de4c99e315a", null ],
+    [ "rams", "classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f", null ],
+    [ "steps", "classRegressionWisard.html#a2d96d1e6bb01d4aed4e8f5cb40510596", null ]
+];

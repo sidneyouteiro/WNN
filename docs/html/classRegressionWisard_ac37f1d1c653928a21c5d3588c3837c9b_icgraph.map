@@ -1,0 +1,6 @@
+<map id="RegressionWisard::applyFit" name="RegressionWisard::applyFit">
+<area shape="rect" id="Node000001" title="Aplica o ajuste calculado." alt="" coords="216,29,399,55"/>
+<area shape="rect" id="Node000002" href="$classRegressionWisard.html#a11970036606a16938821722fb3af53ee" title="Treina o modelo com um conjunto de dados." alt="" coords="5,29,168,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,45,168,45,168,39,202,39"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="126,20,115,11,87,8,63,10,51,15,48,20,55,28,51,31,43,21,47,11,62,5,87,3,117,6,129,15"/>
+</map>

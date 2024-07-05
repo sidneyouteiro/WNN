@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="pt">
+  <compounddef id="classMedian" kind="class" language="C++" prot="public">
+    <compoundname>Median</compoundname>
+    <basecompoundref refid="classMean" prot="public" virt="non-virtual">Mean</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMedian_1a3f90ea702434c059b776f7e9e43e707c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double Median::calculate</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;outputRams)</argsstring>
+        <name>calculate</name>
+        <qualifiedname>Median::calculate</qualifiedname>
+        <reimplements refid="classMean_1a6c725db111881910fcf4df655debbbc7">calculate</reimplements>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+          <declname>outputRams</declname>
+        </param>
+        <briefdescription>
+<para>Calcula a mediana com base nos dados fornecidos. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outputRams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dados de saída das RAMs. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A mediana calculada. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="150" column="12" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="150" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classMedian_1aa6ae083db8e70faab76c09e6ce833cec" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Median::className</definition>
+        <argsstring>() const</argsstring>
+        <name>className</name>
+        <qualifiedname>Median::className</qualifiedname>
+        <briefdescription>
+<para>Obtém o nome da classe. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Nome da classe. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="178" column="17" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="178" bodyend="180"/>
+        <referencedby refid="classMedian_1a6c692aaeecbbc132c968d15390af6f8f" compoundref="meanfunctions_8cc" startline="186" endline="191">getJSON</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMedian_1aeb9c27d4102a96ed26e4f31175372fbe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classMean" kindref="compound">Mean</ref> *</type>
+        <definition>Mean * Median::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <qualifiedname>Median::clone</qualifiedname>
+        <reimplements refid="classMean_1a958ceadab78c39fe3945567847aa78b8">clone</reimplements>
+        <briefdescription>
+<para>Cria uma cópia do objeto <ref refid="classMedian" kindref="compound">Median</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Ponteiro para a cópia do objeto <ref refid="classMedian" kindref="compound">Median</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="170" column="10" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="170" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classMedian_1a6c692aaeecbbc132c968d15390af6f8f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>nl::json</type>
+        <definition>nl::json Median::getJSON</definition>
+        <argsstring>() const</argsstring>
+        <name>getJSON</name>
+        <qualifiedname>Median::getJSON</qualifiedname>
+        <reimplements refid="classMean_1aec291edfcf29ea7915959630a2a1fc25">getJSON</reimplements>
+        <briefdescription>
+<para>Obtém a configuração do objeto em formato JSON. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Configuração do objeto em JSON. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="186" column="14" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="186" bodyend="191"/>
+        <references refid="classMedian_1aa6ae083db8e70faab76c09e6ce833cec" compoundref="meanfunctions_8cc" startline="178" endline="180">className</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Classe para cálculo de mediana. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Mean</label>
+        <link refid="classMean"/>
+      </node>
+      <node id="1">
+        <label>Median</label>
+        <link refid="classMedian"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Mean</label>
+        <link refid="classMean"/>
+      </node>
+      <node id="1">
+        <label>Median</label>
+        <link refid="classMedian"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/models/regressionwisard/meanfunctions.cc" line="143" column="1" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="143" bodyend="192"/>
+    <listofallmembers>
+      <member refid="classMedian_1a3f90ea702434c059b776f7e9e43e707c" prot="public" virt="virtual"><scope>Median</scope><name>calculate</name></member>
+      <member refid="classMedian_1aa6ae083db8e70faab76c09e6ce833cec" prot="public" virt="non-virtual"><scope>Median</scope><name>className</name></member>
+      <member refid="classMedian_1aeb9c27d4102a96ed26e4f31175372fbe" prot="public" virt="virtual"><scope>Median</scope><name>clone</name></member>
+      <member refid="classMedian_1a6c692aaeecbbc132c968d15390af6f8f" prot="public" virt="virtual"><scope>Median</scope><name>getJSON</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,943 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WISARD: Referência à classe RegressionRAMDataHandle</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">WISARD<span id="projectnumber">&#160;2.0</span>
+   </div>
+   <div id="projectbrief">WNN</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classRegressionRAMDataHandle.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pri-methods">Membros privados</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a> &#124;
+<a href="classRegressionRAMDataHandle-members.html">Mostrar lista completa dos membros</a>  </div>
+  <div class="headertitle"><div class="title">Referência à classe RegressionRAMDataHandle</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>A class to handle RAM data for regression tasks.  
+ <a href="#details">Mais...</a></p>
+<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Diagrama de colaboração para RegressionRAMDataHandle:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classRegressionRAMDataHandle__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr class="memitem:ae14bec5896e36c648e5af2389465af9d" id="r_ae14bec5896e36c648e5af2389465af9d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae14bec5896e36c648e5af2389465af9d">compare</a> (<a class="el" href="classRegressionRAMDataHandle.html">RegressionRAMDataHandle</a> &amp;other)</td></tr>
+<tr class="memdesc:ae14bec5896e36c648e5af2389465af9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares this object with another <a class="el" href="classRegressionRAMDataHandle.html" title="A class to handle RAM data for regression tasks.">RegressionRAMDataHandle</a> object.  <br /></td></tr>
+<tr class="separator:ae14bec5896e36c648e5af2389465af9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee65ec030eb5fc20ee5d1aa87af64472" id="r_aee65ec030eb5fc20ee5d1aa87af64472"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee65ec030eb5fc20ee5d1aa87af64472">data</a> ()</td></tr>
+<tr class="memdesc:aee65ec030eb5fc20ee5d1aa87af64472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the entire data as a string.  <br /></td></tr>
+<tr class="separator:aee65ec030eb5fc20ee5d1aa87af64472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fcf657e5fa8d8f74c57b55bae909b16" id="r_a4fcf657e5fa8d8f74c57b55bae909b16"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fcf657e5fa8d8f74c57b55bae909b16">data</a> (int r)</td></tr>
+<tr class="memdesc:a4fcf657e5fa8d8f74c57b55bae909b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the data of a specific RAM as a string.  <br /></td></tr>
+<tr class="separator:a4fcf657e5fa8d8f74c57b55bae909b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d4de5cf1dad67abd478b43be27b31bf" id="r_a6d4de5cf1dad67abd478b43be27b31bf"><td class="memItemLeft" align="right" valign="top">regression_ram_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d4de5cf1dad67abd478b43be27b31bf">get</a> (int r)</td></tr>
+<tr class="memdesc:a6d4de5cf1dad67abd478b43be27b31bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the entire content of a specific RAM.  <br /></td></tr>
+<tr class="separator:a6d4de5cf1dad67abd478b43be27b31bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad7d447964f7f8f16ebb2d92a5a01e67" id="r_aad7d447964f7f8f16ebb2d92a5a01e67"><td class="memItemLeft" align="right" valign="top">regression_content_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad7d447964f7f8f16ebb2d92a5a01e67">get</a> (int r, int addr)</td></tr>
+<tr class="memdesc:aad7d447964f7f8f16ebb2d92a5a01e67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the content of a specific RAM at a specific address.  <br /></td></tr>
+<tr class="separator:aad7d447964f7f8f16ebb2d92a5a01e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8c3377cd28ff6f75a1d5865081eba83" id="r_ac8c3377cd28ff6f75a1d5865081eba83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8c3377cd28ff6f75a1d5865081eba83">RegressionRAMDataHandle</a> ()</td></tr>
+<tr class="memdesc:ac8c3377cd28ff6f75a1d5865081eba83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
+<tr class="separator:ac8c3377cd28ff6f75a1d5865081eba83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae52da90bfea5c5f772bf8828ef83381d" id="r_ae52da90bfea5c5f772bf8828ef83381d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae52da90bfea5c5f772bf8828ef83381d">RegressionRAMDataHandle</a> (regression_ram_t <a class="el" href="#aee65ec030eb5fc20ee5d1aa87af64472">data</a>)</td></tr>
+<tr class="memdesc:ae52da90bfea5c5f772bf8828ef83381d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that initializes the object with a single regression RAM data.  <br /></td></tr>
+<tr class="separator:ae52da90bfea5c5f772bf8828ef83381d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefd557b2ecfbad935e3991aa7d7e654e" id="r_aefd557b2ecfbad935e3991aa7d7e654e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefd557b2ecfbad935e3991aa7d7e654e">RegressionRAMDataHandle</a> (std::string inputdata)</td></tr>
+<tr class="memdesc:aefd557b2ecfbad935e3991aa7d7e654e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that initializes the object with input data.  <br /></td></tr>
+<tr class="separator:aefd557b2ecfbad935e3991aa7d7e654e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a933bf9c75fb351c4e65f7661437c3b68" id="r_a933bf9c75fb351c4e65f7661437c3b68"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a933bf9c75fb351c4e65f7661437c3b68">RegressionRAMDataHandle</a> (std::vector&lt; regression_ram_t &gt; <a class="el" href="#aee65ec030eb5fc20ee5d1aa87af64472">data</a>)</td></tr>
+<tr class="memdesc:a933bf9c75fb351c4e65f7661437c3b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that initializes the object with multiple regression RAM data.  <br /></td></tr>
+<tr class="separator:a933bf9c75fb351c4e65f7661437c3b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1195014557d4831bc5d655027713fcfe" id="r_a1195014557d4831bc5d655027713fcfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1195014557d4831bc5d655027713fcfe">save</a> (std::string prefix)</td></tr>
+<tr class="memdesc:a1195014557d4831bc5d655027713fcfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the data to a file with a given prefix.  <br /></td></tr>
+<tr class="separator:a1195014557d4831bc5d655027713fcfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9073351b9bc44a907b6624c9a2403f01" id="r_a9073351b9bc44a907b6624c9a2403f01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9073351b9bc44a907b6624c9a2403f01">set</a> (int r, int addr, regression_content_t value)</td></tr>
+<tr class="memdesc:a9073351b9bc44a907b6624c9a2403f01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the content at a specific RAM and address.  <br /></td></tr>
+<tr class="separator:a9073351b9bc44a907b6624c9a2403f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a7043e9cca877cfa24ac8fe082197c9" id="r_a3a7043e9cca877cfa24ac8fe082197c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a7043e9cca877cfa24ac8fe082197c9">set</a> (int r, regression_ram_t value)</td></tr>
+<tr class="memdesc:a3a7043e9cca877cfa24ac8fe082197c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the entire content of a specific RAM.  <br /></td></tr>
+<tr class="separator:a3a7043e9cca877cfa24ac8fe082197c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Membros privados</h2></td></tr>
+<tr class="memitem:ab8e382fb4b1ef0e6cfcd8177f2514e3a" id="r_ab8e382fb4b1ef0e6cfcd8177f2514e3a"><td class="memItemLeft" align="right" valign="top">regression_ram_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8e382fb4b1ef0e6cfcd8177f2514e3a">dataToRam</a> (const std::string &amp;inputdata)</td></tr>
+<tr class="memdesc:ab8e382fb4b1ef0e6cfcd8177f2514e3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a string to RAM data.  <br /></td></tr>
+<tr class="separator:ab8e382fb4b1ef0e6cfcd8177f2514e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e44ea5d5f6504fb53868d5021ff11e8" id="r_a0e44ea5d5f6504fb53868d5021ff11e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e44ea5d5f6504fb53868d5021ff11e8">setData</a> (std::string inputdata)</td></tr>
+<tr class="memdesc:a0e44ea5d5f6504fb53868d5021ff11e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the data from an input string.  <br /></td></tr>
+<tr class="separator:a0e44ea5d5f6504fb53868d5021ff11e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr class="memitem:ac6106be1b5ed0b4704896872dd2247d8" id="r_ac6106be1b5ed0b4704896872dd2247d8"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; int, regression_ram_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a></td></tr>
+<tr class="memdesc:ac6106be1b5ed0b4704896872dd2247d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container for the RAM data.  <br /></td></tr>
+<tr class="separator:ac6106be1b5ed0b4704896872dd2247d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>A class to handle RAM data for regression tasks. </p>
+
+<p class="definition">Definido na linha <a class="el" href="regressionramdatahandle_8cc_source.html#l00005">5</a> do ficheiro <a class="el" href="regressionramdatahandle_8cc_source.html">regressionramdatahandle.cc</a>.</p>
+</div><h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
+<a id="aefd557b2ecfbad935e3991aa7d7e654e" name="aefd557b2ecfbad935e3991aa7d7e654e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefd557b2ecfbad935e3991aa7d7e654e">&#9670;&#160;</a></span>RegressionRAMDataHandle() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RegressionRAMDataHandle::RegressionRAMDataHandle </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>inputdata</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor that initializes the object with input data. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputdata</td><td>The input data as a string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definido na linha <a class="el" href="regressionramdatahandle_8cc_source.html#l00011">11</a> do ficheiro <a class="el" href="regressionramdatahandle_8cc_source.html">regressionramdatahandle.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>                                               {</div>
+<div class="line"><span class="lineno">   12</span>    <a class="code hl_function" href="#a0e44ea5d5f6504fb53868d5021ff11e8">setData</a>(inputdata);</div>
+<div class="line"><span class="lineno">   13</span>  }</div>
+<div class="ttc" id="aclassRegressionRAMDataHandle_html_a0e44ea5d5f6504fb53868d5021ff11e8"><div class="ttname"><a href="#a0e44ea5d5f6504fb53868d5021ff11e8">RegressionRAMDataHandle::setData</a></div><div class="ttdeci">void setData(std::string inputdata)</div><div class="ttdoc">Sets the data from an input string.</div><div class="ttdef"><b>Definição</b> <a href="regressionramdatahandle_8cc_source.html#l00147">regressionramdatahandle.cc:147</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referências <a class="el" href="regressionramdatahandle_8cc_source.html#l00147">setData()</a>.</p>
+<div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Grafo de chamadas desta função:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classRegressionRAMDataHandle_aefd557b2ecfbad935e3991aa7d7e654e_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ae52da90bfea5c5f772bf8828ef83381d" name="ae52da90bfea5c5f772bf8828ef83381d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae52da90bfea5c5f772bf8828ef83381d">&#9670;&#160;</a></span>RegressionRAMDataHandle() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RegressionRAMDataHandle::RegressionRAMDataHandle </td>
+          <td>(</td>
+          <td class="paramtype">regression_ram_t</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor that initializes the object with a single regression RAM data. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>A single regression RAM data. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definido na linha <a class="el" href="regressionramdatahandle_8cc_source.html#l00019">19</a> do ficheiro <a class="el" href="regressionramdatahandle_8cc_source.html">regressionramdatahandle.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                 {</div>
+<div class="line"><span class="lineno">   20</span>    <a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>[0] = <a class="code hl_function" href="#aee65ec030eb5fc20ee5d1aa87af64472">data</a>;</div>
+<div class="line"><span class="lineno">   21</span>  }</div>
+<div class="ttc" id="aclassRegressionRAMDataHandle_html_ac6106be1b5ed0b4704896872dd2247d8"><div class="ttname"><a href="#ac6106be1b5ed0b4704896872dd2247d8">RegressionRAMDataHandle::ramdata</a></div><div class="ttdeci">std::unordered_map&lt; int, regression_ram_t &gt; ramdata</div><div class="ttdoc">Container for the RAM data.</div><div class="ttdef"><b>Definição</b> <a href="regressionramdatahandle_8cc_source.html#l00197">regressionramdatahandle.cc:197</a></div></div>
+<div class="ttc" id="aclassRegressionRAMDataHandle_html_aee65ec030eb5fc20ee5d1aa87af64472"><div class="ttname"><a href="#aee65ec030eb5fc20ee5d1aa87af64472">RegressionRAMDataHandle::data</a></div><div class="ttdeci">std::string data()</div><div class="ttdoc">Gets the entire data as a string.</div><div class="ttdef"><b>Definição</b> <a href="regressionramdatahandle_8cc_source.html#l00099">regressionramdatahandle.cc:99</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referências <a class="el" href="regressionramdatahandle_8cc_source.html#l00099">data()</a> e <a class="el" href="regressionramdatahandle_8cc_source.html#l00197">ramdata</a>.</p>
+<div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Grafo de chamadas desta função:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classRegressionRAMDataHandle_ae52da90bfea5c5f772bf8828ef83381d_cgraph.svg" width="440" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a933bf9c75fb351c4e65f7661437c3b68" name="a933bf9c75fb351c4e65f7661437c3b68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a933bf9c75fb351c4e65f7661437c3b68">&#9670;&#160;</a></span>RegressionRAMDataHandle() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RegressionRAMDataHandle::RegressionRAMDataHandle </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; regression_ram_t &gt;</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor that initializes the object with multiple regression RAM data. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>A vector containing multiple regression RAM data. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definido na linha <a class="el" href="regressionramdatahandle_8cc_source.html#l00027">27</a> do ficheiro <a class="el" href="regressionramdatahandle_8cc_source.html">regressionramdatahandle.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>                                                            {</div>
+<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code hl_function" href="#aee65ec030eb5fc20ee5d1aa87af64472">data</a>.size(); i++) {</div>
+<div class="line"><span class="lineno">   29</span>      <a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>[i] = <a class="code hl_function" href="#aee65ec030eb5fc20ee5d1aa87af64472">data</a>[i];</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="line"><span class="lineno">   31</span>  }</div>
+</div><!-- fragment -->
+<p class="reference">Referências <a class="el" href="regressionramdatahandle_8cc_source.html#l00099">data()</a> e <a class="el" href="regressionramdatahandle_8cc_source.html#l00197">ramdata</a>.</p>
+<div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Grafo de chamadas desta função:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classRegressionRAMDataHandle_a933bf9c75fb351c4e65f7661437c3b68_cgraph.svg" width="440" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ac8c3377cd28ff6f75a1d5865081eba83" name="ac8c3377cd28ff6f75a1d5865081eba83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8c3377cd28ff6f75a1d5865081eba83">&#9670;&#160;</a></span>RegressionRAMDataHandle() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RegressionRAMDataHandle::RegressionRAMDataHandle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+
+<p class="definition">Definido na linha <a class="el" href="regressionramdatahandle_8cc_source.html#l00036">36</a> do ficheiro <a class="el" href="regressionramdatahandle_8cc_source.html">regressionramdatahandle.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>{}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentação das funções</h2>
+<a id="ae14bec5896e36c648e5af2389465af9d" name="ae14bec5896e36c648e5af2389465af9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae14bec5896e36c648e5af2389465af9d">&#9670;&#160;</a></span>compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RegressionRAMDataHandle::compare </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRegressionRAMDataHandle.html">RegressionRAMDataHandle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compares this object with another <a class="el" href="classRegressionRAMDataHandle.html" title="A class to handle RAM data for regression tasks.">RegressionRAMDataHandle</a> object. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The other <a class="el" href="classRegressionRAMDataHandle.html" title="A class to handle RAM data for regression tasks.">RegressionRAMDataHandle</a> object to compare with. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>True if both objects are equal, otherwise false. </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="regressionramdatahandle_8cc_source.html#l00081">81</a> do ficheiro <a class="el" href="regressionramdatahandle_8cc_source.html">regressionramdatahandle.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>                                                {</div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>.size() != other.<a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>.size()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">for</span>(std::unordered_map&lt;int,regression_ram_t&gt;::iterator it = <a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>.begin(); it != <a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>.end(); ++it) {</div>
+<div class="line"><span class="lineno">   84</span>      std::unordered_map&lt;int,regression_ram_t&gt;::iterator ito = other.<a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>.find(it-&gt;first);</div>
+<div class="line"><span class="lineno">   85</span>      <span class="keywordflow">if</span>(ito == other.<a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>.end() || it-&gt;second.size() != ito-&gt;second.size()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>      <span class="keywordflow">for</span>(regression_ram_t::iterator itram = it-&gt;second.begin(); itram != it-&gt;second.end(); ++itram) {</div>
+<div class="line"><span class="lineno">   88</span>        regression_ram_t::iterator itramo = ito-&gt;second.find(itram-&gt;first);</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span>(itramo == ito-&gt;second.end() || itram-&gt;second != itramo-&gt;second) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   90</span>      }</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   93</span>  }</div>
+</div><!-- fragment -->
+<p class="reference">Referências <a class="el" href="regressionramdatahandle_8cc_source.html#l00197">ramdata</a>.</p>
+
+</div>
+</div>
+<a id="aee65ec030eb5fc20ee5d1aa87af64472" name="aee65ec030eb5fc20ee5d1aa87af64472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee65ec030eb5fc20ee5d1aa87af64472">&#9670;&#160;</a></span>data() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string RegressionRAMDataHandle::data </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the entire data as a string. </p>
+<dl class="section return"><dt>Retorna</dt><dd>The entire data as a string. </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="regressionramdatahandle_8cc_source.html#l00099">99</a> do ficheiro <a class="el" href="regressionramdatahandle_8cc_source.html">regressionramdatahandle.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>                   {</div>
+<div class="line"><span class="lineno">  100</span>    std::string out;</div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>.size(); i++) {</div>
+<div class="line"><span class="lineno">  102</span>      out += (i != 0 ? <span class="stringliteral">&quot;.&quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + <a class="code hl_function" href="#aee65ec030eb5fc20ee5d1aa87af64472">data</a>(i);</div>
+<div class="line"><span class="lineno">  103</span>    }</div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">return</span> out;</div>
+<div class="line"><span class="lineno">  105</span>  }</div>
+</div><!-- fragment -->
+<p class="reference">Referências <a class="el" href="regressionramdatahandle_8cc_source.html#l00099">data()</a> e <a class="el" href="regressionramdatahandle_8cc_source.html#l00197">ramdata</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="regressionramdatahandle_8cc_source.html#l00099">data()</a>, <a class="el" href="regressionramdatahandle_8cc_source.html#l00019">RegressionRAMDataHandle()</a>, <a class="el" href="regressionramdatahandle_8cc_source.html#l00027">RegressionRAMDataHandle()</a> e <a class="el" href="regressionramdatahandle_8cc_source.html#l00130">save()</a>.</p>
+<div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Grafo de chamadas desta função:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472_cgraph.svg" width="198" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Este é o diagrama das funções que utilizam esta função:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472_icgraph.svg" width="440" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a4fcf657e5fa8d8f74c57b55bae909b16" name="a4fcf657e5fa8d8f74c57b55bae909b16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fcf657e5fa8d8f74c57b55bae909b16">&#9670;&#160;</a></span>data() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string RegressionRAMDataHandle::data </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>r</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the data of a specific RAM as a string. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>The RAM index. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>The data of the specified RAM as a string. </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="regressionramdatahandle_8cc_source.html#l00112">112</a> do ficheiro <a class="el" href="regressionramdatahandle_8cc_source.html">regressionramdatahandle.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  112</span>                        {</div>
+<div class="line"><span class="lineno">  113</span>    <span class="keywordtype">int</span> blockSize = (<span class="keyword">sizeof</span>(addr_t)+(3*<span class="keyword">sizeof</span>(<span class="keywordtype">double</span>)));</div>
+<div class="line"><span class="lineno">  114</span>    std::string out(<a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>[r].size()*blockSize,0);</div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordtype">int</span> k=0;</div>
+<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> j=<a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>[r].begin(); j!=<a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>[r].end(); ++j) {</div>
+<div class="line"><span class="lineno">  117</span>      out.replace(k,<span class="keyword">sizeof</span>(addr_t),convertToBytes(j-&gt;first));</div>
+<div class="line"><span class="lineno">  118</span>      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; j-&gt;second.size(); i++) {</div>
+<div class="line"><span class="lineno">  119</span>        out.replace(k+<span class="keyword">sizeof</span>(addr_t)+(i*<span class="keyword">sizeof</span>(<span class="keywordtype">double</span>)),<span class="keyword">sizeof</span>(<span class="keywordtype">double</span>),convertToBytes(j-&gt;second[i]));</div>
+<div class="line"><span class="lineno">  120</span>      }</div>
+<div class="line"><span class="lineno">  121</span>      k += blockSize;</div>
+<div class="line"><span class="lineno">  122</span>    }</div>
+<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">return</span> Base64::encode(out);</div>
+<div class="line"><span class="lineno">  124</span>  }</div>
+</div><!-- fragment -->
+<p class="reference">Referências <a class="el" href="regressionramdatahandle_8cc_source.html#l00197">ramdata</a>.</p>
+
+</div>
+</div>
+<a id="ab8e382fb4b1ef0e6cfcd8177f2514e3a" name="ab8e382fb4b1ef0e6cfcd8177f2514e3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8e382fb4b1ef0e6cfcd8177f2514e3a">&#9670;&#160;</a></span>dataToRam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">regression_ram_t RegressionRAMDataHandle::dataToRam </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>inputdata</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts a string to RAM data. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputdata</td><td>The input data as a string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>The converted RAM data. </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="regressionramdatahandle_8cc_source.html#l00179">179</a> do ficheiro <a class="el" href="regressionramdatahandle_8cc_source.html">regressionramdatahandle.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  179</span>                                                         {</div>
+<div class="line"><span class="lineno">  180</span>    regression_ram_t ramout;</div>
+<div class="line"><span class="lineno">  181</span>    std::string decodedData = Base64::decode(inputdata);</div>
+<div class="line"><span class="lineno">  182</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> blockSize = (<span class="keyword">sizeof</span>(addr_t)+(3*<span class="keyword">sizeof</span>(<span class="keywordtype">double</span>)));</div>
+<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">if</span>(decodedData.size()%blockSize != 0) <span class="keywordflow">return</span> ramout;</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i=0; i&lt;decodedData.size(); i+=blockSize) {</div>
+<div class="line"><span class="lineno">  186</span>      addr_t address = convertToValue&lt;addr_t&gt;(decodedData.substr(i,<span class="keyword">sizeof</span>(addr_t)));</div>
+<div class="line"><span class="lineno">  187</span>      regression_content_t content;</div>
+<div class="line"><span class="lineno">  188</span>      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; 3; j++) {</div>
+<div class="line"><span class="lineno">  189</span>        <span class="keywordtype">double</span> value = convertToValue&lt;double&gt;(decodedData.substr(i+<span class="keyword">sizeof</span>(addr_t)+(j*<span class="keyword">sizeof</span>(<span class="keywordtype">double</span>)),<span class="keyword">sizeof</span>(<span class="keywordtype">double</span>)));</div>
+<div class="line"><span class="lineno">  190</span>        content.push_back(value);</div>
+<div class="line"><span class="lineno">  191</span>      }</div>
+<div class="line"><span class="lineno">  192</span>      ramout[address]=content;</div>
+<div class="line"><span class="lineno">  193</span>    }</div>
+<div class="line"><span class="lineno">  194</span>    <span class="keywordflow">return</span> ramout;</div>
+<div class="line"><span class="lineno">  195</span>  }</div>
+</div><!-- fragment -->
+<p class="reference">Referenciado por <a class="el" href="regressionramdatahandle_8cc_source.html#l00147">setData()</a>.</p>
+<div id="dynsection-6" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Este é o diagrama das funções que utilizam esta função:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classRegressionRAMDataHandle_ab8e382fb4b1ef0e6cfcd8177f2514e3a_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a6d4de5cf1dad67abd478b43be27b31bf" name="a6d4de5cf1dad67abd478b43be27b31bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d4de5cf1dad67abd478b43be27b31bf">&#9670;&#160;</a></span>get() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">regression_ram_t RegressionRAMDataHandle::get </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>r</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the entire content of a specific RAM. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>The RAM index. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>The entire RAM content. </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="regressionramdatahandle_8cc_source.html#l00053">53</a> do ficheiro <a class="el" href="regressionramdatahandle_8cc_source.html">regressionramdatahandle.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>                              {</div>
+<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>[r];</div>
+<div class="line"><span class="lineno">   55</span>  }</div>
+</div><!-- fragment -->
+<p class="reference">Referências <a class="el" href="regressionramdatahandle_8cc_source.html#l00197">ramdata</a>.</p>
+
+</div>
+</div>
+<a id="aad7d447964f7f8f16ebb2d92a5a01e67" name="aad7d447964f7f8f16ebb2d92a5a01e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad7d447964f7f8f16ebb2d92a5a01e67">&#9670;&#160;</a></span>get() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">regression_content_t RegressionRAMDataHandle::get </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>addr</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the content of a specific RAM at a specific address. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>The RAM index. </td></tr>
+    <tr><td class="paramname">addr</td><td>The address within the RAM. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>The content at the specified RAM and address. </dd></dl>
+
+<p class="definition">Definido na linha <a class="el" href="regressionramdatahandle_8cc_source.html#l00044">44</a> do ficheiro <a class="el" href="regressionramdatahandle_8cc_source.html">regressionramdatahandle.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>                                            {</div>
+<div class="line"><span class="lineno">   45</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>[r][addr];</div>
+<div class="line"><span class="lineno">   46</span>  }</div>
+</div><!-- fragment -->
+<p class="reference">Referências <a class="el" href="regressionramdatahandle_8cc_source.html#l00197">ramdata</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="regressionram_8cc_source.html#l00018">RegressionRAM::RegressionRAM()</a>.</p>
+<div id="dynsection-7" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Este é o diagrama das funções que utilizam esta função:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classRegressionRAMDataHandle_aad7d447964f7f8f16ebb2d92a5a01e67_icgraph.svg" width="495" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a1195014557d4831bc5d655027713fcfe" name="a1195014557d4831bc5d655027713fcfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1195014557d4831bc5d655027713fcfe">&#9670;&#160;</a></span>save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RegressionRAMDataHandle::save </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>prefix</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saves the data to a file with a given prefix. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefix</td><td>The prefix for the filename. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definido na linha <a class="el" href="regressionramdatahandle_8cc_source.html#l00130">130</a> do ficheiro <a class="el" href="regressionramdatahandle_8cc_source.html">regressionramdatahandle.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  130</span>                              {</div>
+<div class="line"><span class="lineno">  131</span>    std::string filename = prefix + ramdata_sufix;</div>
+<div class="line"><span class="lineno">  132</span>    std::ofstream dataFile;</div>
+<div class="line"><span class="lineno">  133</span>    dataFile.open(filename, std::ios::app);</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>.size(); i++) {</div>
+<div class="line"><span class="lineno">  136</span>      dataFile &lt;&lt; (i != 0 ? <span class="stringliteral">&quot;.&quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + <a class="code hl_function" href="#aee65ec030eb5fc20ee5d1aa87af64472">data</a>(i);</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span>    dataFile.close();</div>
+<div class="line"><span class="lineno">  140</span>  }</div>
+</div><!-- fragment -->
+<p class="reference">Referências <a class="el" href="regressionramdatahandle_8cc_source.html#l00099">data()</a> e <a class="el" href="regressionramdatahandle_8cc_source.html#l00197">ramdata</a>.</p>
+<div id="dynsection-8" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Grafo de chamadas desta função:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classRegressionRAMDataHandle_a1195014557d4831bc5d655027713fcfe_cgraph.svg" width="432" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a9073351b9bc44a907b6624c9a2403f01" name="a9073351b9bc44a907b6624c9a2403f01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9073351b9bc44a907b6624c9a2403f01">&#9670;&#160;</a></span>set() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RegressionRAMDataHandle::set </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>addr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">regression_content_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the content at a specific RAM and address. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>The RAM index. </td></tr>
+    <tr><td class="paramname">addr</td><td>The address within the RAM. </td></tr>
+    <tr><td class="paramname">value</td><td>The value to set at the specified RAM and address. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definido na linha <a class="el" href="regressionramdatahandle_8cc_source.html#l00063">63</a> do ficheiro <a class="el" href="regressionramdatahandle_8cc_source.html">regressionramdatahandle.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>                                                        {</div>
+<div class="line"><span class="lineno">   64</span>    <a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>[r][addr] = value;</div>
+<div class="line"><span class="lineno">   65</span>  }</div>
+</div><!-- fragment -->
+<p class="reference">Referências <a class="el" href="regressionramdatahandle_8cc_source.html#l00197">ramdata</a>.</p>
+
+</div>
+</div>
+<a id="a3a7043e9cca877cfa24ac8fe082197c9" name="a3a7043e9cca877cfa24ac8fe082197c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a7043e9cca877cfa24ac8fe082197c9">&#9670;&#160;</a></span>set() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RegressionRAMDataHandle::set </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">regression_ram_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the entire content of a specific RAM. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>The RAM index. </td></tr>
+    <tr><td class="paramname">value</td><td>The value to set for the specified RAM. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definido na linha <a class="el" href="regressionramdatahandle_8cc_source.html#l00072">72</a> do ficheiro <a class="el" href="regressionramdatahandle_8cc_source.html">regressionramdatahandle.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                                          {</div>
+<div class="line"><span class="lineno">   73</span>    <a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>[r] = value;</div>
+<div class="line"><span class="lineno">   74</span>  }</div>
+</div><!-- fragment -->
+<p class="reference">Referências <a class="el" href="regressionramdatahandle_8cc_source.html#l00197">ramdata</a>.</p>
+
+</div>
+</div>
+<a id="a0e44ea5d5f6504fb53868d5021ff11e8" name="a0e44ea5d5f6504fb53868d5021ff11e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e44ea5d5f6504fb53868d5021ff11e8">&#9670;&#160;</a></span>setData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RegressionRAMDataHandle::setData </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>inputdata</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the data from an input string. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputdata</td><td>The input data as a string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definido na linha <a class="el" href="regressionramdatahandle_8cc_source.html#l00147">147</a> do ficheiro <a class="el" href="regressionramdatahandle_8cc_source.html">regressionramdatahandle.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>                                    {</div>
+<div class="line"><span class="lineno">  148</span>    <span class="keywordtype">int</span> s = ramdata_sufix.size();</div>
+<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">if</span>(inputdata.substr(inputdata.size()-s,s).compare(ramdata_sufix) == 0) {</div>
+<div class="line"><span class="lineno">  150</span>      std::ifstream dataFile;</div>
+<div class="line"><span class="lineno">  151</span>      dataFile.open(inputdata);</div>
+<div class="line"><span class="lineno">  152</span>      <span class="keywordflow">if</span>(dataFile.is_open()) {</div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
+<div class="line"><span class="lineno">  154</span>          <span class="keywordflow">if</span>(dataFile.eof()) <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>          std::string rdata=<span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  157</span>          std::getline(dataFile,rdata,<span class="charliteral">&#39;.&#39;</span>);</div>
+<div class="line"><span class="lineno">  158</span>          <a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>[<a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>.size()] = <a class="code hl_function" href="#ab8e382fb4b1ef0e6cfcd8177f2514e3a">dataToRam</a>(rdata);</div>
+<div class="line"><span class="lineno">  159</span>        }</div>
+<div class="line"><span class="lineno">  160</span>        dataFile.close();</div>
+<div class="line"><span class="lineno">  161</span>      }</div>
+<div class="line"><span class="lineno">  162</span>    }</div>
+<div class="line"><span class="lineno">  163</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  164</span>      <span class="keywordtype">int</span> pos=0;</div>
+<div class="line"><span class="lineno">  165</span>      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> found = 0;</div>
+<div class="line"><span class="lineno">  166</span>      <span class="keywordflow">while</span>(found &lt; inputdata.size()) {</div>
+<div class="line"><span class="lineno">  167</span>        found = inputdata.find(<span class="charliteral">&#39;.&#39;</span>,pos);</div>
+<div class="line"><span class="lineno">  168</span>        <a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>[<a class="code hl_variable" href="#ac6106be1b5ed0b4704896872dd2247d8">ramdata</a>.size()] = <a class="code hl_function" href="#ab8e382fb4b1ef0e6cfcd8177f2514e3a">dataToRam</a>(inputdata.substr(pos,found-pos));</div>
+<div class="line"><span class="lineno">  169</span>        pos = found+1;</div>
+<div class="line"><span class="lineno">  170</span>      }</div>
+<div class="line"><span class="lineno">  171</span>    }</div>
+<div class="line"><span class="lineno">  172</span>  }</div>
+<div class="ttc" id="aclassRegressionRAMDataHandle_html_ab8e382fb4b1ef0e6cfcd8177f2514e3a"><div class="ttname"><a href="#ab8e382fb4b1ef0e6cfcd8177f2514e3a">RegressionRAMDataHandle::dataToRam</a></div><div class="ttdeci">regression_ram_t dataToRam(const std::string &amp;inputdata)</div><div class="ttdoc">Converts a string to RAM data.</div><div class="ttdef"><b>Definição</b> <a href="regressionramdatahandle_8cc_source.html#l00179">regressionramdatahandle.cc:179</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referências <a class="el" href="regressionramdatahandle_8cc_source.html#l00179">dataToRam()</a> e <a class="el" href="regressionramdatahandle_8cc_source.html#l00197">ramdata</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="regressionramdatahandle_8cc_source.html#l00011">RegressionRAMDataHandle()</a>.</p>
+<div id="dynsection-9" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Grafo de chamadas desta função:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classRegressionRAMDataHandle_a0e44ea5d5f6504fb53868d5021ff11e8_cgraph.svg" width="432" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-10" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Este é o diagrama das funções que utilizam esta função:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classRegressionRAMDataHandle_a0e44ea5d5f6504fb53868d5021ff11e8_icgraph.svg" width="440" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação dos dados membro</h2>
+<a id="ac6106be1b5ed0b4704896872dd2247d8" name="ac6106be1b5ed0b4704896872dd2247d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6106be1b5ed0b4704896872dd2247d8">&#9670;&#160;</a></span>ramdata</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;int, regression_ram_t&gt; RegressionRAMDataHandle::ramdata</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Container for the RAM data. </p>
+
+<p class="definition">Definido na linha <a class="el" href="regressionramdatahandle_8cc_source.html#l00197">197</a> do ficheiro <a class="el" href="regressionramdatahandle_8cc_source.html">regressionramdatahandle.cc</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="regressionramdatahandle_8cc_source.html#l00081">compare()</a>, <a class="el" href="regressionramdatahandle_8cc_source.html#l00099">data()</a>, <a class="el" href="regressionramdatahandle_8cc_source.html#l00112">data()</a>, <a class="el" href="regressionramdatahandle_8cc_source.html#l00053">get()</a>, <a class="el" href="regressionramdatahandle_8cc_source.html#l00044">get()</a>, <a class="el" href="regressionramdatahandle_8cc_source.html#l00019">RegressionRAMDataHandle()</a>, <a class="el" href="regressionramdatahandle_8cc_source.html#l00027">RegressionRAMDataHandle()</a>, <a class="el" href="regressionramdatahandle_8cc_source.html#l00130">save()</a>, <a class="el" href="regressionramdatahandle_8cc_source.html#l00063">set()</a>, <a class="el" href="regressionramdatahandle_8cc_source.html#l00072">set()</a> e <a class="el" href="regressionramdatahandle_8cc_source.html#l00147">setData()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir do seguinte ficheiro:<ul>
+<li>src/models/regressionwisard/<a class="el" href="regressionramdatahandle_8cc_source.html">regressionramdatahandle.cc</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classRegressionRAMDataHandle.html">RegressionRAMDataHandle</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

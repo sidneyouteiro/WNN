@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['discriminators_39',['discriminators',['../classWisard.html#a1b71cef88b28106fc19c3986d9a5ba54',1,'Wisard']]]
+  ['addresssize_0',['addressSize',['../classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550',1,'RegressionWisard']]]
 ];

@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="pt">
+  <compounddef id="classMean" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Mean</compoundname>
+    <derivedcompoundref refid="classHarmonicMean" prot="public" virt="non-virtual">HarmonicMean</derivedcompoundref>
+    <derivedcompoundref refid="classMedian" prot="public" virt="non-virtual">Median</derivedcompoundref>
+    <derivedcompoundref refid="classPowerMean" prot="public" virt="non-virtual">PowerMean</derivedcompoundref>
+    <derivedcompoundref refid="classSimpleMean" prot="public" virt="non-virtual">SimpleMean</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMean_1a6c725db111881910fcf4df655debbbc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double Mean::calculate</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;outputRams)=0</argsstring>
+        <name>calculate</name>
+        <qualifiedname>Mean::calculate</qualifiedname>
+        <reimplementedby refid="classHarmonicMean_1a366283b04e8ae81d7f5ede51d71ab752">calculate</reimplementedby>
+        <reimplementedby refid="classMedian_1a3f90ea702434c059b776f7e9e43e707c">calculate</reimplementedby>
+        <reimplementedby refid="classPowerMean_1a372235fcd24ea38f1b904302682e4058">calculate</reimplementedby>
+        <reimplementedby refid="classSimpleMean_1a71cb658d6a2c5eaec48184fa4c041168">calculate</reimplementedby>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+          <declname>outputRams</declname>
+        </param>
+        <briefdescription>
+<para>Calcula a média com base nos dados fornecidos. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outputRams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dados de saída das RAMs. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A média calculada. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="17" column="20"/>
+        <referencedby refid="classRegressionWisard_1ab4d4796e3f62df331fee309301e0a681" compoundref="regressionwisard_8cc" startline="104" endline="111">RegressionWisard::predict</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMean_1a958ceadab78c39fe3945567847aa78b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classMean" kindref="compound">Mean</ref> *</type>
+        <definition>virtual Mean * Mean::clone</definition>
+        <argsstring>() const =0</argsstring>
+        <name>clone</name>
+        <qualifiedname>Mean::clone</qualifiedname>
+        <reimplementedby refid="classHarmonicMean_1a678bb735f9d4237e2a47a58c90b92503">clone</reimplementedby>
+        <reimplementedby refid="classMedian_1aeb9c27d4102a96ed26e4f31175372fbe">clone</reimplementedby>
+        <reimplementedby refid="classPowerMean_1afbdacd5ee8241bbddeb515e11115cf19">clone</reimplementedby>
+        <reimplementedby refid="classSimpleMean_1a6d2fc6ae2f6c509d5795452a9de22983">clone</reimplementedby>
+        <briefdescription>
+<para>Cria uma cópia do objeto. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Ponteiro para a cópia do objeto. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="10" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classMean_1aec291edfcf29ea7915959630a2a1fc25" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>nl::json</type>
+        <definition>virtual nl::json Mean::getJSON</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getJSON</name>
+        <qualifiedname>Mean::getJSON</qualifiedname>
+        <reimplementedby refid="classHarmonicMean_1a186bf48440b678ba1b9a35f084dda338">getJSON</reimplementedby>
+        <reimplementedby refid="classMedian_1a6c692aaeecbbc132c968d15390af6f8f">getJSON</reimplementedby>
+        <reimplementedby refid="classPowerMean_1a289c1ba18b1e4183ec1d47d7c7166e66">getJSON</reimplementedby>
+        <reimplementedby refid="classSimpleMean_1aab8299cd1a27e45631726aad7017eee8">getJSON</reimplementedby>
+        <briefdescription>
+<para>Obtém a configuração do objeto em formato JSON. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Configuração do objeto em JSON. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/meanfunctions.cc" line="23" column="22"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Classe base abstrata para cálculo de médias. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>HarmonicMean</label>
+        <link refid="classHarmonicMean"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Mean</label>
+        <link refid="classMean"/>
+      </node>
+      <node id="3">
+        <label>Median</label>
+        <link refid="classMedian"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>PowerMean</label>
+        <link refid="classPowerMean"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SimpleMean</label>
+        <link refid="classSimpleMean"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Mean</label>
+        <link refid="classMean"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/models/regressionwisard/meanfunctions.cc" line="4" column="1" bodyfile="src/models/regressionwisard/meanfunctions.cc" bodystart="4" bodyend="24"/>
+    <listofallmembers>
+      <member refid="classMean_1a6c725db111881910fcf4df655debbbc7" prot="public" virt="pure-virtual"><scope>Mean</scope><name>calculate</name></member>
+      <member refid="classMean_1a958ceadab78c39fe3945567847aa78b8" prot="public" virt="pure-virtual"><scope>Mean</scope><name>clone</name></member>
+      <member refid="classMean_1aec291edfcf29ea7915959630a2a1fc25" prot="public" virt="pure-virtual"><scope>Mean</scope><name>getJSON</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

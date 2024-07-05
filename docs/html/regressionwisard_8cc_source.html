@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WISARD: Código-Fonte de src/models/regressionwisard/regressionwisard.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">WISARD<span id="projectnumber">&#160;2.0</span>
+   </div>
+   <div id="projectbrief">WNN</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('regressionwisard_8cc_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">regressionwisard.cc</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="regressionwisard_8cc.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="foldopen" id="foldopen00004" data-start="{" data-end="};">
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="classRegressionWisard.html">    4</a></span><span class="keyword">class </span><a class="code hl_class" href="classRegressionWisard.html">RegressionWisard</a>: <span class="keyword">public</span> RegressionModel {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#a56ec56a98f692d756f1f80e04bd19354">    9</a></span>    <a class="code hl_function" href="classRegressionWisard.html#a56ec56a98f692d756f1f80e04bd19354">RegressionWisard</a>() {}</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#afef642836ca4d47c9a1ee6f9497ee265">   15</a></span>    <a class="code hl_function" href="classRegressionWisard.html#afef642836ca4d47c9a1ee6f9497ee265">RegressionWisard</a>(nl::json c) {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        srand(randint(0, 1000000));</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        nl::json value;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        value = c[<span class="stringliteral">&quot;addressSize&quot;</span>];</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <a class="code hl_variable" href="classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550">addressSize</a> = value.is_null() ? 3 : value.get&lt;<span class="keywordtype">int</span>&gt;();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        value = c[<span class="stringliteral">&quot;completeAddressing&quot;</span>];</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_variable" href="classRegressionWisard.html#aa667b0e3eb449edf55101e21b9e81047">completeAddressing</a> = value.is_null() ? true : value.get&lt;<span class="keywordtype">bool</span>&gt;();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        value = c[<span class="stringliteral">&quot;orderedMapping&quot;</span>];</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_variable" href="classRegressionWisard.html#a218ec296378e06b77f337de4c99e315a">orderedMapping</a> = value.is_null() ? false : value.get&lt;<span class="keywordtype">bool</span>&gt;();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        value = c[<span class="stringliteral">&quot;minZero&quot;</span>];</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_variable" href="classRegressionWisard.html#a19bf9ed20712adaa43cff5f46985ad0f">minZero</a> = value.is_null() ? 0 : value.get&lt;<span class="keywordtype">int</span>&gt;();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        value = c[<span class="stringliteral">&quot;minOne&quot;</span>];</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_variable" href="classRegressionWisard.html#a4d8ca9f91145bca9cccf256b75a79ab0">minOne</a> = value.is_null() ? 0 : value.get&lt;<span class="keywordtype">int</span>&gt;();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        value = c[<span class="stringliteral">&quot;steps&quot;</span>];</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_variable" href="classRegressionWisard.html#a2d96d1e6bb01d4aed4e8f5cb40510596">steps</a> = value.is_null() ? 0 : value.get&lt;<span class="keywordtype">int</span>&gt;();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        value = c[<span class="stringliteral">&quot;numberOfTrainings&quot;</span>];</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_variable" href="classRegressionWisard.html#a42982f590753efc85fd6f52081dccfa6">numberOfTrainings</a> = value.is_null() ? 0 : value.get&lt;<span class="keywordtype">int</span>&gt;();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        value = c[<span class="stringliteral">&quot;entrySize&quot;</span>];</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_variable" href="classRegressionWisard.html#a0b4ff031198660ee8239a94211a98cd0">entrySize</a> = value.is_null() ? 0 : value.get&lt;<span class="keywordtype">int</span>&gt;();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        value = c[<span class="stringliteral">&quot;mapping&quot;</span>];</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_variable" href="classRegressionWisard.html#a103aa1c658a82b6fb5d17db4bc5cef4b">mapping</a> = value.is_null() ? std::vector&lt;int&gt;() : value.get&lt;std::vector&lt;int&gt;&gt;();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        value = c[<span class="stringliteral">&quot;data&quot;</span>];</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        std::vector&lt;nl::json&gt; data = value.is_null() ? std::vector&lt;nl::json&gt;() : value.get&lt;std::vector&lt;nl::json&gt;&gt;();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; data.size(); i++) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <a class="code hl_variable" href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">rams</a>.push_back(<a class="code hl_class" href="classRegressionRAM.html">RegressionRAM</a>(data[i]));</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#a054c0bf1dd245976d942f5714fa5c8ef">   58</a></span>    <a class="code hl_function" href="classRegressionWisard.html#a054c0bf1dd245976d942f5714fa5c8ef">RegressionWisard</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550">addressSize</a>) : <a class="code hl_variable" href="classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550">addressSize</a>(<a class="code hl_variable" href="classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550">addressSize</a>) {}</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#a8203ce8fa5395d5891c29c4abccb7979">   63</a></span>    <a class="code hl_function" href="classRegressionWisard.html#a8203ce8fa5395d5891c29c4abccb7979">~RegressionWisard</a>() {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_variable" href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">rams</a>.clear();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#a11970036606a16938821722fb3af53ee">   71</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classRegressionWisard.html#a11970036606a16938821722fb3af53ee">train</a>(<span class="keyword">const</span> DataSet&amp; dataset) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; dataset.size(); i++) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <a class="code hl_function" href="classRegressionWisard.html#a11970036606a16938821722fb3af53ee">train</a>(dataset[i], dataset.getY(i));</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classRegressionWisard.html#a2d96d1e6bb01d4aed4e8f5cb40510596">steps</a>; j++) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; dataset.size(); i++) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <a class="code hl_function" href="classRegressionWisard.html#a2f22f241b281ab6a0e4cf1cfb9335bb4">calculateFit</a>(dataset[i], dataset.getY(i));</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <a class="code hl_function" href="classRegressionWisard.html#ac37f1d1c653928a21c5d3588c3837c9b">applyFit</a>();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }   </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#a125bffa9cf4806492f2b2cf96a3932b0">   89</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classRegressionWisard.html#a125bffa9cf4806492f2b2cf96a3932b0">train</a>(<span class="keyword">const</span> BinInput&amp; input, <span class="keyword">const</span> <span class="keywordtype">double</span> y) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">rams</a>.empty()) <a class="code hl_function" href="classRegressionWisard.html#ad003f5c063b032a1995ccfcf2682c549">setRAMShuffle</a>(input.size());</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_function" href="classRegressionWisard.html#a6a25655a9cb15452b468a13dc4ed2858">checkEntrySize</a>(input.size());</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_variable" href="classRegressionWisard.html#a42982f590753efc85fd6f52081dccfa6">numberOfTrainings</a>++;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code hl_variable" href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">rams</a>.size(); i++) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <a class="code hl_variable" href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">rams</a>[i].train(input, y);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    </div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#ab4d4796e3f62df331fee309301e0a681">  104</a></span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classRegressionWisard.html#ab4d4796e3f62df331fee309301e0a681">predict</a>(<span class="keyword">const</span> BinInput&amp; input)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <a class="code hl_function" href="classRegressionWisard.html#a6a25655a9cb15452b468a13dc4ed2858">checkEntrySize</a>(input.size());</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        std::vector&lt;regression_content_t&gt; outputRams(<a class="code hl_variable" href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">rams</a>.size());</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code hl_variable" href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">rams</a>.size(); i++) {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            outputRams[i] = <a class="code hl_variable" href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">rams</a>[i].getVote(input);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classRegressionWisard.html#af7f452b5991bf8498d19cb3b5aea16af">mean</a>-&gt;<a class="code hl_function" href="classMean.html#a6c725db111881910fcf4df655debbbc7">calculate</a>(outputRams);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#ab2825bf4202b12029b489c1d4de342b8">  118</a></span>    std::vector&lt;double&gt; <a class="code hl_function" href="classRegressionWisard.html#ab2825bf4202b12029b489c1d4de342b8">predict</a>(<span class="keyword">const</span> DataSet&amp; dataset)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        std::vector&lt;double&gt; output(dataset.size());</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; dataset.size(); i++) {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            output[i] = <a class="code hl_function" href="classRegressionWisard.html#ab4d4796e3f62df331fee309301e0a681">predict</a>(dataset[i]);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordflow">return</span> output;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
+</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#a2f22f241b281ab6a0e4cf1cfb9335bb4">  133</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classRegressionWisard.html#a2f22f241b281ab6a0e4cf1cfb9335bb4">calculateFit</a>(<span class="keyword">const</span> BinInput&amp; input, <span class="keyword">const</span> <span class="keywordtype">double</span> y) {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordtype">double</span> yPredicted = <a class="code hl_function" href="classRegressionWisard.html#ab4d4796e3f62df331fee309301e0a681">predict</a>(input);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code hl_variable" href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">rams</a>.size(); i++) {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            <a class="code hl_variable" href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">rams</a>[i].calculateFit(input, (y - yPredicted));</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
+</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="foldopen" id="foldopen00143" data-start="{" data-end="}">
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#ac37f1d1c653928a21c5d3588c3837c9b">  143</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classRegressionWisard.html#ac37f1d1c653928a21c5d3588c3837c9b">applyFit</a>() {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code hl_variable" href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">rams</a>.size(); i++) {</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            <a class="code hl_variable" href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">rams</a>[i].applyFit();</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    }</div>
+</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keyword">protected</span>:</div>
+<div class="foldopen" id="foldopen00154" data-start="{" data-end="}">
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#ad003f5c063b032a1995ccfcf2682c549">  154</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classRegressionWisard.html#ad003f5c063b032a1995ccfcf2682c549">setRAMShuffle</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="classRegressionWisard.html#a0b4ff031198660ee8239a94211a98cd0">entrySize</a>) {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        this-&gt;entrySize = <a class="code hl_variable" href="classRegressionWisard.html#a0b4ff031198660ee8239a94211a98cd0">entrySize</a>;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <a class="code hl_function" href="classRegressionWisard.html#a4bfafa888b990804d754feb76044b679">checkAddressSize</a>(<a class="code hl_variable" href="classRegressionWisard.html#a0b4ff031198660ee8239a94211a98cd0">entrySize</a>, <a class="code hl_variable" href="classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550">addressSize</a>);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRegressionWisard.html#a103aa1c658a82b6fb5d17db4bc5cef4b">mapping</a>.size() == 0) {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            <span class="keywordtype">int</span> numberOfRAMS = <a class="code hl_variable" href="classRegressionWisard.html#a0b4ff031198660ee8239a94211a98cd0">entrySize</a> / <a class="code hl_variable" href="classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550">addressSize</a>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            <span class="keywordtype">int</span> remain = <a class="code hl_variable" href="classRegressionWisard.html#a0b4ff031198660ee8239a94211a98cd0">entrySize</a> % <a class="code hl_variable" href="classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550">addressSize</a>;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            <span class="keywordtype">int</span> indexesSize = <a class="code hl_variable" href="classRegressionWisard.html#a0b4ff031198660ee8239a94211a98cd0">entrySize</a>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRegressionWisard.html#aa667b0e3eb449edf55101e21b9e81047">completeAddressing</a> &amp;&amp; remain &gt; 0) {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                numberOfRAMS++;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                indexesSize += <a class="code hl_variable" href="classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550">addressSize</a> - remain;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            <a class="code hl_variable" href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">rams</a>.resize(numberOfRAMS);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            <a class="code hl_variable" href="classRegressionWisard.html#a103aa1c658a82b6fb5d17db4bc5cef4b">mapping</a>.resize(indexesSize);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classRegressionWisard.html#a0b4ff031198660ee8239a94211a98cd0">entrySize</a>; i++) {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                <a class="code hl_variable" href="classRegressionWisard.html#a103aa1c658a82b6fb5d17db4bc5cef4b">mapping</a>[i] = i;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            }</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = <a class="code hl_variable" href="classRegressionWisard.html#a0b4ff031198660ee8239a94211a98cd0">entrySize</a>; i &lt; <a class="code hl_variable" href="classRegressionWisard.html#a103aa1c658a82b6fb5d17db4bc5cef4b">mapping</a>.size(); i++) {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                <a class="code hl_variable" href="classRegressionWisard.html#a103aa1c658a82b6fb5d17db4bc5cef4b">mapping</a>[i] = randint(0, <a class="code hl_variable" href="classRegressionWisard.html#a0b4ff031198660ee8239a94211a98cd0">entrySize</a> - 1, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classRegressionWisard.html#a218ec296378e06b77f337de4c99e315a">orderedMapping</a>) {</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                random_shuffle(<a class="code hl_variable" href="classRegressionWisard.html#a103aa1c658a82b6fb5d17db4bc5cef4b">mapping</a>.begin(), <a class="code hl_variable" href="classRegressionWisard.html#a103aa1c658a82b6fb5d17db4bc5cef4b">mapping</a>.end());</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            <a class="code hl_variable" href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">rams</a>.resize(<a class="code hl_variable" href="classRegressionWisard.html#a103aa1c658a82b6fb5d17db4bc5cef4b">mapping</a>.size() / <a class="code hl_variable" href="classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550">addressSize</a>);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        }</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code hl_variable" href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">rams</a>.size(); i++) {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            std::vector&lt;int&gt; subIndexes(<a class="code hl_variable" href="classRegressionWisard.html#a103aa1c658a82b6fb5d17db4bc5cef4b">mapping</a>.begin() + (((<span class="keywordtype">int</span>)i) * <a class="code hl_variable" href="classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550">addressSize</a>), <a class="code hl_variable" href="classRegressionWisard.html#a103aa1c658a82b6fb5d17db4bc5cef4b">mapping</a>.begin() + ((((<span class="keywordtype">int</span>)i) + 1) * <a class="code hl_variable" href="classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550">addressSize</a>));</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            <a class="code hl_variable" href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">rams</a>[i] = <a class="code hl_class" href="classRegressionRAM.html">RegressionRAM</a>(subIndexes, <a class="code hl_variable" href="classRegressionWisard.html#a19bf9ed20712adaa43cff5f46985ad0f">minZero</a>, <a class="code hl_variable" href="classRegressionWisard.html#a4d8ca9f91145bca9cccf256b75a79ab0">minOne</a>);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        }</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    }</div>
+</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="foldopen" id="foldopen00194" data-start="{" data-end="}">
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#a6a25655a9cb15452b468a13dc4ed2858">  194</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classRegressionWisard.html#a6a25655a9cb15452b468a13dc4ed2858">checkEntrySize</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> entry)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRegressionWisard.html#a0b4ff031198660ee8239a94211a98cd0">entrySize</a> != entry) {</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            <span class="keywordflow">throw</span> Exception(<span class="stringliteral">&quot;The entry size defined on creation of RAM is different of entry size given as input!&quot;</span>);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        }</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    }</div>
+</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="foldopen" id="foldopen00205" data-start="{" data-end="}">
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#a4bfafa888b990804d754feb76044b679">  205</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classRegressionWisard.html#a4bfafa888b990804d754feb76044b679">checkAddressSize</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classRegressionWisard.html#a0b4ff031198660ee8239a94211a98cd0">entrySize</a>, <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550">addressSize</a>)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550">addressSize</a> &lt; 2) {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            <span class="keywordflow">throw</span> Exception(<span class="stringliteral">&quot;The address size can&#39;t be less than 2!&quot;</span>);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRegressionWisard.html#a0b4ff031198660ee8239a94211a98cd0">entrySize</a> &lt; 2) {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            <span class="keywordflow">throw</span> Exception(<span class="stringliteral">&quot;The entry size can&#39;t be less than 2!&quot;</span>);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        }</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classRegressionWisard.html#a0b4ff031198660ee8239a94211a98cd0">entrySize</a> &lt; <a class="code hl_variable" href="classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550">addressSize</a>) {</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            <span class="keywordflow">throw</span> Exception(<span class="stringliteral">&quot;The address size can&#39;t be bigger than entry size!&quot;</span>);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        }</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    }</div>
+</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="foldopen" id="foldopen00222" data-start="{" data-end="}">
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#a6104a1884a605d02e08042eaf2b70310">  222</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classRegressionWisard.html#a6104a1884a605d02e08042eaf2b70310">checkMinZeroOne</a>(<span class="keywordtype">int</span> min0, <span class="keywordtype">int</span> min1) {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="keywordflow">if</span> (min0 + min1 &gt; <a class="code hl_variable" href="classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550">addressSize</a>) {</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            <span class="keywordflow">throw</span> Exception(<span class="stringliteral">&quot;minZero + minOne is bigger than addressSize!&quot;</span>);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        }</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    }</div>
+</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550">  229</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550">addressSize</a>; </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#aa667b0e3eb449edf55101e21b9e81047">  230</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classRegressionWisard.html#aa667b0e3eb449edf55101e21b9e81047">completeAddressing</a>; </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#a218ec296378e06b77f337de4c99e315a">  231</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classRegressionWisard.html#a218ec296378e06b77f337de4c99e315a">orderedMapping</a>; </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#af7f452b5991bf8498d19cb3b5aea16af">  232</a></span>    <a class="code hl_class" href="classMean.html">Mean</a>* <a class="code hl_variable" href="classRegressionWisard.html#af7f452b5991bf8498d19cb3b5aea16af">mean</a>; </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#a19bf9ed20712adaa43cff5f46985ad0f">  233</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classRegressionWisard.html#a19bf9ed20712adaa43cff5f46985ad0f">minZero</a>; </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#a4d8ca9f91145bca9cccf256b75a79ab0">  234</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classRegressionWisard.html#a4d8ca9f91145bca9cccf256b75a79ab0">minOne</a>; </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#a2d96d1e6bb01d4aed4e8f5cb40510596">  235</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classRegressionWisard.html#a2d96d1e6bb01d4aed4e8f5cb40510596">steps</a>; </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#a42982f590753efc85fd6f52081dccfa6">  236</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classRegressionWisard.html#a42982f590753efc85fd6f52081dccfa6">numberOfTrainings</a>; </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#a0b4ff031198660ee8239a94211a98cd0">  237</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classRegressionWisard.html#a0b4ff031198660ee8239a94211a98cd0">entrySize</a>; </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">  238</a></span>    std::vector&lt;RegressionRAM&gt; <a class="code hl_variable" href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">rams</a>; </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="classRegressionWisard.html#a103aa1c658a82b6fb5d17db4bc5cef4b">  239</a></span>    std::vector&lt;int&gt; <a class="code hl_variable" href="classRegressionWisard.html#a103aa1c658a82b6fb5d17db4bc5cef4b">mapping</a>; </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>};</div>
+</div>
+<div class="ttc" id="aclassMean_html"><div class="ttname"><a href="classMean.html">Mean</a></div><div class="ttdoc">Classe base abstrata para cálculo de médias.</div><div class="ttdef"><b>Definição</b> <a href="meanfunctions_8cc_source.html#l00004">meanfunctions.cc:4</a></div></div>
+<div class="ttc" id="aclassMean_html_a6c725db111881910fcf4df655debbbc7"><div class="ttname"><a href="classMean.html#a6c725db111881910fcf4df655debbbc7">Mean::calculate</a></div><div class="ttdeci">virtual double calculate(const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;outputRams)=0</div><div class="ttdoc">Calcula a média com base nos dados fornecidos.</div></div>
+<div class="ttc" id="aclassRegressionRAM_html"><div class="ttname"><a href="classRegressionRAM.html">RegressionRAM</a></div><div class="ttdoc">Classe representando a RAM.</div><div class="ttdef"><b>Definição</b> <a href="regressionram_8cc_source.html#l00006">regressionram.cc:7</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html"><div class="ttname"><a href="classRegressionWisard.html">RegressionWisard</a></div><div class="ttdoc">Classe para um modelo de regressão utilizando Wisard.</div><div class="ttdef"><b>Definição</b> <a href="#l00004">regressionwisard.cc:4</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_a054c0bf1dd245976d942f5714fa5c8ef"><div class="ttname"><a href="classRegressionWisard.html#a054c0bf1dd245976d942f5714fa5c8ef">RegressionWisard::RegressionWisard</a></div><div class="ttdeci">RegressionWisard(int addressSize)</div><div class="ttdoc">Construtor que inicializa o modelo com um tamanho de endereço especificado.</div><div class="ttdef"><b>Definição</b> <a href="#l00058">regressionwisard.cc:58</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_a0b4ff031198660ee8239a94211a98cd0"><div class="ttname"><a href="classRegressionWisard.html#a0b4ff031198660ee8239a94211a98cd0">RegressionWisard::entrySize</a></div><div class="ttdeci">int entrySize</div><div class="ttdoc">Tamanho da entrada.</div><div class="ttdef"><b>Definição</b> <a href="#l00237">regressionwisard.cc:237</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_a103aa1c658a82b6fb5d17db4bc5cef4b"><div class="ttname"><a href="classRegressionWisard.html#a103aa1c658a82b6fb5d17db4bc5cef4b">RegressionWisard::mapping</a></div><div class="ttdeci">std::vector&lt; int &gt; mapping</div><div class="ttdoc">Mapeamento dos índices.</div><div class="ttdef"><b>Definição</b> <a href="#l00239">regressionwisard.cc:239</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_a11970036606a16938821722fb3af53ee"><div class="ttname"><a href="classRegressionWisard.html#a11970036606a16938821722fb3af53ee">RegressionWisard::train</a></div><div class="ttdeci">void train(const DataSet &amp;dataset)</div><div class="ttdoc">Treina o modelo com um conjunto de dados.</div><div class="ttdef"><b>Definição</b> <a href="#l00071">regressionwisard.cc:71</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_a125bffa9cf4806492f2b2cf96a3932b0"><div class="ttname"><a href="classRegressionWisard.html#a125bffa9cf4806492f2b2cf96a3932b0">RegressionWisard::train</a></div><div class="ttdeci">void train(const BinInput &amp;input, const double y)</div><div class="ttdoc">Treina o modelo com uma entrada binária e um valor y.</div><div class="ttdef"><b>Definição</b> <a href="#l00089">regressionwisard.cc:89</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_a19bf9ed20712adaa43cff5f46985ad0f"><div class="ttname"><a href="classRegressionWisard.html#a19bf9ed20712adaa43cff5f46985ad0f">RegressionWisard::minZero</a></div><div class="ttdeci">int minZero</div><div class="ttdoc">Número mínimo de zeros.</div><div class="ttdef"><b>Definição</b> <a href="#l00233">regressionwisard.cc:233</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_a218ec296378e06b77f337de4c99e315a"><div class="ttname"><a href="classRegressionWisard.html#a218ec296378e06b77f337de4c99e315a">RegressionWisard::orderedMapping</a></div><div class="ttdeci">bool orderedMapping</div><div class="ttdoc">Mapeamento ordenado.</div><div class="ttdef"><b>Definição</b> <a href="#l00231">regressionwisard.cc:231</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_a2d96d1e6bb01d4aed4e8f5cb40510596"><div class="ttname"><a href="classRegressionWisard.html#a2d96d1e6bb01d4aed4e8f5cb40510596">RegressionWisard::steps</a></div><div class="ttdeci">int steps</div><div class="ttdoc">Número de passos.</div><div class="ttdef"><b>Definição</b> <a href="#l00235">regressionwisard.cc:235</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_a2f22f241b281ab6a0e4cf1cfb9335bb4"><div class="ttname"><a href="classRegressionWisard.html#a2f22f241b281ab6a0e4cf1cfb9335bb4">RegressionWisard::calculateFit</a></div><div class="ttdeci">void calculateFit(const BinInput &amp;input, const double y)</div><div class="ttdoc">Calcula o ajuste para uma entrada binária e um valor y.</div><div class="ttdef"><b>Definição</b> <a href="#l00133">regressionwisard.cc:133</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_a335eab19f2332e0bfb09157f184de16f"><div class="ttname"><a href="classRegressionWisard.html#a335eab19f2332e0bfb09157f184de16f">RegressionWisard::rams</a></div><div class="ttdeci">std::vector&lt; RegressionRAM &gt; rams</div><div class="ttdoc">Vetor de RAMs de regressão.</div><div class="ttdef"><b>Definição</b> <a href="#l00238">regressionwisard.cc:238</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_a42982f590753efc85fd6f52081dccfa6"><div class="ttname"><a href="classRegressionWisard.html#a42982f590753efc85fd6f52081dccfa6">RegressionWisard::numberOfTrainings</a></div><div class="ttdeci">int numberOfTrainings</div><div class="ttdoc">Número de treinamentos.</div><div class="ttdef"><b>Definição</b> <a href="#l00236">regressionwisard.cc:236</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_a4bfafa888b990804d754feb76044b679"><div class="ttname"><a href="classRegressionWisard.html#a4bfafa888b990804d754feb76044b679">RegressionWisard::checkAddressSize</a></div><div class="ttdeci">void checkAddressSize(const int entrySize, const int addressSize) const</div><div class="ttdoc">Verifica o tamanho do endereço.</div><div class="ttdef"><b>Definição</b> <a href="#l00205">regressionwisard.cc:205</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_a4d8ca9f91145bca9cccf256b75a79ab0"><div class="ttname"><a href="classRegressionWisard.html#a4d8ca9f91145bca9cccf256b75a79ab0">RegressionWisard::minOne</a></div><div class="ttdeci">int minOne</div><div class="ttdoc">Número mínimo de uns.</div><div class="ttdef"><b>Definição</b> <a href="#l00234">regressionwisard.cc:234</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_a56ec56a98f692d756f1f80e04bd19354"><div class="ttname"><a href="classRegressionWisard.html#a56ec56a98f692d756f1f80e04bd19354">RegressionWisard::RegressionWisard</a></div><div class="ttdeci">RegressionWisard()</div><div class="ttdoc">Construtor padrão.</div><div class="ttdef"><b>Definição</b> <a href="#l00009">regressionwisard.cc:9</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_a6104a1884a605d02e08042eaf2b70310"><div class="ttname"><a href="classRegressionWisard.html#a6104a1884a605d02e08042eaf2b70310">RegressionWisard::checkMinZeroOne</a></div><div class="ttdeci">void checkMinZeroOne(int min0, int min1)</div><div class="ttdoc">Verifica os valores mínimos de zeros e uns.</div><div class="ttdef"><b>Definição</b> <a href="#l00222">regressionwisard.cc:222</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_a6a25655a9cb15452b468a13dc4ed2858"><div class="ttname"><a href="classRegressionWisard.html#a6a25655a9cb15452b468a13dc4ed2858">RegressionWisard::checkEntrySize</a></div><div class="ttdeci">void checkEntrySize(const int entry) const</div><div class="ttdoc">Verifica o tamanho da entrada.</div><div class="ttdef"><b>Definição</b> <a href="#l00194">regressionwisard.cc:194</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_a7a40098add4d89932e44ff01868e0550"><div class="ttname"><a href="classRegressionWisard.html#a7a40098add4d89932e44ff01868e0550">RegressionWisard::addressSize</a></div><div class="ttdeci">int addressSize</div><div class="ttdoc">Tamanho do endereço.</div><div class="ttdef"><b>Definição</b> <a href="#l00229">regressionwisard.cc:229</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_a8203ce8fa5395d5891c29c4abccb7979"><div class="ttname"><a href="classRegressionWisard.html#a8203ce8fa5395d5891c29c4abccb7979">RegressionWisard::~RegressionWisard</a></div><div class="ttdeci">~RegressionWisard()</div><div class="ttdoc">Destrutor da classe que limpa a memória.</div><div class="ttdef"><b>Definição</b> <a href="#l00063">regressionwisard.cc:63</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_aa667b0e3eb449edf55101e21b9e81047"><div class="ttname"><a href="classRegressionWisard.html#aa667b0e3eb449edf55101e21b9e81047">RegressionWisard::completeAddressing</a></div><div class="ttdeci">bool completeAddressing</div><div class="ttdoc">Endereçamento completo.</div><div class="ttdef"><b>Definição</b> <a href="#l00230">regressionwisard.cc:230</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_ab2825bf4202b12029b489c1d4de342b8"><div class="ttname"><a href="classRegressionWisard.html#ab2825bf4202b12029b489c1d4de342b8">RegressionWisard::predict</a></div><div class="ttdeci">std::vector&lt; double &gt; predict(const DataSet &amp;dataset) const</div><div class="ttdoc">Faz a predição para um conjunto de dados.</div><div class="ttdef"><b>Definição</b> <a href="#l00118">regressionwisard.cc:118</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_ab4d4796e3f62df331fee309301e0a681"><div class="ttname"><a href="classRegressionWisard.html#ab4d4796e3f62df331fee309301e0a681">RegressionWisard::predict</a></div><div class="ttdeci">double predict(const BinInput &amp;input) const</div><div class="ttdoc">Faz a predição para uma entrada binária.</div><div class="ttdef"><b>Definição</b> <a href="#l00104">regressionwisard.cc:104</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_ac37f1d1c653928a21c5d3588c3837c9b"><div class="ttname"><a href="classRegressionWisard.html#ac37f1d1c653928a21c5d3588c3837c9b">RegressionWisard::applyFit</a></div><div class="ttdeci">void applyFit()</div><div class="ttdoc">Aplica o ajuste calculado.</div><div class="ttdef"><b>Definição</b> <a href="#l00143">regressionwisard.cc:143</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_ad003f5c063b032a1995ccfcf2682c549"><div class="ttname"><a href="classRegressionWisard.html#ad003f5c063b032a1995ccfcf2682c549">RegressionWisard::setRAMShuffle</a></div><div class="ttdeci">void setRAMShuffle(int entrySize)</div><div class="ttdoc">Configura o embaralhamento das RAMs.</div><div class="ttdef"><b>Definição</b> <a href="#l00154">regressionwisard.cc:154</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_af7f452b5991bf8498d19cb3b5aea16af"><div class="ttname"><a href="classRegressionWisard.html#af7f452b5991bf8498d19cb3b5aea16af">RegressionWisard::mean</a></div><div class="ttdeci">Mean * mean</div><div class="ttdoc">Objeto para cálculo de média.</div><div class="ttdef"><b>Definição</b> <a href="#l00232">regressionwisard.cc:232</a></div></div>
+<div class="ttc" id="aclassRegressionWisard_html_afef642836ca4d47c9a1ee6f9497ee265"><div class="ttname"><a href="classRegressionWisard.html#afef642836ca4d47c9a1ee6f9497ee265">RegressionWisard::RegressionWisard</a></div><div class="ttdeci">RegressionWisard(nl::json c)</div><div class="ttdoc">Construtor que inicializa o modelo com um objeto JSON.</div><div class="ttdef"><b>Definição</b> <a href="#l00015">regressionwisard.cc:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bdeba5f06b852fec80257c0bf4c3c36e.html">models</a></li><li class="navelem"><a class="el" href="dir_da06e3dc947cae33087c36059ccd8df4.html">regressionwisard</a></li><li class="navelem"><a class="el" href="regressionwisard_8cc.html">regressionwisard.cc</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

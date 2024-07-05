@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WISARD: Código-Fonte de src/models/regressionwisard/regressionram.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">WISARD<span id="projectnumber">&#160;2.0</span>
+   </div>
+   <div id="projectbrief">WNN</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('regressionram_8cc_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">regressionram.cc</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="regressionram_8cc.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classRegressionRAM.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="classRegressionRAM.html">RegressionRAM</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#a1468df083af359878a5e864e56d58d94">   12</a></span>    <a class="code hl_function" href="classRegressionRAM.html#a1468df083af359878a5e864e56d58d94">RegressionRAM</a>() {}</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#a0ad601f407a8baea97364e81828f5635">   18</a></span>    <a class="code hl_function" href="classRegressionRAM.html#a0ad601f407a8baea97364e81828f5635">RegressionRAM</a>(nl::json c)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        nl::json value;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        value = c[<span class="stringliteral">&quot;memory&quot;</span>];</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        std::string data = value.is_null() ? <span class="stringliteral">&quot;&quot;</span> : value.get&lt;std::string&gt;();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">if</span> (data.size() &gt; 0) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <a class="code hl_class" href="classRegressionRAMDataHandle.html">RegressionRAMDataHandle</a> dh(data);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <a class="code hl_variable" href="classRegressionRAM.html#a77a4282abeff7ed9c178c4ea4aea5a0d">memory</a> = dh.<a class="code hl_function" href="classRegressionRAMDataHandle.html#aad7d447964f7f8f16ebb2d92a5a01e67">get</a>(0);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        value = c[<span class="stringliteral">&quot;mapping&quot;</span>];</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_variable" href="classRegressionRAM.html#a6d9d14f2194853166459c9ac734080c2">mapping</a> = value.is_null() ? std::vector&lt;int&gt;() : value.get&lt;std::vector&lt;int&gt;&gt;();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        value = c[<span class="stringliteral">&quot;minZero&quot;</span>];</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_variable" href="classRegressionRAM.html#a8c283108a2205b2dc816fb13c8b36724">minZero</a> = value.is_null() ? 0 : value.get&lt;<span class="keywordtype">int</span>&gt;();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        value = c[<span class="stringliteral">&quot;minOne&quot;</span>];</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_variable" href="classRegressionRAM.html#afdb97503ca3766f6209826f26eb8b770">minOne</a> = value.is_null() ? 0 : value.get&lt;<span class="keywordtype">int</span>&gt;();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#a8bbb6293b5fa116ee0a69e1c48fe76eb">   45</a></span>    <a class="code hl_function" href="classRegressionRAM.html#a8bbb6293b5fa116ee0a69e1c48fe76eb">RegressionRAM</a>(<span class="keyword">const</span> std::vector&lt;int&gt; <a class="code hl_variable" href="classRegressionRAM.html#a6d9d14f2194853166459c9ac734080c2">mapping</a>, <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classRegressionRAM.html#a8c283108a2205b2dc816fb13c8b36724">minZero</a> = 0, <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classRegressionRAM.html#afdb97503ca3766f6209826f26eb8b770">minOne</a> = 0) : <a class="code hl_variable" href="classRegressionRAM.html#a6d9d14f2194853166459c9ac734080c2">mapping</a>(<a class="code hl_variable" href="classRegressionRAM.html#a6d9d14f2194853166459c9ac734080c2">mapping</a>), <a class="code hl_variable" href="classRegressionRAM.html#a8c283108a2205b2dc816fb13c8b36724">minZero</a>(<a class="code hl_variable" href="classRegressionRAM.html#a8c283108a2205b2dc816fb13c8b36724">minZero</a>), <a class="code hl_variable" href="classRegressionRAM.html#afdb97503ca3766f6209826f26eb8b770">minOne</a>(<a class="code hl_variable" href="classRegressionRAM.html#afdb97503ca3766f6209826f26eb8b770">minOne</a>) {}</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#a94223ef17afc193c6cb2b0e713e331b1">   50</a></span>    <a class="code hl_function" href="classRegressionRAM.html#a94223ef17afc193c6cb2b0e713e331b1">~RegressionRAM</a>()</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <a class="code hl_variable" href="classRegressionRAM.html#a6d9d14f2194853166459c9ac734080c2">mapping</a>.clear();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_variable" href="classRegressionRAM.html#a77a4282abeff7ed9c178c4ea4aea5a0d">memory</a>.clear();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#a3d40a96015f14882569e8c3bd820b03a">   61</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classRegressionRAM.html#a3d40a96015f14882569e8c3bd820b03a">train</a>(<span class="keyword">const</span> BinInput&amp; image, <span class="keyword">const</span> <span class="keywordtype">double</span> y)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        addr_t index = std::get&lt;0&gt;(<a class="code hl_function" href="classRegressionRAM.html#ad7d93ac38c2cb7fce602f8396283dd1a">getIndex</a>(image));</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keyword">auto</span> it = <a class="code hl_variable" href="classRegressionRAM.html#a77a4282abeff7ed9c178c4ea4aea5a0d">memory</a>.find(index);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">if</span> (it == <a class="code hl_variable" href="classRegressionRAM.html#a77a4282abeff7ed9c178c4ea4aea5a0d">memory</a>.end())</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <a class="code hl_variable" href="classRegressionRAM.html#a77a4282abeff7ed9c178c4ea4aea5a0d">memory</a>.insert(it, std::pair&lt;addr_t, regression_content_t&gt;(index, {1, y, 0}));</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            it-&gt;second[0]++;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            it-&gt;second[1] += y;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#af3d15e9225cc5c6e514801d15a85c07a">   79</a></span>    regression_content_t <a class="code hl_function" href="classRegressionRAM.html#af3d15e9225cc5c6e514801d15a85c07a">getVote</a>(<span class="keyword">const</span> BinInput&amp; image)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        std::tuple&lt;addr_t, bool&gt; result = <a class="code hl_function" href="classRegressionRAM.html#ad7d93ac38c2cb7fce602f8396283dd1a">getIndex</a>(image);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">if</span> (std::get&lt;1&gt;(result)) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keywordflow">return</span> {0, 0};</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        addr_t index = std::get&lt;0&gt;(result);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keyword">auto</span> it = <a class="code hl_variable" href="classRegressionRAM.html#a77a4282abeff7ed9c178c4ea4aea5a0d">memory</a>.find(index);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">if</span> (it == <a class="code hl_variable" href="classRegressionRAM.html#a77a4282abeff7ed9c178c4ea4aea5a0d">memory</a>.end())</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keywordflow">return</span> {0, 0};</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">return</span> {it-&gt;second[0], it-&gt;second[1]};</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#afb1e91cc19c1912cc2e569bbe0f82da9">   99</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classRegressionRAM.html#afb1e91cc19c1912cc2e569bbe0f82da9">calculateFit</a>(<span class="keyword">const</span> BinInput&amp; image, <span class="keyword">const</span> <span class="keywordtype">double</span> yFit)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        addr_t index = std::get&lt;0&gt;(<a class="code hl_function" href="classRegressionRAM.html#ad7d93ac38c2cb7fce602f8396283dd1a">getIndex</a>(image));</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keyword">auto</span> it = <a class="code hl_variable" href="classRegressionRAM.html#a77a4282abeff7ed9c178c4ea4aea5a0d">memory</a>.find(index);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        it-&gt;second[2] += yFit;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
+</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="foldopen" id="foldopen00110" data-start="{" data-end="}">
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#a1e6220b2089ed30daf63041821ec8ac6">  110</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classRegressionRAM.html#a1e6220b2089ed30daf63041821ec8ac6">applyFit</a>()</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = <a class="code hl_variable" href="classRegressionRAM.html#a77a4282abeff7ed9c178c4ea4aea5a0d">memory</a>.begin(); it != <a class="code hl_variable" href="classRegressionRAM.html#a77a4282abeff7ed9c178c4ea4aea5a0d">memory</a>.end(); it++)</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            it-&gt;second[1] += it-&gt;second[2] / it-&gt;second[0];</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            it-&gt;second[2] = 0;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
+</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="foldopen" id="foldopen00123" data-start="{" data-end="}">
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#a34308c3b554de1cb36139a04ce6ce2c3">  123</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classRegressionRAM.html#a34308c3b554de1cb36139a04ce6ce2c3">setMinZero</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> value)</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <a class="code hl_variable" href="classRegressionRAM.html#a8c283108a2205b2dc816fb13c8b36724">minZero</a> = value;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
+</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="}">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#a33d0c3451d6aa1f3e6fd1bcd25af42eb">  132</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classRegressionRAM.html#a33d0c3451d6aa1f3e6fd1bcd25af42eb">setMinOne</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> value)</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <a class="code hl_variable" href="classRegressionRAM.html#afdb97503ca3766f6209826f26eb8b770">minOne</a> = value;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    }</div>
+</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#abb209836b83ae461eab6c2d3961343b8">  141</a></span>    regression_ram_t <a class="code hl_function" href="classRegressionRAM.html#abb209836b83ae461eab6c2d3961343b8">getMemory</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classRegressionRAM.html#a77a4282abeff7ed9c178c4ea4aea5a0d">memory</a>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    }</div>
+</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="foldopen" id="foldopen00150" data-start="{" data-end="}">
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#a01cd8b4699432518143520961c4981a9">  150</a></span>    std::vector&lt;int&gt; <a class="code hl_function" href="classRegressionRAM.html#a01cd8b4699432518143520961c4981a9">getMapping</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classRegressionRAM.html#a6d9d14f2194853166459c9ac734080c2">mapping</a>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
+</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="foldopen" id="foldopen00159" data-start="{" data-end="}">
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#a818bb9b81fbe8acac517f8f0aa1b5bf9">  159</a></span>    nl::json <a class="code hl_function" href="classRegressionRAM.html#a818bb9b81fbe8acac517f8f0aa1b5bf9">getJSON</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <a class="code hl_class" href="classRegressionRAMDataHandle.html">RegressionRAMDataHandle</a> dh(<a class="code hl_variable" href="classRegressionRAM.html#a77a4282abeff7ed9c178c4ea4aea5a0d">memory</a>);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        nl::json config =</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            {<span class="stringliteral">&quot;minZero&quot;</span>, <a class="code hl_variable" href="classRegressionRAM.html#a8c283108a2205b2dc816fb13c8b36724">minZero</a>},</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            {<span class="stringliteral">&quot;minOne&quot;</span>, <a class="code hl_variable" href="classRegressionRAM.html#afdb97503ca3766f6209826f26eb8b770">minOne</a>},</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            {<span class="stringliteral">&quot;mapping&quot;</span>, <a class="code hl_variable" href="classRegressionRAM.html#a6d9d14f2194853166459c9ac734080c2">mapping</a>},</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            {<span class="stringliteral">&quot;memory&quot;</span>, <a class="code hl_variable" href="classRegressionRAM.html#a77a4282abeff7ed9c178c4ea4aea5a0d">memory</a>},</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        };</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordflow">return</span> config;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    }</div>
+</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="foldopen" id="foldopen00176" data-start="{" data-end="}">
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#ac7a5d96231c14447a9f26f171ad82ef4">  176</a></span>    <span class="keywordtype">long</span> <a class="code hl_function" href="classRegressionRAM.html#ac7a5d96231c14447a9f26f171ad82ef4">getsizeoff</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="keywordtype">long</span> size = <span class="keyword">sizeof</span>(<a class="code hl_function" href="classRegressionRAM.html#a1468df083af359878a5e864e56d58d94">RegressionRAM</a>);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        size += <a class="code hl_variable" href="classRegressionRAM.html#a6d9d14f2194853166459c9ac734080c2">mapping</a>.size() * <span class="keyword">sizeof</span>(addr_t);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        size += <a class="code hl_variable" href="classRegressionRAM.html#a77a4282abeff7ed9c178c4ea4aea5a0d">memory</a>.size() * (<span class="keyword">sizeof</span>(addr_t) + <span class="keyword">sizeof</span>(regression_content_t));</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keywordflow">return</span> size;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    }</div>
+</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="keyword">protected</span>:</div>
+<div class="foldopen" id="foldopen00190" data-start="{" data-end="}">
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#ad7d93ac38c2cb7fce602f8396283dd1a">  190</a></span>    std::tuple&lt;addr_t, bool&gt; <a class="code hl_function" href="classRegressionRAM.html#ad7d93ac38c2cb7fce602f8396283dd1a">getIndex</a>(<span class="keyword">const</span> BinInput&amp; image)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        addr_t index = 0;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        addr_t p = 1;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="keywordtype">int</span> countOne = 0;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classRegressionRAM.html#a6d9d14f2194853166459c9ac734080c2">mapping</a>.size(); i++)</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            <span class="keywordtype">int</span> bin = image[<a class="code hl_variable" href="classRegressionRAM.html#a6d9d14f2194853166459c9ac734080c2">mapping</a>[i]];</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            countOne += bin;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            index += bin * p;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            p *= 2;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        }</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <span class="keywordflow">if</span> ((countOne &lt; <a class="code hl_variable" href="classRegressionRAM.html#afdb97503ca3766f6209826f26eb8b770">minOne</a>) || (((<span class="keywordtype">int</span>)<a class="code hl_variable" href="classRegressionRAM.html#a6d9d14f2194853166459c9ac734080c2">mapping</a>.size() - countOne) &lt; <a class="code hl_variable" href="classRegressionRAM.html#a8c283108a2205b2dc816fb13c8b36724">minZero</a>))</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            <span class="keywordflow">return</span> std::make_tuple(index, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        }</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keywordflow">return</span> std::make_tuple(index, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    }</div>
+</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#a77a4282abeff7ed9c178c4ea4aea5a0d">  211</a></span>    regression_ram_t <a class="code hl_variable" href="classRegressionRAM.html#a77a4282abeff7ed9c178c4ea4aea5a0d">memory</a>; </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#a6d9d14f2194853166459c9ac734080c2">  212</a></span>    std::vector&lt;int&gt; <a class="code hl_variable" href="classRegressionRAM.html#a6d9d14f2194853166459c9ac734080c2">mapping</a>; </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#a8c283108a2205b2dc816fb13c8b36724">  213</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classRegressionRAM.html#a8c283108a2205b2dc816fb13c8b36724">minZero</a>; </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="classRegressionRAM.html#afdb97503ca3766f6209826f26eb8b770">  214</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classRegressionRAM.html#afdb97503ca3766f6209826f26eb8b770">minOne</a>; </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>};</div>
+</div>
+<div class="ttc" id="aclassRegressionRAMDataHandle_html"><div class="ttname"><a href="classRegressionRAMDataHandle.html">RegressionRAMDataHandle</a></div><div class="ttdoc">A class to handle RAM data for regression tasks.</div><div class="ttdef"><b>Definição</b> <a href="regressionramdatahandle_8cc_source.html#l00005">regressionramdatahandle.cc:5</a></div></div>
+<div class="ttc" id="aclassRegressionRAMDataHandle_html_aad7d447964f7f8f16ebb2d92a5a01e67"><div class="ttname"><a href="classRegressionRAMDataHandle.html#aad7d447964f7f8f16ebb2d92a5a01e67">RegressionRAMDataHandle::get</a></div><div class="ttdeci">regression_content_t get(int r, int addr)</div><div class="ttdoc">Gets the content of a specific RAM at a specific address.</div><div class="ttdef"><b>Definição</b> <a href="regressionramdatahandle_8cc_source.html#l00044">regressionramdatahandle.cc:44</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html"><div class="ttname"><a href="classRegressionRAM.html">RegressionRAM</a></div><div class="ttdoc">Classe representando a RAM.</div><div class="ttdef"><b>Definição</b> <a href="#l00006">regressionram.cc:7</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_a01cd8b4699432518143520961c4981a9"><div class="ttname"><a href="classRegressionRAM.html#a01cd8b4699432518143520961c4981a9">RegressionRAM::getMapping</a></div><div class="ttdeci">std::vector&lt; int &gt; getMapping() const</div><div class="ttdoc">Obtém o mapeamento da RAM.</div><div class="ttdef"><b>Definição</b> <a href="#l00150">regressionram.cc:150</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_a0ad601f407a8baea97364e81828f5635"><div class="ttname"><a href="classRegressionRAM.html#a0ad601f407a8baea97364e81828f5635">RegressionRAM::RegressionRAM</a></div><div class="ttdeci">RegressionRAM(nl::json c)</div><div class="ttdoc">Construtor da classe que inicializa a RAM com um objeto JSON.</div><div class="ttdef"><b>Definição</b> <a href="#l00018">regressionram.cc:18</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_a1468df083af359878a5e864e56d58d94"><div class="ttname"><a href="classRegressionRAM.html#a1468df083af359878a5e864e56d58d94">RegressionRAM::RegressionRAM</a></div><div class="ttdeci">RegressionRAM()</div><div class="ttdoc">Construtor padrão.</div><div class="ttdef"><b>Definição</b> <a href="#l00012">regressionram.cc:12</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_a1e6220b2089ed30daf63041821ec8ac6"><div class="ttname"><a href="classRegressionRAM.html#a1e6220b2089ed30daf63041821ec8ac6">RegressionRAM::applyFit</a></div><div class="ttdeci">void applyFit()</div><div class="ttdoc">Aplica o ajuste calculado.</div><div class="ttdef"><b>Definição</b> <a href="#l00110">regressionram.cc:110</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_a33d0c3451d6aa1f3e6fd1bcd25af42eb"><div class="ttname"><a href="classRegressionRAM.html#a33d0c3451d6aa1f3e6fd1bcd25af42eb">RegressionRAM::setMinOne</a></div><div class="ttdeci">void setMinOne(const int value)</div><div class="ttdoc">Define o valor mínimo de uns.</div><div class="ttdef"><b>Definição</b> <a href="#l00132">regressionram.cc:132</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_a34308c3b554de1cb36139a04ce6ce2c3"><div class="ttname"><a href="classRegressionRAM.html#a34308c3b554de1cb36139a04ce6ce2c3">RegressionRAM::setMinZero</a></div><div class="ttdeci">void setMinZero(const int value)</div><div class="ttdoc">Define o valor mínimo de zeros.</div><div class="ttdef"><b>Definição</b> <a href="#l00123">regressionram.cc:123</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_a3d40a96015f14882569e8c3bd820b03a"><div class="ttname"><a href="classRegressionRAM.html#a3d40a96015f14882569e8c3bd820b03a">RegressionRAM::train</a></div><div class="ttdeci">void train(const BinInput &amp;image, const double y)</div><div class="ttdoc">Treina a RAM com a imagem binária e o valor y.</div><div class="ttdef"><b>Definição</b> <a href="#l00061">regressionram.cc:61</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_a6d9d14f2194853166459c9ac734080c2"><div class="ttname"><a href="classRegressionRAM.html#a6d9d14f2194853166459c9ac734080c2">RegressionRAM::mapping</a></div><div class="ttdeci">std::vector&lt; int &gt; mapping</div><div class="ttdoc">Mapeamento da RAM.</div><div class="ttdef"><b>Definição</b> <a href="#l00212">regressionram.cc:212</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_a77a4282abeff7ed9c178c4ea4aea5a0d"><div class="ttname"><a href="classRegressionRAM.html#a77a4282abeff7ed9c178c4ea4aea5a0d">RegressionRAM::memory</a></div><div class="ttdeci">regression_ram_t memory</div><div class="ttdoc">Memória da RAM.</div><div class="ttdef"><b>Definição</b> <a href="#l00211">regressionram.cc:211</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_a818bb9b81fbe8acac517f8f0aa1b5bf9"><div class="ttname"><a href="classRegressionRAM.html#a818bb9b81fbe8acac517f8f0aa1b5bf9">RegressionRAM::getJSON</a></div><div class="ttdeci">nl::json getJSON() const</div><div class="ttdoc">Obtém a configuração da RAM em formato JSON.</div><div class="ttdef"><b>Definição</b> <a href="#l00159">regressionram.cc:159</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_a8bbb6293b5fa116ee0a69e1c48fe76eb"><div class="ttname"><a href="classRegressionRAM.html#a8bbb6293b5fa116ee0a69e1c48fe76eb">RegressionRAM::RegressionRAM</a></div><div class="ttdeci">RegressionRAM(const std::vector&lt; int &gt; mapping, const int minZero=0, const int minOne=0)</div><div class="ttdoc">Construtor da classe que inicializa a RAM com parâmetros específicos.</div><div class="ttdef"><b>Definição</b> <a href="#l00045">regressionram.cc:45</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_a8c283108a2205b2dc816fb13c8b36724"><div class="ttname"><a href="classRegressionRAM.html#a8c283108a2205b2dc816fb13c8b36724">RegressionRAM::minZero</a></div><div class="ttdeci">int minZero</div><div class="ttdoc">Número mínimo de zeros.</div><div class="ttdef"><b>Definição</b> <a href="#l00213">regressionram.cc:213</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_a94223ef17afc193c6cb2b0e713e331b1"><div class="ttname"><a href="classRegressionRAM.html#a94223ef17afc193c6cb2b0e713e331b1">RegressionRAM::~RegressionRAM</a></div><div class="ttdeci">~RegressionRAM()</div><div class="ttdoc">Destrutor da classe que limpa a memória.</div><div class="ttdef"><b>Definição</b> <a href="#l00050">regressionram.cc:50</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_abb209836b83ae461eab6c2d3961343b8"><div class="ttname"><a href="classRegressionRAM.html#abb209836b83ae461eab6c2d3961343b8">RegressionRAM::getMemory</a></div><div class="ttdeci">regression_ram_t getMemory() const</div><div class="ttdoc">Obtém a memória da RAM.</div><div class="ttdef"><b>Definição</b> <a href="#l00141">regressionram.cc:141</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_ac7a5d96231c14447a9f26f171ad82ef4"><div class="ttname"><a href="classRegressionRAM.html#ac7a5d96231c14447a9f26f171ad82ef4">RegressionRAM::getsizeoff</a></div><div class="ttdeci">long getsizeoff() const</div><div class="ttdoc">Obtém o tamanho da RAM em bytes.</div><div class="ttdef"><b>Definição</b> <a href="#l00176">regressionram.cc:176</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_ad7d93ac38c2cb7fce602f8396283dd1a"><div class="ttname"><a href="classRegressionRAM.html#ad7d93ac38c2cb7fce602f8396283dd1a">RegressionRAM::getIndex</a></div><div class="ttdeci">std::tuple&lt; addr_t, bool &gt; getIndex(const BinInput &amp;image) const</div><div class="ttdoc">Obtém o índice da imagem binária.</div><div class="ttdef"><b>Definição</b> <a href="#l00190">regressionram.cc:190</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_af3d15e9225cc5c6e514801d15a85c07a"><div class="ttname"><a href="classRegressionRAM.html#af3d15e9225cc5c6e514801d15a85c07a">RegressionRAM::getVote</a></div><div class="ttdeci">regression_content_t getVote(const BinInput &amp;image) const</div><div class="ttdoc">Obtém o voto da RAM para a imagem binária fornecida.</div><div class="ttdef"><b>Definição</b> <a href="#l00079">regressionram.cc:79</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_afb1e91cc19c1912cc2e569bbe0f82da9"><div class="ttname"><a href="classRegressionRAM.html#afb1e91cc19c1912cc2e569bbe0f82da9">RegressionRAM::calculateFit</a></div><div class="ttdeci">void calculateFit(const BinInput &amp;image, const double yFit)</div><div class="ttdoc">Calcula o ajuste da RAM para a imagem binária e o valor yFit.</div><div class="ttdef"><b>Definição</b> <a href="#l00099">regressionram.cc:99</a></div></div>
+<div class="ttc" id="aclassRegressionRAM_html_afdb97503ca3766f6209826f26eb8b770"><div class="ttname"><a href="classRegressionRAM.html#afdb97503ca3766f6209826f26eb8b770">RegressionRAM::minOne</a></div><div class="ttdeci">int minOne</div><div class="ttdoc">Número mínimo de uns.</div><div class="ttdef"><b>Definição</b> <a href="#l00214">regressionram.cc:214</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bdeba5f06b852fec80257c0bf4c3c36e.html">models</a></li><li class="navelem"><a class="el" href="dir_da06e3dc947cae33087c36059ccd8df4.html">regressionwisard</a></li><li class="navelem"><a class="el" href="regressionram_8cc.html">regressionram.cc</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

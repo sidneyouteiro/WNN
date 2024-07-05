@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="pt">
+  <compounddef id="dir_077cf56d4b31f3f80e17d96eb64b10eb" kind="dir">
+    <compoundname>src/models/wisard</compoundname>
+    <innerfile refid="discriminator_8cc">discriminator.cc</innerfile>
+    <innerfile refid="wisard_8cc">wisard.cc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/models/wisard/"/>
+  </compounddef>
+</doxygen>

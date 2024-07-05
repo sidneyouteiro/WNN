@@ -1,0 +1,11 @@
+<map id="Wisard" name="Wisard">
+<area shape="rect" id="Node000001" title="A class to implement the Wisard algorithm using multiple discriminators." alt="" coords="56,669,188,935"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="29,541,215,607"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,607,125,653,119,653,119,607"/>
+<area shape="rect" id="Node000003" href="$classDiscriminator.html" title="A class to implement a discriminator using bit arrays and pseudo&#45;random mappings." alt="" coords="5,133,124,479"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="78,478,89,516,92,526,88,528,83,518,73,480"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="148,273,256,339"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="197,353,180,431,154,518,143,542,138,540,149,516,175,430,192,352"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="191,5,213,71"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="205,71,205,257,199,257,199,71"/>
+</map>

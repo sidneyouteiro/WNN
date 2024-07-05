@@ -1,0 +1,208 @@
+\doxysection{Referência à classe Harmonic\+Mean}
+\hypertarget{classHarmonicMean}{}\label{classHarmonicMean}\index{HarmonicMean@{HarmonicMean}}
+
+
+Classe para cálculo de média harmônica.  
+
+
+
+
+Diagrama de heranças da classe Harmonic\+Mean
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classHarmonicMean__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Harmonic\+Mean\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classHarmonicMean__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classHarmonicMean_a366283b04e8ae81d7f5ede51d71ab752}{calculate}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&output\+Rams)
+\begin{DoxyCompactList}\small\item\em Calcula a média harmônica com base nos dados fornecidos. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classHarmonicMean_a6abae98ad4be2ec5f5d3a2394aaf2f9f}{class\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o nome da classe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMean}{Mean}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classHarmonicMean_a678bb735f9d4237e2a47a58c90b92503}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Cria uma cópia do objeto \doxylink{classHarmonicMean}{Harmonic\+Mean}. \end{DoxyCompactList}\item 
+nl\+::json \mbox{\hyperlink{classHarmonicMean_a186bf48440b678ba1b9a35f084dda338}{get\+JSON}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a configuração do objeto em formato JSON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe para cálculo de média harmônica. 
+
+Definido na linha \mbox{\hyperlink{meanfunctions_8cc_source_l00197}{197}} do ficheiro \mbox{\hyperlink{meanfunctions_8cc_source}{meanfunctions.\+cc}}.
+
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classHarmonicMean_a366283b04e8ae81d7f5ede51d71ab752}\index{HarmonicMean@{HarmonicMean}!calculate@{calculate}}
+\index{calculate@{calculate}!HarmonicMean@{HarmonicMean}}
+\doxysubsubsection{\texorpdfstring{calculate()}{calculate()}}
+{\footnotesize\ttfamily \label{classHarmonicMean_a366283b04e8ae81d7f5ede51d71ab752} 
+double Harmonic\+Mean\+::calculate (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{output\+Rams}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Calcula a média harmônica com base nos dados fornecidos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em output\+Rams} & Dados de saída das RAMs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A média harmônica calculada. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classMean_a6c725db111881910fcf4df655debbbc7}{Mean}}.
+
+
+
+Definido na linha \mbox{\hyperlink{meanfunctions_8cc_source_l00204}{204}} do ficheiro \mbox{\hyperlink{meanfunctions_8cc_source}{meanfunctions.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ hmean\ =\ 0;}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ counter\ =\ 0;}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ outputRams.size();\ i++)\ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (outputRams[i][0]\ !=\ 0)\ \{}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ amean\ =\ outputRams[i][1]\ /\ outputRams[i][0];}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (amean\ !=\ 0)\ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hmean\ +=\ 1.0\ /\ amean;}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ counter++;}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (counter\ >\ 0)}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ counter\ /\ hmean;}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00221\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classHarmonicMean_a6abae98ad4be2ec5f5d3a2394aaf2f9f}\index{HarmonicMean@{HarmonicMean}!className@{className}}
+\index{className@{className}!HarmonicMean@{HarmonicMean}}
+\doxysubsubsection{\texorpdfstring{className()}{className()}}
+{\footnotesize\ttfamily \label{classHarmonicMean_a6abae98ad4be2ec5f5d3a2394aaf2f9f} 
+std\+::string Harmonic\+Mean\+::class\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém o nome da classe. 
+
+\begin{DoxyReturn}{Retorna}
+Nome da classe. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{meanfunctions_8cc_source_l00235}{235}} do ficheiro \mbox{\hyperlink{meanfunctions_8cc_source}{meanfunctions.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}HarmonicMean"{}};}
+\DoxyCodeLine{00237\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{meanfunctions_8cc_source_l00243}{get\+JSON()}}.
+
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHarmonicMean_a6abae98ad4be2ec5f5d3a2394aaf2f9f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classHarmonicMean_a678bb735f9d4237e2a47a58c90b92503}\index{HarmonicMean@{HarmonicMean}!clone@{clone}}
+\index{clone@{clone}!HarmonicMean@{HarmonicMean}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \label{classHarmonicMean_a678bb735f9d4237e2a47a58c90b92503} 
+\mbox{\hyperlink{classMean}{Mean}} \texorpdfstring{$\ast$}{*} Harmonic\+Mean\+::clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Cria uma cópia do objeto \doxylink{classHarmonicMean}{Harmonic\+Mean}. 
+
+\begin{DoxyReturn}{Retorna}
+Ponteiro para a cópia do objeto \doxylink{classHarmonicMean}{Harmonic\+Mean}. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classMean_a958ceadab78c39fe3945567847aa78b8}{Mean}}.
+
+
+
+Definido na linha \mbox{\hyperlink{meanfunctions_8cc_source_l00227}{227}} do ficheiro \mbox{\hyperlink{meanfunctions_8cc_source}{meanfunctions.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classHarmonicMean}{HarmonicMean}}();}
+\DoxyCodeLine{00229\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classHarmonicMean_a186bf48440b678ba1b9a35f084dda338}\index{HarmonicMean@{HarmonicMean}!getJSON@{getJSON}}
+\index{getJSON@{getJSON}!HarmonicMean@{HarmonicMean}}
+\doxysubsubsection{\texorpdfstring{getJSON()}{getJSON()}}
+{\footnotesize\ttfamily \label{classHarmonicMean_a186bf48440b678ba1b9a35f084dda338} 
+nl\+::json Harmonic\+Mean\+::get\+JSON (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Obtém a configuração do objeto em formato JSON. 
+
+\begin{DoxyReturn}{Retorna}
+Configuração do objeto em JSON. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classMean_aec291edfcf29ea7915959630a2a1fc25}{Mean}}.
+
+
+
+Definido na linha \mbox{\hyperlink{meanfunctions_8cc_source_l00243}{243}} do ficheiro \mbox{\hyperlink{meanfunctions_8cc_source}{meanfunctions.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ nl::json\ config\ =\ \{}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}type"{}},\ \mbox{\hyperlink{classHarmonicMean_a6abae98ad4be2ec5f5d3a2394aaf2f9f}{className}}()\}}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ config;}
+\DoxyCodeLine{00248\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{meanfunctions_8cc_source_l00235}{class\+Name()}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHarmonicMean_a186bf48440b678ba1b9a35f084dda338_cgraph}
+\end{center}
+\end{figure}
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+src/models/regressionwisard/\mbox{\hyperlink{meanfunctions_8cc}{meanfunctions.\+cc}}\end{DoxyCompactItemize}

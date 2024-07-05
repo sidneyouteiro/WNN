@@ -1,0 +1,5 @@
+<map id="RegressionRAMDataHandle::setData" name="RegressionRAMDataHandle::setData">
+<area shape="rect" id="Node000001" title="Sets the data from an input string." alt="" coords="5,5,192,45"/>
+<area shape="rect" id="Node000002" href="$classRegressionRAMDataHandle.html#ab8e382fb4b1ef0e6cfcd8177f2514e3a" title="Converts a string to RAM data." alt="" coords="240,5,427,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,23,226,23,226,28,192,28"/>
+</map>

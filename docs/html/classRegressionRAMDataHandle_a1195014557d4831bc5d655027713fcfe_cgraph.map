@@ -1,0 +1,6 @@
+<map id="RegressionRAMDataHandle::save" name="RegressionRAMDataHandle::save">
+<area shape="rect" id="Node000001" title="Saves the data to a file with a given prefix." alt="" coords="5,29,192,69"/>
+<area shape="rect" id="Node000002" href="$classRegressionRAMDataHandle.html#aee65ec030eb5fc20ee5d1aa87af64472" title="Gets the entire data as a string." alt="" coords="240,29,427,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,47,226,47,226,52,192,52"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="290,30,287,20,294,10,310,5,333,3,361,6,376,13,373,18,359,11,333,8,311,10,297,15,292,21,295,28"/>
+</map>

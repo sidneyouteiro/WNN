@@ -1,0 +1,14 @@
+<map id="RegressionWisard::checkEntrySize" name="RegressionWisard::checkEntrySize">
+<area shape="rect" id="Node000001" title="Verifica o tamanho da entrada." alt="" coords="692,79,921,104"/>
+<area shape="rect" id="Node000002" href="$classRegressionWisard.html#ab4d4796e3f62df331fee309301e0a681" title="Faz a predição para uma entrada binária." alt="" coords="468,53,644,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="678,81,644,78,644,72,679,76"/>
+<area shape="rect" id="Node000006" href="$classRegressionWisard.html#a125bffa9cf4806492f2b2cf96a3932b0" title="Treina o modelo com uma entrada binária e um valor y." alt="" coords="475,103,637,128"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="679,106,638,110,637,105,678,101"/>
+<area shape="rect" id="Node000003" href="$classRegressionWisard.html#a2f22f241b281ab6a0e4cf1cfb9335bb4" title="Calcula o ajuste para uma entrada binária e um valor y." alt="" coords="216,29,420,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="454,58,420,55,421,50,454,53"/>
+<area shape="rect" id="Node000005" href="$classRegressionWisard.html#ab2825bf4202b12029b489c1d4de342b8" title="Faz a predição para um conjunto de dados." alt="" coords="230,79,406,104"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="455,79,407,85,406,79,454,74"/>
+<area shape="rect" id="Node000004" href="$classRegressionWisard.html#a11970036606a16938821722fb3af53ee" title="Treina o modelo com um conjunto de dados." alt="" coords="5,29,168,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="202,45,168,45,168,39,202,39"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="128,20,117,11,87,8,62,10,49,15,46,20,53,27,49,31,41,21,45,11,61,5,87,3,119,7,131,16"/>
+</map>

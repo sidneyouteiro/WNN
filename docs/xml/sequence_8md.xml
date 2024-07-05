@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="pt">
+  <compounddef id="sequence_8md" kind="file" language="Markdown">
+    <compoundname>sequence.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">*meanfunctions</highlight></codeline>
+<codeline><highlight class="normal">*regressionramdatahandle</highlight></codeline>
+<codeline><highlight class="normal">*regressionram</highlight></codeline>
+<codeline><highlight class="normal">*regressionwisard</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">steps?<sp/>artigo<sp/>wisard;</highlight></codeline>
+<codeline><highlight class="normal">https://github.com/IAZero/wisardpkg/tree/c51b395c0e85ae007bb7f8699515a3136356ef65</highlight></codeline>
+    </programlisting>
+    <location file="src/models/regressionwisard/sequence.md"/>
+  </compounddef>
+</doxygen>

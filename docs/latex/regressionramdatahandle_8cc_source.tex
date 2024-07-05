@@ -1,0 +1,139 @@
+\doxysection{regressionramdatahandle.\+cc}
+\hypertarget{regressionramdatahandle_8cc_source}{}\label{regressionramdatahandle_8cc_source}\index{src/models/regressionwisard/regressionramdatahandle.cc@{src/models/regressionwisard/regressionramdatahandle.cc}}
+\mbox{\hyperlink{regressionramdatahandle_8cc}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00005}\mbox{\hyperlink{classRegressionRAMDataHandle}{00005}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRegressionRAMDataHandle}{RegressionRAMDataHandle}}\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00006}00006\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00011}\mbox{\hyperlink{classRegressionRAMDataHandle_aefd557b2ecfbad935e3991aa7d7e654e}{00011}}\ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle_aefd557b2ecfbad935e3991aa7d7e654e}{RegressionRAMDataHandle}}(std::string\ inputdata)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00012}00012\ \ \ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle_a0e44ea5d5f6504fb53868d5021ff11e8}{setData}}(inputdata);}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00013}00013\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00019}\mbox{\hyperlink{classRegressionRAMDataHandle_ae52da90bfea5c5f772bf8828ef83381d}{00019}}\ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle_ae52da90bfea5c5f772bf8828ef83381d}{RegressionRAMDataHandle}}(regression\_ram\_t\ \mbox{\hyperlink{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472}{data}})\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[0]\ =\ \mbox{\hyperlink{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472}{data}};}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00021}00021\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00027}\mbox{\hyperlink{classRegressionRAMDataHandle_a933bf9c75fb351c4e65f7661437c3b68}{00027}}\ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle_a933bf9c75fb351c4e65f7661437c3b68}{RegressionRAMDataHandle}}(std::vector<regression\_ram\_t>\ \mbox{\hyperlink{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472}{data}})\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472}{data}}.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00029}00029\ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[i]\ =\ \mbox{\hyperlink{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472}{data}}[i];}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00031}00031\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00036}\mbox{\hyperlink{classRegressionRAMDataHandle_ac8c3377cd28ff6f75a1d5865081eba83}{00036}}\ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle_ac8c3377cd28ff6f75a1d5865081eba83}{RegressionRAMDataHandle}}()\ \{\}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00044}\mbox{\hyperlink{classRegressionRAMDataHandle_aad7d447964f7f8f16ebb2d92a5a01e67}{00044}}\ \ \ regression\_content\_t\ \mbox{\hyperlink{classRegressionRAMDataHandle_aad7d447964f7f8f16ebb2d92a5a01e67}{get}}(\textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ addr)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[r][addr];}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00046}00046\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00053}\mbox{\hyperlink{classRegressionRAMDataHandle_a6d4de5cf1dad67abd478b43be27b31bf}{00053}}\ \ \ regression\_ram\_t\ \mbox{\hyperlink{classRegressionRAMDataHandle_a6d4de5cf1dad67abd478b43be27b31bf}{get}}(\textcolor{keywordtype}{int}\ r)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[r];}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00055}00055\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00063}\mbox{\hyperlink{classRegressionRAMDataHandle_a9073351b9bc44a907b6624c9a2403f01}{00063}}\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRegressionRAMDataHandle_a9073351b9bc44a907b6624c9a2403f01}{set}}(\textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ addr,\ regression\_content\_t\ value)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00064}00064\ \ \ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[r][addr]\ =\ value;}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00065}00065\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00072}\mbox{\hyperlink{classRegressionRAMDataHandle_a3a7043e9cca877cfa24ac8fe082197c9}{00072}}\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRegressionRAMDataHandle_a3a7043e9cca877cfa24ac8fe082197c9}{set}}(\textcolor{keywordtype}{int}\ r,\ regression\_ram\_t\ value)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00073}00073\ \ \ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[r]\ =\ value;}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00074}00074\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00081}\mbox{\hyperlink{classRegressionRAMDataHandle_ae14bec5896e36c648e5af2389465af9d}{00081}}\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classRegressionRAMDataHandle_ae14bec5896e36c648e5af2389465af9d}{compare}}\ (\mbox{\hyperlink{classRegressionRAMDataHandle}{RegressionRAMDataHandle}}\&\ other)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00082}00082\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.size()\ !=\ other.\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.size())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00083}00083\ \ \ \ \ \textcolor{keywordflow}{for}(std::unordered\_map<int,regression\_ram\_t>::iterator\ it\ =\ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.begin();\ it\ !=\ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.end();\ ++it)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00084}00084\ \ \ \ \ \ \ std::unordered\_map<int,regression\_ram\_t>::iterator\ ito\ =\ other.\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.find(it-\/>first);}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00085}00085\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(ito\ ==\ other.\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.end()\ ||\ it-\/>second.size()\ !=\ ito-\/>second.size())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00087}00087\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(regression\_ram\_t::iterator\ itram\ =\ it-\/>second.begin();\ itram\ !=\ it-\/>second.end();\ ++itram)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00088}00088\ \ \ \ \ \ \ \ \ regression\_ram\_t::iterator\ itramo\ =\ ito-\/>second.find(itram-\/>first);}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(itramo\ ==\ ito-\/>second.end()\ ||\ itram-\/>second\ !=\ itramo-\/>second)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00090}00090\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00093}00093\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00099}\mbox{\hyperlink{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472}{00099}}\ \ \ std::string\ \mbox{\hyperlink{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472}{data}}()\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00100}00100\ \ \ \ \ std::string\ out;}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00101}00101\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00102}00102\ \ \ \ \ \ \ out\ +=\ (i\ !=\ 0\ ?\ \textcolor{stringliteral}{"{}."{}}\ :\ \textcolor{stringliteral}{"{}"{}})\ +\ \mbox{\hyperlink{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472}{data}}(i);}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00103}00103\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00104}00104\ \ \ \ \ \textcolor{keywordflow}{return}\ out;}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00105}00105\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00112}\mbox{\hyperlink{classRegressionRAMDataHandle_a4fcf657e5fa8d8f74c57b55bae909b16}{00112}}\ \ \ std::string\ \mbox{\hyperlink{classRegressionRAMDataHandle_a4fcf657e5fa8d8f74c57b55bae909b16}{data}}(\textcolor{keywordtype}{int}\ r)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00113}00113\ \ \ \ \ \textcolor{keywordtype}{int}\ blockSize\ =\ (\textcolor{keyword}{sizeof}(addr\_t)+(3*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double})));}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00114}00114\ \ \ \ \ std::string\ out(\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[r].size()*blockSize,0);}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00115}00115\ \ \ \ \ \textcolor{keywordtype}{int}\ k=0;}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00116}00116\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ j=\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[r].begin();\ j!=\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[r].end();\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00117}00117\ \ \ \ \ \ \ out.replace(k,\textcolor{keyword}{sizeof}(addr\_t),convertToBytes(j-\/>first));}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00118}00118\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ j-\/>second.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00119}00119\ \ \ \ \ \ \ \ \ out.replace(k+\textcolor{keyword}{sizeof}(addr\_t)+(i*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double})),\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}),convertToBytes(j-\/>second[i]));}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00120}00120\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00121}00121\ \ \ \ \ \ \ k\ +=\ blockSize;}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00122}00122\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00123}00123\ \ \ \ \ \textcolor{keywordflow}{return}\ Base64::encode(out);}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00124}00124\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00130}\mbox{\hyperlink{classRegressionRAMDataHandle_a1195014557d4831bc5d655027713fcfe}{00130}}\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRegressionRAMDataHandle_a1195014557d4831bc5d655027713fcfe}{save}}(std::string\ prefix)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00131}00131\ \ \ \ \ std::string\ filename\ =\ prefix\ +\ ramdata\_sufix;}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00132}00132\ \ \ \ \ std::ofstream\ dataFile;}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00133}00133\ \ \ \ \ dataFile.open(filename,\ std::ios::app);}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00135}00135\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00136}00136\ \ \ \ \ \ \ dataFile\ <<\ (i\ !=\ 0\ ?\ \textcolor{stringliteral}{"{}."{}}\ :\ \textcolor{stringliteral}{"{}"{}})\ +\ \mbox{\hyperlink{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472}{data}}(i);}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00137}00137\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00139}00139\ \ \ \ \ dataFile.close();}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00140}00140\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00142}00142\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00147}\mbox{\hyperlink{classRegressionRAMDataHandle_a0e44ea5d5f6504fb53868d5021ff11e8}{00147}}\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRegressionRAMDataHandle_a0e44ea5d5f6504fb53868d5021ff11e8}{setData}}(std::string\ inputdata)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00148}00148\ \ \ \ \ \textcolor{keywordtype}{int}\ s\ =\ ramdata\_sufix.size();}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00149}00149\ \ \ \ \ \textcolor{keywordflow}{if}(inputdata.substr(inputdata.size()-\/s,s).compare(ramdata\_sufix)\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00150}00150\ \ \ \ \ \ \ std::ifstream\ dataFile;}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00151}00151\ \ \ \ \ \ \ dataFile.open(inputdata);}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00152}00152\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dataFile.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00153}00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dataFile.eof())\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ std::string\ rdata=\textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ std::getline(dataFile,rdata,\textcolor{charliteral}{'.'});}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.size()]\ =\ \mbox{\hyperlink{classRegressionRAMDataHandle_ab8e382fb4b1ef0e6cfcd8177f2514e3a}{dataToRam}}(rdata);}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00159}00159\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00160}00160\ \ \ \ \ \ \ \ \ dataFile.close();}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00161}00161\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00162}00162\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00163}00163\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00164}00164\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pos=0;}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00165}00165\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ found\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00166}00166\ \ \ \ \ \ \ \textcolor{keywordflow}{while}(found\ <\ inputdata.size())\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00167}00167\ \ \ \ \ \ \ \ \ found\ =\ inputdata.find(\textcolor{charliteral}{'.'},pos);}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00168}00168\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.size()]\ =\ \mbox{\hyperlink{classRegressionRAMDataHandle_ab8e382fb4b1ef0e6cfcd8177f2514e3a}{dataToRam}}(inputdata.substr(pos,found-\/pos));}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00169}00169\ \ \ \ \ \ \ \ \ pos\ =\ found+1;}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00170}00170\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00171}00171\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00172}00172\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00179}\mbox{\hyperlink{classRegressionRAMDataHandle_ab8e382fb4b1ef0e6cfcd8177f2514e3a}{00179}}\ \ \ regression\_ram\_t\ \mbox{\hyperlink{classRegressionRAMDataHandle_ab8e382fb4b1ef0e6cfcd8177f2514e3a}{dataToRam}}(\textcolor{keyword}{const}\ std::string\&\ inputdata)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00180}00180\ \ \ \ \ regression\_ram\_t\ ramout;}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00181}00181\ \ \ \ \ std::string\ decodedData\ =\ Base64::decode(inputdata);}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00182}00182\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ blockSize\ =\ (\textcolor{keyword}{sizeof}(addr\_t)+(3*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double})));}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00183}00183\ \ \ \ \ \textcolor{keywordflow}{if}(decodedData.size()\%blockSize\ !=\ 0)\ \textcolor{keywordflow}{return}\ ramout;}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00185}00185\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ i=0;\ i<decodedData.size();\ i+=blockSize)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00186}00186\ \ \ \ \ \ \ addr\_t\ address\ =\ convertToValue<addr\_t>(decodedData.substr(i,\textcolor{keyword}{sizeof}(addr\_t)));}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00187}00187\ \ \ \ \ \ \ regression\_content\_t\ content;}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00188}00188\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ 3;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00189}00189\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ value\ =\ convertToValue<double>(decodedData.substr(i+\textcolor{keyword}{sizeof}(addr\_t)+(j*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double})),\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double})));}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00190}00190\ \ \ \ \ \ \ \ \ content.push\_back(value);}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00191}00191\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00192}00192\ \ \ \ \ \ \ ramout[address]=content;}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00193}00193\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00194}00194\ \ \ \ \ \textcolor{keywordflow}{return}\ ramout;}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00195}00195\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00196}00196\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00197}\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{00197}}\ \ \ std::unordered\_map<int,\ regression\_ram\_t>\ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}};\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00198}00198\ \};}
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{regressionramdatahandle_8cc_source_l00200}00200\ \textcolor{comment}{//\ Helper\ functions\ to\ convert\ data\ to\ bytes\ and\ back,\ and\ Base64\ encoding/decoding\ should\ be\ defined\ elsewhere}}
+
+\end{DoxyCode}

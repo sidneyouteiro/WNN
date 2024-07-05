@@ -1,0 +1,5 @@
+<map id="RegressionWisard::setRAMShuffle" name="RegressionWisard::setRAMShuffle">
+<area shape="rect" id="Node000001" title="Configura o embaralhamento das RAMs." alt="" coords="216,5,443,31"/>
+<area shape="rect" id="Node000002" href="$classRegressionWisard.html#a125bffa9cf4806492f2b2cf96a3932b0" title="Treina o modelo com uma entrada binária e um valor y." alt="" coords="5,5,168,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,21,168,21,168,15,202,15"/>
+</map>

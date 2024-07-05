@@ -1,0 +1,119 @@
+\doxysection{Referência à classe Mean}
+\hypertarget{classMean}{}\label{classMean}\index{Mean@{Mean}}
+
+
+Classe base abstrata para cálculo de médias.  
+
+
+
+
+Diagrama de heranças da classe Mean
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMean__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Mean\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{classMean__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \mbox{\hyperlink{classMean_a6c725db111881910fcf4df655debbbc7}{calculate}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&output\+Rams)=0
+\begin{DoxyCompactList}\small\item\em Calcula a média com base nos dados fornecidos. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classMean}{Mean}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMean_a958ceadab78c39fe3945567847aa78b8}{clone}} () const =0
+\begin{DoxyCompactList}\small\item\em Cria uma cópia do objeto. \end{DoxyCompactList}\item 
+virtual nl\+::json \mbox{\hyperlink{classMean_aec291edfcf29ea7915959630a2a1fc25}{get\+JSON}} () const =0
+\begin{DoxyCompactList}\small\item\em Obtém a configuração do objeto em formato JSON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe base abstrata para cálculo de médias. 
+
+Definido na linha \mbox{\hyperlink{meanfunctions_8cc_source_l00004}{4}} do ficheiro \mbox{\hyperlink{meanfunctions_8cc_source}{meanfunctions.\+cc}}.
+
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classMean_a6c725db111881910fcf4df655debbbc7}\index{Mean@{Mean}!calculate@{calculate}}
+\index{calculate@{calculate}!Mean@{Mean}}
+\doxysubsubsection{\texorpdfstring{calculate()}{calculate()}}
+{\footnotesize\ttfamily \label{classMean_a6c725db111881910fcf4df655debbbc7} 
+virtual double Mean\+::calculate (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{output\+Rams}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calcula a média com base nos dados fornecidos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em output\+Rams} & Dados de saída das RAMs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A média calculada. 
+\end{DoxyReturn}
+
+
+Implementado em \mbox{\hyperlink{classHarmonicMean_a366283b04e8ae81d7f5ede51d71ab752}{Harmonic\+Mean}}, \mbox{\hyperlink{classMedian_a3f90ea702434c059b776f7e9e43e707c}{Median}}, \mbox{\hyperlink{classPowerMean_a372235fcd24ea38f1b904302682e4058}{Power\+Mean}} e \mbox{\hyperlink{classSimpleMean_a71cb658d6a2c5eaec48184fa4c041168}{Simple\+Mean}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00104}{Regression\+Wisard\+::predict()}}.
+
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMean_a6c725db111881910fcf4df655debbbc7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classMean_a958ceadab78c39fe3945567847aa78b8}\index{Mean@{Mean}!clone@{clone}}
+\index{clone@{clone}!Mean@{Mean}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \label{classMean_a958ceadab78c39fe3945567847aa78b8} 
+virtual \mbox{\hyperlink{classMean}{Mean}} \texorpdfstring{$\ast$}{*} Mean\+::clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Cria uma cópia do objeto. 
+
+\begin{DoxyReturn}{Retorna}
+Ponteiro para a cópia do objeto. 
+\end{DoxyReturn}
+
+
+Implementado em \mbox{\hyperlink{classHarmonicMean_a678bb735f9d4237e2a47a58c90b92503}{Harmonic\+Mean}}, \mbox{\hyperlink{classMedian_aeb9c27d4102a96ed26e4f31175372fbe}{Median}}, \mbox{\hyperlink{classPowerMean_afbdacd5ee8241bbddeb515e11115cf19}{Power\+Mean}} e \mbox{\hyperlink{classSimpleMean_a6d2fc6ae2f6c509d5795452a9de22983}{Simple\+Mean}}.
+
+\Hypertarget{classMean_aec291edfcf29ea7915959630a2a1fc25}\index{Mean@{Mean}!getJSON@{getJSON}}
+\index{getJSON@{getJSON}!Mean@{Mean}}
+\doxysubsubsection{\texorpdfstring{getJSON()}{getJSON()}}
+{\footnotesize\ttfamily \label{classMean_aec291edfcf29ea7915959630a2a1fc25} 
+virtual nl\+::json Mean\+::get\+JSON (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Obtém a configuração do objeto em formato JSON. 
+
+\begin{DoxyReturn}{Retorna}
+Configuração do objeto em JSON. 
+\end{DoxyReturn}
+
+
+Implementado em \mbox{\hyperlink{classHarmonicMean_a186bf48440b678ba1b9a35f084dda338}{Harmonic\+Mean}}, \mbox{\hyperlink{classMedian_a6c692aaeecbbc132c968d15390af6f8f}{Median}}, \mbox{\hyperlink{classPowerMean_a289c1ba18b1e4183ec1d47d7c7166e66}{Power\+Mean}} e \mbox{\hyperlink{classSimpleMean_aab8299cd1a27e45631726aad7017eee8}{Simple\+Mean}}.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+src/models/regressionwisard/\mbox{\hyperlink{meanfunctions_8cc}{meanfunctions.\+cc}}\end{DoxyCompactItemize}

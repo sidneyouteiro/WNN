@@ -1,0 +1,582 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="pt">
+  <compounddef id="classRegressionRAM" kind="class" language="C++" prot="public">
+    <compoundname>RegressionRAM</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classRegressionRAM_1a6d9d14f2194853166459c9ac734080c2" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; RegressionRAM::mapping</definition>
+        <argsstring></argsstring>
+        <name>mapping</name>
+        <qualifiedname>RegressionRAM::mapping</qualifiedname>
+        <briefdescription>
+<para>Mapeamento da RAM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="212" column="17" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="212" bodyend="-1"/>
+        <referencedby refid="classRegressionRAM_1ad7d93ac38c2cb7fce602f8396283dd1a" compoundref="regressionram_8cc" startline="190" endline="208">getIndex</referencedby>
+        <referencedby refid="classRegressionRAM_1a818bb9b81fbe8acac517f8f0aa1b5bf9" compoundref="regressionram_8cc" startline="159" endline="170">getJSON</referencedby>
+        <referencedby refid="classRegressionRAM_1a01cd8b4699432518143520961c4981a9" compoundref="regressionram_8cc" startline="150" endline="153">getMapping</referencedby>
+        <referencedby refid="classRegressionRAM_1ac7a5d96231c14447a9f26f171ad82ef4" compoundref="regressionram_8cc" startline="176" endline="182">getsizeoff</referencedby>
+        <referencedby refid="classRegressionRAM_1a0ad601f407a8baea97364e81828f5635" compoundref="regressionram_8cc" startline="18" endline="37">RegressionRAM</referencedby>
+        <referencedby refid="classRegressionRAM_1a94223ef17afc193c6cb2b0e713e331b1" compoundref="regressionram_8cc" startline="50" endline="54">~RegressionRAM</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classRegressionRAM_1a77a4282abeff7ed9c178c4ea4aea5a0d" prot="private" static="no" mutable="no">
+        <type>regression_ram_t</type>
+        <definition>regression_ram_t RegressionRAM::memory</definition>
+        <argsstring></argsstring>
+        <name>memory</name>
+        <qualifiedname>RegressionRAM::memory</qualifiedname>
+        <briefdescription>
+<para>Memória da RAM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="211" column="22" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="211" bodyend="-1"/>
+        <referencedby refid="classRegressionRAM_1a1e6220b2089ed30daf63041821ec8ac6" compoundref="regressionram_8cc" startline="110" endline="117">applyFit</referencedby>
+        <referencedby refid="classRegressionRAM_1afb1e91cc19c1912cc2e569bbe0f82da9" compoundref="regressionram_8cc" startline="99" endline="105">calculateFit</referencedby>
+        <referencedby refid="classRegressionRAM_1a818bb9b81fbe8acac517f8f0aa1b5bf9" compoundref="regressionram_8cc" startline="159" endline="170">getJSON</referencedby>
+        <referencedby refid="classRegressionRAM_1abb209836b83ae461eab6c2d3961343b8" compoundref="regressionram_8cc" startline="141" endline="144">getMemory</referencedby>
+        <referencedby refid="classRegressionRAM_1ac7a5d96231c14447a9f26f171ad82ef4" compoundref="regressionram_8cc" startline="176" endline="182">getsizeoff</referencedby>
+        <referencedby refid="classRegressionRAM_1af3d15e9225cc5c6e514801d15a85c07a" compoundref="regressionram_8cc" startline="79" endline="92">getVote</referencedby>
+        <referencedby refid="classRegressionRAM_1a0ad601f407a8baea97364e81828f5635" compoundref="regressionram_8cc" startline="18" endline="37">RegressionRAM</referencedby>
+        <referencedby refid="classRegressionRAM_1a3d40a96015f14882569e8c3bd820b03a" compoundref="regressionram_8cc" startline="61" endline="72">train</referencedby>
+        <referencedby refid="classRegressionRAM_1a94223ef17afc193c6cb2b0e713e331b1" compoundref="regressionram_8cc" startline="50" endline="54">~RegressionRAM</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classRegressionRAM_1afdb97503ca3766f6209826f26eb8b770" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RegressionRAM::minOne</definition>
+        <argsstring></argsstring>
+        <name>minOne</name>
+        <qualifiedname>RegressionRAM::minOne</qualifiedname>
+        <briefdescription>
+<para>Número mínimo de uns. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="214" column="9" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="214" bodyend="-1"/>
+        <referencedby refid="classRegressionRAM_1ad7d93ac38c2cb7fce602f8396283dd1a" compoundref="regressionram_8cc" startline="190" endline="208">getIndex</referencedby>
+        <referencedby refid="classRegressionRAM_1a818bb9b81fbe8acac517f8f0aa1b5bf9" compoundref="regressionram_8cc" startline="159" endline="170">getJSON</referencedby>
+        <referencedby refid="classRegressionRAM_1a0ad601f407a8baea97364e81828f5635" compoundref="regressionram_8cc" startline="18" endline="37">RegressionRAM</referencedby>
+        <referencedby refid="classRegressionRAM_1a33d0c3451d6aa1f3e6fd1bcd25af42eb" compoundref="regressionram_8cc" startline="132" endline="135">setMinOne</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classRegressionRAM_1a8c283108a2205b2dc816fb13c8b36724" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RegressionRAM::minZero</definition>
+        <argsstring></argsstring>
+        <name>minZero</name>
+        <qualifiedname>RegressionRAM::minZero</qualifiedname>
+        <briefdescription>
+<para>Número mínimo de zeros. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="213" column="9" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="213" bodyend="-1"/>
+        <referencedby refid="classRegressionRAM_1ad7d93ac38c2cb7fce602f8396283dd1a" compoundref="regressionram_8cc" startline="190" endline="208">getIndex</referencedby>
+        <referencedby refid="classRegressionRAM_1a818bb9b81fbe8acac517f8f0aa1b5bf9" compoundref="regressionram_8cc" startline="159" endline="170">getJSON</referencedby>
+        <referencedby refid="classRegressionRAM_1a0ad601f407a8baea97364e81828f5635" compoundref="regressionram_8cc" startline="18" endline="37">RegressionRAM</referencedby>
+        <referencedby refid="classRegressionRAM_1a34308c3b554de1cb36139a04ce6ce2c3" compoundref="regressionram_8cc" startline="123" endline="126">setMinZero</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classRegressionRAM_1a1e6220b2089ed30daf63041821ec8ac6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RegressionRAM::applyFit</definition>
+        <argsstring>()</argsstring>
+        <name>applyFit</name>
+        <qualifiedname>RegressionRAM::applyFit</qualifiedname>
+        <briefdescription>
+<para>Aplica o ajuste calculado. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="110" column="10" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="110" bodyend="117"/>
+        <references refid="classRegressionRAM_1a77a4282abeff7ed9c178c4ea4aea5a0d" compoundref="regressionram_8cc" startline="211">memory</references>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionRAM_1afb1e91cc19c1912cc2e569bbe0f82da9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RegressionRAM::calculateFit</definition>
+        <argsstring>(const BinInput &amp;image, const double yFit)</argsstring>
+        <name>calculateFit</name>
+        <qualifiedname>RegressionRAM::calculateFit</qualifiedname>
+        <param>
+          <type>const BinInput &amp;</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>yFit</declname>
+        </param>
+        <briefdescription>
+<para>Calcula o ajuste da RAM para a imagem binária e o valor yFit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Imagem binária. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yFit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valor de ajuste. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="99" column="10" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="99" bodyend="105"/>
+        <references refid="classRegressionRAM_1ad7d93ac38c2cb7fce602f8396283dd1a" compoundref="regressionram_8cc" startline="190" endline="208">getIndex</references>
+        <references refid="classRegressionRAM_1a77a4282abeff7ed9c178c4ea4aea5a0d" compoundref="regressionram_8cc" startline="211">memory</references>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionRAM_1a818bb9b81fbe8acac517f8f0aa1b5bf9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>nl::json</type>
+        <definition>nl::json RegressionRAM::getJSON</definition>
+        <argsstring>() const</argsstring>
+        <name>getJSON</name>
+        <qualifiedname>RegressionRAM::getJSON</qualifiedname>
+        <briefdescription>
+<para>Obtém a configuração da RAM em formato JSON. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Objeto JSON representando a configuração da RAM. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="159" column="14" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="159" bodyend="170"/>
+        <references refid="classRegressionRAM_1a6d9d14f2194853166459c9ac734080c2" compoundref="regressionram_8cc" startline="212">mapping</references>
+        <references refid="classRegressionRAM_1a77a4282abeff7ed9c178c4ea4aea5a0d" compoundref="regressionram_8cc" startline="211">memory</references>
+        <references refid="classRegressionRAM_1afdb97503ca3766f6209826f26eb8b770" compoundref="regressionram_8cc" startline="214">minOne</references>
+        <references refid="classRegressionRAM_1a8c283108a2205b2dc816fb13c8b36724" compoundref="regressionram_8cc" startline="213">minZero</references>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionRAM_1a01cd8b4699432518143520961c4981a9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt; int &gt; RegressionRAM::getMapping</definition>
+        <argsstring>() const</argsstring>
+        <name>getMapping</name>
+        <qualifiedname>RegressionRAM::getMapping</qualifiedname>
+        <briefdescription>
+<para>Obtém o mapeamento da RAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Vetor de inteiros representando o mapeamento. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="150" column="17" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="150" bodyend="153"/>
+        <references refid="classRegressionRAM_1a6d9d14f2194853166459c9ac734080c2" compoundref="regressionram_8cc" startline="212">mapping</references>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionRAM_1abb209836b83ae461eab6c2d3961343b8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>regression_ram_t</type>
+        <definition>regression_ram_t RegressionRAM::getMemory</definition>
+        <argsstring>() const</argsstring>
+        <name>getMemory</name>
+        <qualifiedname>RegressionRAM::getMemory</qualifiedname>
+        <briefdescription>
+<para>Obtém a memória da RAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Memória da RAM. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="141" column="22" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="141" bodyend="144"/>
+        <references refid="classRegressionRAM_1a77a4282abeff7ed9c178c4ea4aea5a0d" compoundref="regressionram_8cc" startline="211">memory</references>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionRAM_1ac7a5d96231c14447a9f26f171ad82ef4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long RegressionRAM::getsizeoff</definition>
+        <argsstring>() const</argsstring>
+        <name>getsizeoff</name>
+        <qualifiedname>RegressionRAM::getsizeoff</qualifiedname>
+        <briefdescription>
+<para>Obtém o tamanho da RAM em bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Tamanho da RAM em bytes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="176" column="10" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="176" bodyend="182"/>
+        <references refid="classRegressionRAM_1a6d9d14f2194853166459c9ac734080c2" compoundref="regressionram_8cc" startline="212">mapping</references>
+        <references refid="classRegressionRAM_1a77a4282abeff7ed9c178c4ea4aea5a0d" compoundref="regressionram_8cc" startline="211">memory</references>
+        <references refid="classRegressionRAM_1a1468df083af359878a5e864e56d58d94" compoundref="regressionram_8cc" startline="12" endline="12">RegressionRAM</references>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionRAM_1af3d15e9225cc5c6e514801d15a85c07a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>regression_content_t</type>
+        <definition>regression_content_t RegressionRAM::getVote</definition>
+        <argsstring>(const BinInput &amp;image) const</argsstring>
+        <name>getVote</name>
+        <qualifiedname>RegressionRAM::getVote</qualifiedname>
+        <param>
+          <type>const BinInput &amp;</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+<para>Obtém o voto da RAM para a imagem binária fornecida. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Imagem binária. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Conteúdo da RAM associado à imagem. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="79" column="26" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="79" bodyend="92"/>
+        <references refid="classRegressionRAM_1ad7d93ac38c2cb7fce602f8396283dd1a" compoundref="regressionram_8cc" startline="190" endline="208">getIndex</references>
+        <references refid="classRegressionRAM_1a77a4282abeff7ed9c178c4ea4aea5a0d" compoundref="regressionram_8cc" startline="211">memory</references>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionRAM_1a1468df083af359878a5e864e56d58d94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RegressionRAM::RegressionRAM</definition>
+        <argsstring>()</argsstring>
+        <name>RegressionRAM</name>
+        <qualifiedname>RegressionRAM::RegressionRAM</qualifiedname>
+        <briefdescription>
+<para>Construtor padrão. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="12" column="5" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="12" bodyend="12"/>
+        <referencedby refid="classRegressionRAM_1ac7a5d96231c14447a9f26f171ad82ef4" compoundref="regressionram_8cc" startline="176" endline="182">getsizeoff</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionRAM_1a8bbb6293b5fa116ee0a69e1c48fe76eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RegressionRAM::RegressionRAM</definition>
+        <argsstring>(const std::vector&lt; int &gt; mapping, const int minZero=0, const int minOne=0)</argsstring>
+        <name>RegressionRAM</name>
+        <qualifiedname>RegressionRAM::RegressionRAM</qualifiedname>
+        <param>
+          <type>const std::vector&lt; int &gt;</type>
+          <declname>mapping</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>minZero</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>minOne</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Construtor da classe que inicializa a RAM com parâmetros específicos. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mapping</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vetor de inteiros representando o mapeamento. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minZero</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número mínimo de zeros. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minOne</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número mínimo de uns. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="45" column="5" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionRAM_1a0ad601f407a8baea97364e81828f5635" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RegressionRAM::RegressionRAM</definition>
+        <argsstring>(nl::json c)</argsstring>
+        <name>RegressionRAM</name>
+        <qualifiedname>RegressionRAM::RegressionRAM</qualifiedname>
+        <param>
+          <type>nl::json</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Construtor da classe que inicializa a RAM com um objeto JSON. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objeto do tipo nl::json contendo a configuração inicial da RAM. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="18" column="5" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="18" bodyend="37"/>
+        <references refid="classRegressionRAMDataHandle_1aad7d447964f7f8f16ebb2d92a5a01e67" compoundref="regressionramdatahandle_8cc" startline="44" endline="46">RegressionRAMDataHandle::get</references>
+        <references refid="classRegressionRAM_1a6d9d14f2194853166459c9ac734080c2" compoundref="regressionram_8cc" startline="212">mapping</references>
+        <references refid="classRegressionRAM_1a77a4282abeff7ed9c178c4ea4aea5a0d" compoundref="regressionram_8cc" startline="211">memory</references>
+        <references refid="classRegressionRAM_1afdb97503ca3766f6209826f26eb8b770" compoundref="regressionram_8cc" startline="214">minOne</references>
+        <references refid="classRegressionRAM_1a8c283108a2205b2dc816fb13c8b36724" compoundref="regressionram_8cc" startline="213">minZero</references>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionRAM_1a33d0c3451d6aa1f3e6fd1bcd25af42eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RegressionRAM::setMinOne</definition>
+        <argsstring>(const int value)</argsstring>
+        <name>setMinOne</name>
+        <qualifiedname>RegressionRAM::setMinOne</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Define o valor mínimo de uns. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valor mínimo de uns. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="132" column="10" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="132" bodyend="135"/>
+        <references refid="classRegressionRAM_1afdb97503ca3766f6209826f26eb8b770" compoundref="regressionram_8cc" startline="214">minOne</references>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionRAM_1a34308c3b554de1cb36139a04ce6ce2c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RegressionRAM::setMinZero</definition>
+        <argsstring>(const int value)</argsstring>
+        <name>setMinZero</name>
+        <qualifiedname>RegressionRAM::setMinZero</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Define o valor mínimo de zeros. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valor mínimo de zeros. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="123" column="10" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="123" bodyend="126"/>
+        <references refid="classRegressionRAM_1a8c283108a2205b2dc816fb13c8b36724" compoundref="regressionram_8cc" startline="213">minZero</references>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionRAM_1a3d40a96015f14882569e8c3bd820b03a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RegressionRAM::train</definition>
+        <argsstring>(const BinInput &amp;image, const double y)</argsstring>
+        <name>train</name>
+        <qualifiedname>RegressionRAM::train</qualifiedname>
+        <param>
+          <type>const BinInput &amp;</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Treina a RAM com a imagem binária e o valor y. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Imagem binária utilizada para o treinamento. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valor associado à imagem. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="61" column="10" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="61" bodyend="72"/>
+        <references refid="classRegressionRAM_1ad7d93ac38c2cb7fce602f8396283dd1a" compoundref="regressionram_8cc" startline="190" endline="208">getIndex</references>
+        <references refid="classRegressionRAM_1a77a4282abeff7ed9c178c4ea4aea5a0d" compoundref="regressionram_8cc" startline="211">memory</references>
+      </memberdef>
+      <memberdef kind="function" id="classRegressionRAM_1a94223ef17afc193c6cb2b0e713e331b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RegressionRAM::~RegressionRAM</definition>
+        <argsstring>()</argsstring>
+        <name>~RegressionRAM</name>
+        <qualifiedname>RegressionRAM::~RegressionRAM</qualifiedname>
+        <briefdescription>
+<para>Destrutor da classe que limpa a memória. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="50" column="5" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="50" bodyend="54"/>
+        <references refid="classRegressionRAM_1a6d9d14f2194853166459c9ac734080c2" compoundref="regressionram_8cc" startline="212">mapping</references>
+        <references refid="classRegressionRAM_1a77a4282abeff7ed9c178c4ea4aea5a0d" compoundref="regressionram_8cc" startline="211">memory</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classRegressionRAM_1ad7d93ac38c2cb7fce602f8396283dd1a" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::tuple&lt; addr_t, bool &gt;</type>
+        <definition>std::tuple&lt; addr_t, bool &gt; RegressionRAM::getIndex</definition>
+        <argsstring>(const BinInput &amp;image) const</argsstring>
+        <name>getIndex</name>
+        <qualifiedname>RegressionRAM::getIndex</qualifiedname>
+        <param>
+          <type>const BinInput &amp;</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+<para>Obtém o índice da imagem binária. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Imagem binária. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Tupla contendo o índice e um booleano indicando se os critérios mínimos foram atendidos. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/regressionwisard/regressionram.cc" line="190" column="16" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="190" bodyend="208"/>
+        <references refid="classRegressionRAM_1a6d9d14f2194853166459c9ac734080c2" compoundref="regressionram_8cc" startline="212">mapping</references>
+        <references refid="classRegressionRAM_1afdb97503ca3766f6209826f26eb8b770" compoundref="regressionram_8cc" startline="214">minOne</references>
+        <references refid="classRegressionRAM_1a8c283108a2205b2dc816fb13c8b36724" compoundref="regressionram_8cc" startline="213">minZero</references>
+        <referencedby refid="classRegressionRAM_1afb1e91cc19c1912cc2e569bbe0f82da9" compoundref="regressionram_8cc" startline="99" endline="105">calculateFit</referencedby>
+        <referencedby refid="classRegressionRAM_1af3d15e9225cc5c6e514801d15a85c07a" compoundref="regressionram_8cc" startline="79" endline="92">getVote</referencedby>
+        <referencedby refid="classRegressionRAM_1a3d40a96015f14882569e8c3bd820b03a" compoundref="regressionram_8cc" startline="61" endline="72">train</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Classe representando a RAM. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Classe utilizada para modelar as rams que serão utilizadas no treinamento. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>RegressionRAM</label>
+        <link refid="classRegressionRAM"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-mapping</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>T</label>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; int &gt;</label>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/models/regressionwisard/regressionram.cc" line="6" column="1" bodyfile="src/models/regressionwisard/regressionram.cc" bodystart="7" bodyend="215"/>
+    <listofallmembers>
+      <member refid="classRegressionRAM_1a1e6220b2089ed30daf63041821ec8ac6" prot="public" virt="non-virtual"><scope>RegressionRAM</scope><name>applyFit</name></member>
+      <member refid="classRegressionRAM_1afb1e91cc19c1912cc2e569bbe0f82da9" prot="public" virt="non-virtual"><scope>RegressionRAM</scope><name>calculateFit</name></member>
+      <member refid="classRegressionRAM_1ad7d93ac38c2cb7fce602f8396283dd1a" prot="protected" virt="non-virtual"><scope>RegressionRAM</scope><name>getIndex</name></member>
+      <member refid="classRegressionRAM_1a818bb9b81fbe8acac517f8f0aa1b5bf9" prot="public" virt="non-virtual"><scope>RegressionRAM</scope><name>getJSON</name></member>
+      <member refid="classRegressionRAM_1a01cd8b4699432518143520961c4981a9" prot="public" virt="non-virtual"><scope>RegressionRAM</scope><name>getMapping</name></member>
+      <member refid="classRegressionRAM_1abb209836b83ae461eab6c2d3961343b8" prot="public" virt="non-virtual"><scope>RegressionRAM</scope><name>getMemory</name></member>
+      <member refid="classRegressionRAM_1ac7a5d96231c14447a9f26f171ad82ef4" prot="public" virt="non-virtual"><scope>RegressionRAM</scope><name>getsizeoff</name></member>
+      <member refid="classRegressionRAM_1af3d15e9225cc5c6e514801d15a85c07a" prot="public" virt="non-virtual"><scope>RegressionRAM</scope><name>getVote</name></member>
+      <member refid="classRegressionRAM_1a6d9d14f2194853166459c9ac734080c2" prot="private" virt="non-virtual"><scope>RegressionRAM</scope><name>mapping</name></member>
+      <member refid="classRegressionRAM_1a77a4282abeff7ed9c178c4ea4aea5a0d" prot="private" virt="non-virtual"><scope>RegressionRAM</scope><name>memory</name></member>
+      <member refid="classRegressionRAM_1afdb97503ca3766f6209826f26eb8b770" prot="private" virt="non-virtual"><scope>RegressionRAM</scope><name>minOne</name></member>
+      <member refid="classRegressionRAM_1a8c283108a2205b2dc816fb13c8b36724" prot="private" virt="non-virtual"><scope>RegressionRAM</scope><name>minZero</name></member>
+      <member refid="classRegressionRAM_1a1468df083af359878a5e864e56d58d94" prot="public" virt="non-virtual"><scope>RegressionRAM</scope><name>RegressionRAM</name></member>
+      <member refid="classRegressionRAM_1a0ad601f407a8baea97364e81828f5635" prot="public" virt="non-virtual"><scope>RegressionRAM</scope><name>RegressionRAM</name></member>
+      <member refid="classRegressionRAM_1a8bbb6293b5fa116ee0a69e1c48fe76eb" prot="public" virt="non-virtual"><scope>RegressionRAM</scope><name>RegressionRAM</name></member>
+      <member refid="classRegressionRAM_1a33d0c3451d6aa1f3e6fd1bcd25af42eb" prot="public" virt="non-virtual"><scope>RegressionRAM</scope><name>setMinOne</name></member>
+      <member refid="classRegressionRAM_1a34308c3b554de1cb36139a04ce6ce2c3" prot="public" virt="non-virtual"><scope>RegressionRAM</scope><name>setMinZero</name></member>
+      <member refid="classRegressionRAM_1a3d40a96015f14882569e8c3bd820b03a" prot="public" virt="non-virtual"><scope>RegressionRAM</scope><name>train</name></member>
+      <member refid="classRegressionRAM_1a94223ef17afc193c6cb2b0e713e331b1" prot="public" virt="non-virtual"><scope>RegressionRAM</scope><name>~RegressionRAM</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,688 @@
+\doxysection{Referência à classe Regression\+RAMData\+Handle}
+\hypertarget{classRegressionRAMDataHandle}{}\label{classRegressionRAMDataHandle}\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+
+
+A class to handle RAM data for regression tasks.  
+
+
+
+
+Diagrama de colaboração para Regression\+RAMData\+Handle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classRegressionRAMDataHandle__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classRegressionRAMDataHandle_ae14bec5896e36c648e5af2389465af9d}{compare}} (\mbox{\hyperlink{classRegressionRAMDataHandle}{Regression\+RAMData\+Handle}} \&other)
+\begin{DoxyCompactList}\small\item\em Compares this object with another \doxylink{classRegressionRAMDataHandle}{Regression\+RAMData\+Handle} object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472}{data}} ()
+\begin{DoxyCompactList}\small\item\em Gets the entire data as a string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classRegressionRAMDataHandle_a4fcf657e5fa8d8f74c57b55bae909b16}{data}} (int r)
+\begin{DoxyCompactList}\small\item\em Gets the data of a specific RAM as a string. \end{DoxyCompactList}\item 
+regression\+\_\+ram\+\_\+t \mbox{\hyperlink{classRegressionRAMDataHandle_a6d4de5cf1dad67abd478b43be27b31bf}{get}} (int r)
+\begin{DoxyCompactList}\small\item\em Gets the entire content of a specific RAM. \end{DoxyCompactList}\item 
+regression\+\_\+content\+\_\+t \mbox{\hyperlink{classRegressionRAMDataHandle_aad7d447964f7f8f16ebb2d92a5a01e67}{get}} (int r, int addr)
+\begin{DoxyCompactList}\small\item\em Gets the content of a specific RAM at a specific address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRegressionRAMDataHandle_ac8c3377cd28ff6f75a1d5865081eba83}{Regression\+RAMData\+Handle}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRegressionRAMDataHandle_ae52da90bfea5c5f772bf8828ef83381d}{Regression\+RAMData\+Handle}} (regression\+\_\+ram\+\_\+t \mbox{\hyperlink{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472}{data}})
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the object with a single regression RAM data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRegressionRAMDataHandle_aefd557b2ecfbad935e3991aa7d7e654e}{Regression\+RAMData\+Handle}} (std\+::string inputdata)
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the object with input data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRegressionRAMDataHandle_a933bf9c75fb351c4e65f7661437c3b68}{Regression\+RAMData\+Handle}} (std\+::vector$<$ regression\+\_\+ram\+\_\+t $>$ \mbox{\hyperlink{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472}{data}})
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the object with multiple regression RAM data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRegressionRAMDataHandle_a1195014557d4831bc5d655027713fcfe}{save}} (std\+::string prefix)
+\begin{DoxyCompactList}\small\item\em Saves the data to a file with a given prefix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRegressionRAMDataHandle_a9073351b9bc44a907b6624c9a2403f01}{set}} (int r, int addr, regression\+\_\+content\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the content at a specific RAM and address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRegressionRAMDataHandle_a3a7043e9cca877cfa24ac8fe082197c9}{set}} (int r, regression\+\_\+ram\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the entire content of a specific RAM. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros privados}
+\begin{DoxyCompactItemize}
+\item 
+regression\+\_\+ram\+\_\+t \mbox{\hyperlink{classRegressionRAMDataHandle_ab8e382fb4b1ef0e6cfcd8177f2514e3a}{data\+To\+Ram}} (const std\+::string \&inputdata)
+\begin{DoxyCompactList}\small\item\em Converts a string to RAM data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRegressionRAMDataHandle_a0e44ea5d5f6504fb53868d5021ff11e8}{set\+Data}} (std\+::string inputdata)
+\begin{DoxyCompactList}\small\item\em Sets the data from an input string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ int, regression\+\_\+ram\+\_\+t $>$ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}
+\begin{DoxyCompactList}\small\item\em Container for the RAM data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+A class to handle RAM data for regression tasks. 
+
+Definido na linha \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00005}{5}} do ficheiro \mbox{\hyperlink{regressionramdatahandle_8cc_source}{regressionramdatahandle.\+cc}}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\Hypertarget{classRegressionRAMDataHandle_aefd557b2ecfbad935e3991aa7d7e654e}\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\doxysubsubsection{\texorpdfstring{RegressionRAMDataHandle()}{RegressionRAMDataHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classRegressionRAMDataHandle_aefd557b2ecfbad935e3991aa7d7e654e} 
+Regression\+RAMData\+Handle\+::\+Regression\+RAMData\+Handle (\begin{DoxyParamCaption}\item[{std\+::string}]{inputdata}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that initializes the object with input data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em inputdata} & The input data as a string. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00011}{11}} do ficheiro \mbox{\hyperlink{regressionramdatahandle_8cc_source}{regressionramdatahandle.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle_a0e44ea5d5f6504fb53868d5021ff11e8}{setData}}(inputdata);}
+\DoxyCodeLine{00013\ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00147}{set\+Data()}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionRAMDataHandle_aefd557b2ecfbad935e3991aa7d7e654e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionRAMDataHandle_ae52da90bfea5c5f772bf8828ef83381d}\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\doxysubsubsection{\texorpdfstring{RegressionRAMDataHandle()}{RegressionRAMDataHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classRegressionRAMDataHandle_ae52da90bfea5c5f772bf8828ef83381d} 
+Regression\+RAMData\+Handle\+::\+Regression\+RAMData\+Handle (\begin{DoxyParamCaption}\item[{regression\+\_\+ram\+\_\+t}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that initializes the object with a single regression RAM data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em data} & A single regression RAM data. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00019}{19}} do ficheiro \mbox{\hyperlink{regressionramdatahandle_8cc_source}{regressionramdatahandle.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[0]\ =\ \mbox{\hyperlink{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472}{data}};}
+\DoxyCodeLine{00021\ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00099}{data()}} e \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00197}{ramdata}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionRAMDataHandle_ae52da90bfea5c5f772bf8828ef83381d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionRAMDataHandle_a933bf9c75fb351c4e65f7661437c3b68}\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\doxysubsubsection{\texorpdfstring{RegressionRAMDataHandle()}{RegressionRAMDataHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classRegressionRAMDataHandle_a933bf9c75fb351c4e65f7661437c3b68} 
+Regression\+RAMData\+Handle\+::\+Regression\+RAMData\+Handle (\begin{DoxyParamCaption}\item[{std\+::vector$<$ regression\+\_\+ram\+\_\+t $>$}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that initializes the object with multiple regression RAM data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em data} & A vector containing multiple regression RAM data. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00027}{27}} do ficheiro \mbox{\hyperlink{regressionramdatahandle_8cc_source}{regressionramdatahandle.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472}{data}}.size();\ i++)\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[i]\ =\ \mbox{\hyperlink{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472}{data}}[i];}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00099}{data()}} e \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00197}{ramdata}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionRAMDataHandle_a933bf9c75fb351c4e65f7661437c3b68_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionRAMDataHandle_ac8c3377cd28ff6f75a1d5865081eba83}\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\doxysubsubsection{\texorpdfstring{RegressionRAMDataHandle()}{RegressionRAMDataHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classRegressionRAMDataHandle_ac8c3377cd28ff6f75a1d5865081eba83} 
+Regression\+RAMData\+Handle\+::\+Regression\+RAMData\+Handle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00036}{36}} do ficheiro \mbox{\hyperlink{regressionramdatahandle_8cc_source}{regressionramdatahandle.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classRegressionRAMDataHandle_ae14bec5896e36c648e5af2389465af9d}\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!compare@{compare}}
+\index{compare@{compare}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily \label{classRegressionRAMDataHandle_ae14bec5896e36c648e5af2389465af9d} 
+bool Regression\+RAMData\+Handle\+::compare (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRegressionRAMDataHandle}{Regression\+RAMData\+Handle}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares this object with another \doxylink{classRegressionRAMDataHandle}{Regression\+RAMData\+Handle} object. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em other} & The other \doxylink{classRegressionRAMDataHandle}{Regression\+RAMData\+Handle} object to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+True if both objects are equal, otherwise false. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00081}{81}} do ficheiro \mbox{\hyperlink{regressionramdatahandle_8cc_source}{regressionramdatahandle.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.size()\ !=\ other.\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.size())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordflow}{for}(std::unordered\_map<int,regression\_ram\_t>::iterator\ it\ =\ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.begin();\ it\ !=\ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.end();\ ++it)\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ std::unordered\_map<int,regression\_ram\_t>::iterator\ ito\ =\ other.\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.find(it-\/>first);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(ito\ ==\ other.\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.end()\ ||\ it-\/>second.size()\ !=\ ito-\/>second.size())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(regression\_ram\_t::iterator\ itram\ =\ it-\/>second.begin();\ itram\ !=\ it-\/>second.end();\ ++itram)\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ regression\_ram\_t::iterator\ itramo\ =\ ito-\/>second.find(itram-\/>first);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(itramo\ ==\ ito-\/>second.end()\ ||\ itram-\/>second\ !=\ itramo-\/>second)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00093\ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00197}{ramdata}}.
+
+\Hypertarget{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472}\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!data@{data}}
+\index{data@{data}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472} 
+std\+::string Regression\+RAMData\+Handle\+::data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the entire data as a string. 
+
+\begin{DoxyReturn}{Retorna}
+The entire data as a string. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00099}{99}} do ficheiro \mbox{\hyperlink{regressionramdatahandle_8cc_source}{regressionramdatahandle.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ std::string\ out;}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.size();\ i++)\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ out\ +=\ (i\ !=\ 0\ ?\ \textcolor{stringliteral}{"{}."{}}\ :\ \textcolor{stringliteral}{"{}"{}})\ +\ \mbox{\hyperlink{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472}{data}}(i);}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{return}\ out;}
+\DoxyCodeLine{00105\ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00099}{data()}} e \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00197}{ramdata}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00099}{data()}}, \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00019}{Regression\+RAMData\+Handle()}}, \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00027}{Regression\+RAMData\+Handle()}} e \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00130}{save()}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472_cgraph}
+\end{center}
+\end{figure}
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionRAMDataHandle_a4fcf657e5fa8d8f74c57b55bae909b16}\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!data@{data}}
+\index{data@{data}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classRegressionRAMDataHandle_a4fcf657e5fa8d8f74c57b55bae909b16} 
+std\+::string Regression\+RAMData\+Handle\+::data (\begin{DoxyParamCaption}\item[{int}]{r}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the data of a specific RAM as a string. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em r} & The RAM index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+The data of the specified RAM as a string. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00112}{112}} do ficheiro \mbox{\hyperlink{regressionramdatahandle_8cc_source}{regressionramdatahandle.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{int}\ blockSize\ =\ (\textcolor{keyword}{sizeof}(addr\_t)+(3*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double})));}
+\DoxyCodeLine{00114\ \ \ \ \ std::string\ out(\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[r].size()*blockSize,0);}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{int}\ k=0;}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ j=\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[r].begin();\ j!=\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[r].end();\ ++j)\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ out.replace(k,\textcolor{keyword}{sizeof}(addr\_t),convertToBytes(j-\/>first));}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ j-\/>second.size();\ i++)\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ out.replace(k+\textcolor{keyword}{sizeof}(addr\_t)+(i*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double})),\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}),convertToBytes(j-\/>second[i]));}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ k\ +=\ blockSize;}
+\DoxyCodeLine{00122\ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordflow}{return}\ Base64::encode(out);}
+\DoxyCodeLine{00124\ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00197}{ramdata}}.
+
+\Hypertarget{classRegressionRAMDataHandle_ab8e382fb4b1ef0e6cfcd8177f2514e3a}\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!dataToRam@{dataToRam}}
+\index{dataToRam@{dataToRam}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\doxysubsubsection{\texorpdfstring{dataToRam()}{dataToRam()}}
+{\footnotesize\ttfamily \label{classRegressionRAMDataHandle_ab8e382fb4b1ef0e6cfcd8177f2514e3a} 
+regression\+\_\+ram\+\_\+t Regression\+RAMData\+Handle\+::data\+To\+Ram (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{inputdata}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Converts a string to RAM data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em inputdata} & The input data as a string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+The converted RAM data. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00179}{179}} do ficheiro \mbox{\hyperlink{regressionramdatahandle_8cc_source}{regressionramdatahandle.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00180\ \ \ \ \ regression\_ram\_t\ ramout;}
+\DoxyCodeLine{00181\ \ \ \ \ std::string\ decodedData\ =\ Base64::decode(inputdata);}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ blockSize\ =\ (\textcolor{keyword}{sizeof}(addr\_t)+(3*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double})));}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordflow}{if}(decodedData.size()\%blockSize\ !=\ 0)\ \textcolor{keywordflow}{return}\ ramout;}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ i=0;\ i<decodedData.size();\ i+=blockSize)\ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ addr\_t\ address\ =\ convertToValue<addr\_t>(decodedData.substr(i,\textcolor{keyword}{sizeof}(addr\_t)));}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ regression\_content\_t\ content;}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ 3;\ j++)\ \{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ value\ =\ convertToValue<double>(decodedData.substr(i+\textcolor{keyword}{sizeof}(addr\_t)+(j*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double})),\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double})));}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ content.push\_back(value);}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ ramout[address]=content;}
+\DoxyCodeLine{00193\ \ \ \ \ \}}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordflow}{return}\ ramout;}
+\DoxyCodeLine{00195\ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00147}{set\+Data()}}.
+
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionRAMDataHandle_ab8e382fb4b1ef0e6cfcd8177f2514e3a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionRAMDataHandle_a6d4de5cf1dad67abd478b43be27b31bf}\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!get@{get}}
+\index{get@{get}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classRegressionRAMDataHandle_a6d4de5cf1dad67abd478b43be27b31bf} 
+regression\+\_\+ram\+\_\+t Regression\+RAMData\+Handle\+::get (\begin{DoxyParamCaption}\item[{int}]{r}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the entire content of a specific RAM. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em r} & The RAM index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+The entire RAM content. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00053}{53}} do ficheiro \mbox{\hyperlink{regressionramdatahandle_8cc_source}{regressionramdatahandle.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[r];}
+\DoxyCodeLine{00055\ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00197}{ramdata}}.
+
+\Hypertarget{classRegressionRAMDataHandle_aad7d447964f7f8f16ebb2d92a5a01e67}\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!get@{get}}
+\index{get@{get}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classRegressionRAMDataHandle_aad7d447964f7f8f16ebb2d92a5a01e67} 
+regression\+\_\+content\+\_\+t Regression\+RAMData\+Handle\+::get (\begin{DoxyParamCaption}\item[{int}]{r}{, }\item[{int}]{addr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the content of a specific RAM at a specific address. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em r} & The RAM index. \\
+\hline
+{\em addr} & The address within the RAM. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+The content at the specified RAM and address. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00044}{44}} do ficheiro \mbox{\hyperlink{regressionramdatahandle_8cc_source}{regressionramdatahandle.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[r][addr];}
+\DoxyCodeLine{00046\ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00197}{ramdata}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionram_8cc_source_l00018}{Regression\+RAM\+::\+Regression\+RAM()}}.
+
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionRAMDataHandle_aad7d447964f7f8f16ebb2d92a5a01e67_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionRAMDataHandle_a1195014557d4831bc5d655027713fcfe}\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!save@{save}}
+\index{save@{save}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{classRegressionRAMDataHandle_a1195014557d4831bc5d655027713fcfe} 
+void Regression\+RAMData\+Handle\+::save (\begin{DoxyParamCaption}\item[{std\+::string}]{prefix}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Saves the data to a file with a given prefix. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em prefix} & The prefix for the filename. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00130}{130}} do ficheiro \mbox{\hyperlink{regressionramdatahandle_8cc_source}{regressionramdatahandle.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00131\ \ \ \ \ std::string\ filename\ =\ prefix\ +\ ramdata\_sufix;}
+\DoxyCodeLine{00132\ \ \ \ \ std::ofstream\ dataFile;}
+\DoxyCodeLine{00133\ \ \ \ \ dataFile.open(filename,\ std::ios::app);}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.size();\ i++)\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ dataFile\ <<\ (i\ !=\ 0\ ?\ \textcolor{stringliteral}{"{}."{}}\ :\ \textcolor{stringliteral}{"{}"{}})\ +\ \mbox{\hyperlink{classRegressionRAMDataHandle_aee65ec030eb5fc20ee5d1aa87af64472}{data}}(i);}
+\DoxyCodeLine{00137\ \ \ \ \ \}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ dataFile.close();}
+\DoxyCodeLine{00140\ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00099}{data()}} e \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00197}{ramdata}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionRAMDataHandle_a1195014557d4831bc5d655027713fcfe_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionRAMDataHandle_a9073351b9bc44a907b6624c9a2403f01}\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!set@{set}}
+\index{set@{set}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classRegressionRAMDataHandle_a9073351b9bc44a907b6624c9a2403f01} 
+void Regression\+RAMData\+Handle\+::set (\begin{DoxyParamCaption}\item[{int}]{r}{, }\item[{int}]{addr}{, }\item[{regression\+\_\+content\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the content at a specific RAM and address. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em r} & The RAM index. \\
+\hline
+{\em addr} & The address within the RAM. \\
+\hline
+{\em value} & The value to set at the specified RAM and address. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00063}{63}} do ficheiro \mbox{\hyperlink{regressionramdatahandle_8cc_source}{regressionramdatahandle.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[r][addr]\ =\ value;}
+\DoxyCodeLine{00065\ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00197}{ramdata}}.
+
+\Hypertarget{classRegressionRAMDataHandle_a3a7043e9cca877cfa24ac8fe082197c9}\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!set@{set}}
+\index{set@{set}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classRegressionRAMDataHandle_a3a7043e9cca877cfa24ac8fe082197c9} 
+void Regression\+RAMData\+Handle\+::set (\begin{DoxyParamCaption}\item[{int}]{r}{, }\item[{regression\+\_\+ram\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the entire content of a specific RAM. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em r} & The RAM index. \\
+\hline
+{\em value} & The value to set for the specified RAM. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00072}{72}} do ficheiro \mbox{\hyperlink{regressionramdatahandle_8cc_source}{regressionramdatahandle.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[r]\ =\ value;}
+\DoxyCodeLine{00074\ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00197}{ramdata}}.
+
+\Hypertarget{classRegressionRAMDataHandle_a0e44ea5d5f6504fb53868d5021ff11e8}\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!setData@{setData}}
+\index{setData@{setData}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily \label{classRegressionRAMDataHandle_a0e44ea5d5f6504fb53868d5021ff11e8} 
+void Regression\+RAMData\+Handle\+::set\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{inputdata}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Sets the data from an input string. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em inputdata} & The input data as a string. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00147}{147}} do ficheiro \mbox{\hyperlink{regressionramdatahandle_8cc_source}{regressionramdatahandle.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{int}\ s\ =\ ramdata\_sufix.size();}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordflow}{if}(inputdata.substr(inputdata.size()-\/s,s).compare(ramdata\_sufix)\ ==\ 0)\ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ std::ifstream\ dataFile;}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ dataFile.open(inputdata);}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dataFile.is\_open())\ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dataFile.eof())\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ std::string\ rdata=\textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ std::getline(dataFile,rdata,\textcolor{charliteral}{'.'});}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.size()]\ =\ \mbox{\hyperlink{classRegressionRAMDataHandle_ab8e382fb4b1ef0e6cfcd8177f2514e3a}{dataToRam}}(rdata);}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ dataFile.close();}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00162\ \ \ \ \ \}}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pos=0;}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ found\ =\ 0;}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \textcolor{keywordflow}{while}(found\ <\ inputdata.size())\ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ found\ =\ inputdata.find(\textcolor{charliteral}{'.'},pos);}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}[\mbox{\hyperlink{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}{ramdata}}.size()]\ =\ \mbox{\hyperlink{classRegressionRAMDataHandle_ab8e382fb4b1ef0e6cfcd8177f2514e3a}{dataToRam}}(inputdata.substr(pos,found-\/pos));}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ pos\ =\ found+1;}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00171\ \ \ \ \ \}}
+\DoxyCodeLine{00172\ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00179}{data\+To\+Ram()}} e \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00197}{ramdata}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00011}{Regression\+RAMData\+Handle()}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionRAMDataHandle_a0e44ea5d5f6504fb53868d5021ff11e8_cgraph}
+\end{center}
+\end{figure}
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionRAMDataHandle_a0e44ea5d5f6504fb53868d5021ff11e8_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Documentação dos dados membro}
+\Hypertarget{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8}\index{RegressionRAMDataHandle@{RegressionRAMDataHandle}!ramdata@{ramdata}}
+\index{ramdata@{ramdata}!RegressionRAMDataHandle@{RegressionRAMDataHandle}}
+\doxysubsubsection{\texorpdfstring{ramdata}{ramdata}}
+{\footnotesize\ttfamily \label{classRegressionRAMDataHandle_ac6106be1b5ed0b4704896872dd2247d8} 
+std\+::unordered\+\_\+map$<$int, regression\+\_\+ram\+\_\+t$>$ Regression\+RAMData\+Handle\+::ramdata\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Container for the RAM data. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00197}{197}} do ficheiro \mbox{\hyperlink{regressionramdatahandle_8cc_source}{regressionramdatahandle.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00081}{compare()}}, \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00099}{data()}}, \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00112}{data()}}, \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00053}{get()}}, \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00044}{get()}}, \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00019}{Regression\+RAMData\+Handle()}}, \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00027}{Regression\+RAMData\+Handle()}}, \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00130}{save()}}, \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00063}{set()}}, \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00072}{set()}} e \mbox{\hyperlink{regressionramdatahandle_8cc_source_l00147}{set\+Data()}}.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+src/models/regressionwisard/\mbox{\hyperlink{regressionramdatahandle_8cc}{regressionramdatahandle.\+cc}}\end{DoxyCompactItemize}

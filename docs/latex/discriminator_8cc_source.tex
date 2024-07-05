@@ -1,0 +1,260 @@
+\doxysection{discriminator.\+cc}
+\hypertarget{discriminator_8cc_source}{}\label{discriminator_8cc_source}\index{src/models/wisard/discriminator.cc@{src/models/wisard/discriminator.cc}}
+\mbox{\hyperlink{discriminator_8cc}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}../../../include/bitarray.h"{}}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00007}00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00013}\mbox{\hyperlink{classDiscriminator}{00013}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDiscriminator}{Discriminator}}\ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00020}\mbox{\hyperlink{classDiscriminator_a18f6a5ef1ceca3e187cc495a77a8141c}{00020}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a18f6a5ef1ceca3e187cc495a77a8141c}{Discriminator}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}})\ :}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}}(\mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}}),\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}}(\mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}})}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00022}00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculates\ the\ number\ of\ RAMs\ needed}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}}\ =\ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}}/\mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}}\ +\ ((\mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}}\%\mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}})\ >\ 0);}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//calloc\ retorna\ um\ *\ void}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{//(int\ *)\ -\/>\ casting/troca\ de\ tipo\ }}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Troca\ o\ *\ void\ para\ *\ int,\ pois\ vamos\ lidar\ com\ inteiros}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Bem\ como\ inicializa\ o\ array\ com\ 0}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00029}00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}\ =\ (\textcolor{keywordtype}{int}\ *)calloc(\mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}},\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Generating\ pseudo-\/random\ mapping}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Percorre\ esse\ array}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//mapeia\ cada\ tupla,\ neste\ caso\ é\ parecido\ com\ uma\ enumeração}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}[i]\ =\ i;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//embaralha}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00040}00040\ \ \ \ \ \ \ \ \ std::shuffle(\mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}},\ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}\ +\ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}},\ std::default\_random\_engine(std::random\_device\{\}()));}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Aloca\ memória\ ram}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00043}00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}\ =\ (bitarray\_t\ *)\ calloc(\mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}},\ \textcolor{keyword}{sizeof}(bitarray\_t));}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ num\_bits\ =\ (1UL\ <<\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}});\textcolor{comment}{//2\string^tuple\_size}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ bitarray\_size\ =\ (num\_bits\ >>\ 6);\ \textcolor{comment}{//divide\ by\ 64\ bits}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//verifica\ bits\ restantes}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00048}00048\ \ \ \ \ \ \ \ \ bitarray\_size\ +=\ ((bitarray\_size\ \&\ 0x3F)\ >\ 0);\ \textcolor{comment}{//ceil\ quotient.\ If\ remainder\ >\ 0\ then\ sum\ by\ 1}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//percorre\ as\ rams\ alocadas}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//preenchendo\ os\ elementos\ com\ informações}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{comment}{//várias\ rams\ iguais}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{//mesmas\ propriedades}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].num\_bits\ =\ num\_bits;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].bitarray\_size\ =\ bitarray\_size;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].bitarray\ =\ (uint64\_t\ *)calloc(\mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].bitarray\_size,\ \textcolor{keyword}{sizeof}(uint64\_t));}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00064}\mbox{\hyperlink{classDiscriminator_a85cac98c07ece485461dd6f55e112adb}{00064}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a85cac98c07ece485461dd6f55e112adb}{\string~Discriminator}}()\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00065}00065\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//cout\ <<\ "{}Destructor"{}\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ free(\mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}});}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ free(\mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}});}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00069}00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00075}\mbox{\hyperlink{classDiscriminator_ab8048d9b2da18a14532e90460c5c92a8}{00075}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDiscriminator_ab8048d9b2da18a14532e90460c5c92a8}{train}}(bitarray\_t\ *\ data)}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00076}00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//vars\ auxiliares}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ k\ =\ 0,\ i1,\ i2;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//addr\_pos?}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ addr\_pos;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ uint64\_t\ addr;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//percorre\ o\ número\ de\ rams}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//tupleSize\ -\/\ 1?}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\_pos\ =\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}}-\/1;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Percorre\ o\ tamanho\ da\ tupla??}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ j\ <\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}};\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//arnazena\ a\ divisão\ de\ tuplesMapping[i]\ pro\ 64}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i1\ =\ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}[k]\ >>\ 6;\textcolor{comment}{//Divide\ by\ 64\ to\ find\ the\ bitarray\ id}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//armazena\ o\ restante\ para\ }}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i2\ =\ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}[k]\ \&\ 0x3F;\textcolor{comment}{//Obtain\ remainder\ to\ access\ the\ bitarray\ position}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//cria\ um\ espécie\ de\ endereço\ utilizando\ esta\ operação}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\ |=\ (((data-\/>bitarray[i1]\ \&\ (1UL\ <<\ i2))\ >>\ i2)\ <<\ addr\_pos);}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//vai\ para\ a\ tupla\ anterior}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\_pos-\/-\/;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k++;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i1\ =\ addr\ >>\ 6;\textcolor{comment}{//Divide\ by\ 64\ to\ find\ the\ bitarray\ id}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i2\ =\ addr\ \&\ 0x3F;\textcolor{comment}{//Obtain\ remainder\ to\ access\ the\ bitarray\ position}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].bitarray[i1]\ |=\ (1UL\ <<\ i2);\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00106}00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00112}\mbox{\hyperlink{classDiscriminator_a53db61dec9f645573d5aa577344431a4}{00112}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDiscriminator_a53db61dec9f645573d5aa577344431a4}{train}}(\textcolor{keyword}{const}\ vector<bool>\&\ data)}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00113}00113\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ k\ =\ 0,\ i1,\ i2;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ addr\_pos;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ uint64\_t\ addr;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//percorre\ as\ rams}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//tupleSize-\/1\ ??}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\_pos\ =\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}}-\/1;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//j\ \&\&\ k?}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ (j\ <\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}})\ \&\&\ (k\ <\ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}});\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\ |=\ (data[\mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}[k]]\ <<\ addr\_pos);}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\_pos-\/-\/;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k++;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i1\ =\ addr\ >>\ 6;\textcolor{comment}{//Divide\ by\ 64\ to\ find\ the\ bitarray\ id}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i2\ =\ addr\ \&\ 0x3F;\textcolor{comment}{//Obtain\ remainder\ to\ access\ the\ bitarray\ position}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].bitarray[i1]\ |=\ (1UL\ <<\ i2);\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00134}00134\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00135}00135\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00141}\mbox{\hyperlink{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}{00141}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}{rank}}(bitarray\_t\ *\ data)}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00142}00142\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}{rank}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ k\ =\ 0,\ i1,\ i2;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ addr\_pos;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ uint64\_t\ addr;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\_pos\ =\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}}-\/1;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ j\ <\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}};\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i1\ =\ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}[k]\ >>\ 6;\textcolor{comment}{//Divide\ by\ 64\ to\ find\ the\ bitarray\ id}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i2\ =\ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}[k]\ \&\ 0x3F;\textcolor{comment}{//Obtain\ remainder\ to\ access\ the\ bitarray\ position}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\ |=\ (((data-\/>bitarray[i1]\ \&\ (1UL\ <<\ i2))\ >>\ i2)\ <<\ addr\_pos);}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\_pos-\/-\/;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k++;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i1\ =\ addr\ >>\ 6;\textcolor{comment}{//Divide\ by\ 64\ to\ find\ the\ bitarray\ id}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i2\ =\ addr\ \&\ 0x3F;\textcolor{comment}{//Obtain\ remainder\ to\ access\ the\ bitarray\ position}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}{rank}}\ +=\ (\mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].bitarray[i1]\ \&\ (1UL\ <<\ i2))\ >>\ i2;\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00165}00165\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}{rank}};}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00167}00167\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00168}00168\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00174}\mbox{\hyperlink{classDiscriminator_a1aa42beb010bc86dd9418db8b294e78c}{00174}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classDiscriminator_a1aa42beb010bc86dd9418db8b294e78c}{rank}}(\textcolor{keyword}{const}\ vector<bool>\&\ data)}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00175}00175\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}{rank}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ k\ =\ 0,\ i1,\ i2;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ addr\_pos;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ uint64\_t\ addr;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\_pos\ =\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}}-\/1;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ (j\ <\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}})\ \&\&\ (k\ <\ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}});\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\ |=\ (data[\mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}[k]]\ <<\ addr\_pos);}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\_pos-\/-\/;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k++;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i1\ =\ addr\ >>\ 6;\textcolor{comment}{//Divide\ by\ 64\ to\ find\ the\ bitarray\ id}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i2\ =\ addr\ \&\ 0x3F;\textcolor{comment}{//Obtain\ remainder\ to\ access\ the\ bitarray\ position}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}{rank}}\ +=\ (\mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].bitarray[i1]\ \&\ (1UL\ <<\ i2))\ >>\ i2;\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}{rank}};}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00197}00197\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00201}\mbox{\hyperlink{classDiscriminator_ab2ac35f380491c1ade7032c7269a0e65}{00201}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDiscriminator_ab2ac35f380491c1ade7032c7269a0e65}{info}}()\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00202}00202\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ totalBits\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Entry\ =\ "{}}\ <<\ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}}\ <<\ \textcolor{stringliteral}{"{},\ Tuples\ =\ "{}}\ <<\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}}\ <<\ \textcolor{stringliteral}{"{},\ RAMs\ =\ "{}}\ <<\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}}\ <<\ \textcolor{stringliteral}{"{},\ RAM\ size\ =\ "{}}\ <<\ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[0].num\_bits\ <<\ \textcolor{stringliteral}{"{}\ bits"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ cout\ <<\ "{}RAM\ "{}\ <<\ i\ <<\ "{}\ -\/\ "{}\ <<\ rams[i].num\_bits\ <<\ "{}\ bits"{}\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*for\ (j\ =\ 0;\ j\ <\ rams[i].bitarray\_size;\ j++)\ \{}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00211}00211\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ rams[i].bitarray[j]\ <<\ "{},\ "{};}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00212}00212\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00213}00213\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ endl;*/}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ totalBits\ +=\ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].num\_bits;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00217}00217\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Total\ Bits\ =\ "{}}\ <<\ totalBits\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00219}00219\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00220}00220\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00224}\mbox{\hyperlink{classDiscriminator_a2d97f91f8097cd8581f5c79b34bd0150}{00224}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDiscriminator_a2d97f91f8097cd8581f5c79b34bd0150}{reset}}()}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00225}00225\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Generating\ pseudo-\/random\ mapping}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00228}00228\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}[i]\ =\ i;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ std::shuffle(\mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}},\ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}\ +\ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}},\ std::default\_random\_engine(std::random\_device\{\}()));}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00234}00234\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ j\ <\ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].bitarray\_size;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].bitarray[j]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00240}00240\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00241}00241\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00246}\mbox{\hyperlink{classDiscriminator_ad65569d300243be32d4f7cde25ed71b4}{00246}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classDiscriminator_ad65569d300243be32d4f7cde25ed71b4}{getRamBits}}()\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00247}00247\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[0].num\_bits;}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00249}00249\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00250}00250\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00255}\mbox{\hyperlink{classDiscriminator_a7050bbf5d9b52318fdb8c6387ca7a0ac}{00255}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classDiscriminator_a7050bbf5d9b52318fdb8c6387ca7a0ac}{getNumRams}}()}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00256}00256\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}};}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00258}00258\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00259}00259\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00264}\mbox{\hyperlink{classDiscriminator_a2651a5132e8d8554d47f1406820f4062}{00264}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classDiscriminator_a2651a5132e8d8554d47f1406820f4062}{getTupleSize}}()}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00265}00265\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00266}00266\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}};}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00267}00267\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00268}00268\ }
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00269}00269\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00270}\mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{00270}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}};}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00271}\mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{00271}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}};}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00272}\mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{00272}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}};}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00273}\mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{00273}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ *\ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}};}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00274}\mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{00274}}\ \ \ \ \ \ \ \ \ bitarray\_t\ *\ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}};}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00275}00275\ \};}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00276}00276\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00277}00277\ \textcolor{comment}{\ \ \ int\ main()\{}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00278}00278\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00279}00279\ \textcolor{comment}{\ \ \ Discriminator\ *\ disc\ =\ new\ Discriminator(1024,\ 16);}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00280}00280\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00281}00281\ \textcolor{comment}{\ \ \ vector<bool>\ data\ =\ vector<bool>(1024);}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00282}00282\ \textcolor{comment}{\ \ \ int\ i;}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00283}00283\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00284}00284\ \textcolor{comment}{\ \ \ for\ (i\ =\ 0;\ i\ <\ 1024;\ i++)\ \{}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00285}00285\ \textcolor{comment}{\ \ \ data[i]\ =\ i\&1;}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00286}00286\ \textcolor{comment}{\ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00287}00287\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00288}00288\ \textcolor{comment}{\ \ \ for\ (i\ =\ 0;\ i\ <\ 1024;\ i++)\ \{}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00289}00289\ \textcolor{comment}{\ \ \ cout\ <<\ data[i];}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00290}00290\ \textcolor{comment}{\ \ \ \}\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00291}00291\ \textcolor{comment}{\ \ \ cout\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00292}00292\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00293}00293\ \textcolor{comment}{\ \ \ disc-\/>train(data);}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00294}00294\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00295}00295\ \textcolor{comment}{\ \ \ cout\ <<\ "{}Rank="{}\ <<\ dec\ <<\ disc-\/>rank(data)\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00296}00296\ \textcolor{comment}{\ \ \ disc-\/>info();}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00297}00297\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00298}00298\ \textcolor{comment}{\ \ \ delete\ disc;}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00299}00299\ \textcolor{comment}{\ \ \ return\ 0;}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00300}00300\ \textcolor{comment}{\ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00301}00301\ \textcolor{comment}{\ \ \ */}}
+\DoxyCodeLine{\Hypertarget{discriminator_8cc_source_l00302}00302\ }
+
+\end{DoxyCode}

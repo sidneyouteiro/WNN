@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="pt">
+  <compounddef id="md_src_2models_2regressionwisard_2sequence" kind="page">
+    <compoundname>md_src_2models_2regressionwisard_2sequence</compoundname>
+    <title>sequence</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>*meanfunctions *regressionramdatahandle *regressionram *regressionwisard</para>
+<para>steps? artigo wisard; <ulink url="https://github.com/IAZero/wisardpkg/tree/c51b395c0e85ae007bb7f8699515a3136356ef65">https://github.com/IAZero/wisardpkg/tree/c51b395c0e85ae007bb7f8699515a3136356ef65</ulink> </para>
+    </detaileddescription>
+    <location file="src/models/regressionwisard/sequence.md"/>
+  </compounddef>
+</doxygen>

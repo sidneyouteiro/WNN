@@ -1,0 +1,5 @@
+<map id="PowerMean" name="PowerMean">
+<area shape="rect" id="Node000001" title="Classe para cálculo de média de potência." alt="" coords="5,159,108,304"/>
+<area shape="rect" id="Node000002" href="$classMean.html" title="Classe base abstrata para cálculo de médias." alt="" coords="13,5,101,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,125,59,158,54,158,54,125"/>
+</map>

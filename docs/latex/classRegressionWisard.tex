@@ -1,0 +1,954 @@
+\doxysection{Referência à classe Regression\+Wisard}
+\hypertarget{classRegressionWisard}{}\label{classRegressionWisard}\index{RegressionWisard@{RegressionWisard}}
+
+
+Classe para um modelo de regressão utilizando \doxylink{classWisard}{Wisard}.  
+
+
+
+
+Diagrama de heranças da classe Regression\+Wisard
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classRegressionWisard__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Regression\+Wisard\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classRegressionWisard__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRegressionWisard_ac37f1d1c653928a21c5d3588c3837c9b}{apply\+Fit}} ()
+\begin{DoxyCompactList}\small\item\em Aplica o ajuste calculado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRegressionWisard_a2f22f241b281ab6a0e4cf1cfb9335bb4}{calculate\+Fit}} (const Bin\+Input \&input, const double y)
+\begin{DoxyCompactList}\small\item\em Calcula o ajuste para uma entrada binária e um valor y. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classRegressionWisard_ab4d4796e3f62df331fee309301e0a681}{predict}} (const Bin\+Input \&input) const
+\begin{DoxyCompactList}\small\item\em Faz a predição para uma entrada binária. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classRegressionWisard_ab2825bf4202b12029b489c1d4de342b8}{predict}} (const Data\+Set \&dataset) const
+\begin{DoxyCompactList}\small\item\em Faz a predição para um conjunto de dados. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRegressionWisard_a56ec56a98f692d756f1f80e04bd19354}{Regression\+Wisard}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRegressionWisard_a054c0bf1dd245976d942f5714fa5c8ef}{Regression\+Wisard}} (int \mbox{\hyperlink{classRegressionWisard_a7a40098add4d89932e44ff01868e0550}{address\+Size}})
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa o modelo com um tamanho de endereço especificado. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRegressionWisard_afef642836ca4d47c9a1ee6f9497ee265}{Regression\+Wisard}} (nl\+::json c)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa o modelo com um objeto JSON. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRegressionWisard_a125bffa9cf4806492f2b2cf96a3932b0}{train}} (const Bin\+Input \&input, const double y)
+\begin{DoxyCompactList}\small\item\em Treina o modelo com uma entrada binária e um valor y. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRegressionWisard_a11970036606a16938821722fb3af53ee}{train}} (const Data\+Set \&dataset)
+\begin{DoxyCompactList}\small\item\em Treina o modelo com um conjunto de dados. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRegressionWisard_a8203ce8fa5395d5891c29c4abccb7979}{\texorpdfstring{$\sim$}{\string~}\+Regression\+Wisard}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe que limpa a memória. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRegressionWisard_a4bfafa888b990804d754feb76044b679}{check\+Address\+Size}} (const int \mbox{\hyperlink{classRegressionWisard_a0b4ff031198660ee8239a94211a98cd0}{entry\+Size}}, const int \mbox{\hyperlink{classRegressionWisard_a7a40098add4d89932e44ff01868e0550}{address\+Size}}) const
+\begin{DoxyCompactList}\small\item\em Verifica o tamanho do endereço. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRegressionWisard_a6a25655a9cb15452b468a13dc4ed2858}{check\+Entry\+Size}} (const int entry) const
+\begin{DoxyCompactList}\small\item\em Verifica o tamanho da entrada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRegressionWisard_a6104a1884a605d02e08042eaf2b70310}{check\+Min\+Zero\+One}} (int min0, int min1)
+\begin{DoxyCompactList}\small\item\em Verifica os valores mínimos de zeros e uns. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRegressionWisard_ad003f5c063b032a1995ccfcf2682c549}{set\+RAMShuffle}} (int \mbox{\hyperlink{classRegressionWisard_a0b4ff031198660ee8239a94211a98cd0}{entry\+Size}})
+\begin{DoxyCompactList}\small\item\em Configura o embaralhamento das RAMs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classRegressionWisard_a7a40098add4d89932e44ff01868e0550}{address\+Size}}
+\begin{DoxyCompactList}\small\item\em Tamanho do endereço. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRegressionWisard_aa667b0e3eb449edf55101e21b9e81047}{complete\+Addressing}}
+\begin{DoxyCompactList}\small\item\em Endereçamento completo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRegressionWisard_a0b4ff031198660ee8239a94211a98cd0}{entry\+Size}}
+\begin{DoxyCompactList}\small\item\em Tamanho da entrada. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classRegressionWisard_a103aa1c658a82b6fb5d17db4bc5cef4b}{mapping}}
+\begin{DoxyCompactList}\small\item\em Mapeamento dos índices. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMean}{Mean}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classRegressionWisard_af7f452b5991bf8498d19cb3b5aea16af}{mean}}
+\begin{DoxyCompactList}\small\item\em Objeto para cálculo de média. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRegressionWisard_a4d8ca9f91145bca9cccf256b75a79ab0}{min\+One}}
+\begin{DoxyCompactList}\small\item\em Número mínimo de uns. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRegressionWisard_a19bf9ed20712adaa43cff5f46985ad0f}{min\+Zero}}
+\begin{DoxyCompactList}\small\item\em Número mínimo de zeros. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRegressionWisard_a42982f590753efc85fd6f52081dccfa6}{number\+Of\+Trainings}}
+\begin{DoxyCompactList}\small\item\em Número de treinamentos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRegressionWisard_a218ec296378e06b77f337de4c99e315a}{ordered\+Mapping}}
+\begin{DoxyCompactList}\small\item\em Mapeamento ordenado. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classRegressionRAM}{Regression\+RAM}} $>$ \mbox{\hyperlink{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f}{rams}}
+\begin{DoxyCompactList}\small\item\em Vetor de RAMs de regressão. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRegressionWisard_a2d96d1e6bb01d4aed4e8f5cb40510596}{steps}}
+\begin{DoxyCompactList}\small\item\em Número de passos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe para um modelo de regressão utilizando \doxylink{classWisard}{Wisard}. 
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00004}{4}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\Hypertarget{classRegressionWisard_a56ec56a98f692d756f1f80e04bd19354}\index{RegressionWisard@{RegressionWisard}!RegressionWisard@{RegressionWisard}}
+\index{RegressionWisard@{RegressionWisard}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{RegressionWisard()}{RegressionWisard()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classRegressionWisard_a56ec56a98f692d756f1f80e04bd19354} 
+Regression\+Wisard\+::\+Regression\+Wisard (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor padrão. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00009}{9}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \{\}}
+
+\end{DoxyCode}
+\Hypertarget{classRegressionWisard_afef642836ca4d47c9a1ee6f9497ee265}\index{RegressionWisard@{RegressionWisard}!RegressionWisard@{RegressionWisard}}
+\index{RegressionWisard@{RegressionWisard}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{RegressionWisard()}{RegressionWisard()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classRegressionWisard_afef642836ca4d47c9a1ee6f9497ee265} 
+Regression\+Wisard\+::\+Regression\+Wisard (\begin{DoxyParamCaption}\item[{nl\+::json}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor que inicializa o modelo com um objeto JSON. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em c} & Objeto do tipo nl\+::json contendo a configuração inicial do modelo. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00015}{15}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ srand(randint(0,\ 1000000));}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ nl::json\ value;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ value\ =\ c[\textcolor{stringliteral}{"{}addressSize"{}}];}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a7a40098add4d89932e44ff01868e0550}{addressSize}}\ =\ value.is\_null()\ ?\ 3\ :\ value.get<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ value\ =\ c[\textcolor{stringliteral}{"{}completeAddressing"{}}];}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_aa667b0e3eb449edf55101e21b9e81047}{completeAddressing}}\ =\ value.is\_null()\ ?\ true\ :\ value.get<\textcolor{keywordtype}{bool}>();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ value\ =\ c[\textcolor{stringliteral}{"{}orderedMapping"{}}];}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a218ec296378e06b77f337de4c99e315a}{orderedMapping}}\ =\ value.is\_null()\ ?\ false\ :\ value.get<\textcolor{keywordtype}{bool}>();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ value\ =\ c[\textcolor{stringliteral}{"{}minZero"{}}];}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a19bf9ed20712adaa43cff5f46985ad0f}{minZero}}\ =\ value.is\_null()\ ?\ 0\ :\ value.get<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ value\ =\ c[\textcolor{stringliteral}{"{}minOne"{}}];}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a4d8ca9f91145bca9cccf256b75a79ab0}{minOne}}\ =\ value.is\_null()\ ?\ 0\ :\ value.get<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ value\ =\ c[\textcolor{stringliteral}{"{}steps"{}}];}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a2d96d1e6bb01d4aed4e8f5cb40510596}{steps}}\ =\ value.is\_null()\ ?\ 0\ :\ value.get<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ value\ =\ c[\textcolor{stringliteral}{"{}numberOfTrainings"{}}];}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a42982f590753efc85fd6f52081dccfa6}{numberOfTrainings}}\ =\ value.is\_null()\ ?\ 0\ :\ value.get<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ value\ =\ c[\textcolor{stringliteral}{"{}entrySize"{}}];}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a0b4ff031198660ee8239a94211a98cd0}{entrySize}}\ =\ value.is\_null()\ ?\ 0\ :\ value.get<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ value\ =\ c[\textcolor{stringliteral}{"{}mapping"{}}];}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a103aa1c658a82b6fb5d17db4bc5cef4b}{mapping}}\ =\ value.is\_null()\ ?\ std::vector<int>()\ :\ value.get<std::vector<int>>();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ value\ =\ c[\textcolor{stringliteral}{"{}data"{}}];}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ std::vector<nl::json>\ data\ =\ value.is\_null()\ ?\ std::vector<nl::json>()\ :\ value.get<std::vector<nl::json>>();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ data.size();\ i++)\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f}{rams}}.push\_back(\mbox{\hyperlink{classRegressionRAM}{RegressionRAM}}(data[i]));}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionwisard_8cc_source_l00229}{address\+Size}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00230}{complete\+Addressing}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00237}{entry\+Size}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00239}{mapping}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00234}{min\+One}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00233}{min\+Zero}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00236}{number\+Of\+Trainings}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00231}{ordered\+Mapping}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00238}{rams}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00235}{steps}}.
+
+\Hypertarget{classRegressionWisard_a054c0bf1dd245976d942f5714fa5c8ef}\index{RegressionWisard@{RegressionWisard}!RegressionWisard@{RegressionWisard}}
+\index{RegressionWisard@{RegressionWisard}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{RegressionWisard()}{RegressionWisard()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classRegressionWisard_a054c0bf1dd245976d942f5714fa5c8ef} 
+Regression\+Wisard\+::\+Regression\+Wisard (\begin{DoxyParamCaption}\item[{int}]{address\+Size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor que inicializa o modelo com um tamanho de endereço especificado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em address\+Size} & Tamanho do endereço. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00058}{58}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ :\ \mbox{\hyperlink{classRegressionWisard_a7a40098add4d89932e44ff01868e0550}{addressSize}}(\mbox{\hyperlink{classRegressionWisard_a7a40098add4d89932e44ff01868e0550}{addressSize}})\ \{\}}
+
+\end{DoxyCode}
+\Hypertarget{classRegressionWisard_a8203ce8fa5395d5891c29c4abccb7979}\index{RegressionWisard@{RegressionWisard}!````~RegressionWisard@{\texorpdfstring{$\sim$}{\string~}RegressionWisard}}
+\index{````~RegressionWisard@{\texorpdfstring{$\sim$}{\string~}RegressionWisard}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RegressionWisard()}{\string~RegressionWisard()}}
+{\footnotesize\ttfamily \label{classRegressionWisard_a8203ce8fa5395d5891c29c4abccb7979} 
+Regression\+Wisard\+::\texorpdfstring{$\sim$}{\string~}\+Regression\+Wisard (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destrutor da classe que limpa a memória. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00063}{63}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f}{rams}}.clear();}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionwisard_8cc_source_l00238}{rams}}.
+
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classRegressionWisard_ac37f1d1c653928a21c5d3588c3837c9b}\index{RegressionWisard@{RegressionWisard}!applyFit@{applyFit}}
+\index{applyFit@{applyFit}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{applyFit()}{applyFit()}}
+{\footnotesize\ttfamily \label{classRegressionWisard_ac37f1d1c653928a21c5d3588c3837c9b} 
+void Regression\+Wisard\+::apply\+Fit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Aplica o ajuste calculado. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00143}{143}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f}{rams}}.size();\ i++)\ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f}{rams}}[i].applyFit();}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionwisard_8cc_source_l00238}{rams}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00071}{train()}}.
+
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionWisard_ac37f1d1c653928a21c5d3588c3837c9b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionWisard_a2f22f241b281ab6a0e4cf1cfb9335bb4}\index{RegressionWisard@{RegressionWisard}!calculateFit@{calculateFit}}
+\index{calculateFit@{calculateFit}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{calculateFit()}{calculateFit()}}
+{\footnotesize\ttfamily \label{classRegressionWisard_a2f22f241b281ab6a0e4cf1cfb9335bb4} 
+void Regression\+Wisard\+::calculate\+Fit (\begin{DoxyParamCaption}\item[{const Bin\+Input \&}]{input}{, }\item[{const double}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcula o ajuste para uma entrada binária e um valor y. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em input} & Entrada binária. \\
+\hline
+{\em y} & Valor associado à entrada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00133}{133}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ yPredicted\ =\ \mbox{\hyperlink{classRegressionWisard_ab4d4796e3f62df331fee309301e0a681}{predict}}(input);}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f}{rams}}.size();\ i++)\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f}{rams}}[i].calculateFit(input,\ (y\ -\/\ yPredicted));}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00138\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionwisard_8cc_source_l00104}{predict()}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00238}{rams}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00071}{train()}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionWisard_a2f22f241b281ab6a0e4cf1cfb9335bb4_cgraph}
+\end{center}
+\end{figure}
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionWisard_a2f22f241b281ab6a0e4cf1cfb9335bb4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionWisard_a4bfafa888b990804d754feb76044b679}\index{RegressionWisard@{RegressionWisard}!checkAddressSize@{checkAddressSize}}
+\index{checkAddressSize@{checkAddressSize}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{checkAddressSize()}{checkAddressSize()}}
+{\footnotesize\ttfamily \label{classRegressionWisard_a4bfafa888b990804d754feb76044b679} 
+void Regression\+Wisard\+::check\+Address\+Size (\begin{DoxyParamCaption}\item[{const int}]{entry\+Size}{, }\item[{const int}]{address\+Size}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Verifica o tamanho do endereço. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em entry\+Size} & Tamanho da entrada. \\
+\hline
+{\em address\+Size} & Tamanho do endereço. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00205}{205}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classRegressionWisard_a7a40098add4d89932e44ff01868e0550}{addressSize}}\ <\ 2)\ \{}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ Exception(\textcolor{stringliteral}{"{}The\ address\ size\ can't\ be\ less\ than\ 2!"{}});}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classRegressionWisard_a0b4ff031198660ee8239a94211a98cd0}{entrySize}}\ <\ 2)\ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ Exception(\textcolor{stringliteral}{"{}The\ entry\ size\ can't\ be\ less\ than\ 2!"{}});}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classRegressionWisard_a0b4ff031198660ee8239a94211a98cd0}{entrySize}}\ <\ \mbox{\hyperlink{classRegressionWisard_a7a40098add4d89932e44ff01868e0550}{addressSize}})\ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ Exception(\textcolor{stringliteral}{"{}The\ address\ size\ can't\ be\ bigger\ than\ entry\ size!"{}});}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00215\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionwisard_8cc_source_l00229}{address\+Size}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00237}{entry\+Size}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00154}{set\+RAMShuffle()}}.
+
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionWisard_a4bfafa888b990804d754feb76044b679_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionWisard_a6a25655a9cb15452b468a13dc4ed2858}\index{RegressionWisard@{RegressionWisard}!checkEntrySize@{checkEntrySize}}
+\index{checkEntrySize@{checkEntrySize}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{checkEntrySize()}{checkEntrySize()}}
+{\footnotesize\ttfamily \label{classRegressionWisard_a6a25655a9cb15452b468a13dc4ed2858} 
+void Regression\+Wisard\+::check\+Entry\+Size (\begin{DoxyParamCaption}\item[{const int}]{entry}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Verifica o tamanho da entrada. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em entry} & Tamanho da entrada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00194}{194}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classRegressionWisard_a0b4ff031198660ee8239a94211a98cd0}{entrySize}}\ !=\ entry)\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ Exception(\textcolor{stringliteral}{"{}The\ entry\ size\ defined\ on\ creation\ of\ RAM\ is\ different\ of\ entry\ size\ given\ as\ input!"{}});}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00198\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionwisard_8cc_source_l00237}{entry\+Size}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00104}{predict()}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00089}{train()}}.
+
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionWisard_a6a25655a9cb15452b468a13dc4ed2858_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionWisard_a6104a1884a605d02e08042eaf2b70310}\index{RegressionWisard@{RegressionWisard}!checkMinZeroOne@{checkMinZeroOne}}
+\index{checkMinZeroOne@{checkMinZeroOne}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{checkMinZeroOne()}{checkMinZeroOne()}}
+{\footnotesize\ttfamily \label{classRegressionWisard_a6104a1884a605d02e08042eaf2b70310} 
+void Regression\+Wisard\+::check\+Min\+Zero\+One (\begin{DoxyParamCaption}\item[{int}]{min0}{, }\item[{int}]{min1}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Verifica os valores mínimos de zeros e uns. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em min0} & Valor mínimo de zeros. \\
+\hline
+{\em min1} & Valor mínimo de uns. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00222}{222}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (min0\ +\ min1\ >\ \mbox{\hyperlink{classRegressionWisard_a7a40098add4d89932e44ff01868e0550}{addressSize}})\ \{}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ Exception(\textcolor{stringliteral}{"{}minZero\ +\ minOne\ is\ bigger\ than\ addressSize!"{}});}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00226\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionwisard_8cc_source_l00229}{address\+Size}}.
+
+\Hypertarget{classRegressionWisard_ab4d4796e3f62df331fee309301e0a681}\index{RegressionWisard@{RegressionWisard}!predict@{predict}}
+\index{predict@{predict}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{predict()}{predict()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classRegressionWisard_ab4d4796e3f62df331fee309301e0a681} 
+double Regression\+Wisard\+::predict (\begin{DoxyParamCaption}\item[{const Bin\+Input \&}]{input}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Faz a predição para uma entrada binária. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em input} & Entrada binária. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O valor predito. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00104}{104}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a6a25655a9cb15452b468a13dc4ed2858}{checkEntrySize}}(input.size());}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ std::vector<regression\_content\_t>\ outputRams(\mbox{\hyperlink{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f}{rams}}.size());}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f}{rams}}.size();\ i++)\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ outputRams[i]\ =\ \mbox{\hyperlink{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f}{rams}}[i].getVote(input);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classRegressionWisard_af7f452b5991bf8498d19cb3b5aea16af}{mean}}-\/>\mbox{\hyperlink{classMean_a6c725db111881910fcf4df655debbbc7}{calculate}}(outputRams);}
+\DoxyCodeLine{00111\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{classMean_a6c725db111881910fcf4df655debbbc7}{Mean\+::calculate()}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00194}{check\+Entry\+Size()}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00232}{mean}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00238}{rams}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00133}{calculate\+Fit()}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00118}{predict()}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionWisard_ab4d4796e3f62df331fee309301e0a681_cgraph}
+\end{center}
+\end{figure}
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionWisard_ab4d4796e3f62df331fee309301e0a681_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionWisard_ab2825bf4202b12029b489c1d4de342b8}\index{RegressionWisard@{RegressionWisard}!predict@{predict}}
+\index{predict@{predict}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{predict()}{predict()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classRegressionWisard_ab2825bf4202b12029b489c1d4de342b8} 
+std\+::vector$<$ double $>$ Regression\+Wisard\+::predict (\begin{DoxyParamCaption}\item[{const Data\+Set \&}]{dataset}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Faz a predição para um conjunto de dados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em dataset} & Conjunto de dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Vetor com os valores preditos. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00118}{118}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ std::vector<double>\ output(dataset.size());}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ dataset.size();\ i++)\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ output[i]\ =\ \mbox{\hyperlink{classRegressionWisard_ab4d4796e3f62df331fee309301e0a681}{predict}}(dataset[i]);}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ output;}
+\DoxyCodeLine{00126\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionwisard_8cc_source_l00104}{predict()}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionWisard_ab2825bf4202b12029b489c1d4de342b8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionWisard_ad003f5c063b032a1995ccfcf2682c549}\index{RegressionWisard@{RegressionWisard}!setRAMShuffle@{setRAMShuffle}}
+\index{setRAMShuffle@{setRAMShuffle}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{setRAMShuffle()}{setRAMShuffle()}}
+{\footnotesize\ttfamily \label{classRegressionWisard_ad003f5c063b032a1995ccfcf2682c549} 
+void Regression\+Wisard\+::set\+RAMShuffle (\begin{DoxyParamCaption}\item[{int}]{entry\+Size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Configura o embaralhamento das RAMs. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em entry\+Size} & Tamanho da entrada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00154}{154}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classRegressionWisard_a0b4ff031198660ee8239a94211a98cd0}{entrySize}}\ =\ \mbox{\hyperlink{classRegressionWisard_a0b4ff031198660ee8239a94211a98cd0}{entrySize}};}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a4bfafa888b990804d754feb76044b679}{checkAddressSize}}(\mbox{\hyperlink{classRegressionWisard_a0b4ff031198660ee8239a94211a98cd0}{entrySize}},\ \mbox{\hyperlink{classRegressionWisard_a7a40098add4d89932e44ff01868e0550}{addressSize}});}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classRegressionWisard_a103aa1c658a82b6fb5d17db4bc5cef4b}{mapping}}.size()\ ==\ 0)\ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numberOfRAMS\ =\ \mbox{\hyperlink{classRegressionWisard_a0b4ff031198660ee8239a94211a98cd0}{entrySize}}\ /\ \mbox{\hyperlink{classRegressionWisard_a7a40098add4d89932e44ff01868e0550}{addressSize}};}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ remain\ =\ \mbox{\hyperlink{classRegressionWisard_a0b4ff031198660ee8239a94211a98cd0}{entrySize}}\ \%\ \mbox{\hyperlink{classRegressionWisard_a7a40098add4d89932e44ff01868e0550}{addressSize}};}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ indexesSize\ =\ \mbox{\hyperlink{classRegressionWisard_a0b4ff031198660ee8239a94211a98cd0}{entrySize}};}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classRegressionWisard_aa667b0e3eb449edf55101e21b9e81047}{completeAddressing}}\ \&\&\ remain\ >\ 0)\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ numberOfRAMS++;}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ indexesSize\ +=\ \mbox{\hyperlink{classRegressionWisard_a7a40098add4d89932e44ff01868e0550}{addressSize}}\ -\/\ remain;}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f}{rams}}.resize(numberOfRAMS);}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a103aa1c658a82b6fb5d17db4bc5cef4b}{mapping}}.resize(indexesSize);}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classRegressionWisard_a0b4ff031198660ee8239a94211a98cd0}{entrySize}};\ i++)\ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a103aa1c658a82b6fb5d17db4bc5cef4b}{mapping}}[i]\ =\ i;}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ \mbox{\hyperlink{classRegressionWisard_a0b4ff031198660ee8239a94211a98cd0}{entrySize}};\ i\ <\ \mbox{\hyperlink{classRegressionWisard_a103aa1c658a82b6fb5d17db4bc5cef4b}{mapping}}.size();\ i++)\ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a103aa1c658a82b6fb5d17db4bc5cef4b}{mapping}}[i]\ =\ randint(0,\ \mbox{\hyperlink{classRegressionWisard_a0b4ff031198660ee8239a94211a98cd0}{entrySize}}\ -\/\ 1,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classRegressionWisard_a218ec296378e06b77f337de4c99e315a}{orderedMapping}})\ \{}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ random\_shuffle(\mbox{\hyperlink{classRegressionWisard_a103aa1c658a82b6fb5d17db4bc5cef4b}{mapping}}.begin(),\ \mbox{\hyperlink{classRegressionWisard_a103aa1c658a82b6fb5d17db4bc5cef4b}{mapping}}.end());}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f}{rams}}.resize(\mbox{\hyperlink{classRegressionWisard_a103aa1c658a82b6fb5d17db4bc5cef4b}{mapping}}.size()\ /\ \mbox{\hyperlink{classRegressionWisard_a7a40098add4d89932e44ff01868e0550}{addressSize}});}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f}{rams}}.size();\ i++)\ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<int>\ subIndexes(\mbox{\hyperlink{classRegressionWisard_a103aa1c658a82b6fb5d17db4bc5cef4b}{mapping}}.begin()\ +\ (((\textcolor{keywordtype}{int})i)\ *\ \mbox{\hyperlink{classRegressionWisard_a7a40098add4d89932e44ff01868e0550}{addressSize}}),\ \mbox{\hyperlink{classRegressionWisard_a103aa1c658a82b6fb5d17db4bc5cef4b}{mapping}}.begin()\ +\ ((((\textcolor{keywordtype}{int})i)\ +\ 1)\ *\ \mbox{\hyperlink{classRegressionWisard_a7a40098add4d89932e44ff01868e0550}{addressSize}}));}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f}{rams}}[i]\ =\ \mbox{\hyperlink{classRegressionRAM}{RegressionRAM}}(subIndexes,\ \mbox{\hyperlink{classRegressionWisard_a19bf9ed20712adaa43cff5f46985ad0f}{minZero}},\ \mbox{\hyperlink{classRegressionWisard_a4d8ca9f91145bca9cccf256b75a79ab0}{minOne}});}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00188\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionwisard_8cc_source_l00229}{address\+Size}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00205}{check\+Address\+Size()}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00230}{complete\+Addressing}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00237}{entry\+Size}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00239}{mapping}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00234}{min\+One}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00233}{min\+Zero}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00231}{ordered\+Mapping}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00238}{rams}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00089}{train()}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionWisard_ad003f5c063b032a1995ccfcf2682c549_cgraph}
+\end{center}
+\end{figure}
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionWisard_ad003f5c063b032a1995ccfcf2682c549_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionWisard_a125bffa9cf4806492f2b2cf96a3932b0}\index{RegressionWisard@{RegressionWisard}!train@{train}}
+\index{train@{train}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{train()}{train()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classRegressionWisard_a125bffa9cf4806492f2b2cf96a3932b0} 
+void Regression\+Wisard\+::train (\begin{DoxyParamCaption}\item[{const Bin\+Input \&}]{input}{, }\item[{const double}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Treina o modelo com uma entrada binária e um valor y. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em input} & Entrada binária. \\
+\hline
+{\em y} & Valor associado à entrada. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00089}{89}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f}{rams}}.empty())\ \mbox{\hyperlink{classRegressionWisard_ad003f5c063b032a1995ccfcf2682c549}{setRAMShuffle}}(input.size());}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a6a25655a9cb15452b468a13dc4ed2858}{checkEntrySize}}(input.size());}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a42982f590753efc85fd6f52081dccfa6}{numberOfTrainings}}++;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f}{rams}}.size();\ i++)\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f}{rams}}[i].train(input,\ y);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00097\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionwisard_8cc_source_l00194}{check\+Entry\+Size()}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00236}{number\+Of\+Trainings}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00238}{rams}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00154}{set\+RAMShuffle()}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionWisard_a125bffa9cf4806492f2b2cf96a3932b0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRegressionWisard_a11970036606a16938821722fb3af53ee}\index{RegressionWisard@{RegressionWisard}!train@{train}}
+\index{train@{train}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{train()}{train()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classRegressionWisard_a11970036606a16938821722fb3af53ee} 
+void Regression\+Wisard\+::train (\begin{DoxyParamCaption}\item[{const Data\+Set \&}]{dataset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Treina o modelo com um conjunto de dados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em dataset} & Conjunto de dados utilizado para o treinamento. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00071}{71}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ dataset.size();\ i++)\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a11970036606a16938821722fb3af53ee}{train}}(dataset[i],\ dataset.getY(i));}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{classRegressionWisard_a2d96d1e6bb01d4aed4e8f5cb40510596}{steps}};\ j++)\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ dataset.size();\ i++)\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_a2f22f241b281ab6a0e4cf1cfb9335bb4}{calculateFit}}(dataset[i],\ dataset.getY(i));}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRegressionWisard_ac37f1d1c653928a21c5d3588c3837c9b}{applyFit}}();}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{regressionwisard_8cc_source_l00143}{apply\+Fit()}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00133}{calculate\+Fit()}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00235}{steps}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00071}{train()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00071}{train()}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRegressionWisard_a11970036606a16938821722fb3af53ee_cgraph}
+\end{center}
+\end{figure}
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classRegressionWisard_a11970036606a16938821722fb3af53ee_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Documentação dos dados membro}
+\Hypertarget{classRegressionWisard_a7a40098add4d89932e44ff01868e0550}\index{RegressionWisard@{RegressionWisard}!addressSize@{addressSize}}
+\index{addressSize@{addressSize}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{addressSize}{addressSize}}
+{\footnotesize\ttfamily \label{classRegressionWisard_a7a40098add4d89932e44ff01868e0550} 
+int Regression\+Wisard\+::address\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tamanho do endereço. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00229}{229}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00205}{check\+Address\+Size()}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00222}{check\+Min\+Zero\+One()}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00015}{Regression\+Wisard()}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00154}{set\+RAMShuffle()}}.
+
+\Hypertarget{classRegressionWisard_aa667b0e3eb449edf55101e21b9e81047}\index{RegressionWisard@{RegressionWisard}!completeAddressing@{completeAddressing}}
+\index{completeAddressing@{completeAddressing}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{completeAddressing}{completeAddressing}}
+{\footnotesize\ttfamily \label{classRegressionWisard_aa667b0e3eb449edf55101e21b9e81047} 
+bool Regression\+Wisard\+::complete\+Addressing\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Endereçamento completo. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00230}{230}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00015}{Regression\+Wisard()}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00154}{set\+RAMShuffle()}}.
+
+\Hypertarget{classRegressionWisard_a0b4ff031198660ee8239a94211a98cd0}\index{RegressionWisard@{RegressionWisard}!entrySize@{entrySize}}
+\index{entrySize@{entrySize}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{entrySize}{entrySize}}
+{\footnotesize\ttfamily \label{classRegressionWisard_a0b4ff031198660ee8239a94211a98cd0} 
+int Regression\+Wisard\+::entry\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tamanho da entrada. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00237}{237}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00205}{check\+Address\+Size()}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00194}{check\+Entry\+Size()}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00015}{Regression\+Wisard()}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00154}{set\+RAMShuffle()}}.
+
+\Hypertarget{classRegressionWisard_a103aa1c658a82b6fb5d17db4bc5cef4b}\index{RegressionWisard@{RegressionWisard}!mapping@{mapping}}
+\index{mapping@{mapping}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{mapping}{mapping}}
+{\footnotesize\ttfamily \label{classRegressionWisard_a103aa1c658a82b6fb5d17db4bc5cef4b} 
+std\+::vector$<$int$>$ Regression\+Wisard\+::mapping\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mapeamento dos índices. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00239}{239}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00015}{Regression\+Wisard()}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00154}{set\+RAMShuffle()}}.
+
+\Hypertarget{classRegressionWisard_af7f452b5991bf8498d19cb3b5aea16af}\index{RegressionWisard@{RegressionWisard}!mean@{mean}}
+\index{mean@{mean}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{mean}{mean}}
+{\footnotesize\ttfamily \label{classRegressionWisard_af7f452b5991bf8498d19cb3b5aea16af} 
+\mbox{\hyperlink{classMean}{Mean}}\texorpdfstring{$\ast$}{*} Regression\+Wisard\+::mean\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Objeto para cálculo de média. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00232}{232}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00104}{predict()}}.
+
+\Hypertarget{classRegressionWisard_a4d8ca9f91145bca9cccf256b75a79ab0}\index{RegressionWisard@{RegressionWisard}!minOne@{minOne}}
+\index{minOne@{minOne}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{minOne}{minOne}}
+{\footnotesize\ttfamily \label{classRegressionWisard_a4d8ca9f91145bca9cccf256b75a79ab0} 
+int Regression\+Wisard\+::min\+One\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Número mínimo de uns. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00234}{234}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00015}{Regression\+Wisard()}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00154}{set\+RAMShuffle()}}.
+
+\Hypertarget{classRegressionWisard_a19bf9ed20712adaa43cff5f46985ad0f}\index{RegressionWisard@{RegressionWisard}!minZero@{minZero}}
+\index{minZero@{minZero}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{minZero}{minZero}}
+{\footnotesize\ttfamily \label{classRegressionWisard_a19bf9ed20712adaa43cff5f46985ad0f} 
+int Regression\+Wisard\+::min\+Zero\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Número mínimo de zeros. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00233}{233}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00015}{Regression\+Wisard()}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00154}{set\+RAMShuffle()}}.
+
+\Hypertarget{classRegressionWisard_a42982f590753efc85fd6f52081dccfa6}\index{RegressionWisard@{RegressionWisard}!numberOfTrainings@{numberOfTrainings}}
+\index{numberOfTrainings@{numberOfTrainings}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{numberOfTrainings}{numberOfTrainings}}
+{\footnotesize\ttfamily \label{classRegressionWisard_a42982f590753efc85fd6f52081dccfa6} 
+int Regression\+Wisard\+::number\+Of\+Trainings\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Número de treinamentos. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00236}{236}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00015}{Regression\+Wisard()}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00089}{train()}}.
+
+\Hypertarget{classRegressionWisard_a218ec296378e06b77f337de4c99e315a}\index{RegressionWisard@{RegressionWisard}!orderedMapping@{orderedMapping}}
+\index{orderedMapping@{orderedMapping}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{orderedMapping}{orderedMapping}}
+{\footnotesize\ttfamily \label{classRegressionWisard_a218ec296378e06b77f337de4c99e315a} 
+bool Regression\+Wisard\+::ordered\+Mapping\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mapeamento ordenado. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00231}{231}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00015}{Regression\+Wisard()}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00154}{set\+RAMShuffle()}}.
+
+\Hypertarget{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f}\index{RegressionWisard@{RegressionWisard}!rams@{rams}}
+\index{rams@{rams}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{rams}{rams}}
+{\footnotesize\ttfamily \label{classRegressionWisard_a335eab19f2332e0bfb09157f184de16f} 
+std\+::vector$<$\mbox{\hyperlink{classRegressionRAM}{Regression\+RAM}}$>$ Regression\+Wisard\+::rams\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vetor de RAMs de regressão. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00238}{238}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00143}{apply\+Fit()}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00133}{calculate\+Fit()}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00104}{predict()}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00015}{Regression\+Wisard()}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00154}{set\+RAMShuffle()}}, \mbox{\hyperlink{regressionwisard_8cc_source_l00089}{train()}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00063}{\texorpdfstring{$\sim$}{\string~}\+Regression\+Wisard()}}.
+
+\Hypertarget{classRegressionWisard_a2d96d1e6bb01d4aed4e8f5cb40510596}\index{RegressionWisard@{RegressionWisard}!steps@{steps}}
+\index{steps@{steps}!RegressionWisard@{RegressionWisard}}
+\doxysubsubsection{\texorpdfstring{steps}{steps}}
+{\footnotesize\ttfamily \label{classRegressionWisard_a2d96d1e6bb01d4aed4e8f5cb40510596} 
+int Regression\+Wisard\+::steps\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Número de passos. 
+
+
+
+Definido na linha \mbox{\hyperlink{regressionwisard_8cc_source_l00235}{235}} do ficheiro \mbox{\hyperlink{regressionwisard_8cc_source}{regressionwisard.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{regressionwisard_8cc_source_l00015}{Regression\+Wisard()}} e \mbox{\hyperlink{regressionwisard_8cc_source_l00071}{train()}}.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+src/models/regressionwisard/\mbox{\hyperlink{regressionwisard_8cc}{regressionwisard.\+cc}}\end{DoxyCompactItemize}

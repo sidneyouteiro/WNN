@@ -1,0 +1,6 @@
+<map id="Discriminator::rank" name="Discriminator::rank">
+<area shape="rect" id="Node000001" title="Ranks the given vector of boolean data." alt="" coords="5,29,137,55"/>
+<area shape="rect" id="Node000002" href="$classDiscriminator.html#a76a9e6c46205fbb22e7c71fee3267582" title="Ranks the given data." alt="" coords="185,29,317,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,39,171,39,171,45,138,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="222,31,215,21,219,11,231,5,251,3,276,6,286,15,283,19,274,11,251,8,232,10,223,15,221,20,226,28"/>
+</map>

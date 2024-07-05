@@ -1,244 +1,648 @@
-\hypertarget{classDiscriminator}{}\doxysection{Discriminator Class Reference}
-\label{classDiscriminator}\index{Discriminator@{Discriminator}}
+\doxysection{Referência à classe Discriminator}
+\hypertarget{classDiscriminator}{}\label{classDiscriminator}\index{Discriminator@{Discriminator}}
 
 
 A class to implement a discriminator using bit arrays and pseudo-\/random mappings.  
 
 
-\doxysubsection*{Public Member Functions}
+
+
+Diagrama de colaboração para Discriminator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classDiscriminator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classDiscriminator_a18f6a5ef1ceca3e187cc495a77a8141c}{Discriminator}} (int \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entry\+Size}}, int \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tuple\+Size}})
-\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classDiscriminator}{Discriminator}} class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classDiscriminator_a85cac98c07ece485461dd6f55e112adb}{$\sim$\+Discriminator}} ()
-\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classDiscriminator}{Discriminator}} class. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classDiscriminator_ab8048d9b2da18a14532e90460c5c92a8}{train}} (bitarray\+\_\+t $\ast$data)
-\begin{DoxyCompactList}\small\item\em Trains the discriminator with the given data. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classDiscriminator_a53db61dec9f645573d5aa577344431a4}{train}} (const vector$<$ bool $>$ \&data)
-\begin{DoxyCompactList}\small\item\em Trains the discriminator with the given vector of boolean data. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}{rank}} (bitarray\+\_\+t $\ast$data)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classDiscriminator}{Discriminator} class. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDiscriminator_a7050bbf5d9b52318fdb8c6387ca7a0ac}{get\+Num\+Rams}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of RAMs. \end{DoxyCompactList}\item 
+long int \mbox{\hyperlink{classDiscriminator_ad65569d300243be32d4f7cde25ed71b4}{get\+Ram\+Bits}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of bits in a RAM. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDiscriminator_a2651a5132e8d8554d47f1406820f4062}{get\+Tuple\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Gets the size of a tuple. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDiscriminator_ab2ac35f380491c1ade7032c7269a0e65}{info}} ()
+\begin{DoxyCompactList}\small\item\em Displays information about the discriminator. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}{rank}} (bitarray\+\_\+t \texorpdfstring{$\ast$}{*}data)
 \begin{DoxyCompactList}\small\item\em Ranks the given data. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classDiscriminator_a1aa42beb010bc86dd9418db8b294e78c}{rank}} (const vector$<$ bool $>$ \&data)
 \begin{DoxyCompactList}\small\item\em Ranks the given vector of boolean data. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classDiscriminator_ab2ac35f380491c1ade7032c7269a0e65}{info}} ()
-\begin{DoxyCompactList}\small\item\em Displays information about the discriminator. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classDiscriminator_a2d97f91f8097cd8581f5c79b34bd0150}{reset}} ()
 \begin{DoxyCompactList}\small\item\em Resets the discriminator. \end{DoxyCompactList}\item 
-long int \mbox{\hyperlink{classDiscriminator_ad65569d300243be32d4f7cde25ed71b4}{get\+Ram\+Bits}} ()
-\begin{DoxyCompactList}\small\item\em Gets the number of bits in a RAM. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classDiscriminator_a7050bbf5d9b52318fdb8c6387ca7a0ac}{get\+Num\+Rams}} ()
-\begin{DoxyCompactList}\small\item\em Gets the number of RAMs. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classDiscriminator_a2651a5132e8d8554d47f1406820f4062}{get\+Tuple\+Size}} ()
-\begin{DoxyCompactList}\small\item\em Gets the size of a tuple. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
+void \mbox{\hyperlink{classDiscriminator_ab8048d9b2da18a14532e90460c5c92a8}{train}} (bitarray\+\_\+t \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Trains the discriminator with the given data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDiscriminator_a53db61dec9f645573d5aa577344431a4}{train}} (const vector$<$ bool $>$ \&data)
+\begin{DoxyCompactList}\small\item\em Trains the discriminator with the given vector of boolean data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDiscriminator_a85cac98c07ece485461dd6f55e112adb}{\texorpdfstring{$\sim$}{\string~}\+Discriminator}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classDiscriminator}{Discriminator} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entry\+Size}}
 \item 
-int \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tuple\+Size}}
-\item 
 int \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{num\+Rams}}
 \item 
-int $\ast$ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuples\+Mapping}}
+bitarray\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}
 \item 
-bitarray\+\_\+t $\ast$ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}
+int \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tuple\+Size}}
+\item 
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuples\+Mapping}}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Descrição detalhada}
 A class to implement a discriminator using bit arrays and pseudo-\/random mappings. 
 
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classDiscriminator_a18f6a5ef1ceca3e187cc495a77a8141c}\label{classDiscriminator_a18f6a5ef1ceca3e187cc495a77a8141c}} 
-\index{Discriminator@{Discriminator}!Discriminator@{Discriminator}}
+Definido na linha \mbox{\hyperlink{discriminator_8cc_source_l00013}{13}} do ficheiro \mbox{\hyperlink{discriminator_8cc_source}{discriminator.\+cc}}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\Hypertarget{classDiscriminator_a18f6a5ef1ceca3e187cc495a77a8141c}\index{Discriminator@{Discriminator}!Discriminator@{Discriminator}}
 \index{Discriminator@{Discriminator}!Discriminator@{Discriminator}}
 \doxysubsubsection{\texorpdfstring{Discriminator()}{Discriminator()}}
-{\footnotesize\ttfamily Discriminator\+::\+Discriminator (\begin{DoxyParamCaption}\item[{int}]{entry\+Size,  }\item[{int}]{tuple\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classDiscriminator_a18f6a5ef1ceca3e187cc495a77a8141c} 
+Discriminator\+::\+Discriminator (\begin{DoxyParamCaption}\item[{int}]{entry\+Size}{, }\item[{int}]{tuple\+Size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Constructor for the \mbox{\hyperlink{classDiscriminator}{Discriminator}} class. 
+Constructor for the \doxylink{classDiscriminator}{Discriminator} class. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em entry\+Size} & Size of the entry. \\
 \hline
 {\em tuple\+Size} & Size of the tuple. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classDiscriminator_a85cac98c07ece485461dd6f55e112adb}\label{classDiscriminator_a85cac98c07ece485461dd6f55e112adb}} 
-\index{Discriminator@{Discriminator}!````~Discriminator@{$\sim$Discriminator}}
-\index{````~Discriminator@{$\sim$Discriminator}!Discriminator@{Discriminator}}
-\doxysubsubsection{\texorpdfstring{$\sim$Discriminator()}{~Discriminator()}}
-{\footnotesize\ttfamily Discriminator\+::$\sim$\+Discriminator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+Definido na linha \mbox{\hyperlink{discriminator_8cc_source_l00020}{20}} do ficheiro \mbox{\hyperlink{discriminator_8cc_source}{discriminator.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}}(\mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}}),\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}}(\mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}})}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculates\ the\ number\ of\ RAMs\ needed}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}}\ =\ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}}/\mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}}\ +\ ((\mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}}\%\mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}})\ >\ 0);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//calloc\ retorna\ um\ *\ void}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{//(int\ *)\ -\/>\ casting/troca\ de\ tipo\ }}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Troca\ o\ *\ void\ para\ *\ int,\ pois\ vamos\ lidar\ com\ inteiros}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Bem\ como\ inicializa\ o\ array\ com\ 0}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}\ =\ (\textcolor{keywordtype}{int}\ *)calloc(\mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}},\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Generating\ pseudo-\/random\ mapping}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Percorre\ esse\ array}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}};\ i++)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//mapeia\ cada\ tupla,\ neste\ caso\ é\ parecido\ com\ uma\ enumeração}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}[i]\ =\ i;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//embaralha}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ std::shuffle(\mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}},\ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}\ +\ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}},\ std::default\_random\_engine(std::random\_device\{\}()));}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Aloca\ memória\ ram}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}\ =\ (bitarray\_t\ *)\ calloc(\mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}},\ \textcolor{keyword}{sizeof}(bitarray\_t));}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ num\_bits\ =\ (1UL\ <<\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}});\textcolor{comment}{//2\string^tuple\_size}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ bitarray\_size\ =\ (num\_bits\ >>\ 6);\ \textcolor{comment}{//divide\ by\ 64\ bits}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//verifica\ bits\ restantes}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ bitarray\_size\ +=\ ((bitarray\_size\ \&\ 0x3F)\ >\ 0);\ \textcolor{comment}{//ceil\ quotient.\ If\ remainder\ >\ 0\ then\ sum\ by\ 1}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//percorre\ as\ rams\ alocadas}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//preenchendo\ os\ elementos\ com\ informações}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{comment}{//várias\ rams\ iguais}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{//mesmas\ propriedades}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}};\ i++)\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].num\_bits\ =\ num\_bits;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].bitarray\_size\ =\ bitarray\_size;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].bitarray\ =\ (uint64\_t\ *)calloc(\mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].bitarray\_size,\ \textcolor{keyword}{sizeof}(uint64\_t));}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{discriminator_8cc_source_l00270}{entry\+Size}}, \mbox{\hyperlink{discriminator_8cc_source_l00272}{num\+Rams}}, \mbox{\hyperlink{discriminator_8cc_source_l00274}{rams}}, \mbox{\hyperlink{discriminator_8cc_source_l00271}{tuple\+Size}} e \mbox{\hyperlink{discriminator_8cc_source_l00273}{tuples\+Mapping}}.
+
+\Hypertarget{classDiscriminator_a85cac98c07ece485461dd6f55e112adb}\index{Discriminator@{Discriminator}!````~Discriminator@{\texorpdfstring{$\sim$}{\string~}Discriminator}}
+\index{````~Discriminator@{\texorpdfstring{$\sim$}{\string~}Discriminator}!Discriminator@{Discriminator}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Discriminator()}{\string~Discriminator()}}
+{\footnotesize\ttfamily \label{classDiscriminator_a85cac98c07ece485461dd6f55e112adb} 
+Discriminator\+::\texorpdfstring{$\sim$}{\string~}\+Discriminator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Destructor for the \mbox{\hyperlink{classDiscriminator}{Discriminator}} class. 
+Destructor for the \doxylink{classDiscriminator}{Discriminator} class. 
 
 
 
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classDiscriminator_a7050bbf5d9b52318fdb8c6387ca7a0ac}\label{classDiscriminator_a7050bbf5d9b52318fdb8c6387ca7a0ac}} 
-\index{Discriminator@{Discriminator}!getNumRams@{getNumRams}}
+Definido na linha \mbox{\hyperlink{discriminator_8cc_source_l00064}{64}} do ficheiro \mbox{\hyperlink{discriminator_8cc_source}{discriminator.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//cout\ <<\ "{}Destructor"{}\ <<\ endl;}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ free(\mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}});}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ free(\mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}});}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{discriminator_8cc_source_l00274}{rams}} e \mbox{\hyperlink{discriminator_8cc_source_l00273}{tuples\+Mapping}}.
+
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classDiscriminator_a7050bbf5d9b52318fdb8c6387ca7a0ac}\index{Discriminator@{Discriminator}!getNumRams@{getNumRams}}
 \index{getNumRams@{getNumRams}!Discriminator@{Discriminator}}
 \doxysubsubsection{\texorpdfstring{getNumRams()}{getNumRams()}}
-{\footnotesize\ttfamily int Discriminator\+::get\+Num\+Rams (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classDiscriminator_a7050bbf5d9b52318fdb8c6387ca7a0ac} 
+int Discriminator\+::get\+Num\+Rams (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Gets the number of RAMs. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Retorna}
 Number of RAMs. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classDiscriminator_ad65569d300243be32d4f7cde25ed71b4}\label{classDiscriminator_ad65569d300243be32d4f7cde25ed71b4}} 
-\index{Discriminator@{Discriminator}!getRamBits@{getRamBits}}
+
+
+Definido na linha \mbox{\hyperlink{discriminator_8cc_source_l00255}{255}} do ficheiro \mbox{\hyperlink{discriminator_8cc_source}{discriminator.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}};}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{discriminator_8cc_source_l00272}{num\+Rams}}.
+
+\Hypertarget{classDiscriminator_ad65569d300243be32d4f7cde25ed71b4}\index{Discriminator@{Discriminator}!getRamBits@{getRamBits}}
 \index{getRamBits@{getRamBits}!Discriminator@{Discriminator}}
 \doxysubsubsection{\texorpdfstring{getRamBits()}{getRamBits()}}
-{\footnotesize\ttfamily long int Discriminator\+::get\+Ram\+Bits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classDiscriminator_ad65569d300243be32d4f7cde25ed71b4} 
+long int Discriminator\+::get\+Ram\+Bits (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Gets the number of bits in a RAM. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Retorna}
 Number of bits in a RAM. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classDiscriminator_a2651a5132e8d8554d47f1406820f4062}\label{classDiscriminator_a2651a5132e8d8554d47f1406820f4062}} 
-\index{Discriminator@{Discriminator}!getTupleSize@{getTupleSize}}
+
+
+Definido na linha \mbox{\hyperlink{discriminator_8cc_source_l00246}{246}} do ficheiro \mbox{\hyperlink{discriminator_8cc_source}{discriminator.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[0].num\_bits;}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{discriminator_8cc_source_l00274}{rams}}.
+
+\Hypertarget{classDiscriminator_a2651a5132e8d8554d47f1406820f4062}\index{Discriminator@{Discriminator}!getTupleSize@{getTupleSize}}
 \index{getTupleSize@{getTupleSize}!Discriminator@{Discriminator}}
 \doxysubsubsection{\texorpdfstring{getTupleSize()}{getTupleSize()}}
-{\footnotesize\ttfamily int Discriminator\+::get\+Tuple\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classDiscriminator_a2651a5132e8d8554d47f1406820f4062} 
+int Discriminator\+::get\+Tuple\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Gets the size of a tuple. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Retorna}
 Size of a tuple. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classDiscriminator_ab2ac35f380491c1ade7032c7269a0e65}\label{classDiscriminator_ab2ac35f380491c1ade7032c7269a0e65}} 
-\index{Discriminator@{Discriminator}!info@{info}}
+
+
+Definido na linha \mbox{\hyperlink{discriminator_8cc_source_l00264}{264}} do ficheiro \mbox{\hyperlink{discriminator_8cc_source}{discriminator.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}};}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{discriminator_8cc_source_l00271}{tuple\+Size}}.
+
+\Hypertarget{classDiscriminator_ab2ac35f380491c1ade7032c7269a0e65}\index{Discriminator@{Discriminator}!info@{info}}
 \index{info@{info}!Discriminator@{Discriminator}}
 \doxysubsubsection{\texorpdfstring{info()}{info()}}
-{\footnotesize\ttfamily void Discriminator\+::info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classDiscriminator_ab2ac35f380491c1ade7032c7269a0e65} 
+void Discriminator\+::info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Displays information about the discriminator. 
 
-\mbox{\Hypertarget{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}\label{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}} 
-\index{Discriminator@{Discriminator}!rank@{rank}}
+
+
+Definido na linha \mbox{\hyperlink{discriminator_8cc_source_l00201}{201}} do ficheiro \mbox{\hyperlink{discriminator_8cc_source}{discriminator.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ totalBits\ =\ 0;}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Entry\ =\ "{}}\ <<\ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}}\ <<\ \textcolor{stringliteral}{"{},\ Tuples\ =\ "{}}\ <<\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}}\ <<\ \textcolor{stringliteral}{"{},\ RAMs\ =\ "{}}\ <<\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}}\ <<\ \textcolor{stringliteral}{"{},\ RAM\ size\ =\ "{}}\ <<\ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[0].num\_bits\ <<\ \textcolor{stringliteral}{"{}\ bits"{}}\ <<\ endl;}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}};\ i++)\ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ cout\ <<\ "{}RAM\ "{}\ <<\ i\ <<\ "{}\ -\/\ "{}\ <<\ rams[i].num\_bits\ <<\ "{}\ bits"{}\ <<\ endl;}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*for\ (j\ =\ 0;\ j\ <\ rams[i].bitarray\_size;\ j++)\ \{}}
+\DoxyCodeLine{00211\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ rams[i].bitarray[j]\ <<\ "{},\ "{};}}
+\DoxyCodeLine{00212\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00213\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ endl;*/}}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ totalBits\ +=\ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].num\_bits;}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Total\ Bits\ =\ "{}}\ <<\ totalBits\ <<\ endl;}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{discriminator_8cc_source_l00270}{entry\+Size}}, \mbox{\hyperlink{discriminator_8cc_source_l00272}{num\+Rams}}, \mbox{\hyperlink{discriminator_8cc_source_l00274}{rams}} e \mbox{\hyperlink{discriminator_8cc_source_l00271}{tuple\+Size}}.
+
+\Hypertarget{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}\index{Discriminator@{Discriminator}!rank@{rank}}
 \index{rank@{rank}!Discriminator@{Discriminator}}
 \doxysubsubsection{\texorpdfstring{rank()}{rank()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily int Discriminator\+::rank (\begin{DoxyParamCaption}\item[{bitarray\+\_\+t $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582} 
+int Discriminator\+::rank (\begin{DoxyParamCaption}\item[{bitarray\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Ranks the given data. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Parâmetros}
 \mbox{\texttt{ in}}  & {\em data} & Pointer to bitarray\+\_\+t data. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Retorna}
 Rank of the data. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classDiscriminator_a1aa42beb010bc86dd9418db8b294e78c}\label{classDiscriminator_a1aa42beb010bc86dd9418db8b294e78c}} 
-\index{Discriminator@{Discriminator}!rank@{rank}}
+
+
+Definido na linha \mbox{\hyperlink{discriminator_8cc_source_l00141}{141}} do ficheiro \mbox{\hyperlink{discriminator_8cc_source}{discriminator.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}{rank}}\ =\ 0;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ k\ =\ 0,\ i1,\ i2;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ addr\_pos;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ uint64\_t\ addr;}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}};\ i++)\ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\_pos\ =\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}}-\/1;}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\ =\ 0;}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ j\ <\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}};\ j++)\ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i1\ =\ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}[k]\ >>\ 6;\textcolor{comment}{//Divide\ by\ 64\ to\ find\ the\ bitarray\ id}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i2\ =\ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}[k]\ \&\ 0x3F;\textcolor{comment}{//Obtain\ remainder\ to\ access\ the\ bitarray\ position}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\ |=\ (((data-\/>bitarray[i1]\ \&\ (1UL\ <<\ i2))\ >>\ i2)\ <<\ addr\_pos);}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\_pos-\/-\/;\ \ \ \ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k++;}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i1\ =\ addr\ >>\ 6;\textcolor{comment}{//Divide\ by\ 64\ to\ find\ the\ bitarray\ id}}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i2\ =\ addr\ \&\ 0x3F;\textcolor{comment}{//Obtain\ remainder\ to\ access\ the\ bitarray\ position}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}{rank}}\ +=\ (\mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].bitarray[i1]\ \&\ (1UL\ <<\ i2))\ >>\ i2;\ }
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}{rank}};}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{discriminator_8cc_source_l00272}{num\+Rams}}, \mbox{\hyperlink{discriminator_8cc_source_l00274}{rams}}, \mbox{\hyperlink{discriminator_8cc_source_l00141}{rank()}}, \mbox{\hyperlink{discriminator_8cc_source_l00271}{tuple\+Size}} e \mbox{\hyperlink{discriminator_8cc_source_l00273}{tuples\+Mapping}}.
+
+
+
+Referenciado por \mbox{\hyperlink{discriminator_8cc_source_l00141}{rank()}} e \mbox{\hyperlink{discriminator_8cc_source_l00174}{rank()}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582_cgraph}
+\end{center}
+\end{figure}
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDiscriminator_a1aa42beb010bc86dd9418db8b294e78c}\index{Discriminator@{Discriminator}!rank@{rank}}
 \index{rank@{rank}!Discriminator@{Discriminator}}
 \doxysubsubsection{\texorpdfstring{rank()}{rank()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily int Discriminator\+::rank (\begin{DoxyParamCaption}\item[{const vector$<$ bool $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classDiscriminator_a1aa42beb010bc86dd9418db8b294e78c} 
+int Discriminator\+::rank (\begin{DoxyParamCaption}\item[{const vector$<$ bool $>$ \&}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Ranks the given vector of boolean data. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Parâmetros}
 \mbox{\texttt{ in}}  & {\em data} & Vector of boolean data. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Retorna}
 Rank of the data. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classDiscriminator_a2d97f91f8097cd8581f5c79b34bd0150}\label{classDiscriminator_a2d97f91f8097cd8581f5c79b34bd0150}} 
-\index{Discriminator@{Discriminator}!reset@{reset}}
+
+
+Definido na linha \mbox{\hyperlink{discriminator_8cc_source_l00174}{174}} do ficheiro \mbox{\hyperlink{discriminator_8cc_source}{discriminator.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}{rank}}\ =\ 0;}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ k\ =\ 0,\ i1,\ i2;}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ addr\_pos;}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ uint64\_t\ addr;}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}};\ i++)\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\_pos\ =\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}}-\/1;}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\ =\ 0;}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ (j\ <\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}})\ \&\&\ (k\ <\ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}});\ j++)\ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\ |=\ (data[\mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}[k]]\ <<\ addr\_pos);}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\_pos-\/-\/;\ \ \ \ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k++;}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i1\ =\ addr\ >>\ 6;\textcolor{comment}{//Divide\ by\ 64\ to\ find\ the\ bitarray\ id}}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i2\ =\ addr\ \&\ 0x3F;\textcolor{comment}{//Obtain\ remainder\ to\ access\ the\ bitarray\ position}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}{rank}}\ +=\ (\mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].bitarray[i1]\ \&\ (1UL\ <<\ i2))\ >>\ i2;\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classDiscriminator_a76a9e6c46205fbb22e7c71fee3267582}{rank}};}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{discriminator_8cc_source_l00270}{entry\+Size}}, \mbox{\hyperlink{discriminator_8cc_source_l00272}{num\+Rams}}, \mbox{\hyperlink{discriminator_8cc_source_l00274}{rams}}, \mbox{\hyperlink{discriminator_8cc_source_l00141}{rank()}}, \mbox{\hyperlink{discriminator_8cc_source_l00271}{tuple\+Size}} e \mbox{\hyperlink{discriminator_8cc_source_l00273}{tuples\+Mapping}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classDiscriminator_a1aa42beb010bc86dd9418db8b294e78c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDiscriminator_a2d97f91f8097cd8581f5c79b34bd0150}\index{Discriminator@{Discriminator}!reset@{reset}}
 \index{reset@{reset}!Discriminator@{Discriminator}}
 \doxysubsubsection{\texorpdfstring{reset()}{reset()}}
-{\footnotesize\ttfamily void Discriminator\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classDiscriminator_a2d97f91f8097cd8581f5c79b34bd0150} 
+void Discriminator\+::reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Resets the discriminator. 
 
-\mbox{\Hypertarget{classDiscriminator_ab8048d9b2da18a14532e90460c5c92a8}\label{classDiscriminator_ab8048d9b2da18a14532e90460c5c92a8}} 
-\index{Discriminator@{Discriminator}!train@{train}}
+
+
+Definido na linha \mbox{\hyperlink{discriminator_8cc_source_l00224}{224}} do ficheiro \mbox{\hyperlink{discriminator_8cc_source}{discriminator.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Generating\ pseudo-\/random\ mapping}}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j;}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}};\ i++)\ \{}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}[i]\ =\ i;}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ std::shuffle(\mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}},\ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}\ +\ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}},\ std::default\_random\_engine(std::random\_device\{\}()));}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}};\ i++)\ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ j\ <\ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].bitarray\_size;\ j++)\ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].bitarray[j]\ =\ 0;}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ \ }
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{discriminator_8cc_source_l00270}{entry\+Size}}, \mbox{\hyperlink{discriminator_8cc_source_l00272}{num\+Rams}}, \mbox{\hyperlink{discriminator_8cc_source_l00274}{rams}} e \mbox{\hyperlink{discriminator_8cc_source_l00273}{tuples\+Mapping}}.
+
+\Hypertarget{classDiscriminator_ab8048d9b2da18a14532e90460c5c92a8}\index{Discriminator@{Discriminator}!train@{train}}
 \index{train@{train}!Discriminator@{Discriminator}}
 \doxysubsubsection{\texorpdfstring{train()}{train()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Discriminator\+::train (\begin{DoxyParamCaption}\item[{bitarray\+\_\+t $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classDiscriminator_ab8048d9b2da18a14532e90460c5c92a8} 
+void Discriminator\+::train (\begin{DoxyParamCaption}\item[{bitarray\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Trains the discriminator with the given data. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Parâmetros}
 \mbox{\texttt{ in}}  & {\em data} & Pointer to bitarray\+\_\+t data. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classDiscriminator_a53db61dec9f645573d5aa577344431a4}\label{classDiscriminator_a53db61dec9f645573d5aa577344431a4}} 
-\index{Discriminator@{Discriminator}!train@{train}}
+
+
+Definido na linha \mbox{\hyperlink{discriminator_8cc_source_l00075}{75}} do ficheiro \mbox{\hyperlink{discriminator_8cc_source}{discriminator.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//vars\ auxiliares}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ k\ =\ 0,\ i1,\ i2;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//addr\_pos?}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ addr\_pos;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ uint64\_t\ addr;}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//percorre\ o\ número\ de\ rams}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}};\ i++)\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//tupleSize\ -\/\ 1?}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\_pos\ =\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}}-\/1;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\ =\ 0;}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Percorre\ o\ tamanho\ da\ tupla??}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ j\ <\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}};\ j++)\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//arnazena\ a\ divisão\ de\ tuplesMapping[i]\ pro\ 64}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i1\ =\ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}[k]\ >>\ 6;\textcolor{comment}{//Divide\ by\ 64\ to\ find\ the\ bitarray\ id}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//armazena\ o\ restante\ para\ }}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i2\ =\ \mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}[k]\ \&\ 0x3F;\textcolor{comment}{//Obtain\ remainder\ to\ access\ the\ bitarray\ position}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//cria\ um\ espécie\ de\ endereço\ utilizando\ esta\ operação}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\ |=\ (((data-\/>bitarray[i1]\ \&\ (1UL\ <<\ i2))\ >>\ i2)\ <<\ addr\_pos);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//vai\ para\ a\ tupla\ anterior}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\_pos-\/-\/;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k++;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i1\ =\ addr\ >>\ 6;\textcolor{comment}{//Divide\ by\ 64\ to\ find\ the\ bitarray\ id}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i2\ =\ addr\ \&\ 0x3F;\textcolor{comment}{//Obtain\ remainder\ to\ access\ the\ bitarray\ position}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].bitarray[i1]\ |=\ (1UL\ <<\ i2);\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{discriminator_8cc_source_l00272}{num\+Rams}}, \mbox{\hyperlink{discriminator_8cc_source_l00274}{rams}}, \mbox{\hyperlink{discriminator_8cc_source_l00271}{tuple\+Size}} e \mbox{\hyperlink{discriminator_8cc_source_l00273}{tuples\+Mapping}}.
+
+\Hypertarget{classDiscriminator_a53db61dec9f645573d5aa577344431a4}\index{Discriminator@{Discriminator}!train@{train}}
 \index{train@{train}!Discriminator@{Discriminator}}
 \doxysubsubsection{\texorpdfstring{train()}{train()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Discriminator\+::train (\begin{DoxyParamCaption}\item[{const vector$<$ bool $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classDiscriminator_a53db61dec9f645573d5aa577344431a4} 
+void Discriminator\+::train (\begin{DoxyParamCaption}\item[{const vector$<$ bool $>$ \&}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Trains the discriminator with the given vector of boolean data. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Parâmetros}
 \mbox{\texttt{ in}}  & {\em data} & Vector of boolean data. \\
 \hline
 \end{DoxyParams}
 
 
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classDiscriminator_a54178a4935259476df0db5f29f686fec}\label{classDiscriminator_a54178a4935259476df0db5f29f686fec}} 
-\index{Discriminator@{Discriminator}!entrySize@{entrySize}}
+Definido na linha \mbox{\hyperlink{discriminator_8cc_source_l00112}{112}} do ficheiro \mbox{\hyperlink{discriminator_8cc_source}{discriminator.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ k\ =\ 0,\ i1,\ i2;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ addr\_pos;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ uint64\_t\ addr;}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//percorre\ as\ rams}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}{numRams}};\ i++)\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//tupleSize-\/1\ ??}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\_pos\ =\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}}-\/1;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\ =\ 0;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//j\ \&\&\ k?}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ (j\ <\ \mbox{\hyperlink{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}{tupleSize}})\ \&\&\ (k\ <\ \mbox{\hyperlink{classDiscriminator_a54178a4935259476df0db5f29f686fec}{entrySize}});\ j++)\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\ |=\ (data[\mbox{\hyperlink{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}{tuplesMapping}}[k]]\ <<\ addr\_pos);}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addr\_pos-\/-\/;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k++;}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i1\ =\ addr\ >>\ 6;\textcolor{comment}{//Divide\ by\ 64\ to\ find\ the\ bitarray\ id}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i2\ =\ addr\ \&\ 0x3F;\textcolor{comment}{//Obtain\ remainder\ to\ access\ the\ bitarray\ position}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}{rams}}[i].bitarray[i1]\ |=\ (1UL\ <<\ i2);\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{discriminator_8cc_source_l00270}{entry\+Size}}, \mbox{\hyperlink{discriminator_8cc_source_l00272}{num\+Rams}}, \mbox{\hyperlink{discriminator_8cc_source_l00274}{rams}}, \mbox{\hyperlink{discriminator_8cc_source_l00271}{tuple\+Size}} e \mbox{\hyperlink{discriminator_8cc_source_l00273}{tuples\+Mapping}}.
+
+
+
+\doxysubsection{Documentação dos dados membro}
+\Hypertarget{classDiscriminator_a54178a4935259476df0db5f29f686fec}\index{Discriminator@{Discriminator}!entrySize@{entrySize}}
 \index{entrySize@{entrySize}!Discriminator@{Discriminator}}
 \doxysubsubsection{\texorpdfstring{entrySize}{entrySize}}
-{\footnotesize\ttfamily int Discriminator\+::entry\+Size\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \label{classDiscriminator_a54178a4935259476df0db5f29f686fec} 
+int Discriminator\+::entry\+Size\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}\label{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}} 
-\index{Discriminator@{Discriminator}!numRams@{numRams}}
+
+
+Definido na linha \mbox{\hyperlink{discriminator_8cc_source_l00270}{270}} do ficheiro \mbox{\hyperlink{discriminator_8cc_source}{discriminator.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{discriminator_8cc_source_l00020}{Discriminator()}}, \mbox{\hyperlink{discriminator_8cc_source_l00201}{info()}}, \mbox{\hyperlink{discriminator_8cc_source_l00174}{rank()}}, \mbox{\hyperlink{discriminator_8cc_source_l00224}{reset()}} e \mbox{\hyperlink{discriminator_8cc_source_l00112}{train()}}.
+
+\Hypertarget{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4}\index{Discriminator@{Discriminator}!numRams@{numRams}}
 \index{numRams@{numRams}!Discriminator@{Discriminator}}
 \doxysubsubsection{\texorpdfstring{numRams}{numRams}}
-{\footnotesize\ttfamily int Discriminator\+::num\+Rams\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \label{classDiscriminator_a4f914bc04e0a138c8f108a04302952b4} 
+int Discriminator\+::num\+Rams\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}\label{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}} 
-\index{Discriminator@{Discriminator}!rams@{rams}}
+
+
+Definido na linha \mbox{\hyperlink{discriminator_8cc_source_l00272}{272}} do ficheiro \mbox{\hyperlink{discriminator_8cc_source}{discriminator.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{discriminator_8cc_source_l00020}{Discriminator()}}, \mbox{\hyperlink{discriminator_8cc_source_l00255}{get\+Num\+Rams()}}, \mbox{\hyperlink{discriminator_8cc_source_l00201}{info()}}, \mbox{\hyperlink{discriminator_8cc_source_l00141}{rank()}}, \mbox{\hyperlink{discriminator_8cc_source_l00174}{rank()}}, \mbox{\hyperlink{discriminator_8cc_source_l00224}{reset()}}, \mbox{\hyperlink{discriminator_8cc_source_l00075}{train()}} e \mbox{\hyperlink{discriminator_8cc_source_l00112}{train()}}.
+
+\Hypertarget{classDiscriminator_a4379397ede6279ae3056f1e221b0f319}\index{Discriminator@{Discriminator}!rams@{rams}}
 \index{rams@{rams}!Discriminator@{Discriminator}}
 \doxysubsubsection{\texorpdfstring{rams}{rams}}
-{\footnotesize\ttfamily bitarray\+\_\+t$\ast$ Discriminator\+::rams\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \label{classDiscriminator_a4379397ede6279ae3056f1e221b0f319} 
+bitarray\+\_\+t\texorpdfstring{$\ast$}{*} Discriminator\+::rams\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}\label{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}} 
-\index{Discriminator@{Discriminator}!tupleSize@{tupleSize}}
+
+
+Definido na linha \mbox{\hyperlink{discriminator_8cc_source_l00274}{274}} do ficheiro \mbox{\hyperlink{discriminator_8cc_source}{discriminator.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{discriminator_8cc_source_l00020}{Discriminator()}}, \mbox{\hyperlink{discriminator_8cc_source_l00246}{get\+Ram\+Bits()}}, \mbox{\hyperlink{discriminator_8cc_source_l00201}{info()}}, \mbox{\hyperlink{discriminator_8cc_source_l00141}{rank()}}, \mbox{\hyperlink{discriminator_8cc_source_l00174}{rank()}}, \mbox{\hyperlink{discriminator_8cc_source_l00224}{reset()}}, \mbox{\hyperlink{discriminator_8cc_source_l00075}{train()}}, \mbox{\hyperlink{discriminator_8cc_source_l00112}{train()}} e \mbox{\hyperlink{discriminator_8cc_source_l00064}{\texorpdfstring{$\sim$}{\string~}\+Discriminator()}}.
+
+\Hypertarget{classDiscriminator_a61570db5a52d967ce12df669b606bc4e}\index{Discriminator@{Discriminator}!tupleSize@{tupleSize}}
 \index{tupleSize@{tupleSize}!Discriminator@{Discriminator}}
 \doxysubsubsection{\texorpdfstring{tupleSize}{tupleSize}}
-{\footnotesize\ttfamily int Discriminator\+::tuple\+Size\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \label{classDiscriminator_a61570db5a52d967ce12df669b606bc4e} 
+int Discriminator\+::tuple\+Size\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}\label{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}} 
-\index{Discriminator@{Discriminator}!tuplesMapping@{tuplesMapping}}
+
+
+Definido na linha \mbox{\hyperlink{discriminator_8cc_source_l00271}{271}} do ficheiro \mbox{\hyperlink{discriminator_8cc_source}{discriminator.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{discriminator_8cc_source_l00020}{Discriminator()}}, \mbox{\hyperlink{discriminator_8cc_source_l00264}{get\+Tuple\+Size()}}, \mbox{\hyperlink{discriminator_8cc_source_l00201}{info()}}, \mbox{\hyperlink{discriminator_8cc_source_l00141}{rank()}}, \mbox{\hyperlink{discriminator_8cc_source_l00174}{rank()}}, \mbox{\hyperlink{discriminator_8cc_source_l00075}{train()}} e \mbox{\hyperlink{discriminator_8cc_source_l00112}{train()}}.
+
+\Hypertarget{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1}\index{Discriminator@{Discriminator}!tuplesMapping@{tuplesMapping}}
 \index{tuplesMapping@{tuplesMapping}!Discriminator@{Discriminator}}
 \doxysubsubsection{\texorpdfstring{tuplesMapping}{tuplesMapping}}
-{\footnotesize\ttfamily int$\ast$ Discriminator\+::tuples\+Mapping\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \label{classDiscriminator_a0c738ffdc70bc69a48f4e388731f99a1} 
+int\texorpdfstring{$\ast$}{*} Discriminator\+::tuples\+Mapping\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Definido na linha \mbox{\hyperlink{discriminator_8cc_source_l00273}{273}} do ficheiro \mbox{\hyperlink{discriminator_8cc_source}{discriminator.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{discriminator_8cc_source_l00020}{Discriminator()}}, \mbox{\hyperlink{discriminator_8cc_source_l00141}{rank()}}, \mbox{\hyperlink{discriminator_8cc_source_l00174}{rank()}}, \mbox{\hyperlink{discriminator_8cc_source_l00224}{reset()}}, \mbox{\hyperlink{discriminator_8cc_source_l00075}{train()}}, \mbox{\hyperlink{discriminator_8cc_source_l00112}{train()}} e \mbox{\hyperlink{discriminator_8cc_source_l00064}{\texorpdfstring{$\sim$}{\string~}\+Discriminator()}}.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
 \item 
 src/models/wisard/\mbox{\hyperlink{discriminator_8cc}{discriminator.\+cc}}\end{DoxyCompactItemize}

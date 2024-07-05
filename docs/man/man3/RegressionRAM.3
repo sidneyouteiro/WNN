@@ -1,0 +1,537 @@
+.TH "RegressionRAM" 3 "Version 2.0" "WISARD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RegressionRAM \- Classe representando a RAM\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Membros públicos"
+
+.in +1c
+.ti -1c
+.RI "void \fBapplyFit\fP ()"
+.br
+.RI "Aplica o ajuste calculado\&. "
+.ti -1c
+.RI "void \fBcalculateFit\fP (const BinInput &image, const double yFit)"
+.br
+.RI "Calcula o ajuste da RAM para a imagem binária e o valor yFit\&. "
+.ti -1c
+.RI "nl::json \fBgetJSON\fP () const"
+.br
+.RI "Obtém a configuração da RAM em formato JSON\&. "
+.ti -1c
+.RI "std::vector< int > \fBgetMapping\fP () const"
+.br
+.RI "Obtém o mapeamento da RAM\&. "
+.ti -1c
+.RI "regression_ram_t \fBgetMemory\fP () const"
+.br
+.RI "Obtém a memória da RAM\&. "
+.ti -1c
+.RI "long \fBgetsizeoff\fP () const"
+.br
+.RI "Obtém o tamanho da RAM em bytes\&. "
+.ti -1c
+.RI "regression_content_t \fBgetVote\fP (const BinInput &image) const"
+.br
+.RI "Obtém o voto da RAM para a imagem binária fornecida\&. "
+.ti -1c
+.RI "\fBRegressionRAM\fP ()"
+.br
+.RI "Construtor padrão\&. "
+.ti -1c
+.RI "\fBRegressionRAM\fP (const std::vector< int > \fBmapping\fP, const int \fBminZero\fP=0, const int \fBminOne\fP=0)"
+.br
+.RI "Construtor da classe que inicializa a RAM com parâmetros específicos\&. "
+.ti -1c
+.RI "\fBRegressionRAM\fP (nl::json c)"
+.br
+.RI "Construtor da classe que inicializa a RAM com um objeto JSON\&. "
+.ti -1c
+.RI "void \fBsetMinOne\fP (const int value)"
+.br
+.RI "Define o valor mínimo de uns\&. "
+.ti -1c
+.RI "void \fBsetMinZero\fP (const int value)"
+.br
+.RI "Define o valor mínimo de zeros\&. "
+.ti -1c
+.RI "void \fBtrain\fP (const BinInput &image, const double y)"
+.br
+.RI "Treina a RAM com a imagem binária e o valor y\&. "
+.ti -1c
+.RI "\fB~RegressionRAM\fP ()"
+.br
+.RI "Destrutor da classe que limpa a memória\&. "
+.in -1c
+.SS "Membros protegidos"
+
+.in +1c
+.ti -1c
+.RI "std::tuple< addr_t, bool > \fBgetIndex\fP (const BinInput &image) const"
+.br
+.RI "Obtém o índice da imagem binária\&. "
+.in -1c
+.SS "Atributos Privados"
+
+.in +1c
+.ti -1c
+.RI "std::vector< int > \fBmapping\fP"
+.br
+.RI "Mapeamento da RAM\&. "
+.ti -1c
+.RI "regression_ram_t \fBmemory\fP"
+.br
+.RI "Memória da RAM\&. "
+.ti -1c
+.RI "int \fBminOne\fP"
+.br
+.RI "Número mínimo de uns\&. "
+.ti -1c
+.RI "int \fBminZero\fP"
+.br
+.RI "Número mínimo de zeros\&. "
+.in -1c
+.SH "Descrição detalhada"
+.PP 
+Classe representando a RAM\&. 
+
+Classe utilizada para modelar as rams que serão utilizadas no treinamento\&. 
+.PP
+Definido na linha \fB6\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.SH "Documentação dos Construtores & Destrutor"
+.PP 
+.SS "RegressionRAM::RegressionRAM ()\fR [inline]\fP"
+
+.PP
+Construtor padrão\&. 
+.PP
+Definido na linha \fB12\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.nf
+12 {}
+.PP
+.fi
+
+.PP
+Referenciado por \fBgetsizeoff()\fP\&.
+.SS "RegressionRAM::RegressionRAM (nl::json c)\fR [inline]\fP"
+
+.PP
+Construtor da classe que inicializa a RAM com um objeto JSON\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIc\fP Objeto do tipo nl::json contendo a configuração inicial da RAM\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB18\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.nf
+19     {
+20         nl::json value;
+21 
+22         value = c["memory"];
+23         std::string data = value\&.is_null() ? "" : value\&.get<std::string>();
+24         if (data\&.size() > 0) {
+25             RegressionRAMDataHandle dh(data);
+26             memory = dh\&.get(0);
+27         }
+28 
+29         value = c["mapping"];
+30         mapping = value\&.is_null() ? std::vector<int>() : value\&.get<std::vector<int>>();
+31 
+32         value = c["minZero"];
+33         minZero = value\&.is_null() ? 0 : value\&.get<int>();
+34 
+35         value = c["minOne"];
+36         minOne = value\&.is_null() ? 0 : value\&.get<int>();
+37     }
+.PP
+.fi
+
+.PP
+Referências \fBRegressionRAMDataHandle::get()\fP, \fBmapping\fP, \fBmemory\fP, \fBminOne\fP e \fBminZero\fP\&.
+.SS "RegressionRAM::RegressionRAM (const std::vector< int > mapping, const int minZero = \fR0\fP, const int minOne = \fR0\fP)\fR [inline]\fP"
+
+.PP
+Construtor da classe que inicializa a RAM com parâmetros específicos\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fImapping\fP Vetor de inteiros representando o mapeamento\&. 
+.br
+\fIminZero\fP Número mínimo de zeros\&. 
+.br
+\fIminOne\fP Número mínimo de uns\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB45\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.nf
+45 : mapping(mapping), minZero(minZero), minOne(minOne) {}
+.PP
+.fi
+
+.SS "RegressionRAM::~RegressionRAM ()\fR [inline]\fP"
+
+.PP
+Destrutor da classe que limpa a memória\&. 
+.PP
+Definido na linha \fB50\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.nf
+51     {
+52         mapping\&.clear();
+53         memory\&.clear();
+54     }
+.PP
+.fi
+
+.PP
+Referências \fBmapping\fP e \fBmemory\fP\&.
+.SH "Documentação das funções"
+.PP 
+.SS "void RegressionRAM::applyFit ()\fR [inline]\fP"
+
+.PP
+Aplica o ajuste calculado\&. 
+.PP
+Definido na linha \fB110\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.nf
+111     {
+112         for (auto it = memory\&.begin(); it != memory\&.end(); it++)
+113         {
+114             it\->second[1] += it\->second[2] / it\->second[0];
+115             it\->second[2] = 0;
+116         }
+117     }
+.PP
+.fi
+
+.PP
+Referências \fBmemory\fP\&.
+.SS "void RegressionRAM::calculateFit (const BinInput & image, const double yFit)\fR [inline]\fP"
+
+.PP
+Calcula o ajuste da RAM para a imagem binária e o valor yFit\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIimage\fP Imagem binária\&. 
+.br
+\fIyFit\fP Valor de ajuste\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB99\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.nf
+100     {
+101         addr_t index = std::get<0>(getIndex(image));
+102 
+103         auto it = memory\&.find(index);
+104         it\->second[2] += yFit;
+105     }
+.PP
+.fi
+
+.PP
+Referências \fBgetIndex()\fP e \fBmemory\fP\&.
+.SS "std::tuple< addr_t, bool > RegressionRAM::getIndex (const BinInput & image) const\fR [inline]\fP, \fR [protected]\fP"
+
+.PP
+Obtém o índice da imagem binária\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIimage\fP Imagem binária\&. 
+.RE
+.PP
+\fBRetorna\fP
+.RS 4
+Tupla contendo o índice e um booleano indicando se os critérios mínimos foram atendidos\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB190\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.nf
+191     {
+192         addr_t index = 0;
+193         addr_t p = 1;
+194         int countOne = 0;
+195         for (unsigned int i = 0; i < mapping\&.size(); i++)
+196         {
+197             int bin = image[mapping[i]];
+198             countOne += bin;
+199             index += bin * p;
+200             p *= 2;
+201         }
+202         if ((countOne < minOne) || (((int)mapping\&.size() \- countOne) < minZero))
+203         {
+204             return std::make_tuple(index, true);
+205         }
+206 
+207         return std::make_tuple(index, false);
+208     }
+.PP
+.fi
+
+.PP
+Referências \fBmapping\fP, \fBminOne\fP e \fBminZero\fP\&.
+.PP
+Referenciado por \fBcalculateFit()\fP, \fBgetVote()\fP e \fBtrain()\fP\&.
+.SS "nl::json RegressionRAM::getJSON () const\fR [inline]\fP"
+
+.PP
+Obtém a configuração da RAM em formato JSON\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Objeto JSON representando a configuração da RAM\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB159\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.nf
+160     {
+161         RegressionRAMDataHandle dh(memory);
+162         nl::json config =
+163         {
+164             {"minZero", minZero},
+165             {"minOne", minOne},
+166             {"mapping", mapping},
+167             {"memory", memory},
+168         };
+169         return config;
+170     }
+.PP
+.fi
+
+.PP
+Referências \fBmapping\fP, \fBmemory\fP, \fBminOne\fP e \fBminZero\fP\&.
+.SS "std::vector< int > RegressionRAM::getMapping () const\fR [inline]\fP"
+
+.PP
+Obtém o mapeamento da RAM\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Vetor de inteiros representando o mapeamento\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB150\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.nf
+151     {
+152         return mapping;
+153     }
+.PP
+.fi
+
+.PP
+Referências \fBmapping\fP\&.
+.SS "regression_ram_t RegressionRAM::getMemory () const\fR [inline]\fP"
+
+.PP
+Obtém a memória da RAM\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Memória da RAM\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB141\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.nf
+142     {
+143         return memory;
+144     }
+.PP
+.fi
+
+.PP
+Referências \fBmemory\fP\&.
+.SS "long RegressionRAM::getsizeoff () const\fR [inline]\fP"
+
+.PP
+Obtém o tamanho da RAM em bytes\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Tamanho da RAM em bytes\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB176\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.nf
+177     {
+178         long size = sizeof(RegressionRAM);
+179         size += mapping\&.size() * sizeof(addr_t);
+180         size += memory\&.size() * (sizeof(addr_t) + sizeof(regression_content_t));
+181         return size;
+182     }
+.PP
+.fi
+
+.PP
+Referências \fBmapping\fP, \fBmemory\fP e \fBRegressionRAM()\fP\&.
+.SS "regression_content_t RegressionRAM::getVote (const BinInput & image) const\fR [inline]\fP"
+
+.PP
+Obtém o voto da RAM para a imagem binária fornecida\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIimage\fP Imagem binária\&. 
+.RE
+.PP
+\fBRetorna\fP
+.RS 4
+Conteúdo da RAM associado à imagem\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB79\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.nf
+80     {
+81         std::tuple<addr_t, bool> result = getIndex(image);
+82         if (std::get<1>(result)) {
+83             return {0, 0};
+84         }
+85         addr_t index = std::get<0>(result);
+86 
+87         auto it = memory\&.find(index);
+88         if (it == memory\&.end())
+89             return {0, 0};
+90         else
+91             return {it\->second[0], it\->second[1]};
+92     }
+.PP
+.fi
+
+.PP
+Referências \fBgetIndex()\fP e \fBmemory\fP\&.
+.SS "void RegressionRAM::setMinOne (const int value)\fR [inline]\fP"
+
+.PP
+Define o valor mínimo de uns\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIvalue\fP Valor mínimo de uns\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB132\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.nf
+133     {
+134         minOne = value;
+135     }
+.PP
+.fi
+
+.PP
+Referências \fBminOne\fP\&.
+.SS "void RegressionRAM::setMinZero (const int value)\fR [inline]\fP"
+
+.PP
+Define o valor mínimo de zeros\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIvalue\fP Valor mínimo de zeros\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB123\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.nf
+124     {
+125         minZero = value;
+126     }
+.PP
+.fi
+
+.PP
+Referências \fBminZero\fP\&.
+.SS "void RegressionRAM::train (const BinInput & image, const double y)\fR [inline]\fP"
+
+.PP
+Treina a RAM com a imagem binária e o valor y\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIimage\fP Imagem binária utilizada para o treinamento\&. 
+.br
+\fIy\fP Valor associado à imagem\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB61\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.nf
+62     {
+63         addr_t index = std::get<0>(getIndex(image));
+64 
+65         auto it = memory\&.find(index);
+66         if (it == memory\&.end())
+67             memory\&.insert(it, std::pair<addr_t, regression_content_t>(index, {1, y, 0}));
+68         else {
+69             it\->second[0]++;
+70             it\->second[1] += y;
+71         }
+72     }
+.PP
+.fi
+
+.PP
+Referências \fBgetIndex()\fP e \fBmemory\fP\&.
+.SH "Documentação dos dados membro"
+.PP 
+.SS "std::vector<int> RegressionRAM::mapping\fR [private]\fP"
+
+.PP
+Mapeamento da RAM\&. 
+.PP
+Definido na linha \fB212\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.PP
+Referenciado por \fBgetIndex()\fP, \fBgetJSON()\fP, \fBgetMapping()\fP, \fBgetsizeoff()\fP, \fBRegressionRAM()\fP e \fB~RegressionRAM()\fP\&.
+.SS "regression_ram_t RegressionRAM::memory\fR [private]\fP"
+
+.PP
+Memória da RAM\&. 
+.PP
+Definido na linha \fB211\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.PP
+Referenciado por \fBapplyFit()\fP, \fBcalculateFit()\fP, \fBgetJSON()\fP, \fBgetMemory()\fP, \fBgetsizeoff()\fP, \fBgetVote()\fP, \fBRegressionRAM()\fP, \fBtrain()\fP e \fB~RegressionRAM()\fP\&.
+.SS "int RegressionRAM::minOne\fR [private]\fP"
+
+.PP
+Número mínimo de uns\&. 
+.PP
+Definido na linha \fB214\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.PP
+Referenciado por \fBgetIndex()\fP, \fBgetJSON()\fP, \fBRegressionRAM()\fP e \fBsetMinOne()\fP\&.
+.SS "int RegressionRAM::minZero\fR [private]\fP"
+
+.PP
+Número mínimo de zeros\&. 
+.PP
+Definido na linha \fB213\fP do ficheiro \fBregressionram\&.cc\fP\&.
+.PP
+Referenciado por \fBgetIndex()\fP, \fBgetJSON()\fP, \fBRegressionRAM()\fP e \fBsetMinZero()\fP\&.
+
+.SH "Autor"
+.PP 
+Gerado automaticamente por Doxygen para WISARD a partir do código fonte\&.

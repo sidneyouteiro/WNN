@@ -1,0 +1,152 @@
+.TH "Median" 3 "Version 2.0" "WISARD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Median \- Classe para cálculo de mediana\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Derivada de \fBMean\fP\&.
+.SS "Membros públicos"
+
+.in +1c
+.ti -1c
+.RI "double \fBcalculate\fP (const std::vector< std::vector< double > > &outputRams)"
+.br
+.RI "Calcula a mediana com base nos dados fornecidos\&. "
+.ti -1c
+.RI "std::string \fBclassName\fP () const"
+.br
+.RI "Obtém o nome da classe\&. "
+.ti -1c
+.RI "\fBMean\fP * \fBclone\fP () const"
+.br
+.RI "Cria uma cópia do objeto \fBMedian\fP\&. "
+.ti -1c
+.RI "nl::json \fBgetJSON\fP () const"
+.br
+.RI "Obtém a configuração do objeto em formato JSON\&. "
+.in -1c
+.SH "Descrição detalhada"
+.PP 
+Classe para cálculo de mediana\&. 
+.PP
+Definido na linha \fB143\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.SH "Documentação das funções"
+.PP 
+.SS "double Median::calculate (const std::vector< std::vector< double > > & outputRams)\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Calcula a mediana com base nos dados fornecidos\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIoutputRams\fP Dados de saída das RAMs\&. 
+.RE
+.PP
+\fBRetorna\fP
+.RS 4
+A mediana calculada\&. 
+.RE
+.PP
+
+.PP
+Implementa \fBMean\fP\&.
+.PP
+Definido na linha \fB150\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.nf
+150                                                                      {
+151         std::vector<double> means(outputRams\&.size());
+152         for (unsigned int i = 0; i < outputRams\&.size(); i++) {
+153             means[i] = outputRams[i][1] / outputRams[i][0];
+154         }
+155         std::sort(means\&.begin(), means\&.end());
+156         if (means\&.size() % 2 == 0) {
+157             int index = means\&.size() / 2;
+158             return (means[index] + means[index + 1]) / 2\&.0;
+159         }
+160         else {
+161             int index = (means\&.size() \- 1) / 2 + 1;
+162             return means[index];
+163         }
+164     }
+.PP
+.fi
+
+.SS "std::string Median::className () const\fR [inline]\fP"
+
+.PP
+Obtém o nome da classe\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Nome da classe\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB178\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.nf
+178                                 {
+179         return "Median";
+180     }
+.PP
+.fi
+
+.PP
+Referenciado por \fBgetJSON()\fP\&.
+.SS "\fBMean\fP * Median::clone () const\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Cria uma cópia do objeto \fBMedian\fP\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Ponteiro para a cópia do objeto \fBMedian\fP\&. 
+.RE
+.PP
+
+.PP
+Implementa \fBMean\fP\&.
+.PP
+Definido na linha \fB170\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.nf
+170                         {
+171         return new Median();
+172     }
+.PP
+.fi
+
+.SS "nl::json Median::getJSON () const\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Obtém a configuração do objeto em formato JSON\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Configuração do objeto em JSON\&. 
+.RE
+.PP
+
+.PP
+Implementa \fBMean\fP\&.
+.PP
+Definido na linha \fB186\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.nf
+186                            {
+187         nl::json config = {
+188             {"type", className()}
+189         };
+190         return config;
+191     }
+.PP
+.fi
+
+.PP
+Referências \fBclassName()\fP\&.
+
+.SH "Autor"
+.PP 
+Gerado automaticamente por Doxygen para WISARD a partir do código fonte\&.

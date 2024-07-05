@@ -1,0 +1,9 @@
+<map id="RegressionWisard::calculateFit" name="RegressionWisard::calculateFit">
+<area shape="rect" id="Node000001" title="Calcula o ajuste para uma entrada binária e um valor y." alt="" coords="5,31,209,56"/>
+<area shape="rect" id="Node000002" href="$classRegressionWisard.html#ab4d4796e3f62df331fee309301e0a681" title="Faz a predição para uma entrada binária." alt="" coords="257,31,433,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,41,243,41,243,46,209,46"/>
+<area shape="rect" id="Node000003" href="$classMean.html#a6c725db111881910fcf4df655debbbc7" title="Calcula a média com base nos dados fornecidos." alt="" coords="539,5,653,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="433,32,525,22,525,28,434,37"/>
+<area shape="rect" id="Node000004" href="$classRegressionWisard.html#a6a25655a9cb15452b468a13dc4ed2858" title="Verifica o tamanho da entrada." alt="" coords="481,55,711,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="434,49,468,52,467,58,433,54"/>
+</map>

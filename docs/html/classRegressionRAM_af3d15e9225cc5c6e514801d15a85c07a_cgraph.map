@@ -1,0 +1,5 @@
+<map id="RegressionRAM::getVote" name="RegressionRAM::getVote">
+<area shape="rect" id="Node000001" title="Obtém o voto da RAM para a imagem binária fornecida." alt="" coords="5,5,176,31"/>
+<area shape="rect" id="Node000002" href="$classRegressionRAM.html#ad7d93ac38c2cb7fce602f8396283dd1a" title="Obtém o índice da imagem binária." alt="" coords="224,5,400,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,15,210,15,210,21,177,21"/>
+</map>

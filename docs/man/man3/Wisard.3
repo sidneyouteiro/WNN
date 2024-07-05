@@ -1,0 +1,381 @@
+.TH "Wisard" 3 "Version 2.0" "WISARD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Wisard \- A class to implement the \fBWisard\fP algorithm using multiple discriminators\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Membros públicos"
+
+.in +1c
+.ti -1c
+.RI "void \fBaddDiscriminator\fP ()"
+.br
+.RI "Adds a new discriminator to the \fBWisard\fP\&. "
+.ti -1c
+.RI "void \fBinfo\fP ()"
+.br
+.RI "Displays information about the \fBWisard\fP\&. "
+.ti -1c
+.RI "int \fBrank\fP (const vector< bool > &data)"
+.br
+.RI "Ranks the given data and returns the label with the highest response\&. "
+.ti -1c
+.RI "std::vector< size_t > \fBrank\fP (const vector< vector< bool > > &data)"
+.br
+.RI "Ranks multiple sets of data and returns a vector of labels\&. "
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.RI "Resets the \fBWisard\fP by resetting all discriminators\&. "
+.ti -1c
+.RI "std::array< unsigned long int, 4 > \fBstats\fP ()"
+.br
+.RI "Returns statistics about the \fBWisard\fP\&. "
+.ti -1c
+.RI "void \fBtrain\fP (const vector< vector< bool > > &data, const vector< int > &label)"
+.br
+.RI "Trains the \fBWisard\fP with the given data and labels\&. "
+.ti -1c
+.RI "\fBWisard\fP (int \fBentrySize\fP, int \fBtupleSize\fP, int \fBnumDiscriminator\fP)"
+.br
+.RI "Constructor for the \fBWisard\fP class\&. "
+.ti -1c
+.RI "\fB~Wisard\fP ()"
+.br
+.RI "Destructor for the \fBWisard\fP class\&. Frees dynamically allocated memory\&. "
+.in -1c
+.SS "Atributos Privados"
+
+.in +1c
+.ti -1c
+.RI "vector< \fBDiscriminator\fP * > \fBdiscriminators\fP"
+.br
+.ti -1c
+.RI "int \fBentrySize\fP"
+.br
+.ti -1c
+.RI "int \fBnumDiscriminator\fP"
+.br
+.ti -1c
+.RI "int \fBtupleSize\fP"
+.br
+.in -1c
+.SH "Descrição detalhada"
+.PP 
+A class to implement the \fBWisard\fP algorithm using multiple discriminators\&. 
+.PP
+Definido na linha \fB11\fP do ficheiro \fBwisard\&.cc\fP\&.
+.SH "Documentação dos Construtores & Destrutor"
+.PP 
+.SS "Wisard::Wisard (int entrySize, int tupleSize, int numDiscriminator)\fR [inline]\fP"
+
+.PP
+Constructor for the \fBWisard\fP class\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIentrySize\fP Size of the entry\&. 
+.br
+\fItupleSize\fP Size of the tuple\&. 
+.br
+\fInumDiscriminator\fP Number of discriminators\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB19\fP do ficheiro \fBwisard\&.cc\fP\&.
+.nf
+19                                                                :
+20     //inicializa as variáveis com os valores definidos no construtor
+21     //Member variable?
+22     entrySize(entrySize), tupleSize(tupleSize), numDiscriminator(numDiscriminator)
+23     {
+24         int i;
+25         discriminators = vector<Discriminator*>(numDiscriminator);
+26         //Classe Discriminator
+27 
+28         for (i = 0; i < numDiscriminator; i++) {
+29             discriminators[i] = new Discriminator(entrySize, tupleSize);
+30             //Cria os discriminadores com tamanho de entrada e tupla
+31         }
+32     }
+.PP
+.fi
+
+.PP
+Referências \fBdiscriminators\fP, \fBentrySize\fP, \fBnumDiscriminator\fP e \fBtupleSize\fP\&.
+.SS "Wisard::~Wisard ()\fR [inline]\fP"
+
+.PP
+Destructor for the \fBWisard\fP class\&. Frees dynamically allocated memory\&. 
+.PP
+Definido na linha \fB37\fP do ficheiro \fBwisard\&.cc\fP\&.
+.nf
+38     {
+39         unsigned int i;
+40         for (i = 0; i < discriminators\&.size(); i++) {
+41             delete discriminators[i];
+42         }
+43     }
+.PP
+.fi
+
+.PP
+Referências \fBdiscriminators\fP\&.
+.SH "Documentação das funções"
+.PP 
+.SS "void Wisard::addDiscriminator ()\fR [inline]\fP"
+
+.PP
+Adds a new discriminator to the \fBWisard\fP\&. 
+.PP
+Definido na linha \fB48\fP do ficheiro \fBwisard\&.cc\fP\&.
+.nf
+49     {
+50         //emplace back cria um novo último item
+51         discriminators\&.emplace_back(new Discriminator(entrySize, tupleSize));
+52         //incrementa o número de discriminadores
+53         numDiscriminator++;
+54     }
+.PP
+.fi
+
+.PP
+Referências \fBdiscriminators\fP, \fBentrySize\fP, \fBnumDiscriminator\fP e \fBtupleSize\fP\&.
+.SS "void Wisard::info ()\fR [inline]\fP"
+
+.PP
+Displays information about the \fBWisard\fP\&. 
+.PP
+Definido na linha \fB166\fP do ficheiro \fBwisard\&.cc\fP\&.
+.nf
+167     {
+168     int i;
+169         int numRams = discriminators[0]\->getNumRams();
+170         long int ramSize = discriminators[0]\->getRamBits();
+171         long int totalRamBits = numRams * ramSize; 
+172         long int totalBits = numDiscriminator * totalRamBits;
+173 
+174     cout << "Number of Discriminators = " << numDiscriminator << endl;
+175        
+176         for (i = 0; i < numDiscriminator; i++) {
+177             cout << "Discriminator " << i << ": ";
+178             discriminators[i]\->info();
+179         //size = size + discriminators[i]\->getTupleSize() * discriminators[i]\->getNumRams();
+180         }
+181 
+182     cout << "Size of wisard:" << totalBits << endl;
+183 
+184     }
+.PP
+.fi
+
+.PP
+Referências \fBdiscriminators\fP e \fBnumDiscriminator\fP\&.
+.SS "int Wisard::rank (const vector< bool > & data)\fR [inline]\fP"
+
+.PP
+Ranks the given data and returns the label with the highest response\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIdata\fP Vector of boolean data\&. 
+.RE
+.PP
+\fBRetorna\fP
+.RS 4
+Label with the highest response\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB81\fP do ficheiro \fBwisard\&.cc\fP\&.
+.nf
+82     {
+83         int i;
+84         int label = 0;   
+85         int max_resp = 0;
+86         int resp;
+87 
+88         //percorre todos os discriminadores
+89         for (i = 0; i < numDiscriminator; i++) {
+90             //chama ela mesma
+91             resp = discriminators[i]\->rank(data);
+92 
+93             //o que é resp?
+94             //checa resp com o resp máximo
+95             // armazena o índice do resp máximo e retorna como label
+96             if (resp > max_resp) {
+97                 max_resp = resp;
+98                 label = i;
+99             }
+100         }
+101 
+102         return label;
+103     }
+.PP
+.fi
+
+.PP
+Referências \fBdiscriminators\fP e \fBnumDiscriminator\fP\&.
+.SS "std::vector< size_t > Wisard::rank (const vector< vector< bool > > & data)\fR [inline]\fP"
+
+.PP
+Ranks multiple sets of data and returns a vector of labels\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIdata\fP Vector of vectors of boolean data\&. 
+.RE
+.PP
+\fBRetorna\fP
+.RS 4
+Vector of labels with the highest responses\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB140\fP do ficheiro \fBwisard\&.cc\fP\&.
+.nf
+141     {
+142         std::vector<size_t> a({data\&.size()});
+143 
+144         unsigned int i;
+145         int j, max_resp, resp;
+146 
+147         for(i = 0; i < data\&.size(); i++){
+148             
+149             max_resp = 0;
+150             for(j = 0; j < numDiscriminator; j++){
+151                 resp = discriminators[j]\->rank(data[i]);
+152 
+153                 if(resp > max_resp){
+154                     max_resp = resp;
+155                     a[i] = j;
+156                 }
+157             }
+158         }
+159     return a;
+160     }
+.PP
+.fi
+
+.PP
+Referências \fBdiscriminators\fP e \fBnumDiscriminator\fP\&.
+.SS "void Wisard::reset ()\fR [inline]\fP"
+
+.PP
+Resets the \fBWisard\fP by resetting all discriminators\&. 
+.PP
+Definido na linha \fB211\fP do ficheiro \fBwisard\&.cc\fP\&.
+.nf
+212     {
+213         int i;
+214 
+215         for (i = 0; i < numDiscriminator; i++) {
+216             discriminators[i]\->reset();
+217         }
+218     }
+.PP
+.fi
+
+.PP
+Referências \fBdiscriminators\fP e \fBnumDiscriminator\fP\&.
+.SS "std::array< unsigned long int, 4 > Wisard::stats ()\fR [inline]\fP"
+
+.PP
+Returns statistics about the \fBWisard\fP\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Array of statistics including number of RAMs, RAM size, total RAM bits, and total bits\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB190\fP do ficheiro \fBwisard\&.cc\fP\&.
+.nf
+191     {
+192         std::array<unsigned long int, 4> a({4});
+193         //auto stats = a\&.mutable_unchecked();
+194 
+195         int numRams = discriminators[0]\->getNumRams();
+196         long int ramSize = discriminators[0]\->getRamBits();
+197         long int totalRamBits = numRams * ramSize; 
+198         long int totalBits = numDiscriminator * totalRamBits;
+199 
+200         a[0] = numRams;
+201         a[1] = ramSize;
+202         a[2] = totalRamBits;
+203         a[3] = totalBits;
+204 
+205         return a;
+206     }
+.PP
+.fi
+
+.PP
+Referências \fBdiscriminators\fP e \fBnumDiscriminator\fP\&.
+.SS "void Wisard::train (const vector< vector< bool > > & data, const vector< int > & label)\fR [inline]\fP"
+
+.PP
+Trains the \fBWisard\fP with the given data and labels\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIdata\fP Vector of vectors of boolean data\&. 
+.br
+\fIlabel\fP Vector of integer labels\&. 
+.RE
+.PP
+
+.PP
+Definido na linha \fB64\fP do ficheiro \fBwisard\&.cc\fP\&.
+.nf
+65     {
+66         unsigned int i;
+67         
+68         //percorre todo o vetor label
+69         for (i = 0; i < label\&.size(); i++) {
+70             //chama o método train do objeto discriminator apontado por discriminators[label[i]] e data[i] é o parâmetro
+71             discriminators[label[i]]\->train(data[i]);
+72         }
+73     }
+.PP
+.fi
+
+.PP
+Referências \fBdiscriminators\fP\&.
+.SH "Documentação dos dados membro"
+.PP 
+.SS "vector<\fBDiscriminator\fP*> Wisard::discriminators\fR [private]\fP"
+
+.PP
+Definido na linha \fB224\fP do ficheiro \fBwisard\&.cc\fP\&.
+.PP
+Referenciado por \fBaddDiscriminator()\fP, \fBinfo()\fP, \fBrank()\fP, \fBrank()\fP, \fBreset()\fP, \fBstats()\fP, \fBtrain()\fP, \fBWisard()\fP e \fB~Wisard()\fP\&.
+.SS "int Wisard::entrySize\fR [private]\fP"
+
+.PP
+Definido na linha \fB221\fP do ficheiro \fBwisard\&.cc\fP\&.
+.PP
+Referenciado por \fBaddDiscriminator()\fP e \fBWisard()\fP\&.
+.SS "int Wisard::numDiscriminator\fR [private]\fP"
+
+.PP
+Definido na linha \fB223\fP do ficheiro \fBwisard\&.cc\fP\&.
+.PP
+Referenciado por \fBaddDiscriminator()\fP, \fBinfo()\fP, \fBrank()\fP, \fBrank()\fP, \fBreset()\fP, \fBstats()\fP e \fBWisard()\fP\&.
+.SS "int Wisard::tupleSize\fR [private]\fP"
+
+.PP
+Definido na linha \fB222\fP do ficheiro \fBwisard\&.cc\fP\&.
+.PP
+Referenciado por \fBaddDiscriminator()\fP e \fBWisard()\fP\&.
+
+.SH "Autor"
+.PP 
+Gerado automaticamente por Doxygen para WISARD a partir do código fonte\&.

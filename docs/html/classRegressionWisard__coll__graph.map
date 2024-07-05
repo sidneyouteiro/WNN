@@ -1,0 +1,19 @@
+<map id="RegressionWisard" name="RegressionWisard">
+<area shape="rect" id="Node000001" title="Classe para um modelo de regressão utilizando Wisard." alt="" coords="173,1005,323,1471"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,857,120,923"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,934,175,1096,171,1098,84,936"/>
+<area shape="rect" id="Node000003" href="$classMean.html" title="Classe base abstrata para cálculo de médias." alt="" coords="144,837,232,943"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,943,208,989,202,990,194,943"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="257,857,453,923"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="347,924,327,990,322,989,342,922"/>
+<area shape="rect" id="Node000005" href="$classRegressionRAM.html" title="Classe representando a RAM." alt="" coords="305,389,444,775"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="365,775,360,841,355,841,359,775"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="356,261,471,327"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="454,325,469,350,469,365,472,454,480,529,499,659,504,721,502,786,491,859,468,944,443,1002,410,1058,374,1109,336,1153,332,1150,369,1105,406,1055,438,1000,463,942,486,858,497,786,498,721,493,659,475,530,467,454,464,365,464,351,449,328"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="412,327,405,373,400,372,406,327"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="225,133,333,199"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="275,213,265,315,259,456,261,534,267,615,278,696,296,774,313,817,335,856,330,858,308,820,291,775,273,697,262,616,256,535,254,456,260,315,270,212"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="324,206,381,259,378,263,321,210"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="267,5,290,71"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="281,71,281,117,276,117,276,71"/>
+</map>

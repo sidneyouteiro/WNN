@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="pt">
+  <compounddef id="dir_da06e3dc947cae33087c36059ccd8df4" kind="dir">
+    <compoundname>src/models/regressionwisard</compoundname>
+    <innerfile refid="meanfunctions_8cc">meanfunctions.cc</innerfile>
+    <innerfile refid="regressionram_8cc">regressionram.cc</innerfile>
+    <innerfile refid="regressionramdatahandle_8cc">regressionramdatahandle.cc</innerfile>
+    <innerfile refid="regressionwisard_8cc">regressionwisard.cc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/models/regressionwisard/"/>
+  </compounddef>
+</doxygen>

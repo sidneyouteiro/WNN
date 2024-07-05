@@ -1,0 +1,12 @@
+<map id="Mean::calculate" name="Mean::calculate">
+<area shape="rect" id="Node000001" title="Calcula a média com base nos dados fornecidos." alt="" coords="692,55,807,80"/>
+<area shape="rect" id="Node000002" href="$classRegressionWisard.html#ab4d4796e3f62df331fee309301e0a681" title="Faz a predição para uma entrada binária." alt="" coords="468,55,644,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="678,70,644,70,644,65,678,65"/>
+<area shape="rect" id="Node000003" href="$classRegressionWisard.html#a2f22f241b281ab6a0e4cf1cfb9335bb4" title="Calcula o ajuste para uma entrada binária e um valor y." alt="" coords="216,29,420,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="454,59,420,56,421,50,454,54"/>
+<area shape="rect" id="Node000005" href="$classRegressionWisard.html#ab2825bf4202b12029b489c1d4de342b8" title="Faz a predição para um conjunto de dados." alt="" coords="230,79,406,104"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="455,80,407,85,406,80,454,75"/>
+<area shape="rect" id="Node000004" href="$classRegressionWisard.html#a11970036606a16938821722fb3af53ee" title="Treina o modelo com um conjunto de dados." alt="" coords="5,29,168,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="202,45,168,45,168,39,202,39"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="128,20,117,11,87,8,62,10,49,15,46,20,53,27,49,31,41,21,45,11,61,5,87,3,119,7,131,16"/>
+</map>

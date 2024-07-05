@@ -1,0 +1,84 @@
+.TH "Mean" 3 "Version 2.0" "WISARD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Mean \- Classe base abstrata para cálculo de médias\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Herdado por \fBHarmonicMean\fP, \fBMedian\fP, \fBPowerMean\fP e \fBSimpleMean\fP\&.
+.SS "Membros públicos"
+
+.in +1c
+.ti -1c
+.RI "virtual double \fBcalculate\fP (const std::vector< std::vector< double > > &outputRams)=0"
+.br
+.RI "Calcula a média com base nos dados fornecidos\&. "
+.ti -1c
+.RI "virtual \fBMean\fP * \fBclone\fP () const =0"
+.br
+.RI "Cria uma cópia do objeto\&. "
+.ti -1c
+.RI "virtual nl::json \fBgetJSON\fP () const =0"
+.br
+.RI "Obtém a configuração do objeto em formato JSON\&. "
+.in -1c
+.SH "Descrição detalhada"
+.PP 
+Classe base abstrata para cálculo de médias\&. 
+.PP
+Definido na linha \fB4\fP do ficheiro \fBmeanfunctions\&.cc\fP\&.
+.SH "Documentação das funções"
+.PP 
+.SS "virtual double Mean::calculate (const std::vector< std::vector< double > > & outputRams)\fR [pure virtual]\fP"
+
+.PP
+Calcula a média com base nos dados fornecidos\&. 
+.PP
+\fBParâmetros\fP
+.RS 4
+\fIoutputRams\fP Dados de saída das RAMs\&. 
+.RE
+.PP
+\fBRetorna\fP
+.RS 4
+A média calculada\&. 
+.RE
+.PP
+
+.PP
+Implementado em \fBHarmonicMean\fP, \fBMedian\fP, \fBPowerMean\fP e \fBSimpleMean\fP\&.
+.PP
+Referenciado por \fBRegressionWisard::predict()\fP\&.
+.SS "virtual \fBMean\fP * Mean::clone () const\fR [pure virtual]\fP"
+
+.PP
+Cria uma cópia do objeto\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Ponteiro para a cópia do objeto\&. 
+.RE
+.PP
+
+.PP
+Implementado em \fBHarmonicMean\fP, \fBMedian\fP, \fBPowerMean\fP e \fBSimpleMean\fP\&.
+.SS "virtual nl::json Mean::getJSON () const\fR [pure virtual]\fP"
+
+.PP
+Obtém a configuração do objeto em formato JSON\&. 
+.PP
+\fBRetorna\fP
+.RS 4
+Configuração do objeto em JSON\&. 
+.RE
+.PP
+
+.PP
+Implementado em \fBHarmonicMean\fP, \fBMedian\fP, \fBPowerMean\fP e \fBSimpleMean\fP\&.
+
+.SH "Autor"
+.PP 
+Gerado automaticamente por Doxygen para WISARD a partir do código fonte\&.

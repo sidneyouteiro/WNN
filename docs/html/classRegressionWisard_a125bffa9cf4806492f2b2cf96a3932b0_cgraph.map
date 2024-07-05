@@ -1,0 +1,9 @@
+<map id="RegressionWisard::train" name="RegressionWisard::train">
+<area shape="rect" id="Node000001" title="Treina o modelo com uma entrada binária e um valor y." alt="" coords="5,31,168,56"/>
+<area shape="rect" id="Node000002" href="$classRegressionWisard.html#a6a25655a9cb15452b468a13dc4ed2858" title="Verifica o tamanho da entrada." alt="" coords="216,5,445,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,32,202,29,203,34,168,38"/>
+<area shape="rect" id="Node000003" href="$classRegressionWisard.html#ad003f5c063b032a1995ccfcf2682c549" title="Configura o embaralhamento das RAMs." alt="" coords="217,55,444,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="168,49,204,52,203,57,168,54"/>
+<area shape="rect" id="Node000004" href="$classRegressionWisard.html#a4bfafa888b990804d754feb76044b679" title="Verifica o tamanho do endereço." alt="" coords="493,55,740,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="444,65,480,65,480,70,444,70"/>
+</map>

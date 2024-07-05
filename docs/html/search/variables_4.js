@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['tuplesize_44',['tupleSize',['../classDiscriminator.html#a61570db5a52d967ce12df669b606bc4e',1,'Discriminator::tupleSize()'],['../classWisard.html#a03efe8e678a058bbc282312dba6ceb31',1,'Wisard::tupleSize()']]],
-  ['tuplesmapping_45',['tuplesMapping',['../classDiscriminator.html#a0c738ffdc70bc69a48f4e388731f99a1',1,'Discriminator']]]
+  ['mapping_0',['mapping',['../classRegressionRAM.html#a6d9d14f2194853166459c9ac734080c2',1,'RegressionRAM::mapping'],['../classRegressionWisard.html#a103aa1c658a82b6fb5d17db4bc5cef4b',1,'RegressionWisard::mapping']]],
+  ['mean_1',['mean',['../classRegressionWisard.html#af7f452b5991bf8498d19cb3b5aea16af',1,'RegressionWisard']]],
+  ['memory_2',['memory',['../classRegressionRAM.html#a77a4282abeff7ed9c178c4ea4aea5a0d',1,'RegressionRAM']]],
+  ['minone_3',['minOne',['../classRegressionRAM.html#afdb97503ca3766f6209826f26eb8b770',1,'RegressionRAM::minOne'],['../classRegressionWisard.html#a4d8ca9f91145bca9cccf256b75a79ab0',1,'RegressionWisard::minOne']]],
+  ['minzero_4',['minZero',['../classRegressionRAM.html#a8c283108a2205b2dc816fb13c8b36724',1,'RegressionRAM::minZero'],['../classRegressionWisard.html#a19bf9ed20712adaa43cff5f46985ad0f',1,'RegressionWisard::minZero']]]
 ];

@@ -1,0 +1,284 @@
+\doxysection{Referência à classe Power\+Mean}
+\hypertarget{classPowerMean}{}\label{classPowerMean}\index{PowerMean@{PowerMean}}
+
+
+Classe para cálculo de média de potência.  
+
+
+
+
+Diagrama de heranças da classe Power\+Mean
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classPowerMean__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Power\+Mean\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classPowerMean__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classPowerMean_a372235fcd24ea38f1b904302682e4058}{calculate}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&output\+Rams)
+\begin{DoxyCompactList}\small\item\em Calcula a média de potência com base nos dados fornecidos. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classPowerMean_a12e74bd8542ab5311b807f1339c85871}{class\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o nome da classe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMean}{Mean}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPowerMean_afbdacd5ee8241bbddeb515e11115cf19}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Cria uma cópia do objeto \doxylink{classPowerMean}{Power\+Mean}. \end{DoxyCompactList}\item 
+nl\+::json \mbox{\hyperlink{classPowerMean_a289c1ba18b1e4183ec1d47d7c7166e66}{get\+JSON}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a configuração do objeto em formato JSON. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPowerMean_a199342b28474b5ccaa8f9b43704f7302}{Power\+Mean}} (int n)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classPowerMean}{Power\+Mean}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classPowerMean_a3e39d4719328bf801444dd4252a3937c}{power}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe para cálculo de média de potência. 
+
+Definido na linha \mbox{\hyperlink{meanfunctions_8cc_source_l00081}{81}} do ficheiro \mbox{\hyperlink{meanfunctions_8cc_source}{meanfunctions.\+cc}}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\Hypertarget{classPowerMean_a199342b28474b5ccaa8f9b43704f7302}\index{PowerMean@{PowerMean}!PowerMean@{PowerMean}}
+\index{PowerMean@{PowerMean}!PowerMean@{PowerMean}}
+\doxysubsubsection{\texorpdfstring{PowerMean()}{PowerMean()}}
+{\footnotesize\ttfamily \label{classPowerMean_a199342b28474b5ccaa8f9b43704f7302} 
+Power\+Mean\+::\+Power\+Mean (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor da classe \doxylink{classPowerMean}{Power\+Mean}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & Potência a ser utilizada no cálculo. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{meanfunctions_8cc_source_l00089}{89}} do ficheiro \mbox{\hyperlink{meanfunctions_8cc_source}{meanfunctions.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00089\ :\ \mbox{\hyperlink{classPowerMean_a3e39d4719328bf801444dd4252a3937c}{power}}(n)\ \{\}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{meanfunctions_8cc_source_l00115}{clone()}}.
+
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classPowerMean_a199342b28474b5ccaa8f9b43704f7302_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classPowerMean_a372235fcd24ea38f1b904302682e4058}\index{PowerMean@{PowerMean}!calculate@{calculate}}
+\index{calculate@{calculate}!PowerMean@{PowerMean}}
+\doxysubsubsection{\texorpdfstring{calculate()}{calculate()}}
+{\footnotesize\ttfamily \label{classPowerMean_a372235fcd24ea38f1b904302682e4058} 
+double Power\+Mean\+::calculate (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{output\+Rams}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Calcula a média de potência com base nos dados fornecidos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em output\+Rams} & Dados de saída das RAMs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A média de potência calculada. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classMean_a6c725db111881910fcf4df655debbbc7}{Mean}}.
+
+
+
+Definido na linha \mbox{\hyperlink{meanfunctions_8cc_source_l00096}{96}} do ficheiro \mbox{\hyperlink{meanfunctions_8cc_source}{meanfunctions.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ sumy\ =\ 0;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ counter\ =\ 0;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ outputRams.size();\ i++)\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (outputRams[i][0]\ !=\ 0)\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sumy\ +=\ pow(outputRams[i][1]\ /\ outputRams[i][0],\ \mbox{\hyperlink{classPowerMean_a3e39d4719328bf801444dd4252a3937c}{power}});}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ counter++;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (counter\ >\ 0)}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pow(sumy\ /\ counter,\ 1.0\ /\ \mbox{\hyperlink{classPowerMean_a3e39d4719328bf801444dd4252a3937c}{power}});}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00109\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{meanfunctions_8cc_source_l00083}{power}}.
+
+\Hypertarget{classPowerMean_a12e74bd8542ab5311b807f1339c85871}\index{PowerMean@{PowerMean}!className@{className}}
+\index{className@{className}!PowerMean@{PowerMean}}
+\doxysubsubsection{\texorpdfstring{className()}{className()}}
+{\footnotesize\ttfamily \label{classPowerMean_a12e74bd8542ab5311b807f1339c85871} 
+std\+::string Power\+Mean\+::class\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém o nome da classe. 
+
+\begin{DoxyReturn}{Retorna}
+Nome da classe. 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{meanfunctions_8cc_source_l00123}{123}} do ficheiro \mbox{\hyperlink{meanfunctions_8cc_source}{meanfunctions.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}PowerMean"{}};}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{meanfunctions_8cc_source_l00131}{get\+JSON()}}.
+
+Este é o diagrama das funções que utilizam esta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPowerMean_a12e74bd8542ab5311b807f1339c85871_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classPowerMean_afbdacd5ee8241bbddeb515e11115cf19}\index{PowerMean@{PowerMean}!clone@{clone}}
+\index{clone@{clone}!PowerMean@{PowerMean}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \label{classPowerMean_afbdacd5ee8241bbddeb515e11115cf19} 
+\mbox{\hyperlink{classMean}{Mean}} \texorpdfstring{$\ast$}{*} Power\+Mean\+::clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Cria uma cópia do objeto \doxylink{classPowerMean}{Power\+Mean}. 
+
+\begin{DoxyReturn}{Retorna}
+Ponteiro para a cópia do objeto \doxylink{classPowerMean}{Power\+Mean}. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classMean_a958ceadab78c39fe3945567847aa78b8}{Mean}}.
+
+
+
+Definido na linha \mbox{\hyperlink{meanfunctions_8cc_source_l00115}{115}} do ficheiro \mbox{\hyperlink{meanfunctions_8cc_source}{meanfunctions.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPowerMean_a199342b28474b5ccaa8f9b43704f7302}{PowerMean}}(\mbox{\hyperlink{classPowerMean_a3e39d4719328bf801444dd4252a3937c}{power}});}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{meanfunctions_8cc_source_l00083}{power}} e \mbox{\hyperlink{meanfunctions_8cc_source_l00089}{Power\+Mean()}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classPowerMean_afbdacd5ee8241bbddeb515e11115cf19_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classPowerMean_a289c1ba18b1e4183ec1d47d7c7166e66}\index{PowerMean@{PowerMean}!getJSON@{getJSON}}
+\index{getJSON@{getJSON}!PowerMean@{PowerMean}}
+\doxysubsubsection{\texorpdfstring{getJSON()}{getJSON()}}
+{\footnotesize\ttfamily \label{classPowerMean_a289c1ba18b1e4183ec1d47d7c7166e66} 
+nl\+::json Power\+Mean\+::get\+JSON (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Obtém a configuração do objeto em formato JSON. 
+
+\begin{DoxyReturn}{Retorna}
+Configuração do objeto em JSON. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classMean_aec291edfcf29ea7915959630a2a1fc25}{Mean}}.
+
+
+
+Definido na linha \mbox{\hyperlink{meanfunctions_8cc_source_l00131}{131}} do ficheiro \mbox{\hyperlink{meanfunctions_8cc_source}{meanfunctions.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ nl::json\ config\ =\ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}type"{}},\ \mbox{\hyperlink{classPowerMean_a12e74bd8542ab5311b807f1339c85871}{className}}()\},}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}power"{}},\ \mbox{\hyperlink{classPowerMean_a3e39d4719328bf801444dd4252a3937c}{power}}\}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ config;}
+\DoxyCodeLine{00137\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referências \mbox{\hyperlink{meanfunctions_8cc_source_l00123}{class\+Name()}} e \mbox{\hyperlink{meanfunctions_8cc_source_l00083}{power}}.
+
+Grafo de chamadas desta função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPowerMean_a289c1ba18b1e4183ec1d47d7c7166e66_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Documentação dos dados membro}
+\Hypertarget{classPowerMean_a3e39d4719328bf801444dd4252a3937c}\index{PowerMean@{PowerMean}!power@{power}}
+\index{power@{power}!PowerMean@{PowerMean}}
+\doxysubsubsection{\texorpdfstring{power}{power}}
+{\footnotesize\ttfamily \label{classPowerMean_a3e39d4719328bf801444dd4252a3937c} 
+int Power\+Mean\+::power\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definido na linha \mbox{\hyperlink{meanfunctions_8cc_source_l00083}{83}} do ficheiro \mbox{\hyperlink{meanfunctions_8cc_source}{meanfunctions.\+cc}}.
+
+
+
+Referenciado por \mbox{\hyperlink{meanfunctions_8cc_source_l00096}{calculate()}}, \mbox{\hyperlink{meanfunctions_8cc_source_l00115}{clone()}} e \mbox{\hyperlink{meanfunctions_8cc_source_l00131}{get\+JSON()}}.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+src/models/regressionwisard/\mbox{\hyperlink{meanfunctions_8cc}{meanfunctions.\+cc}}\end{DoxyCompactItemize}

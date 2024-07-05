@@ -1,0 +1,446 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="pt">
+  <compounddef id="classDiscriminator" kind="class" language="C++" prot="public">
+    <compoundname>Discriminator</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classDiscriminator_1a54178a4935259476df0db5f29f686fec" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Discriminator::entrySize</definition>
+        <argsstring></argsstring>
+        <name>entrySize</name>
+        <qualifiedname>Discriminator::entrySize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/wisard/discriminator.cc" line="270" column="13" bodyfile="src/models/wisard/discriminator.cc" bodystart="270" bodyend="-1"/>
+        <referencedby refid="classDiscriminator_1a18f6a5ef1ceca3e187cc495a77a8141c" compoundref="discriminator_8cc" startline="20" endline="59">Discriminator</referencedby>
+        <referencedby refid="classDiscriminator_1ab2ac35f380491c1ade7032c7269a0e65" compoundref="discriminator_8cc" startline="201" endline="219">info</referencedby>
+        <referencedby refid="classDiscriminator_1a1aa42beb010bc86dd9418db8b294e78c" compoundref="discriminator_8cc" startline="174" endline="197">rank</referencedby>
+        <referencedby refid="classDiscriminator_1a2d97f91f8097cd8581f5c79b34bd0150" compoundref="discriminator_8cc" startline="224" endline="240">reset</referencedby>
+        <referencedby refid="classDiscriminator_1a53db61dec9f645573d5aa577344431a4" compoundref="discriminator_8cc" startline="112" endline="134">train</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Discriminator::numRams</definition>
+        <argsstring></argsstring>
+        <name>numRams</name>
+        <qualifiedname>Discriminator::numRams</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/wisard/discriminator.cc" line="272" column="13" bodyfile="src/models/wisard/discriminator.cc" bodystart="272" bodyend="-1"/>
+        <referencedby refid="classDiscriminator_1a18f6a5ef1ceca3e187cc495a77a8141c" compoundref="discriminator_8cc" startline="20" endline="59">Discriminator</referencedby>
+        <referencedby refid="classDiscriminator_1a7050bbf5d9b52318fdb8c6387ca7a0ac" compoundref="discriminator_8cc" startline="255" endline="258">getNumRams</referencedby>
+        <referencedby refid="classDiscriminator_1ab2ac35f380491c1ade7032c7269a0e65" compoundref="discriminator_8cc" startline="201" endline="219">info</referencedby>
+        <referencedby refid="classDiscriminator_1a76a9e6c46205fbb22e7c71fee3267582" compoundref="discriminator_8cc" startline="141" endline="167">rank</referencedby>
+        <referencedby refid="classDiscriminator_1a1aa42beb010bc86dd9418db8b294e78c" compoundref="discriminator_8cc" startline="174" endline="197">rank</referencedby>
+        <referencedby refid="classDiscriminator_1a2d97f91f8097cd8581f5c79b34bd0150" compoundref="discriminator_8cc" startline="224" endline="240">reset</referencedby>
+        <referencedby refid="classDiscriminator_1ab8048d9b2da18a14532e90460c5c92a8" compoundref="discriminator_8cc" startline="75" endline="106">train</referencedby>
+        <referencedby refid="classDiscriminator_1a53db61dec9f645573d5aa577344431a4" compoundref="discriminator_8cc" startline="112" endline="134">train</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" prot="private" static="no" mutable="no">
+        <type>bitarray_t *</type>
+        <definition>bitarray_t* Discriminator::rams</definition>
+        <argsstring></argsstring>
+        <name>rams</name>
+        <qualifiedname>Discriminator::rams</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/wisard/discriminator.cc" line="274" column="21" bodyfile="src/models/wisard/discriminator.cc" bodystart="274" bodyend="-1"/>
+        <referencedby refid="classDiscriminator_1a18f6a5ef1ceca3e187cc495a77a8141c" compoundref="discriminator_8cc" startline="20" endline="59">Discriminator</referencedby>
+        <referencedby refid="classDiscriminator_1ad65569d300243be32d4f7cde25ed71b4" compoundref="discriminator_8cc" startline="246" endline="249">getRamBits</referencedby>
+        <referencedby refid="classDiscriminator_1ab2ac35f380491c1ade7032c7269a0e65" compoundref="discriminator_8cc" startline="201" endline="219">info</referencedby>
+        <referencedby refid="classDiscriminator_1a76a9e6c46205fbb22e7c71fee3267582" compoundref="discriminator_8cc" startline="141" endline="167">rank</referencedby>
+        <referencedby refid="classDiscriminator_1a1aa42beb010bc86dd9418db8b294e78c" compoundref="discriminator_8cc" startline="174" endline="197">rank</referencedby>
+        <referencedby refid="classDiscriminator_1a2d97f91f8097cd8581f5c79b34bd0150" compoundref="discriminator_8cc" startline="224" endline="240">reset</referencedby>
+        <referencedby refid="classDiscriminator_1ab8048d9b2da18a14532e90460c5c92a8" compoundref="discriminator_8cc" startline="75" endline="106">train</referencedby>
+        <referencedby refid="classDiscriminator_1a53db61dec9f645573d5aa577344431a4" compoundref="discriminator_8cc" startline="112" endline="134">train</referencedby>
+        <referencedby refid="classDiscriminator_1a85cac98c07ece485461dd6f55e112adb" compoundref="discriminator_8cc" startline="64" endline="69">~Discriminator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Discriminator::tupleSize</definition>
+        <argsstring></argsstring>
+        <name>tupleSize</name>
+        <qualifiedname>Discriminator::tupleSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/wisard/discriminator.cc" line="271" column="13" bodyfile="src/models/wisard/discriminator.cc" bodystart="271" bodyend="-1"/>
+        <referencedby refid="classDiscriminator_1a18f6a5ef1ceca3e187cc495a77a8141c" compoundref="discriminator_8cc" startline="20" endline="59">Discriminator</referencedby>
+        <referencedby refid="classDiscriminator_1a2651a5132e8d8554d47f1406820f4062" compoundref="discriminator_8cc" startline="264" endline="267">getTupleSize</referencedby>
+        <referencedby refid="classDiscriminator_1ab2ac35f380491c1ade7032c7269a0e65" compoundref="discriminator_8cc" startline="201" endline="219">info</referencedby>
+        <referencedby refid="classDiscriminator_1a76a9e6c46205fbb22e7c71fee3267582" compoundref="discriminator_8cc" startline="141" endline="167">rank</referencedby>
+        <referencedby refid="classDiscriminator_1a1aa42beb010bc86dd9418db8b294e78c" compoundref="discriminator_8cc" startline="174" endline="197">rank</referencedby>
+        <referencedby refid="classDiscriminator_1ab8048d9b2da18a14532e90460c5c92a8" compoundref="discriminator_8cc" startline="75" endline="106">train</referencedby>
+        <referencedby refid="classDiscriminator_1a53db61dec9f645573d5aa577344431a4" compoundref="discriminator_8cc" startline="112" endline="134">train</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" prot="private" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* Discriminator::tuplesMapping</definition>
+        <argsstring></argsstring>
+        <name>tuplesMapping</name>
+        <qualifiedname>Discriminator::tuplesMapping</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/wisard/discriminator.cc" line="273" column="14" bodyfile="src/models/wisard/discriminator.cc" bodystart="273" bodyend="-1"/>
+        <referencedby refid="classDiscriminator_1a18f6a5ef1ceca3e187cc495a77a8141c" compoundref="discriminator_8cc" startline="20" endline="59">Discriminator</referencedby>
+        <referencedby refid="classDiscriminator_1a76a9e6c46205fbb22e7c71fee3267582" compoundref="discriminator_8cc" startline="141" endline="167">rank</referencedby>
+        <referencedby refid="classDiscriminator_1a1aa42beb010bc86dd9418db8b294e78c" compoundref="discriminator_8cc" startline="174" endline="197">rank</referencedby>
+        <referencedby refid="classDiscriminator_1a2d97f91f8097cd8581f5c79b34bd0150" compoundref="discriminator_8cc" startline="224" endline="240">reset</referencedby>
+        <referencedby refid="classDiscriminator_1ab8048d9b2da18a14532e90460c5c92a8" compoundref="discriminator_8cc" startline="75" endline="106">train</referencedby>
+        <referencedby refid="classDiscriminator_1a53db61dec9f645573d5aa577344431a4" compoundref="discriminator_8cc" startline="112" endline="134">train</referencedby>
+        <referencedby refid="classDiscriminator_1a85cac98c07ece485461dd6f55e112adb" compoundref="discriminator_8cc" startline="64" endline="69">~Discriminator</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDiscriminator_1a18f6a5ef1ceca3e187cc495a77a8141c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Discriminator::Discriminator</definition>
+        <argsstring>(int entrySize, int tupleSize)</argsstring>
+        <name>Discriminator</name>
+        <qualifiedname>Discriminator::Discriminator</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>entrySize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tupleSize</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for the <ref refid="classDiscriminator" kindref="compound">Discriminator</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entrySize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the entry. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tupleSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the tuple. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/wisard/discriminator.cc" line="20" column="9" bodyfile="src/models/wisard/discriminator.cc" bodystart="20" bodyend="59"/>
+        <references refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" compoundref="discriminator_8cc" startline="270">entrySize</references>
+        <references refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" compoundref="discriminator_8cc" startline="272">numRams</references>
+        <references refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" compoundref="discriminator_8cc" startline="274">rams</references>
+        <references refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" compoundref="discriminator_8cc" startline="271">tupleSize</references>
+        <references refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" compoundref="discriminator_8cc" startline="273">tuplesMapping</references>
+      </memberdef>
+      <memberdef kind="function" id="classDiscriminator_1a7050bbf5d9b52318fdb8c6387ca7a0ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Discriminator::getNumRams</definition>
+        <argsstring>()</argsstring>
+        <name>getNumRams</name>
+        <qualifiedname>Discriminator::getNumRams</qualifiedname>
+        <briefdescription>
+<para>Gets the number of RAMs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Number of RAMs. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/wisard/discriminator.cc" line="255" column="13" bodyfile="src/models/wisard/discriminator.cc" bodystart="255" bodyend="258"/>
+        <references refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" compoundref="discriminator_8cc" startline="272">numRams</references>
+      </memberdef>
+      <memberdef kind="function" id="classDiscriminator_1ad65569d300243be32d4f7cde25ed71b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long int</type>
+        <definition>long int Discriminator::getRamBits</definition>
+        <argsstring>()</argsstring>
+        <name>getRamBits</name>
+        <qualifiedname>Discriminator::getRamBits</qualifiedname>
+        <briefdescription>
+<para>Gets the number of bits in a RAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Number of bits in a RAM. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/wisard/discriminator.cc" line="246" column="18" bodyfile="src/models/wisard/discriminator.cc" bodystart="246" bodyend="249"/>
+        <references refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" compoundref="discriminator_8cc" startline="274">rams</references>
+      </memberdef>
+      <memberdef kind="function" id="classDiscriminator_1a2651a5132e8d8554d47f1406820f4062" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Discriminator::getTupleSize</definition>
+        <argsstring>()</argsstring>
+        <name>getTupleSize</name>
+        <qualifiedname>Discriminator::getTupleSize</qualifiedname>
+        <briefdescription>
+<para>Gets the size of a tuple. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Size of a tuple. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/wisard/discriminator.cc" line="264" column="13" bodyfile="src/models/wisard/discriminator.cc" bodystart="264" bodyend="267"/>
+        <references refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" compoundref="discriminator_8cc" startline="271">tupleSize</references>
+      </memberdef>
+      <memberdef kind="function" id="classDiscriminator_1ab2ac35f380491c1ade7032c7269a0e65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Discriminator::info</definition>
+        <argsstring>()</argsstring>
+        <name>info</name>
+        <qualifiedname>Discriminator::info</qualifiedname>
+        <briefdescription>
+<para>Displays information about the discriminator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/wisard/discriminator.cc" line="201" column="14" bodyfile="src/models/wisard/discriminator.cc" bodystart="201" bodyend="219"/>
+        <references refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" compoundref="discriminator_8cc" startline="270">entrySize</references>
+        <references refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" compoundref="discriminator_8cc" startline="272">numRams</references>
+        <references refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" compoundref="discriminator_8cc" startline="274">rams</references>
+        <references refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" compoundref="discriminator_8cc" startline="271">tupleSize</references>
+      </memberdef>
+      <memberdef kind="function" id="classDiscriminator_1a76a9e6c46205fbb22e7c71fee3267582" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Discriminator::rank</definition>
+        <argsstring>(bitarray_t *data)</argsstring>
+        <name>rank</name>
+        <qualifiedname>Discriminator::rank</qualifiedname>
+        <param>
+          <type>bitarray_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Ranks the given data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to bitarray_t data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Rank of the data. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/wisard/discriminator.cc" line="141" column="13" bodyfile="src/models/wisard/discriminator.cc" bodystart="141" bodyend="167"/>
+        <references refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" compoundref="discriminator_8cc" startline="272">numRams</references>
+        <references refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" compoundref="discriminator_8cc" startline="274">rams</references>
+        <references refid="classDiscriminator_1a76a9e6c46205fbb22e7c71fee3267582" compoundref="discriminator_8cc" startline="141" endline="167">rank</references>
+        <references refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" compoundref="discriminator_8cc" startline="271">tupleSize</references>
+        <references refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" compoundref="discriminator_8cc" startline="273">tuplesMapping</references>
+        <referencedby refid="classDiscriminator_1a76a9e6c46205fbb22e7c71fee3267582" compoundref="discriminator_8cc" startline="141" endline="167">rank</referencedby>
+        <referencedby refid="classDiscriminator_1a1aa42beb010bc86dd9418db8b294e78c" compoundref="discriminator_8cc" startline="174" endline="197">rank</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDiscriminator_1a1aa42beb010bc86dd9418db8b294e78c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Discriminator::rank</definition>
+        <argsstring>(const vector&lt; bool &gt; &amp;data)</argsstring>
+        <name>rank</name>
+        <qualifiedname>Discriminator::rank</qualifiedname>
+        <param>
+          <type>const vector&lt; bool &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Ranks the given vector of boolean data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of boolean data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Rank of the data. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/wisard/discriminator.cc" line="174" column="13" bodyfile="src/models/wisard/discriminator.cc" bodystart="174" bodyend="197"/>
+        <references refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" compoundref="discriminator_8cc" startline="270">entrySize</references>
+        <references refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" compoundref="discriminator_8cc" startline="272">numRams</references>
+        <references refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" compoundref="discriminator_8cc" startline="274">rams</references>
+        <references refid="classDiscriminator_1a76a9e6c46205fbb22e7c71fee3267582" compoundref="discriminator_8cc" startline="141" endline="167">rank</references>
+        <references refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" compoundref="discriminator_8cc" startline="271">tupleSize</references>
+        <references refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" compoundref="discriminator_8cc" startline="273">tuplesMapping</references>
+      </memberdef>
+      <memberdef kind="function" id="classDiscriminator_1a2d97f91f8097cd8581f5c79b34bd0150" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Discriminator::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <qualifiedname>Discriminator::reset</qualifiedname>
+        <briefdescription>
+<para>Resets the discriminator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/wisard/discriminator.cc" line="224" column="14" bodyfile="src/models/wisard/discriminator.cc" bodystart="224" bodyend="240"/>
+        <references refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" compoundref="discriminator_8cc" startline="270">entrySize</references>
+        <references refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" compoundref="discriminator_8cc" startline="272">numRams</references>
+        <references refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" compoundref="discriminator_8cc" startline="274">rams</references>
+        <references refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" compoundref="discriminator_8cc" startline="273">tuplesMapping</references>
+      </memberdef>
+      <memberdef kind="function" id="classDiscriminator_1ab8048d9b2da18a14532e90460c5c92a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Discriminator::train</definition>
+        <argsstring>(bitarray_t *data)</argsstring>
+        <name>train</name>
+        <qualifiedname>Discriminator::train</qualifiedname>
+        <param>
+          <type>bitarray_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Trains the discriminator with the given data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to bitarray_t data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/wisard/discriminator.cc" line="75" column="14" bodyfile="src/models/wisard/discriminator.cc" bodystart="75" bodyend="106"/>
+        <references refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" compoundref="discriminator_8cc" startline="272">numRams</references>
+        <references refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" compoundref="discriminator_8cc" startline="274">rams</references>
+        <references refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" compoundref="discriminator_8cc" startline="271">tupleSize</references>
+        <references refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" compoundref="discriminator_8cc" startline="273">tuplesMapping</references>
+      </memberdef>
+      <memberdef kind="function" id="classDiscriminator_1a53db61dec9f645573d5aa577344431a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Discriminator::train</definition>
+        <argsstring>(const vector&lt; bool &gt; &amp;data)</argsstring>
+        <name>train</name>
+        <qualifiedname>Discriminator::train</qualifiedname>
+        <param>
+          <type>const vector&lt; bool &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Trains the discriminator with the given vector of boolean data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of boolean data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/wisard/discriminator.cc" line="112" column="14" bodyfile="src/models/wisard/discriminator.cc" bodystart="112" bodyend="134"/>
+        <references refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" compoundref="discriminator_8cc" startline="270">entrySize</references>
+        <references refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" compoundref="discriminator_8cc" startline="272">numRams</references>
+        <references refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" compoundref="discriminator_8cc" startline="274">rams</references>
+        <references refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" compoundref="discriminator_8cc" startline="271">tupleSize</references>
+        <references refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" compoundref="discriminator_8cc" startline="273">tuplesMapping</references>
+      </memberdef>
+      <memberdef kind="function" id="classDiscriminator_1a85cac98c07ece485461dd6f55e112adb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Discriminator::~Discriminator</definition>
+        <argsstring>()</argsstring>
+        <name>~Discriminator</name>
+        <qualifiedname>Discriminator::~Discriminator</qualifiedname>
+        <briefdescription>
+<para>Destructor for the <ref refid="classDiscriminator" kindref="compound">Discriminator</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/models/wisard/discriminator.cc" line="64" column="9" bodyfile="src/models/wisard/discriminator.cc" bodystart="64" bodyend="69"/>
+        <references refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" compoundref="discriminator_8cc" startline="274">rams</references>
+        <references refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" compoundref="discriminator_8cc" startline="273">tuplesMapping</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A class to implement a discriminator using bit arrays and pseudo-random mappings. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Discriminator</label>
+        <link refid="classDiscriminator"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/models/wisard/discriminator.cc" line="13" column="1" bodyfile="src/models/wisard/discriminator.cc" bodystart="13" bodyend="275"/>
+    <listofallmembers>
+      <member refid="classDiscriminator_1a18f6a5ef1ceca3e187cc495a77a8141c" prot="public" virt="non-virtual"><scope>Discriminator</scope><name>Discriminator</name></member>
+      <member refid="classDiscriminator_1a54178a4935259476df0db5f29f686fec" prot="private" virt="non-virtual"><scope>Discriminator</scope><name>entrySize</name></member>
+      <member refid="classDiscriminator_1a7050bbf5d9b52318fdb8c6387ca7a0ac" prot="public" virt="non-virtual"><scope>Discriminator</scope><name>getNumRams</name></member>
+      <member refid="classDiscriminator_1ad65569d300243be32d4f7cde25ed71b4" prot="public" virt="non-virtual"><scope>Discriminator</scope><name>getRamBits</name></member>
+      <member refid="classDiscriminator_1a2651a5132e8d8554d47f1406820f4062" prot="public" virt="non-virtual"><scope>Discriminator</scope><name>getTupleSize</name></member>
+      <member refid="classDiscriminator_1ab2ac35f380491c1ade7032c7269a0e65" prot="public" virt="non-virtual"><scope>Discriminator</scope><name>info</name></member>
+      <member refid="classDiscriminator_1a4f914bc04e0a138c8f108a04302952b4" prot="private" virt="non-virtual"><scope>Discriminator</scope><name>numRams</name></member>
+      <member refid="classDiscriminator_1a4379397ede6279ae3056f1e221b0f319" prot="private" virt="non-virtual"><scope>Discriminator</scope><name>rams</name></member>
+      <member refid="classDiscriminator_1a76a9e6c46205fbb22e7c71fee3267582" prot="public" virt="non-virtual"><scope>Discriminator</scope><name>rank</name></member>
+      <member refid="classDiscriminator_1a1aa42beb010bc86dd9418db8b294e78c" prot="public" virt="non-virtual"><scope>Discriminator</scope><name>rank</name></member>
+      <member refid="classDiscriminator_1a2d97f91f8097cd8581f5c79b34bd0150" prot="public" virt="non-virtual"><scope>Discriminator</scope><name>reset</name></member>
+      <member refid="classDiscriminator_1ab8048d9b2da18a14532e90460c5c92a8" prot="public" virt="non-virtual"><scope>Discriminator</scope><name>train</name></member>
+      <member refid="classDiscriminator_1a53db61dec9f645573d5aa577344431a4" prot="public" virt="non-virtual"><scope>Discriminator</scope><name>train</name></member>
+      <member refid="classDiscriminator_1a61570db5a52d967ce12df669b606bc4e" prot="private" virt="non-virtual"><scope>Discriminator</scope><name>tupleSize</name></member>
+      <member refid="classDiscriminator_1a0c738ffdc70bc69a48f4e388731f99a1" prot="private" virt="non-virtual"><scope>Discriminator</scope><name>tuplesMapping</name></member>
+      <member refid="classDiscriminator_1a85cac98c07ece485461dd6f55e112adb" prot="public" virt="non-virtual"><scope>Discriminator</scope><name>~Discriminator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
